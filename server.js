@@ -1,29 +1,51 @@
 // server.js
 const express = require('express');
 const fs = require('fs');
+const path = require('path');
 const XLSX = require('xlsx');
+
 const app = express();
 const PORT = 3000;
+const filePath = path.join(__dirname, 'data.json');
 
 let data = [];
+
+// 🔄 Load existing entries from data.json on startup
+try {
+  const fileData = fs.readFileSync(filePath, 'utf8');
+  if (fileData.trim()) {
+    data = JSON.parse(fileData);
+    console.log(`🟢 Loaded ${data.length} existing entries`);
+  } else {
+    console.log("⚠️ data.json is empty. Starting fresh.");
+    data = [];
+  }
+} catch (err) {
+  console.log("⚠️ data.json not found. Starting fresh.");
+  data = [];
+}
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-// 🔁 Accept form submission
+// 📝 Handle form submissions
 app.post('/submit', (req, res) => {
   const { school, name, category } = req.body;
   if (!school || !name || !category) return res.status(400).send("Missing fields");
 
   const categories = category.split(',').map(c => c.trim());
-  categories.forEach(cat => data.push({ school, name, category: cat }));
+  const timestamp = new Date().toLocaleString('en-IN', { hour12: false });
 
-  fs.writeFileSync('data.json', JSON.stringify(data));
+  categories.forEach(cat => {
+    data.push({ school, name, category: cat, timestamp });
+  });
+
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
   res.send("Success");
 });
 
-// 📊 Show sorted results in admin.html
+// 📊 Serve sorted results to admin dashboard
 app.get('/results', (req, res) => {
   const sorted = [...data].sort((a, b) => a.school.localeCompare(b.school));
   res.json(sorted);
@@ -41,4 +63,24 @@ app.get('/export', (req, res) => {
   res.send(buffer);
 });
 
-app.listen(PORT, () => console.log(`✅ Server running at http://localhost:${PORT}`));
+// 🔁 Reset all responses
+app.post('/reset-all', (req, res) => {
+  data = [];
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  res.send("All responses have been reset.");
+});
+
+// 🔁 Reset last response
+app.post('/reset-last', (req, res) => {
+  if (data.length > 0) {
+    data.pop();
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+    res.send("Last response has been removed.");
+  } else {
+    res.send("No responses to remove.");
+  }
+});
+
+app.listen(PORT, () => {
+  console.log(`✅ Server running at http://localhost:${PORT}`);
+});

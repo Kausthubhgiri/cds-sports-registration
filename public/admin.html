@@ -4,12 +4,52 @@
   <meta charset="UTF-8">
   <title>CDS Sports Results Dashboard</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #f2f2f2;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    #count {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    button {
+      margin-right: 10px;
+      margin-bottom: 1rem;
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .card {
+      background: white;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      border-left: 6px solid #007bff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .info {
+      margin-bottom: 0.3rem;
+    }
+    .timestamp {
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
   <h1>📊 CDS Sports Meet – Live Dashboard</h1>
   <div id="count">Total Entries: 0</div>
-  <div id="results"></div>
+  
   <button onclick="window.location.href='/export'">⬇ Export to Excel</button>
+  <button onclick="resetAll()">🗑️ Reset All Responses</button>
+  <button onclick="resetLast()">↩️ Undo Last Response</button>
+
+  <div id="results"></div>
 
   <script>
     function loadResults() {
@@ -25,6 +65,24 @@
               ${d.timestamp ? `<div class="timestamp">🕒 ${d.timestamp}</div>` : ""}
             </div>`).join('');
           document.getElementById('results').innerHTML = html;
+        });
+    }
+
+    function resetAll() {
+      fetch('/reset-all', { method: 'POST' })
+        .then(res => res.text())
+        .then(msg => {
+          alert(msg);
+          loadResults();
+        });
+    }
+
+    function resetLast() {
+      fetch('/reset-last', { method: 'POST' })
+        .then(res => res.text())
+        .then(msg => {
+          alert(msg);
+          loadResults();
         });
     }
 
