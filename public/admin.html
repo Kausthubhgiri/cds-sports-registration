@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CDS Sports Results Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📊 CDS Sports Meet – Live Dashboard</h1>
+  <div id="count">Total Entries: 0</div>
+  <div id="results"></div>
+  <button onclick="window.location.href='/export'">⬇ Export to Excel</button>
+
+  <script>
+    function loadResults() {
+      fetch('/results')
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('count').textContent = `Total Entries: ${data.length}`;
+          const html = data.map(d => `
+            <div class="card">
+              <div class="info"><strong>🏫 ${d.school}</strong></div>
+              <div class="info">👤 ${d.name}</div>
+              <div class="info">🏅 ${d.category}</div>
+              ${d.timestamp ? `<div class="timestamp">🕒 ${d.timestamp}</div>` : ""}
+            </div>`).join('');
+          document.getElementById('results').innerHTML = html;
+        });
+    }
+
+    setInterval(loadResults, 5000); // Refresh every 5 seconds
+    loadResults(); // Initial load
+  </script>
+</body>
+</html>

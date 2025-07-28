@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CDS Sports Meet Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🏆 CDS Sports Meet – Registration</h1>
+
+  <form id="regForm" enctype="multipart/form-data">
+    <input type="text" name="school" placeholder="School Name" required>
+    <input type="text" name="name" placeholder="Participant Name" required>
+    <input type="number" name="chest" placeholder="Chest Number" required>
+    
+    <label>Date of Birth</label>
+    <input type="date" name="dob" required>
+
+    <label>Age Category</label>
+    <select name="ageCategory" required>
+      <option value="" disabled selected>Select Age Group</option>
+      <option>Under 11</option>
+      <option>Under 14</option>
+      <option>Under 16</option>
+      <option>Under 17</option>
+      <option>Under 19</option>
+    </select>
+
+    <label>Gender</label>
+    <select name="gender" required>
+      <option value="" disabled selected>Select Gender</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+
+    <label>Choose Events (select one or more)</label>
+    <select name="events" multiple required>
+      <option>50m Race</option>
+      <option>100m Race</option>
+      <option>200m</option>
+      <option>400m</option>
+      <option>800m</option>
+      <option>1500m</option>
+      <option>Shot Put</option>
+      <option>Discus Throw</option>
+      <option>Long Jump</option>
+      <option>High Jump</option>
+      <option>4x100m Relay</option>
+      <option>4x400m Relay</option>
+    </select>
+
+    <label>Upload Photo</label>
+    <input type="file" name="photo" accept="image/*" required>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="status"></div>
+
+  <script>
+    document.getElementById('regForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById("status").innerText = "⏳ Submitting...";
+      document.getElementById("status").style.opacity = 1;
+
+      const formData = new FormData(this);
+
+      fetch('/submit', {
+        method: 'POST',
+        body: formData
+      })
+      .then(res => res.text())
+      .then(response => {
+        document.getElementById("status").innerText = "✅ Submission recorded!";
+        this.reset();
+      })
+      .catch(error => {
+        document.getElementById("status").innerText = "❌ Submission failed. Try again.";
+        console.error(error);
+      });
+    });
+  </script>
+</body>
+</html>
