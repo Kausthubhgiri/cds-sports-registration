@@ -6,13 +6,16 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="banner">
+  <img src="banner.png" alt="CDS Sports Meet Banner">
+</div>
   <h1>🏆 CDS Sports Meet – Registration</h1>
 
-  <form id="regForm" enctype="multipart/form-data">
+  <form id="regForm">
     <input type="text" name="school" placeholder="School Name" required>
     <input type="text" name="name" placeholder="Participant Name" required>
     <input type="number" name="chest" placeholder="Chest Number" required>
-    
+
     <label>Date of Birth</label>
     <input type="date" name="dob" required>
 
@@ -35,20 +38,20 @@
     </select>
 
     <label>Choose Events (select one or more)</label>
-    <select name="events" multiple required>
-      <option>50m Race</option>
-      <option>100m Race</option>
-      <option>200m</option>
-      <option>400m</option>
-      <option>800m</option>
-      <option>1500m</option>
-      <option>Shot Put</option>
-      <option>Discus Throw</option>
-      <option>Long Jump</option>
-      <option>High Jump</option>
-      <option>4x100m Relay</option>
-      <option>4x400m Relay</option>
-    </select>
+    <div id="event-options">
+      <label><input type="checkbox" name="events" value="50m Race"> 50m Race</label>
+      <label><input type="checkbox" name="events" value="100m Race"> 100m Race</label>
+      <label><input type="checkbox" name="events" value="200m"> 200m</label>
+      <label><input type="checkbox" name="events" value="400m"> 400m</label>
+      <label><input type="checkbox" name="events" value="800m"> 800m</label>
+      <label><input type="checkbox" name="events" value="1500m"> 1500m</label>
+      <label><input type="checkbox" name="events" value="Shot Put"> Shot Put</label>
+      <label><input type="checkbox" name="events" value="Discus Throw"> Discus Throw</label>
+      <label><input type="checkbox" name="events" value="Long Jump"> Long Jump</label>
+      <label><input type="checkbox" name="events" value="High Jump"> High Jump</label>
+      <label><input type="checkbox" name="events" value="4x100m Relay"> 4x100m Relay</label>
+      <label><input type="checkbox" name="events" value="4x400m Relay"> 4x400m Relay</label>
+    </div>
 
     <label>Upload Photo</label>
     <input type="file" name="photo" accept="image/*" required>
@@ -65,13 +68,26 @@
       document.getElementById("status").style.opacity = 1;
 
       const formData = new FormData(this);
+      const selectedEvents = Array.from(document.querySelectorAll('input[name="events"]:checked'))
+                                  .map(input => input.value);
 
-      fetch('/submit', {
+      const entry = {
+        school: formData.get("school"),
+        name: formData.get("name"),
+        chest: formData.get("chest"),
+        dob: formData.get("dob"),
+        ageCategory: formData.get("ageCategory"),
+        gender: formData.get("gender"),
+        events: selectedEvents
+      };
+
+      fetch('/results.json', {
         method: 'POST',
-        body: formData
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(entry)
       })
-      .then(res => res.text())
-      .then(response => {
+      .then(res => res.json())
+      .then(data => {
         document.getElementById("status").innerText = "✅ Submission recorded!";
         this.reset();
       })
