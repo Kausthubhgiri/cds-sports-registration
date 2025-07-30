@@ -25,24 +25,34 @@
       font-size: 1rem;
       cursor: pointer;
     }
+    .age-header {
+      font-size: 1.3rem;
+      margin-top: 2rem;
+      color: #333;
+    }
     .card {
       background: white;
       padding: 1rem;
       margin: 0.5rem 0;
       border-left: 6px solid #007bff;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
     }
     .info {
+      flex: 1 1 300px;
       margin-bottom: 0.3rem;
+    }
+    .photo {
+      max-width: 100px;
+      max-height: 100px;
+      margin-right: 1rem;
+      border-radius: 4px;
     }
     .timestamp {
       font-size: 0.9rem;
       color: #555;
-    }
-    .age-header {
-      font-size: 1.3rem;
-      margin-top: 2rem;
-      color: #333;
     }
   </style>
 </head>
@@ -63,25 +73,26 @@
         .then(data => {
           document.getElementById('count').textContent = `Total Entries: ${data.length}`;
 
-          // 🔄 Group results by age category
           const grouped = {};
           data.forEach(entry => {
-            if (!grouped[entry.ageCategory]) {
-              grouped[entry.ageCategory] = [];
-            }
+            if (!grouped[entry.ageCategory]) grouped[entry.ageCategory] = [];
             grouped[entry.ageCategory].push(entry);
           });
 
-          // 🧩 Generate HTML with age category headers
           const html = Object.keys(grouped).map(ageGroup => {
             const cards = grouped[ageGroup].map(d => `
               <div class="card">
+                ${d.photo ? `<img src="${d.photo}" alt="Photo" class="photo">` : ""}
                 <div class="info"><strong>🏫 ${d.school}</strong></div>
                 <div class="info">👤 ${d.name}</div>
-                <div class="info">🏅 ${d.category}</div>
-                <div class="info">📅 Age Category: ${d.ageCategory}</div>
+                <div class="info">🎽 Chest Number: ${d.chest || "N/A"}</div>
+                <div class="info">📅 DOB: ${d.dob || "N/A"}</div>
+                <div class="info">⚧ Gender: ${d.gender || "N/A"}</div>
+                <div class="info">🏅 Event: ${d.category}</div>
+                <div class="info">🧒 Age Category: ${d.ageCategory}</div>
                 ${d.timestamp ? `<div class="timestamp">🕒 ${d.timestamp}</div>` : ""}
-              </div>`).join('');
+              </div>
+            `).join('');
             return `<div>
                       <div class="age-header">🧒 Age Group: ${ageGroup}</div>
                       ${cards}
@@ -110,8 +121,8 @@
         });
     }
 
-    setInterval(loadResults, 5000); // Refresh every 5 seconds
-    loadResults(); // Initial load
+    setInterval(loadResults, 5000);
+    loadResults();
   </script>
 </body>
 </html>

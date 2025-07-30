@@ -4,14 +4,53 @@
   <meta charset="UTF-8">
   <title>CDS Sports Meet Registration</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    input, select {
+      display: block;
+      margin-bottom: 1rem;
+      padding: 0.6rem;
+      width: 100%;
+      max-width: 500px;
+    }
+    button {
+      padding: 0.7rem 1.2rem;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .banner img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1.5rem;
+    }
+    #event-options label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    #status {
+      margin-top: 1rem;
+      font-weight: bold;
+      transition: opacity 0.3s ease;
+    }
+  </style>
 </head>
 <body>
   <div class="banner">
-  <img src="banner.png" alt="CDS Sports Meet Banner">
-</div>
+    <img src="banner.png" alt="CDS Sports Meet Banner">
+  </div>
   <h1>🏆 CDS Sports Meet – Registration</h1>
 
-  <form id="regForm">
+  <form id="regForm" enctype="multipart/form-data">
     <input type="text" name="school" placeholder="School Name" required>
     <input type="text" name="name" placeholder="Participant Name" required>
     <input type="number" name="chest" placeholder="Chest Number" required>
@@ -64,35 +103,29 @@
   <script>
     document.getElementById('regForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      document.getElementById("status").innerText = "⏳ Submitting...";
-      document.getElementById("status").style.opacity = 1;
+      const statusDiv = document.getElementById("status");
+      statusDiv.innerText = "⏳ Submitting...";
+      statusDiv.style.opacity = 1;
 
-      const formData = new FormData(this);
+      const form = e.target;
+      const formData = new FormData(form);
+
       const selectedEvents = Array.from(document.querySelectorAll('input[name="events"]:checked'))
                                   .map(input => input.value);
 
-      const entry = {
-        school: formData.get("school"),
-        name: formData.get("name"),
-        chest: formData.get("chest"),
-        dob: formData.get("dob"),
-        ageCategory: formData.get("ageCategory"),
-        gender: formData.get("gender"),
-        events: selectedEvents
-      };
+      formData.set("events", selectedEvents);
 
-      fetch('/results.json', {
+      fetch('/results', {
         method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(entry)
+        body: formData
       })
       .then(res => res.json())
       .then(data => {
-        document.getElementById("status").innerText = "✅ Submission recorded!";
-        this.reset();
+        statusDiv.innerText = "✅ Submission recorded!";
+        form.reset();
       })
       .catch(error => {
-        document.getElementById("status").innerText = "❌ Submission failed. Try again.";
+        statusDiv.innerText = "❌ Submission failed. Try again.";
         console.error(error);
       });
     });
