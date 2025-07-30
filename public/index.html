@@ -4,45 +4,6 @@
   <meta charset="UTF-8">
   <title>CDS Sports Meet Registration</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 2rem;
-      background-color: #f5f5f5;
-    }
-    h1 {
-      margin-top: 0;
-    }
-    input, select {
-      display: block;
-      margin-bottom: 1rem;
-      padding: 0.6rem;
-      width: 100%;
-      max-width: 500px;
-    }
-    button {
-      padding: 0.7rem 1.2rem;
-      font-size: 1rem;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    .banner img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 1.5rem;
-    }
-    #event-options label {
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-    #status {
-      margin-top: 1rem;
-      font-weight: bold;
-      transition: opacity 0.3s ease;
-    }
-  </style>
 </head>
 <body>
   <div class="banner">
@@ -51,15 +12,20 @@
   <h1>🏆 CDS Sports Meet – Registration</h1>
 
   <form id="regForm" enctype="multipart/form-data">
-    <input type="text" name="school" placeholder="School Name" required>
-    <input type="text" name="name" placeholder="Participant Name" required>
-    <input type="number" name="chest" placeholder="Chest Number" required>
+    <label for="school">School Name</label>
+    <input type="text" id="school" name="school" placeholder="School Name" required>
 
-    <label>Date of Birth</label>
-    <input type="date" name="dob" required>
+    <label for="name">Participant Name</label>
+    <input type="text" id="name" name="name" placeholder="Participant Name" required>
 
-    <label>Age Category</label>
-    <select name="ageCategory" required>
+    <label for="chest">Chest Number</label>
+    <input type="number" id="chest" name="chest" placeholder="Chest Number" required>
+
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" name="dob" title="Date of Birth" required>
+
+    <label for="ageCategory">Age Category</label>
+    <select id="ageCategory" name="ageCategory" required>
       <option value="" disabled selected>Select Age Group</option>
       <option>Under 11</option>
       <option>Under 14</option>
@@ -68,67 +34,81 @@
       <option>Under 19</option>
     </select>
 
-    <label>Gender</label>
-    <select name="gender" required>
+    <label for="gender">Gender</label>
+    <select id="gender" name="gender" required>
       <option value="" disabled selected>Select Gender</option>
       <option>Male</option>
       <option>Female</option>
       <option>Other</option>
     </select>
 
-    <label>Choose Events (select any event within the limit)</label>
-    <div id="event-options">
-      <label><input type="checkbox" name="events" value="50m Race"> 50m Race</label>
-      <label><input type="checkbox" name="events" value="100m Race"> 100m Race</label>
-      <label><input type="checkbox" name="events" value="200m"> 200m</label>
-      <label><input type="checkbox" name="events" value="400m"> 400m</label>
-      <label><input type="checkbox" name="events" value="800m"> 800m</label>
-      <label><input type="checkbox" name="events" value="1500m"> 1500m</label>
-      <label><input type="checkbox" name="events" value="Shot Put"> Shot Put</label>
-      <label><input type="checkbox" name="events" value="Discus Throw"> Discus Throw</label>
-      <label><input type="checkbox" name="events" value="Long Jump"> Long Jump</label>
-      <label><input type="checkbox" name="events" value="High Jump"> High Jump</label>
-      <label><input type="checkbox" name="events" value="4x100m Relay"> 4x100m Relay</label>
-      <label><input type="checkbox" name="events" value="4x400m Relay"> 4x400m Relay</label>
-    </div>
+    <fieldset>
+      <legend>Choose Events (select one or more)</legend>
+      <div id="event-options">
+        <label><input type="checkbox" name="events" value="50m Race"> 50m Race</label>
+        <label><input type="checkbox" name="events" value="100m Race"> 100m Race</label>
+        <label><input type="checkbox" name="events" value="200m"> 200m</label>
+        <label><input type="checkbox" name="events" value="400m"> 400m</label>
+        <label><input type="checkbox" name="events" value="800m"> 800m</label>
+        <label><input type="checkbox" name="events" value="1500m"> 1500m</label>
+        <label><input type="checkbox" name="events" value="Shot Put"> Shot Put</label>
+        <label><input type="checkbox" name="events" value="Discus Throw"> Discus Throw</label>
+        <label><input type="checkbox" name="events" value="Long Jump"> Long Jump</label>
+        <label><input type="checkbox" name="events" value="High Jump"> High Jump</label>
+        <label><input type="checkbox" name="events" value="4x100m Relay"> 4x100m Relay</label>
+        <label><input type="checkbox" name="events" value="4x400m Relay"> 4x400m Relay</label>
+      </div>
+    </fieldset>
 
-    <label>Upload Photo</label>
-    <input type="file" name="photo" accept="image/*" required>
+    <label for="photo">Upload Photo</label>
+    <input type="file" id="photo" name="photo" accept="image/*" required>
 
     <button type="submit">Submit</button>
   </form>
 
-  <div id="status"></div>
+  <div id="status" role="status" aria-live="polite"></div>
+
+  <!-- ✅ New Button to Download School-Specific Responses -->
+  <button onclick="promptDownload()">⬇ Download My Responses</button>
 
   <script>
     document.getElementById('regForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      const statusDiv = document.getElementById("status");
-      statusDiv.innerText = "⏳ Submitting...";
-      statusDiv.style.opacity = 1;
+      document.getElementById("status").innerText = "⏳ Submitting...";
+      document.getElementById("status").style.opacity = 1;
 
-      const form = e.target;
-      const formData = new FormData(form);
+      const formData = new FormData(this);
 
+      // Collect selected events manually
       const selectedEvents = Array.from(document.querySelectorAll('input[name="events"]:checked'))
                                   .map(input => input.value);
 
-      formData.set("events", selectedEvents);
+      // Remove default checkbox values and re-append selected ones
+      formData.delete("events");
+      selectedEvents.forEach(event => formData.append("events", event));
 
-      fetch('/results', {
+      fetch('/submit', {
         method: 'POST',
         body: formData
       })
       .then(res => res.json())
       .then(data => {
-        statusDiv.innerText = "✅ Submission recorded!";
-        form.reset();
+        document.getElementById("status").innerText = "✅ " + data.message;
+        this.reset();
       })
       .catch(error => {
-        statusDiv.innerText = "❌ Submission failed. Try again.";
+        document.getElementById("status").innerText = "❌ Submission failed. Try again.";
         console.error(error);
       });
     });
+
+    // ✅ Prompt for school name and download school-specific Excel
+    function promptDownload() {
+      const school = prompt("Enter your school name to download your responses:");
+      if (school && school.trim()) {
+        window.location.href = `/export-school?school=${encodeURIComponent(school.trim())}`;
+      }
+    }
   </script>
 </body>
 </html>

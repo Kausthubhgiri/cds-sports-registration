@@ -25,30 +25,15 @@
       font-size: 1rem;
       cursor: pointer;
     }
-    .age-header {
-      font-size: 1.3rem;
-      margin-top: 2rem;
-      color: #333;
-    }
     .card {
       background: white;
       padding: 1rem;
       margin: 0.5rem 0;
       border-left: 6px solid #007bff;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
     }
     .info {
-      flex: 1 1 300px;
       margin-bottom: 0.3rem;
-    }
-    .photo {
-      max-width: 100px;
-      max-height: 100px;
-      margin-right: 1rem;
-      border-radius: 4px;
     }
     .timestamp {
       font-size: 0.9rem;
@@ -57,72 +42,75 @@
   </style>
 </head>
 <body>
-  <h1>📊 CDS Sports Meet – Live Dashboard</h1>
-  <div id="count">Total Entries: 0</div>
-
-  <button onclick="window.location.href='/export'">⬇ Export to Excel</button>
-  <button onclick="resetAll()">🗑️ Reset All Responses</button>
-  <button onclick="resetLast()">↩️ Undo Last Response</button>
-
-  <div id="results"></div>
+  <h1>🏅 CDS Sports Meet – Admin Dashboard</h1>
+  <div id="resultsContainer"></div>
 
   <script>
-    function loadResults() {
-      fetch('/results')
-        .then(res => res.json())
-        .then(data => {
-          document.getElementById('count').textContent = `Total Entries: ${data.length}`;
+    fetch('/results')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('resultsContainer');
+        const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
 
-          const grouped = {};
-          data.forEach(entry => {
-            if (!grouped[entry.ageCategory]) grouped[entry.ageCategory] = [];
-            grouped[entry.ageCategory].push(entry);
+        const schools = [...new Set(data.map(entry => entry.school))].sort();
+
+        schools.forEach(school => {
+          const schoolSection = document.createElement('details');
+          schoolSection.innerHTML = `<summary>🏫 <strong>${school}</strong></summary>`;
+
+          const schoolEntries = data.filter(e => e.school === school);
+
+          // Group by event
+          const eventMap = {};
+          schoolEntries.forEach(entry => {
+            entry.events.forEach(event => {
+              eventMap[event] = eventMap[event] || [];
+              eventMap[event].push(entry);
+            });
           });
 
-          const html = Object.keys(grouped).map(ageGroup => {
-            const cards = grouped[ageGroup].map(d => `
-              <div class="card">
-                ${d.photo ? `<img src="${d.photo}" alt="Photo" class="photo">` : ""}
-                <div class="info"><strong>🏫 ${d.school}</strong></div>
-                <div class="info">👤 ${d.name}</div>
-                <div class="info">🎽 Chest Number: ${d.chest || "N/A"}</div>
-                <div class="info">📅 DOB: ${d.dob || "N/A"}</div>
-                <div class="info">⚧ Gender: ${d.gender || "N/A"}</div>
-                <div class="info">🏅 Event: ${d.category}</div>
-                <div class="info">🧒 Age Category: ${d.ageCategory}</div>
-                ${d.timestamp ? `<div class="timestamp">🕒 ${d.timestamp}</div>` : ""}
-              </div>
-            `).join('');
-            return `<div>
-                      <div class="age-header">🧒 Age Group: ${ageGroup}</div>
-                      ${cards}
-                    </div>`;
-          }).join('');
+          Object.entries(eventMap).forEach(([eventName, participants]) => {
+            const eventSection = document.createElement('details');
+            eventSection.innerHTML = `<summary>🎯 <strong>${eventName}</strong></summary>`;
 
-          document.getElementById('results').innerHTML = html;
+            // Sort by age category
+            participants.sort((a, b) =>
+              ageOrder.indexOf(a.ageCategory) - ageOrder.indexOf(b.ageCategory)
+            );
+
+            const table = document.createElement('table');
+            table.style.marginBottom = '1em';
+            table.innerHTML = `
+              <tr>
+                <th>Name</th>
+                <th>Chest</th>
+                <th>DOB</th>
+                <th>Age Category</th>
+                <th>Gender</th>
+                <th>Timestamp</th>
+              </tr>
+            `;
+
+            participants.forEach(p => {
+              const row = `
+                <tr>
+                  <td>${p.name}</td>
+                  <td>${p.chest}</td>
+                  <td>${p.dob}</td>
+                  <td>${p.ageCategory}</td>
+                  <td>${p.gender}</td>
+                  <td>${p.timestamp}</td>
+                </tr>
+              `;
+              table.innerHTML += row;
+            });
+
+            eventSection.appendChild(table);
+            schoolSection.appendChild(eventSection);
+          });
+
+          container.appendChild(schoolSection);
         });
-    }
-
-    function resetAll() {
-      fetch('/reset-all', { method: 'POST' })
-        .then(res => res.text())
-        .then(msg => {
-          alert(msg);
-          loadResults();
-        });
-    }
-
-    function resetLast() {
-      fetch('/reset-last', { method: 'POST' })
-        .then(res => res.text())
-        .then(msg => {
-          alert(msg);
-          loadResults();
-        });
-    }
-
-    setInterval(loadResults, 5000);
-    loadResults();
+      });
   </script>
 </body>
-</html>
