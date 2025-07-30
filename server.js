@@ -235,3 +235,8 @@ app.get('/export-school', async (req, res) => {
   await workbook.xlsx.write(res);
   res.end();
 });
+const port = 3000; // Force local port 3000
+
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
+});
