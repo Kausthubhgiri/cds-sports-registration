@@ -39,12 +39,17 @@
       font-size: 0.9rem;
       color: #555;
     }
+    .age-header {
+      font-size: 1.3rem;
+      margin-top: 2rem;
+      color: #333;
+    }
   </style>
 </head>
 <body>
   <h1>📊 CDS Sports Meet – Live Dashboard</h1>
   <div id="count">Total Entries: 0</div>
-  
+
   <button onclick="window.location.href='/export'">⬇ Export to Excel</button>
   <button onclick="resetAll()">🗑️ Reset All Responses</button>
   <button onclick="resetLast()">↩️ Undo Last Response</button>
@@ -57,13 +62,32 @@
         .then(res => res.json())
         .then(data => {
           document.getElementById('count').textContent = `Total Entries: ${data.length}`;
-          const html = data.map(d => `
-            <div class="card">
-              <div class="info"><strong>🏫 ${d.school}</strong></div>
-              <div class="info">👤 ${d.name}</div>
-              <div class="info">🏅 ${d.category}</div>
-              ${d.timestamp ? `<div class="timestamp">🕒 ${d.timestamp}</div>` : ""}
-            </div>`).join('');
+
+          // 🔄 Group results by age category
+          const grouped = {};
+          data.forEach(entry => {
+            if (!grouped[entry.ageCategory]) {
+              grouped[entry.ageCategory] = [];
+            }
+            grouped[entry.ageCategory].push(entry);
+          });
+
+          // 🧩 Generate HTML with age category headers
+          const html = Object.keys(grouped).map(ageGroup => {
+            const cards = grouped[ageGroup].map(d => `
+              <div class="card">
+                <div class="info"><strong>🏫 ${d.school}</strong></div>
+                <div class="info">👤 ${d.name}</div>
+                <div class="info">🏅 ${d.category}</div>
+                <div class="info">📅 Age Category: ${d.ageCategory}</div>
+                ${d.timestamp ? `<div class="timestamp">🕒 ${d.timestamp}</div>` : ""}
+              </div>`).join('');
+            return `<div>
+                      <div class="age-header">🧒 Age Group: ${ageGroup}</div>
+                      ${cards}
+                    </div>`;
+          }).join('');
+
           document.getElementById('results').innerHTML = html;
         });
     }

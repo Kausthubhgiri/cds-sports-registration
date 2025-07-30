@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -31,30 +30,30 @@ app.use(express.static('public'));
 
 // 📝 Route: Handle form submissions at /submit
 app.post('/submit', (req, res) => {
-  const { school, name, category } = req.body;
-  if (!school || !name || !category) return res.status(400).send("Missing fields");
+  const { school, name, category, ageCategory } = req.body;
+  if (!school || !name || !category || !ageCategory) return res.status(400).send("Missing fields");
 
   const categories = category.split(',').map(c => c.trim());
   const timestamp = new Date().toLocaleString('en-IN', { hour12: false });
 
   categories.forEach(cat => {
-    data.push({ school, name, category: cat, timestamp });
+    data.push({ school, name, category: cat, ageCategory, timestamp });
   });
 
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
   res.send("Success");
 });
 
-// 🆕 Route: Duplicate logic for /results (POST) — matches frontend call
+// 🆕 Route: Duplicate logic for /results (POST)
 app.post('/results', (req, res) => {
-  const { school, name, category } = req.body;
-  if (!school || !name || !category) return res.status(400).send("Missing fields");
+  const { school, name, category, ageCategory } = req.body;
+  if (!school || !name || !category || !ageCategory) return res.status(400).send("Missing fields");
 
   const categories = category.split(',').map(c => c.trim());
   const timestamp = new Date().toLocaleString('en-IN', { hour12: false });
 
   categories.forEach(cat => {
-    data.push({ school, name, category: cat, timestamp });
+    data.push({ school, name, category: cat, ageCategory, timestamp });
   });
 
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
@@ -63,7 +62,14 @@ app.post('/results', (req, res) => {
 
 // 📊 Route: Return sorted results to admin dashboard
 app.get('/results', (req, res) => {
-  const sorted = [...data].sort((a, b) => a.school.localeCompare(b.school));
+  const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
+
+  const sorted = [...data].sort((a, b) => {
+    const ageCompare = ageOrder.indexOf(a.ageCategory) - ageOrder.indexOf(b.ageCategory);
+    if (ageCompare !== 0) return ageCompare;
+    return a.school.localeCompare(b.school);
+  });
+
   res.json(sorted);
 });
 
