@@ -267,4 +267,4 @@ app.get('/export-school', async (req, res) => {
 
   res.setHeader(
     'Content-Type',
-    'application/vnd.openxmlformats
+    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
