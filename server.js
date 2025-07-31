@@ -109,10 +109,8 @@ app.get('/export', (req, res) => {
   const ExcelJS = require('exceljs');
   const workbook = new ExcelJS.Workbook();
   const sheet = workbook.addWorksheet('CDS Sports Results');
-const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
+  const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
 
-
-  // Helper to group by key
   function groupBy(array, key) {
     return array.reduce((acc, item) => {
       const group = item[key];
@@ -144,35 +142,39 @@ const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
       });
     });
 
-  for (const [eventName, participants] of Object.entries(eventMap)) {
-  sheet.addRow([`Event: ${eventName}`]);
+    for (const [eventName, participants] of Object.entries(eventMap)) {
+      sheet.addRow([`Event: ${eventName}`]);
 
-  const ageGroups = {};
-  participants.forEach(p => {
-    ageGroups[p.ageCategory] = ageGroups[p.ageCategory] || [];
-    ageGroups[p.ageCategory].push(p);
-  });
+      const ageGroups = {};
+      participants.forEach(p => {
+        ageGroups[p.ageCategory] = ageGroups[p.ageCategory] || [];
+        ageGroups[p.ageCategory].push(p);
+      });
 
-  const sortedAgeGroups = ageOrder.filter(age => ageGroups[age]);
-  for (const ageCategory of sortedAgeGroups) {
-    sheet.addRow([`Age Category: ${ageCategory}`]);
-    sheet.addRow(['Name', 'Chest', 'DOB', 'Gender', 'Timestamp']);
+      const sortedAgeGroups = ageOrder.filter(age => ageGroups[age]);
 
-    ageGroups[ageCategory].forEach(p => {
-      sheet.addRow([
-        p.name,
-        p.chest,
-        p.dob,
-        p.gender,
-        p.timestamp
-      ]);
-    });
+      for (const ageCategory of sortedAgeGroups) {
+        sheet.addRow([`Age Category: ${ageCategory}`]);
+        sheet.addRow(['Name', 'Chest', 'DOB', 'Gender', 'Timestamp']);
+
+        ageGroups[ageCategory].forEach(p => {
+          sheet.addRow([
+            p.name,
+            p.chest,
+            p.dob,
+            p.gender,
+            p.timestamp
+          ]);
+        });
+
+        sheet.addRow([]);
+      }
+
+      sheet.addRow([]);
+    }
 
     sheet.addRow([]);
   }
-
-  sheet.addRow([]);
-}
 
   res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
   res.setHeader('Content-Disposition', 'attachment; filename=cds_sports_results.xlsx');
@@ -258,7 +260,7 @@ app.get('/export-school', async (req, res) => {
 
     for (const ageCategory of sortedAgeGroups) {
       sheet.addRow([`Age Category: ${ageCategory}`]);
-      sheet.addRow(['Name', 'Chest', 'DOB', 'Gender', 'Timestamp']);
+            sheet.addRow(['Name', 'Chest', 'DOB', 'Gender', 'Timestamp']);
 
       ageGroups[ageCategory].forEach(p => {
         sheet.addRow([
@@ -277,17 +279,19 @@ app.get('/export-school', async (req, res) => {
   }
 
   res.setHeader(
-  'Content-Type',
-  'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-);
-res.setHeader(
-  'Content-Disposition',
-  `attachment; filename=${schoolName.replace(/\s+/g, '_')}_responses.xlsx`
-);
+    'Content-Type',
+    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+  );
+  res.setHeader(
+    'Content-Disposition',
+    `attachment; filename=${schoolName.replace(/\s+/g, '_')}_responses.xlsx`
+  );
 
-await workbook.xlsx.write(res);
-res.end();
+  await workbook.xlsx.write(res);
+  res.end();
 });
+
+// 🚀 Start the server
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
