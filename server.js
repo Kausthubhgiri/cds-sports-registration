@@ -203,26 +203,41 @@ app.get('/export-school', async (req, res) => {
     });
   });
 
-  for (const [eventName, participants] of Object.entries(eventMap)) {
-    sheet.addRow([`Event: ${eventName}`]);
-    sheet.addRow(['Name', 'Chest', 'DOB', 'Age Category', 'Gender', 'Timestamp']);
+ for (const [eventName, participants] of Object.entries(eventMap)) {
+  sheet.addRow([`Event: ${eventName}`]);
 
-    participants
-      .sort((a, b) => ageOrder.indexOf(a.ageCategory) - ageOrder.indexOf(b.ageCategory))
-      .forEach(p => {
-        sheet.addRow([
-          p.name,
-          p.chest,
-          p.dob,
-          p.ageCategory,
-          p.gender,
-          p.timestamp
-        ]);
-      });
+  // Group by age category
+  const ageGroups = {};
+  participants.forEach(p => {
+    ageGroups[p.ageCategory] = ageGroups[p.ageCategory] || [];
+    ageGroups[p.ageCategory].push(p);
+  });
 
-    sheet.addRow([]); // Blank row between events
+  // Sort age categories by defined order
+  const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
+  const sortedAgeGroups = Object.keys(ageGroups).sort(
+    (a, b) => ageOrder.indexOf(a) - ageOrder.indexOf(b)
+  );
+
+  for (const ageCategory of sortedAgeGroups) {
+    sheet.addRow([`Age Category: ${ageCategory}`]);
+    sheet.addRow(['Name', 'Chest', 'DOB', 'Gender', 'Timestamp']);
+
+    ageGroups[ageCategory].forEach(p => {
+      sheet.addRow([
+        p.name,
+        p.chest,
+        p.dob,
+        p.gender,
+        p.timestamp
+      ]);
+    });
+
+    sheet.addRow([]); // Blank row between age categories
   }
 
+  sheet.addRow([]); // Blank row between events
+}
   res.setHeader(
     'Content-Type',
     'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
