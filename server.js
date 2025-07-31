@@ -266,5 +266,14 @@ app.get('/export-school', async (req, res) => {
   }
 
   res.setHeader(
-    'Content-Type',
-    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+  'Content-Type',
+  'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+);
+res.setHeader(
+  'Content-Disposition',
+  `attachment; filename=${schoolName.replace(/\s+/g, '_')}_responses.xlsx`
+);
+
+await workbook.xlsx.write(res);
+res.end();
+});
