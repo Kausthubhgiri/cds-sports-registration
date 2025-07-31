@@ -150,29 +150,43 @@
         return;
       }
 
-      const formData = new FormData(form);
+      const formData = new FormData();
 
-    fetch('/submit', {
-  method: 'POST',
-  body: formData
-})
-.then(async res => {
-  if (!res.ok) {
-    const errorText = await res.text();
-    throw new Error(errorText || 'Submission failed');
-  }
-  return res.json();
-})
-.then(data => {
-  statusDiv.textContent = "✅ Registration successful!";
-  form.reset();
-  preview.style.display = 'none';
-})
-.catch(err => {
-  console.error("❌ Submission error:", err);
-  statusDiv.textContent = `❌ ${err.message}`;
-});
+      // Append all form fields manually
+      formData.append('school', form.school.value);
+      formData.append('name', form.name.value);
+      formData.append('chest', form.chest.value);
+      formData.append('dob', form.dob.value);
+      formData.append('ageCategory', form.ageCategory.value);
+      formData.append('gender', form.gender.value);
+      formData.append('photo', photoInput.files[0]);
+
+      // Append each selected event
+      eventsChecked.forEach(event => {
+        formData.append('events', event.value);
+      });
+
+      fetch('/submit', {
+        method: 'POST',
+        body: formData
+      })
+      .then(async res => {
+        if (!res.ok) {
+          const errorText = await res.text();
+          throw new Error(errorText || 'Submission failed');
+        }
+        return res.json();
+      })
+      .then(data => {
+        statusDiv.textContent = "✅ Registration successful!";
+        form.reset();
+        preview.style.display = 'none';
+      })
+      .catch(err => {
+        console.error("❌ Submission error:", err);
+        statusDiv.textContent = `❌ ${err.message}`;
+      });
+    });
   </script>
 </body>
 </html>
- 
