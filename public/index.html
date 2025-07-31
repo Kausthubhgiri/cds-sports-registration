@@ -152,21 +152,26 @@
 
       const formData = new FormData(form);
 
-      fetch('/submit', {
-        method: 'POST',
-        body: formData
-      })
-      .then(res => res.json())
-      .then(data => {
-        statusDiv.textContent = "✅ Registration successful!";
-        form.reset();
-        preview.style.display = 'none';
-      })
-      .catch(err => {
-        console.error("❌ Submission error:", err);
-        statusDiv.textContent = "❌ Submission failed. Please try again.";
-      });
-    });
+    fetch('/submit', {
+  method: 'POST',
+  body: formData
+})
+.then(async res => {
+  if (!res.ok) {
+    const errorText = await res.text();
+    throw new Error(errorText || 'Submission failed');
+  }
+  return res.json();
+})
+.then(data => {
+  statusDiv.textContent = "✅ Registration successful!";
+  form.reset();
+  preview.style.display = 'none';
+})
+.catch(err => {
+  console.error("❌ Submission error:", err);
+  statusDiv.textContent = `❌ ${err.message}`;
+});
   </script>
 </body>
 </html>
