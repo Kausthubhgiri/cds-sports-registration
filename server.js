@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -11,6 +10,9 @@ const filePath = path.join(__dirname, 'results.json');
 
 // 📁 Setup multer for image uploads
 const upload = multer({ dest: 'uploads/' });
+
+// 📷 Serve uploaded images statically
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 let data = [];
 
@@ -39,7 +41,7 @@ app.post('/submit', upload.single('photo'), (req, res) => {
   const photo = req.file;
 
   if (!school || !name || !chest || !dob || !ageCategory || !gender || !events || !photo) {
-    return res.status(400).send("Missing fields");
+    return res.status(400).json({ error: "Missing fields" });
   }
 
   const timestamp = new Date().toLocaleString('en-IN', { hour12: false });
@@ -52,7 +54,7 @@ app.post('/submit', upload.single('photo'), (req, res) => {
     ageCategory,
     gender,
     events: Array.isArray(events) ? events : [events],
-    photoPath: photo.path,
+    photoPath: `/uploads/${photo.filename}`,
     timestamp
   };
 
@@ -80,7 +82,7 @@ app.post('/results', upload.single('photo'), (req, res) => {
     ageCategory,
     gender,
     events: Array.isArray(events) ? events : [events],
-    photoPath: photo.path,
+    photoPath: `/uploads/${photo.filename}`,
     timestamp
   };
 
@@ -89,13 +91,20 @@ app.post('/results', upload.single('photo'), (req, res) => {
   res.send("Success");
 });
 
-// 📊 Route: Return sorted results to admin dashboard
+// 📊 Route: Return sorted results to admin dashboard (reads fresh data)
 app.get('/results', (req, res) => {
-  const sorted = [...data].sort((a, b) => a.school.localeCompare(b.school));
-  res.json(sorted);
+  try {
+    const fileData = fs.readFileSync(filePath, 'utf8');
+    const parsed = fileData.trim() ? JSON.parse(fileData) : [];
+    const sorted = [...parsed].sort((a, b) => a.school.localeCompare(b.school));
+    res.json(sorted);
+  } catch (err) {
+    console.error("❌ Failed to read results.json:", err);
+    res.status(500).json({ error: "Failed to load results" });
+  }
 });
 
-// 📁 Route: Export results to Excel in grouped format
+// 📁 Route: Export results to Excel in grouped format (uses fresh data)
 app.get('/export', (req, res) => {
   const ExcelJS = require('exceljs');
   const workbook = new ExcelJS.Workbook();
@@ -111,12 +120,20 @@ app.get('/export', (req, res) => {
     }, {});
   }
 
-  const schools = groupBy(data, 'school');
+  let exportData = [];
+  try {
+    const fileData = fs.readFileSync(filePath, 'utf8');
+    exportData = fileData.trim() ? JSON.parse(fileData) : [];
+  } catch (err) {
+    console.error("❌ Failed to read results.json:", err);
+    return res.status(500).send("Failed to export data");
+  }
+
+  const schools = groupBy(exportData, 'school');
 
   for (const [schoolName, entries] of Object.entries(schools)) {
     sheet.addRow([`School: ${schoolName}`]);
 
-    // Flatten all events across entries
     const eventMap = {};
     entries.forEach(entry => {
       entry.events.forEach(event => {
@@ -140,10 +157,10 @@ app.get('/export', (req, res) => {
         ]);
       });
 
-      sheet.addRow([]); // Blank row between events
+      sheet.addRow([]);
     }
 
-    sheet.addRow([]); // Blank row between schools
+    sheet.addRow([]);
   }
 
   res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
@@ -151,6 +168,7 @@ app.get('/export', (req, res) => {
 
   workbook.xlsx.write(res).then(() => res.end());
 });
+
 // 🔁 Route: Reset all saved responses
 app.post('/reset-all', (req, res) => {
   data = [];
@@ -168,12 +186,14 @@ app.post('/reset-last', (req, res) => {
     res.send("No responses to remove.");
   }
 });
+
 // 🏫 Route: Get list of all unique schools from results.json
 app.get('/schools', (req, res) => {
   const schools = [...new Set(data.map(entry => entry.school))].sort();
   res.json(schools);
 });
 
+// 🏫 Route: Export responses for a specific school
 app.get('/export-school', async (req, res) => {
   const ExcelJS = require('exceljs');
   const schoolName = req.query.school;
@@ -182,7 +202,16 @@ app.get('/export-school', async (req, res) => {
     return res.status(400).send("School name is required.");
   }
 
-  const filtered = data.filter(entry =>
+  let exportData = [];
+  try {
+    const fileData = fs.readFileSync(filePath, 'utf8');
+    exportData = fileData.trim() ? JSON.parse(fileData) : [];
+  } catch (err) {
+    console.error("❌ Failed to read results.json:", err);
+    return res.status(500).send("Failed to export school data");
+  }
+
+  const filtered = exportData.filter(entry =>
     entry.school.toLowerCase() === schoolName.toLowerCase()
   );
 
@@ -193,8 +222,6 @@ app.get('/export-school', async (req, res) => {
   const workbook = new ExcelJS.Workbook();
   const sheet = workbook.addWorksheet(`Responses – ${schoolName}`);
 
-  const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
-
   const eventMap = {};
   filtered.forEach(entry => {
     entry.events.forEach(event => {
@@ -203,55 +230,41 @@ app.get('/export-school', async (req, res) => {
     });
   });
 
- for (const [eventName, participants] of Object.entries(eventMap)) {
-  sheet.addRow([`Event: ${eventName}`]);
-
-  // Group by age category
-  const ageGroups = {};
-  participants.forEach(p => {
-    ageGroups[p.ageCategory] = ageGroups[p.ageCategory] || [];
-    ageGroups[p.ageCategory].push(p);
-  });
-
-  // Sort age categories by defined order
   const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
-  const sortedAgeGroups = Object.keys(ageGroups).sort(
-    (a, b) => ageOrder.indexOf(a) - ageOrder.indexOf(b)
-  );
 
-  for (const ageCategory of sortedAgeGroups) {
-    sheet.addRow([`Age Category: ${ageCategory}`]);
-    sheet.addRow(['Name', 'Chest', 'DOB', 'Gender', 'Timestamp']);
+  for (const [eventName, participants] of Object.entries(eventMap)) {
+    sheet.addRow([`Event: ${eventName}`]);
 
-    ageGroups[ageCategory].forEach(p => {
-      sheet.addRow([
-        p.name,
-        p.chest,
-        p.dob,
-        p.gender,
-        p.timestamp
-      ]);
+    const ageGroups = {};
+    participants.forEach(p => {
+      ageGroups[p.ageCategory] = ageGroups[p.ageCategory] || [];
+      ageGroups[p.ageCategory].push(p);
     });
 
-    sheet.addRow([]); // Blank row between age categories
+    const sortedAgeGroups = Object.keys(ageGroups).sort(
+      (a, b) => ageOrder.indexOf(a) - ageOrder.indexOf(b)
+    );
+
+    for (const ageCategory of sortedAgeGroups) {
+      sheet.addRow([`Age Category: ${ageCategory}`]);
+      sheet.addRow(['Name', 'Chest', 'DOB', 'Gender', 'Timestamp']);
+
+      ageGroups[ageCategory].forEach(p => {
+        sheet.addRow([
+          p.name,
+          p.chest,
+          p.dob,
+          p.gender,
+          p.timestamp
+        ]);
+      });
+
+      sheet.addRow([]);
+    }
+
+    sheet.addRow([]);
   }
 
-  sheet.addRow([]); // Blank row between events
-}
   res.setHeader(
     'Content-Type',
-    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-  );
-  res.setHeader(
-    'Content-Disposition',
-    `attachment; filename=${schoolName}_responses.xlsx`
-  );
-
-  await workbook.xlsx.write(res);
-  res.end();
-});
-const port = 3000; // Force local port 3000
-
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
-});
+    'application/vnd.openxmlformats
