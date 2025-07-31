@@ -24,6 +24,13 @@
       padding: 0.6rem 1rem;
       font-size: 1rem;
       cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #0056b3;
     }
     .card {
       background: white;
@@ -39,78 +46,124 @@
       font-size: 0.9rem;
       color: #555;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.5rem;
+    }
+    th, td {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+    details {
+      margin-bottom: 1rem;
+    }
   </style>
 </head>
 <body>
   <h1>🏅 CDS Sports Meet – Admin Dashboard</h1>
+
+  <button onclick="window.location.href='/export'">⬇ Export to Excel</button>
+  <button onclick="resetAll()">🗑️ Reset All Responses</button>
+  <button onclick="resetLast()">↩️ Undo Last Response</button>
+
   <div id="resultsContainer"></div>
 
   <script>
-    fetch('/results')
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById('resultsContainer');
-        const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
+    const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
 
-        const schools = [...new Set(data.map(entry => entry.school))].sort();
+    function loadResults() {
+      fetch('/results')
+        .then(res => res.json())
+        .then(data => {
+          const container = document.getElementById('resultsContainer');
+          container.innerHTML = ''; // Clear previous results
 
-        schools.forEach(school => {
-          const schoolSection = document.createElement('details');
-          schoolSection.innerHTML = `<summary>🏫 <strong>${school}</strong></summary>`;
+          const schools = [...new Set(data.map(entry => entry.school))].sort();
 
-          const schoolEntries = data.filter(e => e.school === school);
+          schools.forEach(school => {
+            const schoolSection = document.createElement('details');
+            schoolSection.innerHTML = `<summary>🏫 <strong>${school}</strong></summary>`;
 
-          // Group by event
-          const eventMap = {};
-          schoolEntries.forEach(entry => {
-            entry.events.forEach(event => {
-              eventMap[event] = eventMap[event] || [];
-              eventMap[event].push(entry);
+            const schoolEntries = data.filter(e => e.school === school);
+
+            const eventMap = {};
+            schoolEntries.forEach(entry => {
+              entry.events.forEach(event => {
+                eventMap[event] = eventMap[event] || [];
+                eventMap[event].push(entry);
+              });
             });
-          });
 
-          Object.entries(eventMap).forEach(([eventName, participants]) => {
-            const eventSection = document.createElement('details');
-            eventSection.innerHTML = `<summary>🎯 <strong>${eventName}</strong></summary>`;
+            Object.entries(eventMap).forEach(([eventName, participants]) => {
+              const eventSection = document.createElement('details');
+              eventSection.innerHTML = `<summary>🎯 <strong>${eventName}</strong></summary>`;
 
-            // Sort by age category
-            participants.sort((a, b) =>
-              ageOrder.indexOf(a.ageCategory) - ageOrder.indexOf(b.ageCategory)
-            );
+              participants.sort((a, b) =>
+                ageOrder.indexOf(a.ageCategory) - ageOrder.indexOf(b.ageCategory)
+              );
 
-            const table = document.createElement('table');
-            table.style.marginBottom = '1em';
-            table.innerHTML = `
-              <tr>
-                <th>Name</th>
-                <th>Chest</th>
-                <th>DOB</th>
-                <th>Age Category</th>
-                <th>Gender</th>
-                <th>Timestamp</th>
-              </tr>
-            `;
-
-            participants.forEach(p => {
-              const row = `
+              const table = document.createElement('table');
+              table.innerHTML = `
                 <tr>
-                  <td>${p.name}</td>
-                  <td>${p.chest}</td>
-                  <td>${p.dob}</td>
-                  <td>${p.ageCategory}</td>
-                  <td>${p.gender}</td>
-                  <td>${p.timestamp}</td>
+                  <th>Name</th>
+                  <th>Chest</th>
+                  <th>DOB</th>
+                  <th>Age Category</th>
+                  <th>Gender</th>
+                  <th>Timestamp</th>
                 </tr>
               `;
-              table.innerHTML += row;
+
+              participants.forEach(p => {
+                const row = `
+                  <tr>
+                    <td>${p.name}</td>
+                    <td>${p.chest}</td>
+                    <td>${p.dob}</td>
+                    <td>${p.ageCategory}</td>
+                    <td>${p.gender}</td>
+                    <td>${p.timestamp}</td>
+                  </tr>
+                `;
+                table.innerHTML += row;
+              });
+
+              eventSection.appendChild(table);
+              schoolSection.appendChild(eventSection);
             });
 
-            eventSection.appendChild(table);
-            schoolSection.appendChild(eventSection);
+            container.appendChild(schoolSection);
           });
-
-          container.appendChild(schoolSection);
         });
-      });
+    }
+
+    function resetAll() {
+      fetch('/reset-all', { method: 'POST' })
+        .then(res => res.text())
+        .then(msg => {
+          alert(msg);
+          loadResults();
+        });
+    }
+
+    function resetLast() {
+      fetch('/reset-last', { method: 'POST' })
+        .then(res => res.text())
+        .then(msg => {
+          alert(msg);
+          loadResults();
+        });
+    }
+
+    setInterval(loadResults, 5000); // Refresh every 5 seconds
+    loadResults(); // Initial load
   </script>
 </body>
+</html>

@@ -68,47 +68,4 @@
 
   <div id="status" role="status" aria-live="polite"></div>
 
-  <!-- ✅ New Button to Download School-Specific Responses -->
-  <button onclick="promptDownload()">⬇ Download My Responses</button>
-
-  <script>
-    document.getElementById('regForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      document.getElementById("status").innerText = "⏳ Submitting...";
-      document.getElementById("status").style.opacity = 1;
-
-      const formData = new FormData(this);
-
-      // Collect selected events manually
-      const selectedEvents = Array.from(document.querySelectorAll('input[name="events"]:checked'))
-                                  .map(input => input.value);
-
-      // Remove default checkbox values and re-append selected ones
-      formData.delete("events");
-      selectedEvents.forEach(event => formData.append("events", event));
-
-      fetch('/submit', {
-        method: 'POST',
-        body: formData
-      })
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById("status").innerText = "✅ " + data.message;
-        this.reset();
-      })
-      .catch(error => {
-        document.getElementById("status").innerText = "❌ Submission failed. Try again.";
-        console.error(error);
-      });
-    });
-
-    // ✅ Prompt for school name and download school-specific Excel
-    function promptDownload() {
-      const school = prompt("Enter your school name to download your responses:");
-      if (school && school.trim()) {
-        window.location.href = `/export-school?school=${encodeURIComponent(school.trim())}`;
-      }
-    }
-  </script>
-</body>
-</html>
+ 
