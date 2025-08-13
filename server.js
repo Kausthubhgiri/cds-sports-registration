@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const XLSX = require('xlsx');
+const ExcelJS = require('exceljs');
 const multer = require('multer');
 
 const app = express();
@@ -35,13 +36,44 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
+// 📊 Load chest number ranges from Excel
+let chestRanges = {};
+let chestTracker = {};
+
+async function loadChestRanges() {
+  const workbook = new ExcelJS.Workbook();
+  await workbook.xlsx.readFile('chest_numbers.xlsx');
+  const sheet = workbook.getWorksheet(1);
+
+  sheet.eachRow((row, rowIndex) => {
+    if (rowIndex === 1) return; // Skip header
+    const school = row.getCell(1).value;
+    const start = parseInt(row.getCell(2).value);
+    const end = parseInt(row.getCell(3).value);
+    chestRanges[school] = { start, end };
+    chestTracker[school] = start;
+  });
+}
+
+loadChestRanges();
+
 // 📝 Route: Handle form submissions at /submit (with photo upload)
 app.post('/submit', upload.single('photo'), (req, res) => {
-  const { school, name, chest, dob, ageCategory, gender, events } = req.body;
+  const { school, name, dob, ageCategory, gender, events } = req.body;
   const photo = req.file;
 
-  if (!school || !name || !chest || !dob || !ageCategory || !gender || !events || !photo) {
+  if (!school || !name || !dob || !ageCategory || !gender || !events || !photo) {
     return res.status(400).json({ error: "Missing fields" });
+  }
+
+  const range = chestRanges[school];
+  if (!range) {
+    return res.status(400).json({ error: "School not found in chest number database." });
+  }
+
+  const nextChest = chestTracker[school]++;
+  if (nextChest > range.end) {
+    return res.status(400).json({ error: "Chest number range exhausted for this school." });
   }
 
   const timestamp = new Date().toLocaleString('en-IN', { hour12: false });
@@ -49,7 +81,7 @@ app.post('/submit', upload.single('photo'), (req, res) => {
   const entry = {
     school,
     name,
-    chest,
+    chest: nextChest,
     dob,
     ageCategory,
     gender,
@@ -60,16 +92,26 @@ app.post('/submit', upload.single('photo'), (req, res) => {
 
   data.push(entry);
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-  res.json({ message: "Success" });
+  res.json({ message: "Success", chest: nextChest });
 });
 
 // 🆕 Route: Duplicate logic for /results (POST) — matches frontend call
 app.post('/results', upload.single('photo'), (req, res) => {
-  const { school, name, chest, dob, ageCategory, gender, events } = req.body;
+  const { school, name, dob, ageCategory, gender, events } = req.body;
   const photo = req.file;
 
-  if (!school || !name || !chest || !dob || !ageCategory || !gender || !events || !photo) {
+  if (!school || !name || !dob || !ageCategory || !gender || !events || !photo) {
     return res.status(400).send("Missing fields");
+  }
+
+  const range = chestRanges[school];
+  if (!range) {
+    return res.status(400).send("School not found in chest number database.");
+  }
+
+  const nextChest = chestTracker[school]++;
+  if (nextChest > range.end) {
+    return res.status(400).send("Chest number range exhausted for this school.");
   }
 
   const timestamp = new Date().toLocaleString('en-IN', { hour12: false });
@@ -77,7 +119,7 @@ app.post('/results', upload.single('photo'), (req, res) => {
   const entry = {
     school,
     name,
-    chest,
+    chest: nextChest,
     dob,
     ageCategory,
     gender,
@@ -106,7 +148,6 @@ app.get('/results', (req, res) => {
 
 // 📁 Route: Export results to Excel in grouped format (uses fresh data)
 app.get('/export', (req, res) => {
-  const ExcelJS = require('exceljs');
   const workbook = new ExcelJS.Workbook();
   const sheet = workbook.addWorksheet('CDS Sports Results');
   const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
@@ -188,18 +229,23 @@ app.post('/reset-all', (req, res) => {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
   res.send("All responses have been reset.");
 });
-
-// 🔁 Route: Reset last response entry
+// 🔁 Route: Reset last response entry and chest number
 app.post('/reset-last', (req, res) => {
   if (data.length > 0) {
-    data.pop();
+    const lastEntry = data.pop();
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-    res.send("Last response has been removed.");
+
+    // Roll back chest number for the corresponding school
+    const school = lastEntry.school;
+    if (chestTracker[school] && chestTracker[school] > chestRanges[school].start) {
+      chestTracker[school]--;
+    }
+
+    res.send("Last response and chest number have been removed.");
   } else {
     res.send("No responses to remove.");
   }
 });
-
 // 🏫 Route: Get list of all unique schools from results.json
 app.get('/schools', (req, res) => {
   const schools = [...new Set(data.map(entry => entry.school))].sort();
@@ -208,14 +254,13 @@ app.get('/schools', (req, res) => {
 
 // 🏫 Route: Export responses for a specific school
 app.get('/export-school', async (req, res) => {
-  const ExcelJS = require('exceljs');
   const schoolName = req.query.school;
 
   if (!schoolName) {
     return res.status(400).send("School name is required.");
   }
 
-  let exportData = [];
+    let exportData = [];
   try {
     const fileData = fs.readFileSync(filePath, 'utf8');
     exportData = fileData.trim() ? JSON.parse(fileData) : [];
@@ -260,7 +305,7 @@ app.get('/export-school', async (req, res) => {
 
     for (const ageCategory of sortedAgeGroups) {
       sheet.addRow([`Age Category: ${ageCategory}`]);
-            sheet.addRow(['Name', 'Chest', 'DOB', 'Gender', 'Timestamp']);
+      sheet.addRow(['Name', 'Chest', 'DOB', 'Gender', 'Timestamp']);
 
       ageGroups[ageCategory].forEach(p => {
         sheet.addRow([
@@ -290,7 +335,30 @@ app.get('/export-school', async (req, res) => {
   await workbook.xlsx.write(res);
   res.end();
 });
+// 🧮 Route: Get next available chest number for a school
+app.get('/next-chest', (req, res) => {
+  const school = req.query.school;
+  if (!school) return res.json({ chest: null });
 
+  const normalized = school.trim().toLowerCase();
+
+  const matchKey = Object.keys(chestRanges).find(
+    key => key.trim().toLowerCase() === normalized
+  );
+
+  if (!matchKey) {
+    return res.json({ chest: null });
+  }
+
+  const range = chestRanges[matchKey];
+  const next = chestTracker[matchKey];
+
+  if (!range || next > range.end) {
+    return res.json({ chest: null });
+  }
+
+  res.json({ chest: next });
+});
 // 🚀 Start the server
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
