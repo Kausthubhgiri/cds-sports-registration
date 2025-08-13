@@ -73,7 +73,11 @@
 
   <form id="regForm" enctype="multipart/form-data">
     <label for="school">School Name</label>
-    <input type="text" id="school" name="school" placeholder="School Name" required>
+<select id="school" name="school" required>
+  <option value="" disabled selected>Select School Name</option>
+  <option>VISHWABHARATHY PUBLIC SCHOOL</option>
+  <option>Dr GR PUBLIC SCHOOL</option>
+</select>
 
     <label for="name">Participant Name</label>
     <input type="text" id="name" name="name" placeholder="Participant Name" required>
