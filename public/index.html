@@ -57,6 +57,12 @@
       max-width: 200px;
       display: none;
     }
+    #chestDisplay {
+      padding: 0.5rem;
+      background: #e0e0e0;
+      font-weight: bold;
+      margin-top: 0.3rem;
+    }
   </style>
 </head>
 <body>
@@ -72,8 +78,8 @@
     <label for="name">Participant Name</label>
     <input type="text" id="name" name="name" placeholder="Participant Name" required>
 
-    <label for="chest">Chest Number</label>
-    <input type="number" id="chest" name="chest" placeholder="Chest Number" required>
+    <label>Assigned Chest Number</label>
+    <div id="chestDisplay">Please select a school</div>
 
     <label for="dob">Date of Birth</label>
     <input type="date" id="dob" name="dob" title="Date of Birth" required>
@@ -129,6 +135,8 @@
     const photoInput = document.getElementById('photo');
     const preview = document.getElementById('preview');
     const eventCheckboxes = document.querySelectorAll('input[name="events"]');
+    const chestDisplay = document.getElementById('chestDisplay');
+    const schoolInput = document.getElementById('school');
 
     // Show photo preview
     photoInput.addEventListener('change', function () {
@@ -162,7 +170,19 @@
       });
     });
 
-    form.addEventListener('submit', function (e) {
+    // Fetch next chest number when school is selected
+    schoolInput.addEventListener('change', async function () {
+      const school = this.value;
+      try {
+        const res = await fetch(`/next-chest?school=${encodeURIComponent(school)}`);
+        const data = await res.json();
+        chestDisplay.textContent = data.chest ? `Chest Number: ${data.chest}` : 'Unavailable';
+      } catch (err) {
+        chestDisplay.textContent = 'Error fetching chest number';
+      }
+    });
+
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
 
       const eventsChecked = document.querySelectorAll('input[name="events"]:checked');
@@ -177,7 +197,6 @@
       const formData = new FormData();
       formData.append('school', form.school.value);
       formData.append('name', form.name.value);
-      formData.append('chest', form.chest.value);
       formData.append('dob', form.dob.value);
       formData.append('ageCategory', form.ageCategory.value);
       formData.append('gender', form.gender.value);
@@ -187,26 +206,23 @@
         formData.append('events', event.value);
       });
 
-      fetch('/submit', {
-        method: 'POST',
-        body: formData
-      })
-      .then(async res => {
-        if (!res.ok) {
-          const errorText = await res.text();
-          throw new Error(errorText || 'Submission failed');
-        }
-        return res.json();
-      })
-      .then(data => {
-        statusDiv.textContent = "✅ Registration successful!";
+      try {
+        const res = await fetch('/submit', {
+          method: 'POST',
+          body: formData
+        });
+
+        const result = await res.json();
+        if (!res.ok) throw new Error(result.error || 'Submission failed');
+
+               statusDiv.textContent = `✅ Registration successful! Assigned Chest Number: ${result.chest}`;
         form.reset();
         preview.style.display = 'none';
-      })
-      .catch(err => {
+        chestDisplay.textContent = 'Please select a school';
+      } catch (err) {
         console.error("❌ Submission error:", err);
         statusDiv.textContent = `❌ ${err.message}`;
-      });
+      }
     });
   </script>
 </body>
