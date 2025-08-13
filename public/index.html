@@ -63,6 +63,23 @@
       font-weight: bold;
       margin-top: 0.3rem;
     }
+    .popup {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: opacity 0.3s ease;
+    }
+    .popup.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
@@ -73,11 +90,11 @@
 
   <form id="regForm" enctype="multipart/form-data">
     <label for="school">School Name</label>
-<select id="school" name="school" required>
-  <option value="" disabled selected>Select School Name</option>
-  <option>VISHWABHARATHY PUBLIC SCHOOL</option>
-  <option>Dr GR PUBLIC SCHOOL</option>
-</select>
+    <select id="school" name="school" required>
+      <option value="" disabled selected>Select School Name</option>
+      <option>VISHWABHARATHY PUBLIC SCHOOL</option>
+      <option>Dr GR PUBLIC SCHOOL</option>
+    </select>
 
     <label for="name">Participant Name</label>
     <input type="text" id="name" name="name" placeholder="Participant Name" required>
@@ -133,7 +150,35 @@
 
   <div id="status" role="status" aria-live="polite"></div>
 
+  <!-- ✅ Popup container -->
+  <div id="popup" class="popup hidden">
+    <span id="popupMessage"></span>
+  </div>
+
   <script>
+    const dobInput = document.getElementById('dob');
+    const ageCategorySelect = document.getElementById('ageCategory');
+
+    dobInput.addEventListener('change', () => {
+      const dob = new Date(dobInput.value);
+      if (isNaN(dob)) return;
+
+      const year = dob.getFullYear();
+      const age = 2025 - year;
+
+      let category = '';
+      if (age <= 10) category = 'Under 11';
+      else if (age <= 13) category = 'Under 14';
+      else if (age <= 15) category = 'Under 16';
+      else if (age === 16) category = 'Under 17';
+      else if (age <= 18) category = 'Under 19';
+
+      const optionToSelect = Array.from(ageCategorySelect.options).find(opt => opt.value === category);
+      if (optionToSelect) {
+        ageCategorySelect.value = optionToSelect.value;
+      }
+    });
+
     const form = document.getElementById('regForm');
     const statusDiv = document.getElementById('status');
     const photoInput = document.getElementById('photo');
@@ -142,7 +187,6 @@
     const chestDisplay = document.getElementById('chestDisplay');
     const schoolInput = document.getElementById('school');
 
-    // Show photo preview
     photoInput.addEventListener('change', function () {
       const file = photoInput.files[0];
       if (file) {
@@ -153,7 +197,6 @@
       }
     });
 
-    // Limit selection: max 3 non-relays, max 2 relays
     eventCheckboxes.forEach(checkbox => {
       checkbox.addEventListener('change', () => {
         const selected = Array.from(eventCheckboxes).filter(cb => cb.checked);
@@ -174,13 +217,12 @@
       });
     });
 
-    // Fetch next chest number when school is selected
     schoolInput.addEventListener('change', async function () {
       const school = this.value;
       try {
         const res = await fetch(`/next-chest?school=${encodeURIComponent(school)}`);
         const data = await res.json();
-        chestDisplay.textContent = data.chest ? `Chest Number: ${data.chest}` : 'Unavailable';
+                chestDisplay.textContent = data.chest ? `Chest Number: ${data.chest}` : 'Unavailable';
       } catch (err) {
         chestDisplay.textContent = 'Error fetching chest number';
       }
@@ -195,6 +237,7 @@
 
       if (nonRelayChecked.length > 3 || relayChecked.length > 2) {
         statusDiv.textContent = "❌ Please follow the event selection limits: max 3 non-relays and 2 relays.";
+        showPopup("❌ Invalid event selection.");
         return;
       }
 
@@ -219,15 +262,28 @@
         const result = await res.json();
         if (!res.ok) throw new Error(result.error || 'Submission failed');
 
-               statusDiv.textContent = `✅ Registration successful! Assigned Chest Number: ${result.chest}`;
+        statusDiv.textContent = `✅ Registration successful! Assigned Chest Number: ${result.chest}`;
+        showPopup(`✅ Chest Number: ${result.chest}`);
         form.reset();
         preview.style.display = 'none';
         chestDisplay.textContent = 'Please select a school';
       } catch (err) {
         console.error("❌ Submission error:", err);
         statusDiv.textContent = `❌ ${err.message}`;
+        showPopup(`❌ ${err.message}`);
       }
     });
+
+    function showPopup(message) {
+      const popup = document.getElementById('popup');
+      const popupMessage = document.getElementById('popupMessage');
+      popupMessage.textContent = message;
+      popup.classList.remove('hidden');
+
+      setTimeout(() => {
+        popup.classList.add('hidden');
+      }, 3000);
+    }
   </script>
 </body>
 </html>
