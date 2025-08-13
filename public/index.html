@@ -97,7 +97,7 @@
     </select>
 
     <fieldset>
-      <legend>Choose Events (select one or more)</legend>
+      <legend>Choose Events (Max 3 non-relays & 2 relays)</legend>
       <div id="event-options">
         <label><input type="checkbox" name="events" value="50m Race"> 50m Race</label>
         <label><input type="checkbox" name="events" value="100m Race"> 100m Race</label>
@@ -109,8 +109,8 @@
         <label><input type="checkbox" name="events" value="Discus Throw"> Discus Throw</label>
         <label><input type="checkbox" name="events" value="Long Jump"> Long Jump</label>
         <label><input type="checkbox" name="events" value="High Jump"> High Jump</label>
-        <label><input type="checkbox" name="events" value="4x100m Relay"> 4x100m Relay</label>
-        <label><input type="checkbox" name="events" value="4x400m Relay"> 4x400m Relay</label>
+        <label><input type="checkbox" name="events" value="4x100m Relay" class="relay"> 4x100m Relay</label>
+        <label><input type="checkbox" name="events" value="4x400m Relay" class="relay"> 4x400m Relay</label>
       </div>
     </fieldset>
 
@@ -128,6 +128,7 @@
     const statusDiv = document.getElementById('status');
     const photoInput = document.getElementById('photo');
     const preview = document.getElementById('preview');
+    const eventCheckboxes = document.querySelectorAll('input[name="events"]');
 
     // Show photo preview
     photoInput.addEventListener('change', function () {
@@ -140,19 +141,40 @@
       }
     });
 
+    // Limit selection: max 3 non-relays, max 2 relays
+    eventCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        const selected = Array.from(eventCheckboxes).filter(cb => cb.checked);
+        const nonRelaySelected = selected.filter(cb => !cb.classList.contains('relay'));
+        const relaySelected = selected.filter(cb => cb.classList.contains('relay'));
+
+        if (!checkbox.checked) return;
+
+        if (!checkbox.classList.contains('relay') && nonRelaySelected.length > 3) {
+          checkbox.checked = false;
+          alert("⚠️ You can select up to 3 non-relay events only.");
+        }
+
+        if (checkbox.classList.contains('relay') && relaySelected.length > 2) {
+          checkbox.checked = false;
+          alert("⚠️ You can select up to 2 relay events only.");
+        }
+      });
+    });
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      // Validate at least one event selected
       const eventsChecked = document.querySelectorAll('input[name="events"]:checked');
-      if (eventsChecked.length === 0) {
-        statusDiv.textContent = "❌ Please select at least one event.";
+      const nonRelayChecked = Array.from(eventsChecked).filter(cb => !cb.classList.contains('relay'));
+      const relayChecked = Array.from(eventsChecked).filter(cb => cb.classList.contains('relay'));
+
+      if (nonRelayChecked.length > 3 || relayChecked.length > 2) {
+        statusDiv.textContent = "❌ Please follow the event selection limits: max 3 non-relays and 2 relays.";
         return;
       }
 
       const formData = new FormData();
-
-      // Append all form fields manually
       formData.append('school', form.school.value);
       formData.append('name', form.name.value);
       formData.append('chest', form.chest.value);
@@ -161,7 +183,6 @@
       formData.append('gender', form.gender.value);
       formData.append('photo', photoInput.files[0]);
 
-      // Append each selected event
       eventsChecked.forEach(event => {
         formData.append('events', event.value);
       });
