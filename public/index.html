@@ -8,7 +8,7 @@
     body {
       font-family: Arial, sans-serif;
       padding: 2rem;
-      background: #f2f2f2;
+      background: #1e1e1e;
     }
     h1 {
       font-size: 2rem;
@@ -26,27 +26,44 @@
       font-size: 1rem;
     }
     fieldset {
-      margin-top: 1rem;
-      padding: 1rem;
-      border: 1px solid #ccc;
-    }
+  border: none;
+  padding: 0;
+  margin: 0;
+}
     legend {
       font-weight: bold;
     }
-    #event-options label {
-      display: block;
-      margin: 0.3rem 0;
-    }
+  #event-options {
+  display: block;
+  margin-left: 2rem; /* aligns with form */
+}
+
+#event-options label {
+  display: block;
+  position: relative;
+  padding-left: 1.8rem; /* creates space for checkbox */
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+#event-options input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  accent-color: #007bff;
+}
     button {
-      background-color: #007bff;
-      color: white;
+      background-color: #0004ff;
+      color: rgb(230, 230, 230);
       border: none;
       border-radius: 4px;
       margin-top: 1rem;
       cursor: pointer;
     }
     button:hover {
-      background-color: #0056b3;
+      background-color: #2600ff;
     }
     #status {
       margin-top: 1rem;
@@ -59,7 +76,7 @@
     }
     #chestDisplay {
       padding: 0.5rem;
-      background: #e0e0e0;
+      background: #1e00ff;
       font-weight: bold;
       margin-top: 0.3rem;
     }
@@ -80,9 +97,25 @@
       opacity: 0;
       pointer-events: none;
     }
+   #bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.9;
+  filter: blur(6px); /* smooth blur effect */
+  transition: filter 0.5s ease; /* optional: for dynamic blur changes */
+}
   </style>
 </head>
 <body>
+  <video autoplay muted loop id="bgVideo">
+  <source src="background.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
   <div class="banner">
     <img src="banner.png" alt="CDS Sports Meet Banner">
   </div>
@@ -128,10 +161,10 @@
       <div id="event-options">
         <label><input type="checkbox" name="events" value="50m Race"> 50m Race</label>
         <label><input type="checkbox" name="events" value="100m Race"> 100m Race</label>
-        <label><input type="checkbox" name="events" value="200m"> 200m</label>
-        <label><input type="checkbox" name="events" value="400m"> 400m</label>
-        <label><input type="checkbox" name="events" value="800m"> 800m</label>
-        <label><input type="checkbox" name="events" value="1500m"> 1500m</label>
+        <label><input type="checkbox" name="events" value="200m Race"> 200m Race</label>
+        <label><input type="checkbox" name="events" value="400m Race"> 400m Race</label>
+        <label><input type="checkbox" name="events" value="800m Race"> 800m Race</label>
+        <label><input type="checkbox" name="events" value="1500m Race"> 1500m Race</label>
         <label><input type="checkbox" name="events" value="Shot Put"> Shot Put</label>
         <label><input type="checkbox" name="events" value="Discus Throw"> Discus Throw</label>
         <label><input type="checkbox" name="events" value="Long Jump"> Long Jump</label>
@@ -263,7 +296,7 @@
         if (!res.ok) throw new Error(result.error || 'Submission failed');
 
         statusDiv.textContent = `✅ Registration successful! Assigned Chest Number: ${result.chest}`;
-        showPopup(`✅ Chest Number: ${result.chest}`);
+        showPopup(`✅ Registration successful!\nChest Number: ${result.chest}`);
         form.reset();
         preview.style.display = 'none';
         chestDisplay.textContent = 'Please select a school';
