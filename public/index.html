@@ -138,16 +138,10 @@
     <label for="dob">Date of Birth</label>
     <input type="date" id="dob" name="dob" title="Date of Birth" required>
 
-    <label for="ageCategory">Age Category</label>
-    <select id="ageCategory" name="ageCategory" required>
-      <option value="" disabled selected>Select Age Group</option>
-      <option>Under 11</option>
-      <option>Under 14</option>
-      <option>Under 16</option>
-      <option>Under 17</option>
-      <option>Under 19</option>
-    </select>
+   <label for="ageCategory">Age Category:</label>
+<input type="text" id="ageCategory" name="ageCategory" readonly class="locked-field">
 
+      
     <label for="gender">Gender</label>
     <select id="gender" name="gender" required>
       <option value="" disabled selected>Select Gender</option>
@@ -317,6 +311,24 @@
         popup.classList.add('hidden');
       }, 3000);
     }
+    function getAgeCategory(dob) {
+  const birthYear = new Date(dob).getFullYear();
+  const age = new Date().getFullYear() - birthYear;
+
+  if (age <= 10) return 'Under 11';
+  if (age <= 13) return 'Under 14';
+  if (age <= 15) return 'Under 16';
+  if (age === 16) return 'Under 17';
+  if (age <= 18) return 'Under 19';
+  return 'Overage';
+}
+
+document.getElementById('dob').addEventListener('change', function () {
+  const dob = this.value;
+  const category = getAgeCategory(dob);
+  document.getElementById('ageCategory').value = category;
+});
+
   </script>
 </body>
 </html>
