@@ -59,14 +59,45 @@ loadChestRanges();
 
 // 📝 Route: Handle form submissions at /submit (with photo upload)
 app.post('/submit', upload.single('photo'), (req, res) => {
-  const { school, name, dob, ageCategory, gender, events } = req.body;
+  const { school, name, dob, gender, events } = req.body;
   const photo = req.file;
 
-  if (!school || !name || !dob || !ageCategory || !gender || !events || !photo) {
+  // ✅ Validate required fields
+  if (!school || !name || !dob || !gender || !events || !photo) {
     return res.status(400).json({ error: "Missing fields" });
   }
 
-  const range = chestRanges[school];
+  // ✅ Normalize inputs
+  const normalizedName = name.trim().toLowerCase();
+  const normalizedSchool = school.trim().toLowerCase();
+
+  // ✅ Check for duplicate entry (same name + same school)
+  const duplicate = data.find(entry =>
+    entry.name.trim().toLowerCase() === normalizedName &&
+    entry.school.trim().toLowerCase() === normalizedSchool
+  );
+
+  if (duplicate) {
+    return res.status(400).json({ error: "This participant is already registered from this school." });
+  }
+
+  // ✅ Auto-calculate age category from DOB
+  function getAgeCategory(dob) {
+    const birthYear = new Date(dob).getFullYear();
+    const age = new Date().getFullYear() - birthYear;
+
+    if (age <= 10) return 'Under 11';
+    if (age <= 13) return 'Under 14';
+    if (age <= 15) return 'Under 16';
+    if (age === 16) return 'Under 17';
+    if (age <= 18) return 'Under 19';
+    return 'Overage';
+  }
+
+  const ageCategory = getAgeCategory(dob);
+
+  // ✅ Validate chest number range
+  const range = chestRanges[school.trim()];
   if (!range) {
     return res.status(400).json({ error: "School not found in chest number database." });
   }
@@ -76,25 +107,40 @@ app.post('/submit', upload.single('photo'), (req, res) => {
     return res.status(400).json({ error: "Chest number range exhausted for this school." });
   }
 
+  // ✅ Format timestamp
   const timestamp = new Date().toLocaleString('en-IN', { hour12: false });
 
+  // ✅ Sanitize events
+  const sanitizedEvents = Array.isArray(events)
+    ? events.map(e => e.trim())
+    : typeof events === 'string'
+      ? [events.trim()]
+      : [];
+
+  if (sanitizedEvents.length === 0) {
+    return res.status(400).json({ error: "No events selected." });
+  }
+
+  // ✅ Construct entry
   const entry = {
-    school,
-    name,
+    school: school.trim(),
+    name: name.trim(),
     chest: nextChest,
     dob,
     ageCategory,
     gender,
-    events: Array.isArray(events) ? events : [events],
+    events: sanitizedEvents,
     photoPath: `/uploads/${photo.filename}`,
     timestamp
   };
 
+  // ✅ Save entry
   data.push(entry);
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+
+  // ✅ Respond
   res.json({ message: "Success", chest: nextChest });
 });
-
 // 🆕 Route: Duplicate logic for /results (POST) — matches frontend call
 app.post('/results', upload.single('photo'), (req, res) => {
   const { school, name, dob, ageCategory, gender, events } = req.body;
