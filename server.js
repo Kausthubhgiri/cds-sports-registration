@@ -1,6 +1,3 @@
-// Add this at the top if using local dev
-require('dotenv').config();
-
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -8,26 +5,41 @@ const ExcelJS = require('exceljs');
 const multer = require('multer');
 const axios = require('axios');
 
+const app = express();
+const PORT = process.env.PORT || 3000;
+const filePath = path.join(__dirname, 'results.json');
+
+// 🔐 GitHub sync config
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const REPO = 'kausthubhgiri/cds-sports-registration';
 const FILE_PATH = 'results.json';
 const BRANCH = 'main';
 const USE_GITHUB = process.env.USE_GITHUB === 'true';
 
-const app = express();
-const PORT = process.env.PORT || 3000;
-const filePath = path.join(__dirname, 'results.json');
+// 📁 Multer config for image uploads
+const upload = multer({
+  dest: 'uploads/',
+  fileFilter: (req, file, cb) => {
+    const allowedTypes = ['image/png', 'image/jpeg'];
+    if (allowedTypes.includes(file.mimetype)) {
+      cb(null, true);
+    } else {
+      cb(new Error('Only .png and .jpg files are allowed'));
+    }
+  }
+});
 
-const upload = multer({ dest: 'uploads/' });
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
+// 🧠 App state
 let data = [];
 let chestRanges = {};
 let chestTracker = {};
 
+// 🔄 GitHub fetch
 async function fetchDataFromGitHub() {
   const headers = {
     Authorization: `token ${GITHUB_TOKEN}`,
@@ -46,6 +58,7 @@ async function fetchDataFromGitHub() {
   }
 }
 
+// 🗂️ Local fallback
 function fetchDataFromLocal() {
   try {
     const fileData = fs.readFileSync(filePath, 'utf8');
@@ -55,10 +68,12 @@ function fetchDataFromLocal() {
   }
 }
 
+// 🧩 Unified loader
 async function getLatestData() {
   return USE_GITHUB ? await fetchDataFromGitHub() : fetchDataFromLocal();
 }
 
+// 📤 GitHub push
 async function pushToGitHub(newData, message = 'Update results.json') {
   const headers = {
     Authorization: `token ${GITHUB_TOKEN}`,
@@ -80,6 +95,7 @@ async function pushToGitHub(newData, message = 'Update results.json') {
   );
 }
 
+// 📊 Chest number logic
 async function loadChestRanges() {
   const workbook = new ExcelJS.Workbook();
   await workbook.xlsx.readFile('chest_numbers.xlsx');
@@ -89,11 +105,14 @@ async function loadChestRanges() {
     const school = row.getCell(1).value;
     const start = parseInt(row.getCell(2).value);
     const end = parseInt(row.getCell(3).value);
-    chestRanges[school] = { start, end };
-    if (!chestTracker[school]) chestTracker[school] = start;
+    if (school && start && end) {
+      chestRanges[school] = { start, end };
+      chestTracker[school] = start;
+    }
   });
 }
 
+// 🔁 Recover chest tracker from data
 async function initializeData() {
   data = await getLatestData();
   data.forEach(entry => {
@@ -104,10 +123,12 @@ async function initializeData() {
     }
   });
 }
-
 function getAgeCategory(dob) {
   const birthYear = new Date(dob).getFullYear();
+  if (isNaN(birthYear)) return 'Invalid DOB';
+
   const age = new Date().getFullYear() - birthYear;
+
   if (age <= 10) return 'Under 11';
   if (age <= 13) return 'Under 14';
   if (age <= 15) return 'Under 16';
@@ -115,18 +136,114 @@ function getAgeCategory(dob) {
   if (age <= 18) return 'Under 19';
   return 'Overage';
 }
+// 📝 Submit route
+app.post('/submit', upload.single('photo'), async (req, res) => {
+  const { school, name, dob, gender, events } = req.body;
+  const photo = req.file;
 
-await loadChestRanges();
-await initializeData();
+  if (!school || !name || !dob || !gender || !events || !photo) {
+    return res.status(400).json({ error: "Missing fields" });
+  }
 
-// /submit and /results routes already implemented above...
+  const normalizedName = name.trim().toLowerCase();
+  const normalizedSchool = school.trim().toLowerCase();
 
+  const duplicate = data.find(entry =>
+    entry.name.trim().toLowerCase() === normalizedName &&
+    entry.school.trim().toLowerCase() === normalizedSchool
+  );
+  if (duplicate) {
+    return res.status(400).json({ error: "This participant is already registered from this school." });
+  }
+
+  const ageCategory = getAgeCategory(dob);
+  const range = chestRanges[school.trim()];
+  if (!range) {
+    return res.status(400).json({ error: "School not found in chest number database." });
+  }
+
+  const nextChest = chestTracker[school]++;
+  if (nextChest > range.end) {
+    return res.status(400).json({ error: "Chest number range exhausted for this school." });
+  }
+
+  const timestamp = new Date().toLocaleString('en-IN', { hour12: false });
+  const sanitizedEvents = Array.isArray(events)
+    ? events.map(e => e.trim())
+    : typeof events === 'string'
+      ? [events.trim()]
+      : [];
+
+  if (sanitizedEvents.length === 0) {
+    return res.status(400).json({ error: "No events selected." });
+  }
+
+  const entry = {
+    school: school.trim(),
+    name: name.trim(),
+    chest: nextChest,
+    dob,
+    ageCategory,
+    gender,
+    events: sanitizedEvents,
+    photoPath: `/uploads/${photo.filename}`,
+    timestamp
+  };
+
+  data.push(entry);
+  USE_GITHUB
+    ? await pushToGitHub(data, `Add ${name} from ${school}`)
+    : fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+
+  res.json({ message: "Success", chest: nextChest });
+});
+
+// 🆕 POST /results (duplicate logic for frontend compatibility)
+app.post('/results', upload.single('photo'), async (req, res) => {
+  const { school, name, dob, ageCategory, gender, events } = req.body;
+  const photo = req.file;
+
+  if (!school || !name || !dob || !ageCategory || !gender || !events || !photo) {
+    return res.status(400).send("Missing fields");
+  }
+
+  const range = chestRanges[school];
+  if (!range) return res.status(400).send("School not found in chest number database.");
+
+  const nextChest = chestTracker[school]++;
+  if (nextChest > range.end) {
+    return res.status(400).send("Chest number range exhausted for this school.");
+  }
+
+  const timestamp = new Date().toLocaleString('en-IN', { hour12: false });
+  const entry = {
+    school,
+    name,
+    chest: nextChest,
+    dob,
+    ageCategory,
+    gender,
+    events: Array.isArray(events) ? events : [events],
+    photoPath: `/uploads/${photo.filename}`,
+    timestamp
+  };
+
+  data.push(entry);
+  USE_GITHUB
+    ? await pushToGitHub(data, `Add ${name} from ${school}`)
+    : fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+
+  res.send("Success");
+});
+
+// 📊 GET /results
 app.get('/results', async (req, res) => {
   const parsed = await getLatestData();
   const sorted = [...parsed].sort((a, b) => a.school.localeCompare(b.school));
   res.json(sorted);
 });
 
+// 📁 GET /export
 app.get('/export', async (req, res) => {
   const workbook = new ExcelJS.Workbook();
   const sheet = workbook.addWorksheet('CDS Sports Results');
@@ -194,18 +311,14 @@ app.get('/export', async (req, res) => {
   res.end();
 });
 
+// 🔁 Reset routes
 app.post('/reset-all', async (req, res) => {
   data = [];
-  if (USE_GITHUB) {
-    try {
-      await pushToGitHub([], 'Reset all responses');
-    } catch (err) {
-      console.error("❌ GitHub reset failed:", err.message);
-      return res.status(500).send("Failed to reset GitHub data");
-    }
-  } else {
-    fs.writeFileSync(filePath, JSON.stringify([], null, 2));
-  }
+  chestTracker = {};
+  await loadChestRanges();
+  USE_GITHUB
+    ? await pushToGitHub([], 'Reset all responses')
+    : fs.writeFileSync(filePath, JSON.stringify([], null, 2));
   res.send("All responses have been reset.");
 });
 
@@ -213,16 +326,9 @@ app.post('/reset-last', async (req, res) => {
   if (data.length === 0) return res.send("No responses to remove.");
   const lastEntry = data.pop();
 
-  if (USE_GITHUB) {
-    try {
-      await pushToGitHub(data, 'Remove last response');
-    } catch (err) {
-      console.error("❌ GitHub reset failed:", err.message);
-      return res.status(500).send("Failed to reset GitHub data");
-    }
-  } else {
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-  }
+  USE_GITHUB
+    ? await pushToGitHub(data, 'Remove last response')
+    : fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 
   const school = lastEntry.school;
   if (chestTracker[school] && chestTracker[school] > chestRanges[school].start) {
@@ -232,6 +338,7 @@ app.post('/reset-last', async (req, res) => {
   res.send("Last response and chest number have been removed.");
 });
 
+// 🏫 School routes
 app.get('/schools', (req, res) => {
   const schools = [...new Set(data.map(entry => entry.school))].sort();
   res.json(schools);
@@ -262,7 +369,6 @@ app.get('/export-school', async (req, res) => {
   });
 
   const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
-
   for (const [eventName, participants] of Object.entries(eventMap)) {
     sheet.addRow([`Event: ${eventName}`]);
 
@@ -308,6 +414,38 @@ app.get('/export-school', async (req, res) => {
   await workbook.xlsx.write(res);
   res.end();
 });
-app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
+(async () => {
+  await loadChestRanges();
+  console.log("📦 Chest ranges loaded:", chestRanges);
+  await initializeData();
+  app.get('/next-chest', (req, res) => {
+  const school = req.query.school;
+  if (!school) return res.json({ chest: null });
+
+  const normalized = school.trim().toLowerCase();
+
+  const matchKey = Object.keys(chestRanges).find(
+    key => key.trim().toLowerCase() === normalized
+  );
+
+  if (!matchKey) {
+    console.log(`❌ School not found: ${school}`);
+    return res.json({ chest: null });
+  }
+
+  const range = chestRanges[matchKey];
+  const next = chestTracker[matchKey];
+
+  if (!range || next > range.end) {
+    console.log(`⚠️ Chest range exhausted for ${matchKey}`);
+    return res.json({ chest: null });
+  }
+  console.log(`✅ Next chest for ${matchKey}: ${next}`);
+
+  res.json({ chest: next });
 });
+
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running at http://localhost:${PORT}`);
+  });
+})();

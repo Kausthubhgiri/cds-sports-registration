@@ -2,6 +2,7 @@
   "name": "your-app-name",
   "version": "1.0.0",
   "description": "CDS SPORTS MEET 2K25",
+
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
