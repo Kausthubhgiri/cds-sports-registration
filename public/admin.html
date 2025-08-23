@@ -24,6 +24,13 @@
       padding: 0.6rem 1rem;
       font-size: 1rem;
       cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #0056b3;
     }
     .card {
       background: white;
@@ -39,18 +46,47 @@
       font-size: 0.9rem;
       color: #555;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.5rem;
+    }
+    th, td {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+    details {
+      margin-bottom: 1rem;
+    }
   </style>
 </head>
 <body>
   <h1>🏅 CDS Sports Meet – Admin Dashboard</h1>
-  <div id="resultsContainer"></div>
+<div id="count">Loading entries...</div>
 
-  <script>
+  <button onclick="window.location.href='/export'">⬇ Export to Excel</button>
+  <button onclick="resetAll()">🗑️ Reset All Responses</button>
+  <button onclick="resetLast()">↩️ Undo Last Response</button>
+
+  <div id="resultsContainer"></div>
+<script>
+  const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
+
+  function loadResults() {
     fetch('/results')
       .then(res => res.json())
       .then(data => {
         const container = document.getElementById('resultsContainer');
-        const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
+        const countDiv = document.getElementById('count');
+        container.innerHTML = ''; // Clear previous results
+
+        countDiv.textContent = `📋 Total Entries: ${data.length}`;
 
         const schools = [...new Set(data.map(entry => entry.school))].sort();
 
@@ -60,7 +96,6 @@
 
           const schoolEntries = data.filter(e => e.school === school);
 
-          // Group by event
           const eventMap = {};
           schoolEntries.forEach(entry => {
             entry.events.forEach(event => {
@@ -73,15 +108,14 @@
             const eventSection = document.createElement('details');
             eventSection.innerHTML = `<summary>🎯 <strong>${eventName}</strong></summary>`;
 
-            // Sort by age category
             participants.sort((a, b) =>
               ageOrder.indexOf(a.ageCategory) - ageOrder.indexOf(b.ageCategory)
             );
 
             const table = document.createElement('table');
-            table.style.marginBottom = '1em';
             table.innerHTML = `
               <tr>
+                <th>Photo</th>
                 <th>Name</th>
                 <th>Chest</th>
                 <th>DOB</th>
@@ -94,6 +128,7 @@
             participants.forEach(p => {
               const row = `
                 <tr>
+                  <td><img src="${p.photoPath}" alt="Photo of ${p.name}" style="max-width:80px; border-radius:4px;"></td>
                   <td>${p.name}</td>
                   <td>${p.chest}</td>
                   <td>${p.dob}</td>
@@ -112,5 +147,28 @@
           container.appendChild(schoolSection);
         });
       });
-  </script>
+  }
+
+  function resetAll() {
+    fetch('/reset-all', { method: 'POST' })
+      .then(res => res.text())
+      .then(msg => {
+        alert(msg);
+        loadResults();
+      });
+  }
+
+  function resetLast() {
+    fetch('/reset-last', { method: 'POST' })
+      .then(res => res.text())
+      .then(msg => {
+        alert(msg);
+        loadResults();
+      });
+  }
+
+  setInterval(loadResults, 5000); // Refresh every 5 seconds
+  loadResults(); // Initial load
+</script>
 </body>
+</html>

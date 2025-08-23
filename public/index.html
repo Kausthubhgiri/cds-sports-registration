@@ -4,36 +4,249 @@
   <meta charset="UTF-8">
   <title>CDS Sports Meet Registration</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #1e1e1e;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      font-size: 1rem;
+    }
+    fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+    legend {
+      font-weight: bold;
+    }
+  #event-options {
+  display: block;
+  margin-left: 2rem; /* aligns with form */
+}
+
+#event-options label {
+  display: block;
+  position: relative;
+  padding-left: 1.8rem; /* creates space for checkbox */
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+#event-options input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  accent-color: #007bff;
+  size: 4rem;
+}
+    button {
+      background-color: #0004ff;
+      color: rgb(230, 230, 230);
+      border: none;
+      border-radius: 23px;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2600ff;
+    }
+    #status {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    #preview {
+      margin-top: 1rem;
+      max-width: 200px;
+      display: none;
+    }
+    #chestDisplay {
+      padding: 0.5rem;
+      background: #1e00ff;
+      font-weight: bold;
+      margin-top: 0.3rem;
+    }
+    .popup {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: opacity 0.3s ease;
+    }
+    .popup.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+   #bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.9;
+  filter: blur(2px); /* smooth blur effect */
+  transition: filter 0.5s ease; /* optional: for dynamic blur changes */
+}
+
+/* 📞 Contact Us Button */
+#contactBtn {
+  background-color: #007bff;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#contactBtn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* 📞 Popup Modal */
+.popup-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #222;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  text-align: center;
+  width: 300px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.popup-center.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -60%);
+}
+
+/* 🎯 Action Buttons Container */
+.popup-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Adds spacing between buttons */
+  margin-top: 1.2rem;
+  flex-wrap: wrap;
+}
+
+/* 🎨 Base Button Style */
+.popup-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  min-width: 100px;
+  text-align: center;
+}
+
+/* ✨ Hover Effect */
+.popup-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* ❌ Close Button */
+.popup-btn.close {
+  background-color: #555;
+}
+.popup-btn.close:hover {
+  background-color: #333;
+}
+
+/* 📞 Call Button */
+.popup-btn.call {
+  background: linear-gradient(135deg, #28a745, #218838);
+  box-shadow: 0 0 10px rgba(40, 167, 69, 0.6);
+}
+
+/* 💬 WhatsApp Button */
+.popup-btn.whatsapp {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  box-shadow: 0 0 10px rgba(37, 211, 102, 0.6);
+}
+  </style>
 </head>
 <body>
+  <video autoplay muted loop id="bgVideo">
+  <source src="background.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
   <div class="banner">
     <img src="banner.png" alt="CDS Sports Meet Banner">
   </div>
-  <h1>🏆 CDS Sports Meet – Registration</h1>
+  <h1>🏆 CDS Sports Meet 2025
+    Hosted by Dr.GR Public School – Registration</h1>
 
   <form id="regForm" enctype="multipart/form-data">
     <label for="school">School Name</label>
-    <input type="text" id="school" name="school" placeholder="School Name" required>
+    <select id="school" name="school" required>
+      <option value="" disabled selected>Select School Name</option>
+      <option>SARASWATHI VIDYALAYA</option>
+      <option>Dr GR PUBLIC SCHOOL</option>
+      <option>VISHWABHARATHY PUBLIC SCHOOL</option>
+      <option>N.S.S PUBLIC SCHOOL PERUNTHANNI</option>
+      <option>A.R.R PUBLIC SCHOOL</option>
+      <option>HOLY TRINITY PUBLIC SCHOOL</option>
+      <option>SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL</option>
+      <option>RAJA RAVI VARMA CENTRAL SCHOOL</option>
+      <option>SREE GOKULAM PUBLIC SCHOOL</option>
+      <option>CHINTHALAYA VIDYALAYA</option>
+      <option>JAWAHAR PUBLIC SCHOOL</option>
+      <option>VISWADARSHINI PUBLIC SCHOOL</option>
+      <option>SREE SARASWATHY VIDYALAYAM</option>
+      <option>THUNCHAN SMARAKA PUBLIC SCHOOL</option>
+     </select>
 
     <label for="name">Participant Name</label>
     <input type="text" id="name" name="name" placeholder="Participant Name" required>
 
-    <label for="chest">Chest Number</label>
-    <input type="number" id="chest" name="chest" placeholder="Chest Number" required>
+    <label>Assigned Chest Number</label>
+    <div id="chestDisplay">Please select a school</div>
 
     <label for="dob">Date of Birth</label>
     <input type="date" id="dob" name="dob" title="Date of Birth" required>
 
-    <label for="ageCategory">Age Category</label>
-    <select id="ageCategory" name="ageCategory" required>
-      <option value="" disabled selected>Select Age Group</option>
-      <option>Under 11</option>
-      <option>Under 14</option>
-      <option>Under 16</option>
-      <option>Under 17</option>
-      <option>Under 19</option>
-    </select>
+   <label for="ageCategory">Age Category:</label>
+<input type="text" id="ageCategory" name="ageCategory" readonly class="locked-field">
 
+      
     <label for="gender">Gender</label>
     <select id="gender" name="gender" required>
       <option value="" disabled selected>Select Gender</option>
@@ -43,72 +256,215 @@
     </select>
 
     <fieldset>
-      <legend>Choose Events (select one or more)</legend>
+      <legend>Choose Events (Max 3 non-relays & 2 relays)</legend>
       <div id="event-options">
         <label><input type="checkbox" name="events" value="50m Race"> 50m Race</label>
         <label><input type="checkbox" name="events" value="100m Race"> 100m Race</label>
-        <label><input type="checkbox" name="events" value="200m"> 200m</label>
-        <label><input type="checkbox" name="events" value="400m"> 400m</label>
-        <label><input type="checkbox" name="events" value="800m"> 800m</label>
-        <label><input type="checkbox" name="events" value="1500m"> 1500m</label>
+        <label><input type="checkbox" name="events" value="200m Race"> 200m Race</label>
+        <label><input type="checkbox" name="events" value="400m Race"> 400m Race</label>
+        <label><input type="checkbox" name="events" value="800m Race"> 800m Race</label>
+        <label><input type="checkbox" name="events" value="1500m Race"> 1500m Race</label>
         <label><input type="checkbox" name="events" value="Shot Put"> Shot Put</label>
         <label><input type="checkbox" name="events" value="Discus Throw"> Discus Throw</label>
         <label><input type="checkbox" name="events" value="Long Jump"> Long Jump</label>
         <label><input type="checkbox" name="events" value="High Jump"> High Jump</label>
-        <label><input type="checkbox" name="events" value="4x100m Relay"> 4x100m Relay</label>
-        <label><input type="checkbox" name="events" value="4x400m Relay"> 4x400m Relay</label>
+        <label><input type="checkbox" name="events" value="4x100m Relay" class="relay"> 4x100m Relay</label>
+        <label><input type="checkbox" name="events" value="4x400m Relay" class="relay"> 4x400m Relay</label>
       </div>
     </fieldset>
 
     <label for="photo">Upload Photo</label>
     <input type="file" id="photo" name="photo" accept="image/*" required>
+    <img id="preview" alt="Photo Preview">
 
     <button type="submit">Submit</button>
   </form>
+ 
 
   <div id="status" role="status" aria-live="polite"></div>
 
-  <!-- ✅ New Button to Download School-Specific Responses -->
-  <button onclick="promptDownload()">⬇ Download My Responses</button>
+  <!-- ✅ Popup container -->
+  <div id="popup" class="popup hidden">
+    <span id="popupMessage"></span>
+  </div>
 
   <script>
-    document.getElementById('regForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      document.getElementById("status").innerText = "⏳ Submitting...";
-      document.getElementById("status").style.opacity = 1;
+    const dobInput = document.getElementById('dob');
+    const ageCategorySelect = document.getElementById('ageCategory');
 
-      const formData = new FormData(this);
+    dobInput.addEventListener('change', () => {
+      const dob = new Date(dobInput.value);
+      if (isNaN(dob)) return;
 
-      // Collect selected events manually
-      const selectedEvents = Array.from(document.querySelectorAll('input[name="events"]:checked'))
-                                  .map(input => input.value);
+      const year = dob.getFullYear();
+      const age = 2025 - year;
 
-      // Remove default checkbox values and re-append selected ones
-      formData.delete("events");
-      selectedEvents.forEach(event => formData.append("events", event));
+      let category = '';
+      if (age <= 10) category = 'Under 11';
+      else if (age <= 13) category = 'Under 14';
+      else if (age <= 15) category = 'Under 16';
+      else if (age === 16) category = 'Under 17';
+      else if (age <= 18) category = 'Under 19';
 
-      fetch('/submit', {
-        method: 'POST',
-        body: formData
-      })
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById("status").innerText = "✅ " + data.message;
-        this.reset();
-      })
-      .catch(error => {
-        document.getElementById("status").innerText = "❌ Submission failed. Try again.";
-        console.error(error);
+      const optionToSelect = Array.from(ageCategorySelect.options).find(opt => opt.value === category);
+      if (optionToSelect) {
+        ageCategorySelect.value = optionToSelect.value;
+      }
+    });
+
+    const form = document.getElementById('regForm');
+    const statusDiv = document.getElementById('status');
+    const photoInput = document.getElementById('photo');
+    const preview = document.getElementById('preview');
+    const eventCheckboxes = document.querySelectorAll('input[name="events"]');
+    const chestDisplay = document.getElementById('chestDisplay');
+    const schoolInput = document.getElementById('school');
+
+    photoInput.addEventListener('change', function () {
+      const file = photoInput.files[0];
+      if (file) {
+        preview.src = URL.createObjectURL(file);
+        preview.style.display = 'block';
+      } else {
+        preview.style.display = 'none';
+      }
+    });
+
+    eventCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        const selected = Array.from(eventCheckboxes).filter(cb => cb.checked);
+        const nonRelaySelected = selected.filter(cb => !cb.classList.contains('relay'));
+        const relaySelected = selected.filter(cb => cb.classList.contains('relay'));
+
+        if (!checkbox.checked) return;
+
+        if (!checkbox.classList.contains('relay') && nonRelaySelected.length > 3) {
+          checkbox.checked = false;
+         showPopup("⚠️ You can select up to 3 non-relay events only.");
+        }
+
+        if (checkbox.classList.contains('relay') && relaySelected.length > 2) {
+          checkbox.checked = false;
+         showPopup("⚠️ You can select up to 2 relay events only.");
+        }
       });
     });
 
-    // ✅ Prompt for school name and download school-specific Excel
-    function promptDownload() {
-      const school = prompt("Enter your school name to download your responses:");
-      if (school && school.trim()) {
-        window.location.href = `/export-school?school=${encodeURIComponent(school.trim())}`;
+    schoolInput.addEventListener('change', async function () {
+      const school = this.value;
+      try {
+        const res = await fetch(`/next-chest?school=${encodeURIComponent(school)}`);
+        const data = await res.json();
+                chestDisplay.textContent = data.chest ? `Chest Number: ${data.chest}` : 'Unavailable';
+      } catch (err) {
+        chestDisplay.textContent = 'Error fetching chest number';
       }
+    });
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const eventsChecked = document.querySelectorAll('input[name="events"]:checked');
+      const nonRelayChecked = Array.from(eventsChecked).filter(cb => !cb.classList.contains('relay'));
+      const relayChecked = Array.from(eventsChecked).filter(cb => cb.classList.contains('relay'));
+
+      if (nonRelayChecked.length > 3 || relayChecked.length > 2) {
+        statusDiv.textContent = "❌ Please follow the event selection limits: max 3 non-relays and 2 relays.";
+        showPopup("❌ Invalid event selection.");
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append('school', form.school.value);
+      formData.append('name', form.name.value);
+      formData.append('dob', form.dob.value);
+      formData.append('ageCategory', form.ageCategory.value);
+      formData.append('gender', form.gender.value);
+      formData.append('photo', photoInput.files[0]);
+
+      eventsChecked.forEach(event => {
+        formData.append('events', event.value);
+      });
+
+      try {
+        const res = await fetch('/submit', {
+          method: 'POST',
+          body: formData
+        });
+
+        const result = await res.json();
+        if (!res.ok) throw new Error(result.error || 'Submission failed');
+
+        statusDiv.textContent = `✅ Registration successful! Assigned Chest Number: ${result.chest}`;
+        showPopup(`✅ Registration successful!\nChest Number: ${result.chest}`);
+        form.reset();
+        preview.style.display = 'none';
+        chestDisplay.textContent = 'Please select a school';
+      } catch (err) {
+        console.error("❌ Submission error:", err);
+        statusDiv.textContent = `❌ ${err.message}`;
+        showPopup(`❌ ${err.message}`);
+      }
+    });
+
+    function showPopup(message) {
+      const popup = document.getElementById('popup');
+      const popupMessage = document.getElementById('popupMessage');
+      popupMessage.textContent = message;
+      popup.classList.remove('hidden');
+
+      setTimeout(() => {
+        popup.classList.add('hidden');
+      }, 3000);
     }
+    function getAgeCategory(dob) {
+  const birthYear = new Date(dob).getFullYear();
+  const age = new Date().getFullYear() - birthYear;
+
+  if (age <= 10) return 'Under 11';
+  if (age <= 13) return 'Under 14';
+  if (age <= 15) return 'Under 16';
+  if (age === 16) return 'Under 17';
+  if (age <= 18) return 'Under 19';
+  return 'Overage';
+}
+
+document.getElementById('dob').addEventListener('change', function () {
+  const dob = this.value;
+  const category = getAgeCategory(dob);
+  document.getElementById('ageCategory').value = category;
+});
+ 
+ 
   </script>
+ <!-- 📞 Contact Us Button -->
+  <button id="contactBtn">📞 Contact Us</button>
+
+  <!-- 📞 Contact Popup Modal -->
+  <div id="contactPopup" class="popup-center hidden">
+    <h3>Need Help?</h3>
+    <p>Reach out to Reji: <strong>+91 8086326780</strong></p>
+    <div class="popup-actions">
+      <a href="tel:+918086326780" class="popup-btn">📞 Call</a>
+      <a href="https://wa.me/918086326780" target="_blank" class="popup-btn">💬 WhatsApp</a>
+      <button id="closePopup" class="popup-btn close">❌ Close</button>
+    </div>
+  </div>
+
+  <script>
+    const contactBtn = document.getElementById('contactBtn');
+    const contactPopup = document.getElementById('contactPopup');
+    const closePopup = document.getElementById('closePopup');
+
+    contactBtn.addEventListener('click', () => {
+      contactPopup.classList.remove('hidden');
+    });
+
+    closePopup.addEventListener('click', () => {
+      contactPopup.classList.add('hidden');
+    });
+  </script>
+
+</div>
 </body>
 </html>
