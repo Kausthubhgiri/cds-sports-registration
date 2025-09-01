@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "k1",
+    "chest": 201,
+    "dob": "2009-06-08",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "50m Race"
+    ],
+    "photoPath": "/uploads/ab9dc26187407596c112deeb1776e355",
+    "timestamp": "1/9/2025, 15:23:57"
+  }
+]
