@@ -221,10 +221,12 @@ app.post('/submit', upload.single('photo'), async (req, res) => {
     timestamp
   };
 
-  data.push(entry);
-  USE_GITHUB
-    ? await pushToGitHub(data, `Add ${name} from ${school}`)
-    : fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  ddata.push(entry);
+fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+
+if (USE_GITHUB) {
+  await pushToGitHub(data, `Add ${name} from ${school}`);
+}
 
   res.json({ message: "Success", chest: nextChest });
 });
@@ -259,10 +261,12 @@ app.post('/results', upload.single('photo'), async (req, res) => {
     timestamp
   };
 
-  data.push(entry);
-  USE_GITHUB
-    ? await pushToGitHub(data, `Add ${name} from ${school}`)
-    : fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+ data.push(entry);
+fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+
+if (USE_GITHUB) {
+  await pushToGitHub(data, `Add ${name} from ${school}`);
+}
 
   res.send("Success");
 });
