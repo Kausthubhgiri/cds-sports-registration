@@ -352,9 +352,11 @@ app.post('/reset-all', async (req, res) => {
   data = [];
   chestTracker = {};
   await loadChestRanges();
-  USE_GITHUB
-    ? await pushToGitHub([], 'Reset all responses')
-    : fs.writeFileSync(filePath, JSON.stringify([], null, 2));
+ fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+
+if (USE_GITHUB) {
+  await pushToGitHub(data, '...');
+}
   res.send("All responses have been reset.");
 });
 
@@ -362,10 +364,11 @@ app.post('/reset-last', async (req, res) => {
   if (data.length === 0) return res.send("No responses to remove.");
   const lastEntry = data.pop();
 
-  USE_GITHUB
-    ? await pushToGitHub(data, 'Remove last response')
-    : fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 
+if (USE_GITHUB) {
+  await pushToGitHub(data, '...');
+}
   const school = lastEntry.school;
   if (chestTracker[school] && chestTracker[school] > chestRanges[school].start) {
     chestTracker[school]--;
