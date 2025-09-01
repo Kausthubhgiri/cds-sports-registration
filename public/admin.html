@@ -77,95 +77,104 @@
   <div id="resultsContainer"></div>
 <script>
   const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
+  let previousData = [];
 
   function loadResults() {
-    fetch('/results')
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById('resultsContainer');
-        const countDiv = document.getElementById('count');
-        container.innerHTML = ''; // Clear previous results
+  fetch('/results')
+    .then(res => res.json())
+    .then(data => {
+      if (JSON.stringify(data) === JSON.stringify(previousData)) return; // No change, skip update
+      previousData = data;
 
-        countDiv.textContent = `📋 Total Entries: ${data.length}`;
+      const container = document.getElementById('resultsContainer');
+      const countDiv = document.getElementById('count');
+      countDiv.textContent = `📋 Total Entries: ${data.length}`;
 
-        const schools = [...new Set(data.map(entry => entry.school))].sort();
+      // Clear only the inner content, not the whole structure
+      container.innerHTML = '';
 
-        schools.forEach(school => {
-          const schoolSection = document.createElement('details');
-          schoolSection.innerHTML = `<summary>🏫 <strong>${school}</strong></summary>`;
+      const schools = [...new Set(data.map(entry => entry.school))].sort();
 
-          const schoolEntries = data.filter(e => e.school === school);
+      schools.forEach(school => {
+        const schoolSection = document.createElement('details');
+        schoolSection.innerHTML = `<summary>🏫 <strong>${school}</strong></summary>`;
 
-          const eventMap = {};
-          schoolEntries.forEach(entry => {
-            entry.events.forEach(event => {
-              eventMap[event] = eventMap[event] || [];
-              eventMap[event].push(entry);
-            });
+        const schoolEntries = data.filter(e => e.school === school);
+        const eventMap = {};
+
+        schoolEntries.forEach(entry => {
+          entry.events.forEach(event => {
+            eventMap[event] = eventMap[event] || [];
+            eventMap[event].push(entry);
           });
+        });
 
-          Object.entries(eventMap).forEach(([eventName, participants]) => {
-            const eventSection = document.createElement('details');
-            eventSection.innerHTML = `<summary>🎯 <strong>${eventName}</strong></summary>`;
+        Object.entries(eventMap).forEach(([eventName, participants]) => {
+          const eventSection = document.createElement('details');
+          eventSection.innerHTML = `<summary>🎯 <strong>${eventName}</strong></summary>`;
 
-            participants.sort((a, b) =>
-              ageOrder.indexOf(a.ageCategory) - ageOrder.indexOf(b.ageCategory)
-            );
+          participants.sort((a, b) =>
+            ageOrder.indexOf(a.ageCategory) - ageOrder.indexOf(b.ageCategory)
+          );
 
-            const table = document.createElement('table');
-            table.innerHTML = `
+          const table = document.createElement('table');
+          table.innerHTML = `
+            <tr>
+              <th>Photo</th>
+              <th>Name</th>
+              <th>Chest</th>
+              <th>DOB</th>
+              <th>Age Category</th>
+              <th>Gender</th>
+              <th>Timestamp</th>
+            </tr>
+          `;
+
+          participants.forEach(p => {
+            const row = `
               <tr>
-                <th>Photo</th>
-                <th>Name</th>
-                <th>Chest</th>
-                <th>DOB</th>
-                <th>Age Category</th>
-                <th>Gender</th>
-                <th>Timestamp</th>
+                <td><img src="${p.photoPath}" alt="Photo of ${p.name}" style="max-width:80px; border-radius:4px;"></td>
+                <td>${p.name}</td>
+                <td>${p.chest}</td>
+                <td>${p.dob}</td>
+                <td>${p.ageCategory}</td>
+                <td>${p.gender}</td>
+                <td>${p.timestamp}</td>
               </tr>
             `;
-
-            participants.forEach(p => {
-              const row = `
-                <tr>
-                  <td><img src="${p.photoPath}" alt="Photo of ${p.name}" style="max-width:80px; border-radius:4px;"></td>
-                  <td>${p.name}</td>
-                  <td>${p.chest}</td>
-                  <td>${p.dob}</td>
-                  <td>${p.ageCategory}</td>
-                  <td>${p.gender}</td>
-                  <td>${p.timestamp}</td>
-                </tr>
-              `;
-              table.innerHTML += row;
-            });
-
-            eventSection.appendChild(table);
-            schoolSection.appendChild(eventSection);
+            table.innerHTML += row;
           });
 
-          container.appendChild(schoolSection);
+          eventSection.appendChild(table);
+          schoolSection.appendChild(eventSection);
         });
-      });
-  }
 
-  function resetAll() {
-    fetch('/reset-all', { method: 'POST' })
-      .then(res => res.text())
-      .then(msg => {
-        alert(msg);
-        loadResults();
+        container.appendChild(schoolSection);
       });
-  }
+    });
+}
 
-  function resetLast() {
-    fetch('/reset-last', { method: 'POST' })
-      .then(res => res.text())
-      .then(msg => {
-        alert(msg);
-        loadResults();
-      });
-  }
+ function resetAll() {
+  if (!confirm("⚠️ Are you sure you want to reset ALL responses? This cannot be undone.")) return;
+
+  fetch('/reset-all', { method: 'POST' })
+    .then(res => res.text())
+    .then(msg => {
+      alert(msg);
+      loadResults();
+    });
+}
+
+function resetLast() {
+  if (!confirm("↩️ Do you want to undo the last response?")) return;
+
+  fetch('/reset-last', { method: 'POST' })
+    .then(res => res.text())
+    .then(msg => {
+      alert(msg);
+      loadResults();
+    });
+}
 
   setInterval(loadResults, 5000); // Refresh every 5 seconds
   loadResults(); // Initial load
