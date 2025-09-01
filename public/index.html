@@ -98,17 +98,64 @@
       opacity: 0;
       pointer-events: none;
     }
-   #bgVideo {
+  /* Shared video styles */
+#bgVideoDesktop,
+#bgVideoMobile {
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 100%;
-  min-height: 100%;
   object-fit: cover;
   z-index: -1;
   opacity: 0.9;
-  filter: blur(2px); /* smooth blur effect */
-  transition: filter 0.5s ease; /* optional: for dynamic blur changes */
+  filter: blur(6px);
+}
+
+/* Desktop video fills screen */
+@media (min-width: 768px) {
+  #bgVideoDesktop {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+  }
+  #bgVideoMobile {
+    display: none;
+  }
+}
+
+/* Mobile video locks to 9:16 canvas */
+@media (max-width: 767px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+
+  #bgVideoDesktop {
+    display: none;
+  }
+
+  #bgVideoMobile {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .form-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    color: #fff;
+  }
 }
 
 /* 📞 Contact Us Button */
@@ -201,16 +248,41 @@
   background: linear-gradient(135deg, #25D366, #128C7E);
   box-shadow: 0 0 10px rgba(37, 211, 102, 0.6);
 }
+.form-wrapper {
+  width: 480px;
+  background: rgb(0, 0, 0); /* deep black with slight transparency */
+  padding: 2rem;
+  margin: 60px 0 0 60px; /* left-aligned */
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgb(0, 0, 0);
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.form-wrapper h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
   </style>
 </head>
 <body>
-  <video autoplay muted loop id="bgVideo">
-  <source src="background.mp4" type="video/mp4">
+  <!-- Desktop Background Video -->
+<video autoplay muted loop id="bgVideoDesktop">
+  <source src="desktop-bg.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<!-- Mobile Background Video -->
+<video autoplay muted loop id="bgVideoMobile">
+  <source src="mobile-bg.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
   <div class="banner">
     <img src="banner.png" alt="CDS Sports Meet Banner">
   </div>
+  <div class="form-wrapper">
   <h1>🏆 CDS Sports Meet 2025
     Hosted by Dr.GR Public School – Registration</h1>
 
@@ -466,5 +538,6 @@ document.getElementById('dob').addEventListener('change', function () {
   </script>
 
 </div>
+</form>
 </body>
 </html>

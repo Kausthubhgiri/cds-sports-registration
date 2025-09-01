@@ -1,4 +1,5 @@
-const express = require('express');
+const { data: fileData } = await axios.get(...);
+await axios.put(...);const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const ExcelJS = require('exceljs');
@@ -75,26 +76,57 @@ async function getLatestData() {
 
 // 📤 GitHub push
 async function pushToGitHub(newData, message = 'Update results.json') {
+  if (!GITHUB_TOKEN) {
+    console.error("❌ Missing GitHub token. Cannot push to GitHub.");
+    return;
+  }
+
   const headers = {
     Authorization: `token ${GITHUB_TOKEN}`,
     Accept: 'application/vnd.github.v3+json',
   };
-  const { data: fileData } = await axios.get(
-    `https://api.github.com/repos/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}`,
-    { headers }
-  );
-  await axios.put(
-    `https://api.github.com/repos/${REPO}/contents/${FILE_PATH}`,
-    {
-      message,
-      content: Buffer.from(JSON.stringify(newData, null, 2)).toString('base64'),
-      sha: fileData.sha,
-      branch: BRANCH,
-    },
-    { headers }
-  );
-}
 
+  console.log("📤 Attempting GitHub push...");
+  console.log(`📝 Commit message: ${message}`);
+  console.log(`📦 Data size: ${JSON.stringify(newData).length} bytes`);
+
+  let sha = null;
+
+  try {
+    const { data: fileData } = await axios.get(
+      `https://api.github.com/repos/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}`,
+      { headers }
+    );
+    sha = fileData.sha;
+    console.log("🔍 Existing file found. SHA:", sha);
+  } catch (err) {
+    if (err.response?.status === 404) {
+      console.log("📁 File not found — creating new one");
+    } else {
+      console.error("❌ GitHub fetch failed:", err.response?.data || err.message);
+      return;
+    }
+  }
+
+  const payload = {
+    message,
+    content: Buffer.from(JSON.stringify(newData, null, 2)).toString('base64'),
+    branch: BRANCH,
+  };
+
+  if (sha) payload.sha = sha;
+
+  try {
+    await axios.put(
+      `https://api.github.com/repos/${REPO}/contents/${FILE_PATH}`,
+      payload,
+      { headers }
+    );
+    console.log("✅ GitHub push successful");
+  } catch (err) {
+    console.error("❌ GitHub push failed:", err.response?.data || err.message);
+  }
+}
 // 📊 Chest number logic
 async function loadChestRanges() {
   const workbook = new ExcelJS.Workbook();
