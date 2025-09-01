@@ -36,7 +36,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // 🧠 App state
-let data = [];
+
 let chestRanges = {};
 let chestTracker = {};
 
