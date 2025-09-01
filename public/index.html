@@ -351,7 +351,7 @@
 
     <button type="submit">Submit</button>
   </form>
- 
+ <div id="submittingPopup" class="popup hidden">Submitting your registration...</div>
 
   <div id="status" role="status" aria-live="polite"></div>
 
@@ -435,6 +435,7 @@
 
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
+        document.getElementById('submittingPopup').classList.remove('hidden');
 
       const eventsChecked = document.querySelectorAll('input[name="events"]:checked');
       const nonRelayChecked = Array.from(eventsChecked).filter(cb => !cb.classList.contains('relay'));
@@ -468,6 +469,7 @@
         if (!res.ok) throw new Error(result.error || 'Submission failed');
 
         statusDiv.textContent = `✅ Registration successful! Assigned Chest Number: ${result.chest}`;
+        document.getElementById('submittingPopup').classList.add('hidden');
         showPopup(`✅ Registration successful!\nChest Number: ${result.chest}`);
         form.reset();
         preview.style.display = 'none';
@@ -475,6 +477,7 @@
       } catch (err) {
         console.error("❌ Submission error:", err);
         statusDiv.textContent = `❌ ${err.message}`;
+        document.getElementById('submittingPopup').classList.add('hidden');
         showPopup(`❌ ${err.message}`);
       }
     });
