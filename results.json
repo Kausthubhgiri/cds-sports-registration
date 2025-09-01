@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "k1",
+    "chest": 201,
+    "dob": "2009-06-08",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/5475b5c8d5c2fd39efc513c577670133",
+    "timestamp": "1/9/2025, 15:30:40"
+  }
+]
