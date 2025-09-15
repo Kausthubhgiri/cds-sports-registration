@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "t1",
+    "chest": 100,
+    "dob": "2009-01-01",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "50m Race"
+    ],
+    "photoPath": "/uploads/feb3e5a11ceb9f22c339caa5ec41f5fd",
+    "timestamp": "15/9/2025, 16:42:01"
+  }
+]
