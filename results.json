@@ -111,5 +111,20 @@
     ],
     "photoPath": "/uploads/dc194c51fb1a5f1eecf4513f8f9b5b3f",
     "timestamp": "22/9/2025, 09:47:08"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "FARHA FATHIMA",
+    "chest": 805,
+    "dob": "2015-04-06",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/282f3bf39eee99968623158ccb793abd",
+    "timestamp": "22/9/2025, 09:49:03"
   }
 ]
