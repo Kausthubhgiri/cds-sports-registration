@@ -178,5 +178,18 @@
     ],
     "photoPath": "/uploads/8f237e7f2ad1c0cac7f6f2de8d57434e",
     "timestamp": "22/9/2025, 10:00:53"
+  },
+  {
+    "school": "VISWADARSHINI PUBLIC SCHOOL",
+    "name": "DIVIN R D",
+    "chest": 1209,
+    "dob": "2012-11-07",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/abaa572716f8f89ae42a4ebbd22fa0e2",
+    "timestamp": "22/9/2025, 10:02:40"
   }
 ]
