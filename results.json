@@ -28,5 +28,19 @@
     ],
     "photoPath": "/uploads/416919277ee39cae52a272bc92683e2b",
     "timestamp": "22/9/2025, 09:01:03"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "ADVAITH ULLAS  GOPALA KRISHNAN",
+    "chest": 802,
+    "dob": "2013-12-10",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "100m Race"
+    ],
+    "photoPath": "/uploads/0b3c36ef246b1f9f08940a87acfe3f90",
+    "timestamp": "22/9/2025, 09:01:25"
   }
 ]
