@@ -12,5 +12,21 @@
     ],
     "photoPath": "/uploads/a88159b004127f966648e133e943008f",
     "timestamp": "22/9/2025, 08:59:14"
+  },
+  {
+    "school": "VISWADARSHINI PUBLIC SCHOOL",
+    "name": "MUHAMMED HARIS",
+    "chest": 1201,
+    "dob": "2015-04-09",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/416919277ee39cae52a272bc92683e2b",
+    "timestamp": "22/9/2025, 09:01:03"
   }
 ]
