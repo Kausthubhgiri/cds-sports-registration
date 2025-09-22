@@ -96,5 +96,20 @@
     ],
     "photoPath": "/uploads/4e9ef67113e4ea424ae493e5eed83d28",
     "timestamp": "22/9/2025, 09:38:23"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "RITHIKA JAYAN A",
+    "chest": 804,
+    "dob": "2015-06-02",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/dc194c51fb1a5f1eecf4513f8f9b5b3f",
+    "timestamp": "22/9/2025, 09:47:08"
   }
 ]
