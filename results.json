@@ -191,5 +191,18 @@
     ],
     "photoPath": "/uploads/abaa572716f8f89ae42a4ebbd22fa0e2",
     "timestamp": "22/9/2025, 10:02:40"
+  },
+  {
+    "school": "VISWADARSHINI PUBLIC SCHOOL",
+    "name": "JAISON PRAKASH",
+    "chest": 1210,
+    "dob": "2014-11-18",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/70710dd4ccd4314db2b0a58e38544c66",
+    "timestamp": "22/9/2025, 10:04:27"
   }
 ]
