@@ -83,5 +83,18 @@
     ],
     "photoPath": "/uploads/c310de74e35480bf67e5f3c471b23d95",
     "timestamp": "22/9/2025, 09:36:58"
+  },
+  {
+    "school": "VISWADARSHINI PUBLIC SCHOOL",
+    "name": "ABHISHEK S S",
+    "chest": 1204,
+    "dob": "2010-07-30",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "400m Race"
+    ],
+    "photoPath": "/uploads/4e9ef67113e4ea424ae493e5eed83d28",
+    "timestamp": "22/9/2025, 09:38:23"
   }
 ]
