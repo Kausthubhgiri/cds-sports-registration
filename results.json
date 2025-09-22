@@ -42,5 +42,19 @@
     ],
     "photoPath": "/uploads/0b3c36ef246b1f9f08940a87acfe3f90",
     "timestamp": "22/9/2025, 09:01:25"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "FARHA FATHIMA A",
+    "chest": 803,
+    "dob": "2015-04-06",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "50m Race",
+      "100m Race"
+    ],
+    "photoPath": "/uploads/7739b3f66479eb1f4128c7081192234b",
+    "timestamp": "22/9/2025, 09:04:39"
   }
 ]
