@@ -68,116 +68,161 @@
 </head>
 <body>
   <h1>🏅 CDS Sports Meet – Admin Dashboard</h1>
-<div id="count">Loading entries...</div>
+  <div id="count">Loading entries...</div>
 
   <button onclick="window.location.href='/export'">⬇ Export to Excel</button>
   <button onclick="resetAll()">🗑️ Reset All Responses</button>
   <button onclick="resetLast()">↩️ Undo Last Response</button>
 
   <div id="resultsContainer"></div>
+
 <script>
   const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
   let previousData = [];
 
   function loadResults() {
-  fetch('/results')
-    .then(res => res.json())
-    .then(data => {
-      if (JSON.stringify(data) === JSON.stringify(previousData)) return; // No change, skip update
-      previousData = data;
+    fetch('/results')
+      .then(res => res.json())
+      .then(data => {
+        if (JSON.stringify(data) === JSON.stringify(previousData)) return;
+        previousData = data;
 
-      const container = document.getElementById('resultsContainer');
-      const countDiv = document.getElementById('count');
-      countDiv.textContent = `📋 Total Entries: ${data.length}`;
+        const container = document.getElementById('resultsContainer');
+        const countDiv = document.getElementById('count');
+        countDiv.textContent = `📋 Total Entries: ${data.length}`;
+        container.innerHTML = '';
 
-      // Clear only the inner content, not the whole structure
-      container.innerHTML = '';
+        const schools = [...new Set(data.map(entry => entry.school))].sort();
 
-      const schools = [...new Set(data.map(entry => entry.school))].sort();
+        schools.forEach(school => {
+          const schoolSection = document.createElement('details');
+          schoolSection.innerHTML = `<summary>🏫 <strong>${school}</strong></summary>`;
 
-      schools.forEach(school => {
-        const schoolSection = document.createElement('details');
-        schoolSection.innerHTML = `<summary>🏫 <strong>${school}</strong></summary>`;
+          const schoolEntries = data.filter(e => e.school === school);
+          const eventMap = {};
 
-        const schoolEntries = data.filter(e => e.school === school);
-        const eventMap = {};
-
-        schoolEntries.forEach(entry => {
-          entry.events.forEach(event => {
-            eventMap[event] = eventMap[event] || [];
-            eventMap[event].push(entry);
+          schoolEntries.forEach(entry => {
+            entry.events.forEach(event => {
+              eventMap[event] = eventMap[event] || [];
+              eventMap[event].push(entry);
+            });
           });
-        });
 
-        Object.entries(eventMap).forEach(([eventName, participants]) => {
-          const eventSection = document.createElement('details');
-          eventSection.innerHTML = `<summary>🎯 <strong>${eventName}</strong></summary>`;
+          Object.entries(eventMap).forEach(([eventName, participants]) => {
+            const eventSection = document.createElement('details');
+            eventSection.innerHTML = `<summary>🎯 <strong>${eventName}</strong></summary>`;
 
-          participants.sort((a, b) =>
-            ageOrder.indexOf(a.ageCategory) - ageOrder.indexOf(b.ageCategory)
-          );
+            participants.sort((a, b) =>
+              ageOrder.indexOf(a.ageCategory) - ageOrder.indexOf(b.ageCategory)
+            );
 
-          const table = document.createElement('table');
-          table.innerHTML = `
-            <tr>
-              <th>Photo</th>
-              <th>Name</th>
-              <th>Chest</th>
-              <th>DOB</th>
-              <th>Age Category</th>
-              <th>Gender</th>
-              <th>Timestamp</th>
-            </tr>
-          `;
-
-          participants.forEach(p => {
-            const row = `
+            const table = document.createElement('table');
+            table.innerHTML = `
               <tr>
-                <td><img src="${p.photoPath}" alt="Photo of ${p.name}" style="max-width:80px; border-radius:4px;"></td>
-                <td>${p.name}</td>
-                <td>${p.chest}</td>
-                <td>${p.dob}</td>
-                <td>${p.ageCategory}</td>
-                <td>${p.gender}</td>
-                <td>${p.timestamp}</td>
+                <th>Photo</th>
+                <th>Name</th>
+                <th>Chest</th>
+                <th>DOB</th>
+                <th>Age Category</th>
+                <th>Gender</th>
+                <th>Timestamp</th>
+                <th>Actions</th>
               </tr>
             `;
-            table.innerHTML += row;
+
+            participants.forEach(p => {
+              const row = `
+                <tr>
+                  <td><img src="${p.photoPath}" alt="Photo of ${p.name}" style="max-width:80px; border-radius:4px;"></td>
+                  <td>${p.name}</td>
+                  <td>${p.chest}</td>
+                  <td>${p.dob}</td>
+                  <td>${p.ageCategory}</td>
+                  <td>${p.gender}</td>
+                  <td>${p.timestamp}</td>
+                  <td>
+                    <button onclick="editEvents('${p.name}', '${p.school}')">✏️ Edit Events</button>
+                    <button onclick="removeCandidate('${p.name}', '${p.school}')">🗑️ Remove</button>
+                  </td>
+                </tr>
+              `;
+              table.innerHTML += row;
+            });
+
+            eventSection.appendChild(table);
+            schoolSection.appendChild(eventSection);
           });
 
-          eventSection.appendChild(table);
-          schoolSection.appendChild(eventSection);
+          container.appendChild(schoolSection);
         });
-
-        container.appendChild(schoolSection);
       });
-    });
-}
+  }
 
- function resetAll() {
-  if (!confirm("⚠️ Are you sure you want to reset ALL responses? This cannot be undone.")) return;
+  function resetAll() {
+    if (!confirm("⚠️ Are you sure you want to reset ALL responses? This cannot be undone.")) return;
+    fetch('/reset-all', { method: 'POST' })
+      .then(res => res.text())
+      .then(msg => {
+        alert(msg);
+        loadResults();
+      });
+  }
 
-  fetch('/reset-all', { method: 'POST' })
-    .then(res => res.text())
-    .then(msg => {
-      alert(msg);
-      loadResults();
-    });
-}
+  function resetLast() {
+    if (!confirm("↩️ Do you want to undo the last response?")) return;
+    fetch('/reset-last', { method: 'POST' })
+      .then(res => res.text())
+      .then(msg => {
+        alert(msg);
+        loadResults();
+      });
+  }
 
-function resetLast() {
-  if (!confirm("↩️ Do you want to undo the last response?")) return;
+  function editEvents(name, school) {
+    const entry = previousData.find(e =>
+      e.name === name && e.school === school
+    );
+    if (!entry) return alert("Participant not found.");
 
-  fetch('/reset-last', { method: 'POST' })
-    .then(res => res.text())
-    .then(msg => {
-      alert(msg);
-      loadResults();
-    });
-}
+    const allEvents = ["100m", "200m", "Long Jump", "Shot Put", "Relay"]; // Customize this list
+    const updated = prompt(
+      `Edit events for ${name} (comma-separated):\nAvailable: ${allEvents.join(', ')}`,
+      entry.events.join(', ')
+    );
+    if (updated === null) return;
 
-  setInterval(loadResults, 5000); // Refresh every 5 seconds
-  loadResults(); // Initial load
+    const newEvents = updated.split(',').map(e => e.trim()).filter(e => allEvents.includes(e));
+    if (newEvents.length === 0) return alert("No valid events selected.");
+
+    fetch('/edit-events', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, school, events: newEvents })
+    })
+      .then(res => res.text())
+      .then(msg => {
+        alert(msg);
+        loadResults();
+      });
+  }
+
+  function removeCandidate(name, school) {
+    if (!confirm(`⚠️ Are you sure you want to remove ${name} from ${school}?`)) return;
+
+    fetch('/remove-candidate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, school })
+    })
+      .then(res => res.text())
+      .then(msg => {
+        alert(msg);
+        loadResults();
+      });
+  }
+
+  setInterval(loadResults, 5000);
+  loadResults();
 </script>
 </body>
 </html>
