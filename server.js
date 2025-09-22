@@ -326,6 +326,41 @@ app.post('/reset-last', async (req, res) => {
 
   res.send("Last response and chest number have been removed.");
 });
+// ✏️ POST /edit-events
+app.post('/edit-events', async (req, res) => {
+  const { name, school, events } = req.body;
+  const index = data.findIndex(e =>
+    e.name.trim().toLowerCase() === name.trim().toLowerCase() &&
+    e.school.trim().toLowerCase() === school.trim().toLowerCase()
+  );
+  if (index === -1) return res.status(404).send("Participant not found.");
+
+  data[index].events = events;
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  if (USE_GITHUB) await pushToGitHub(data, `Update events for ${name} from ${school}`);
+  res.send("Events updated successfully.");
+});
+
+// 🗑️ POST /remove-candidate
+app.post('/remove-candidate', async (req, res) => {
+  const { name, school } = req.body;
+  const index = data.findIndex(e =>
+    e.name.trim().toLowerCase() === name.trim().toLowerCase() &&
+    e.school.trim().toLowerCase() === school.trim().toLowerCase()
+  );
+  if (index === -1) return res.status(404).send("Candidate not found.");
+
+  const removed = data.splice(index, 1)[0];
+  chestTracker[school] = Math.max(chestTracker[school] - 1, chestRanges[school].start);
+
+  const photoPath = path.join(__dirname, removed.photoPath);
+  if (fs.existsSync(photoPath)) fs.unlinkSync(photoPath);
+
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2)); // ✅ This was missing
+  if (USE_GITHUB) await pushToGitHub(data, `Remove candidate ${name} from ${school}`);
+
+  res.send(`${name} has been removed from ${school}.`);
+});
 
 // 🏫 GET /schools
 app.get('/schools', (req, res) => {
