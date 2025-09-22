@@ -152,5 +152,18 @@
     ],
     "photoPath": "/uploads/f0414c93ce1df0ed43a63764ebf94ef9",
     "timestamp": "22/9/2025, 09:57:06"
+  },
+  {
+    "school": "VISWADARSHINI PUBLIC SCHOOL",
+    "name": "ABHINAND A B",
+    "chest": 1207,
+    "dob": "2009-02-04",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/ed90c6d60a71c40e8fee48635dd10418",
+    "timestamp": "22/9/2025, 09:58:44"
   }
 ]
