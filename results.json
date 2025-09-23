@@ -230,5 +230,19 @@
     ],
     "photoPath": "/uploads/c4b16d95b8e7698a0661a662099637c5",
     "timestamp": "23/9/2025, 07:44:15"
+  },
+  {
+    "school": "VISWADARSHINI PUBLIC SCHOOL",
+    "name": "NOORA FATHIMA",
+    "chest": 1213,
+    "dob": "2016-07-15",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "50m Race",
+      "100m Race"
+    ],
+    "photoPath": "/uploads/bfe57b935f9ce3f7fc545c08e4aa2fc3",
+    "timestamp": "23/9/2025, 07:45:44"
   }
 ]
