@@ -244,5 +244,19 @@
     ],
     "photoPath": "/uploads/bfe57b935f9ce3f7fc545c08e4aa2fc3",
     "timestamp": "23/9/2025, 07:45:44"
+  },
+  {
+    "school": "VISWADARSHINI PUBLIC SCHOOL",
+    "name": "ABIYA S S",
+    "chest": 1214,
+    "dob": "2015-06-19",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race"
+    ],
+    "photoPath": "/uploads/ca0a7584372e0b625fce74f531fad97c",
+    "timestamp": "23/9/2025, 07:47:05"
   }
 ]
