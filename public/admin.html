@@ -184,7 +184,7 @@
     );
     if (!entry) return alert("Participant not found.");
 
-    const allEvents = ["100m", "200m", "Long Jump", "Shot Put", "Relay"]; // Customize this list
+    const allEvents = ["50m Race", "100m Race", "200m Race", " 400m Race", "800m Race","1500m Race","Shot Put","Discus Throw","Long Jump","High Jump","4x100m Relay","4x400m Relay"]; // Customize this list
     const updated = prompt(
       `Edit events for ${name} (comma-separated):\nAvailable: ${allEvents.join(', ')}`,
       entry.events.join(', ')
