@@ -217,5 +217,18 @@
     ],
     "photoPath": "/uploads/3e4420da203cd97e248bd1a85b6f4bf6",
     "timestamp": "23/9/2025, 07:42:33"
+  },
+  {
+    "school": "VISWADARSHINI PUBLIC SCHOOL",
+    "name": "AGNIDEV M P",
+    "chest": 1212,
+    "dob": "2014-11-23",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "200m Race"
+    ],
+    "photoPath": "/uploads/c4b16d95b8e7698a0661a662099637c5",
+    "timestamp": "23/9/2025, 07:44:15"
   }
 ]
