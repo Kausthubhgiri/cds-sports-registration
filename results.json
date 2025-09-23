@@ -272,5 +272,19 @@
     ],
     "photoPath": "/uploads/fe49229e9975e7e7f0907b46c4248d68",
     "timestamp": "23/9/2025, 07:48:27"
+  },
+  {
+    "school": "VISWADARSHINI PUBLIC SCHOOL",
+    "name": "ATHIL JOSEPH",
+    "chest": 1216,
+    "dob": "2012-01-08",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race"
+    ],
+    "photoPath": "/uploads/71ad0fc7b1325adc6c19c01f8c5c447d",
+    "timestamp": "23/9/2025, 07:51:58"
   }
 ]
