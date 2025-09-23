@@ -204,5 +204,18 @@
     ],
     "photoPath": "/uploads/70710dd4ccd4314db2b0a58e38544c66",
     "timestamp": "22/9/2025, 10:04:27"
+  },
+  {
+    "school": "VISWADARSHINI PUBLIC SCHOOL",
+    "name": "KARTHIK U S",
+    "chest": 1211,
+    "dob": "2016-08-09",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/3e4420da203cd97e248bd1a85b6f4bf6",
+    "timestamp": "23/9/2025, 07:42:33"
   }
 ]
