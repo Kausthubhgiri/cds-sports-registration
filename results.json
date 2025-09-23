@@ -21,7 +21,8 @@
     "ageCategory": "Under 11",
     "gender": "Male",
     "events": [
-      "100m"
+      "100m",
+      "200m"
     ],
     "photoPath": "/uploads/416919277ee39cae52a272bc92683e2b",
     "timestamp": "22/9/2025, 09:01:03"
