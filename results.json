@@ -258,5 +258,19 @@
     ],
     "photoPath": "/uploads/ca0a7584372e0b625fce74f531fad97c",
     "timestamp": "23/9/2025, 07:47:05"
+  },
+  {
+    "school": "VISWADARSHINI PUBLIC SCHOOL",
+    "name": "GOWRI NANDA P R",
+    "chest": 1215,
+    "dob": "2012-08-08",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race"
+    ],
+    "photoPath": "/uploads/fe49229e9975e7e7f0907b46c4248d68",
+    "timestamp": "23/9/2025, 07:48:27"
   }
 ]
