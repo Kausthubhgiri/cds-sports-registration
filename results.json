@@ -21,10 +21,7 @@
     "ageCategory": "Under 11",
     "gender": "Male",
     "events": [
-      "50m Race",
-      "100m Race",
-      "200m Race",
-      "4x100m Relay"
+      "100m"
     ],
     "photoPath": "/uploads/416919277ee39cae52a272bc92683e2b",
     "timestamp": "22/9/2025, 09:01:03"
