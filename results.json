@@ -301,5 +301,21 @@
     ],
     "photoPath": "/uploads/ef0d0f6570b3e33b1e1d097da5f5b976",
     "timestamp": "25/9/2025, 08:57:23"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "SRAVAN S NAIR",
+    "chest": 1002,
+    "dob": "2008-04-14",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/3badd528a3508f3784a17624312b1168",
+    "timestamp": "25/9/2025, 09:11:04"
   }
 ]
