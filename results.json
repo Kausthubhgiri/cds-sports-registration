@@ -694,5 +694,20 @@
     ],
     "photoPath": "/uploads/cb6e07c371824040e080adf03b0424ac",
     "timestamp": "25/9/2025, 10:49:53"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "NITHALI S NIKHIL",
+    "chest": 819,
+    "dob": "2012-12-05",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/d3008669f61b4f469e55583ee6536097",
+    "timestamp": "25/9/2025, 10:52:42"
   }
 ]
