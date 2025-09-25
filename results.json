@@ -765,5 +765,19 @@
     ],
     "photoPath": "/uploads/334d0914328146aabaab23cc79a0b761",
     "timestamp": "25/9/2025, 11:02:58"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "GOPIKA M V",
+    "chest": 1016,
+    "dob": "2008-05-01",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "High Jump"
+    ],
+    "photoPath": "/uploads/feb36f509b6cade0f66654340069e836",
+    "timestamp": "25/9/2025, 11:22:36"
   }
 ]
