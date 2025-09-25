@@ -723,5 +723,19 @@
     ],
     "photoPath": "/uploads/d07aa9ed90ff6f0fb0ac7e6855375ce3",
     "timestamp": "25/9/2025, 10:54:40"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "AANANYA.D",
+    "chest": 821,
+    "dob": "2011-07-17",
+    "ageCategory": "Under 16",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/c20df30f50b1f438526b39004e257142",
+    "timestamp": "25/9/2025, 10:57:40"
   }
 ]
