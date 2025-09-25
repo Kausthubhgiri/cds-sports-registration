@@ -792,5 +792,19 @@
     ],
     "photoPath": "/uploads/958cc662fffaae0c2bcc5c68baab0ebe",
     "timestamp": "25/9/2025, 11:24:09"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "VARNA R B",
+    "chest": 1018,
+    "dob": "2008-09-10",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/09e3c1c5d68172531b7ef508f8399d4d",
+    "timestamp": "25/9/2025, 11:25:50"
   }
 ]
