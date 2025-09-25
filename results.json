@@ -619,5 +619,21 @@
     ],
     "photoPath": "/uploads/bee600068e90fa60cf4fa47da1c9d525",
     "timestamp": "25/9/2025, 10:39:21"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "MALAVIKA M",
+    "chest": 814,
+    "dob": "2008-04-11",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/81ffd95b65f45e1f514eca846bb04961",
+    "timestamp": "25/9/2025, 10:41:50"
   }
 ]
