@@ -576,5 +576,18 @@
     ],
     "photoPath": "/uploads/4da99572ce27915c590bd9f6aa1ca15a",
     "timestamp": "25/9/2025, 10:32:13"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "VEDHA S A",
+    "chest": 811,
+    "dob": "2015-12-21",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/92eee3d30741c2c870ffff5cfa515dba",
+    "timestamp": "25/9/2025, 10:34:40"
   }
 ]
