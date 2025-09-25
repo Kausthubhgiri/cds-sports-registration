@@ -651,5 +651,18 @@
     ],
     "photoPath": "/uploads/24c571d31e32c83b98b28d60d2922a92",
     "timestamp": "25/9/2025, 10:43:58"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "ANJANA MOHAN A",
+    "chest": 816,
+    "dob": "2008-11-13",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/311e2ecd8034ead9e16554d04b44dd0c",
+    "timestamp": "25/9/2025, 10:47:11"
   }
 ]
