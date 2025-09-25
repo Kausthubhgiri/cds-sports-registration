@@ -737,5 +737,19 @@
     ],
     "photoPath": "/uploads/c20df30f50b1f438526b39004e257142",
     "timestamp": "25/9/2025, 10:57:40"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "MUHAMMED ASIF S A",
+    "chest": 822,
+    "dob": "2013-01-03",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "400m Race"
+    ],
+    "photoPath": "/uploads/56e0a3e147651571769cc3a96f06ff4b",
+    "timestamp": "25/9/2025, 10:59:35"
   }
 ]
