@@ -459,5 +459,19 @@
     ],
     "photoPath": "/uploads/5a9639bf103a31d5587567f062cbb115",
     "timestamp": "25/9/2025, 10:02:16"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "AKASH A S",
+    "chest": 1009,
+    "dob": "2008-12-03",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "High Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/255452698a9a441bacb596b7235fddf5",
+    "timestamp": "25/9/2025, 10:04:26"
   }
 ]
