@@ -446,5 +446,18 @@
     ],
     "photoPath": "/uploads/944973f7cb2f1739c8133f683c025c5e",
     "timestamp": "25/9/2025, 09:41:59"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "THAMJEEDH AHAMMED B",
+    "chest": 1008,
+    "dob": "2008-03-31",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "1500m Race"
+    ],
+    "photoPath": "/uploads/5a9639bf103a31d5587567f062cbb115",
+    "timestamp": "25/9/2025, 10:02:16"
   }
 ]
