@@ -513,5 +513,22 @@
     ],
     "photoPath": "/uploads/1b2aa2a23e3020b01921f7b4db0a28e6",
     "timestamp": "25/9/2025, 10:10:15"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "LEKSHMI J",
+    "chest": 1013,
+    "dob": "2007-10-24",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "400m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/91d505c971e2741ed5a5bd1f40d67a2d",
+    "timestamp": "25/9/2025, 10:14:02"
   }
 ]
