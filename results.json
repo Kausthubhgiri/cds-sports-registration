@@ -604,5 +604,20 @@
     ],
     "photoPath": "/uploads/04a79394f0b29550ca3e834816382d50",
     "timestamp": "25/9/2025, 10:38:29"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "SREYAS RAJ A R",
+    "chest": 813,
+    "dob": "2010-03-24",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/bee600068e90fa60cf4fa47da1c9d525",
+    "timestamp": "25/9/2025, 10:39:21"
   }
 ]
