@@ -546,5 +546,21 @@
     ],
     "photoPath": "/uploads/98e4cb479bcb981e4d0248faf865ded0",
     "timestamp": "25/9/2025, 10:16:21"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "ARABHI S R",
+    "chest": 1015,
+    "dob": "2008-03-31",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "800m Race",
+      "Long Jump",
+      "High Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/1120c1a9dbd307b0d7f5e8e2e7603ed2",
+    "timestamp": "25/9/2025, 10:19:35"
   }
 ]
