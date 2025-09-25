@@ -530,5 +530,21 @@
     ],
     "photoPath": "/uploads/91d505c971e2741ed5a5bd1f40d67a2d",
     "timestamp": "25/9/2025, 10:14:02"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "ANAGHA A B",
+    "chest": 1014,
+    "dob": "2008-07-22",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/98e4cb479bcb981e4d0248faf865ded0",
+    "timestamp": "25/9/2025, 10:16:21"
   }
 ]
