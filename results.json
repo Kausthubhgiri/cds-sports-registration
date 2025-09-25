@@ -486,5 +486,19 @@
     ],
     "photoPath": "/uploads/705c469b04f307950c5f4700cb24fe3f",
     "timestamp": "25/9/2025, 10:06:17"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "ANANDHAKRISHNA A S",
+    "chest": 1011,
+    "dob": "2008-06-06",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/502711bc78a7f8d2a4b7a6de3938fad0",
+    "timestamp": "25/9/2025, 10:08:02"
   }
 ]
