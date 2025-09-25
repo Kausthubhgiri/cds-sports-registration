@@ -679,5 +679,20 @@
     ],
     "photoPath": "/uploads/7313166ab927669251b619d1c682a76c",
     "timestamp": "25/9/2025, 10:48:13"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "MUHAMMED ALIF S A",
+    "chest": 818,
+    "dob": "2011-02-18",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/cb6e07c371824040e080adf03b0424ac",
+    "timestamp": "25/9/2025, 10:49:53"
   }
 ]
