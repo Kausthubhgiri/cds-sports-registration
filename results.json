@@ -751,5 +751,19 @@
     ],
     "photoPath": "/uploads/56e0a3e147651571769cc3a96f06ff4b",
     "timestamp": "25/9/2025, 10:59:35"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "SABARI SAJAN S",
+    "chest": 823,
+    "dob": "2010-05-28",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "Discus Throw",
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/334d0914328146aabaab23cc79a0b761",
+    "timestamp": "25/9/2025, 11:02:58"
   }
 ]
