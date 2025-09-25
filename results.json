@@ -562,5 +562,19 @@
     ],
     "photoPath": "/uploads/1120c1a9dbd307b0d7f5e8e2e7603ed2",
     "timestamp": "25/9/2025, 10:19:35"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "ALA YASMIN R R",
+    "chest": 810,
+    "dob": "2015-09-23",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/4da99572ce27915c590bd9f6aa1ca15a",
+    "timestamp": "25/9/2025, 10:32:13"
   }
 ]
