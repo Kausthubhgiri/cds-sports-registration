@@ -418,5 +418,19 @@
     ],
     "photoPath": "/uploads/d1d98f971200ede9a184977af6c87d7e",
     "timestamp": "25/9/2025, 09:36:35"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "RISHIKESH B S",
+    "chest": 1007,
+    "dob": "2008-09-10",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/76bd220bb5860a80f147e3be5baa4f36",
+    "timestamp": "25/9/2025, 09:40:21"
   }
 ]
