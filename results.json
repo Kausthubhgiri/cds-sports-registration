@@ -405,5 +405,18 @@
     ],
     "photoPath": "/uploads/e23e995100be62e9dd18690c4e08088d",
     "timestamp": "25/9/2025, 09:35:28"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "ANURAJ B S",
+    "chest": 808,
+    "dob": "2013-06-06",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/d1d98f971200ede9a184977af6c87d7e",
+    "timestamp": "25/9/2025, 09:36:35"
   }
 ]
