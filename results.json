@@ -709,5 +709,19 @@
     ],
     "photoPath": "/uploads/d3008669f61b4f469e55583ee6536097",
     "timestamp": "25/9/2025, 10:52:42"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "ANAMIKA.S.R",
+    "chest": 820,
+    "dob": "2012-09-24",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/d07aa9ed90ff6f0fb0ac7e6855375ce3",
+    "timestamp": "25/9/2025, 10:54:40"
   }
 ]
