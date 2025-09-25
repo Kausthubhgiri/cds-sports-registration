@@ -779,5 +779,18 @@
     ],
     "photoPath": "/uploads/feb36f509b6cade0f66654340069e836",
     "timestamp": "25/9/2025, 11:22:36"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "PARVATHY S B",
+    "chest": 1017,
+    "dob": "2008-08-24",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/958cc662fffaae0c2bcc5c68baab0ebe",
+    "timestamp": "25/9/2025, 11:24:09"
   }
 ]
