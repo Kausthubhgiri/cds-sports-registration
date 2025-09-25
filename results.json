@@ -500,5 +500,18 @@
     ],
     "photoPath": "/uploads/502711bc78a7f8d2a4b7a6de3938fad0",
     "timestamp": "25/9/2025, 10:08:02"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "SREEHARI S",
+    "chest": 1012,
+    "dob": "2008-10-02",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/1b2aa2a23e3020b01921f7b4db0a28e6",
+    "timestamp": "25/9/2025, 10:10:15"
   }
 ]
