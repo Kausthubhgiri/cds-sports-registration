@@ -317,5 +317,19 @@
     ],
     "photoPath": "/uploads/3badd528a3508f3784a17624312b1168",
     "timestamp": "25/9/2025, 09:11:04"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "GOWRI SANKAR",
+    "chest": 1003,
+    "dob": "2008-03-18",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/7c967c616c6f9a150a914ea4c4e9dc3c",
+    "timestamp": "25/9/2025, 09:21:04"
   }
 ]
