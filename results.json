@@ -432,5 +432,19 @@
     ],
     "photoPath": "/uploads/76bd220bb5860a80f147e3be5baa4f36",
     "timestamp": "25/9/2025, 09:40:21"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "NAVANEETH M A",
+    "chest": 809,
+    "dob": "2014-04-09",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/944973f7cb2f1739c8133f683c025c5e",
+    "timestamp": "25/9/2025, 09:41:59"
   }
 ]
