@@ -346,5 +346,21 @@
     ],
     "photoPath": "/uploads/5d8b3a7eae9dcd5634086e17a568b74f",
     "timestamp": "25/9/2025, 09:26:31"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "DARVIN VINOD",
+    "chest": 1004,
+    "dob": "2007-11-23",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "High Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/69c02b9da580f061b31889e78d8733c0",
+    "timestamp": "25/9/2025, 09:27:52"
   }
 ]
