@@ -664,5 +664,20 @@
     ],
     "photoPath": "/uploads/311e2ecd8034ead9e16554d04b44dd0c",
     "timestamp": "25/9/2025, 10:47:11"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "ABHINAV M S",
+    "chest": 817,
+    "dob": "2010-12-17",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/7313166ab927669251b619d1c682a76c",
+    "timestamp": "25/9/2025, 10:48:13"
   }
 ]
