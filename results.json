@@ -392,5 +392,18 @@
     ],
     "photoPath": "/uploads/d38c3699a3db65b1f01b9540623f7e8a",
     "timestamp": "25/9/2025, 09:32:09"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "KRISHNAJITH H P",
+    "chest": 1006,
+    "dob": "2008-01-03",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/e23e995100be62e9dd18690c4e08088d",
+    "timestamp": "25/9/2025, 09:35:28"
   }
 ]
