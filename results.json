@@ -378,5 +378,19 @@
     ],
     "photoPath": "/uploads/7d6bddaddd705562e382c3b728be30de",
     "timestamp": "25/9/2025, 09:31:02"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "AKHIL M A",
+    "chest": 1005,
+    "dob": "2008-10-22",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "1500m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/d38c3699a3db65b1f01b9540623f7e8a",
+    "timestamp": "25/9/2025, 09:32:09"
   }
 ]
