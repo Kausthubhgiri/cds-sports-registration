@@ -285,5 +285,21 @@
     ],
     "photoPath": "/uploads/71ad0fc7b1325adc6c19c01f8c5c447d",
     "timestamp": "23/9/2025, 07:51:58"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Sachin Biju",
+    "chest": 1001,
+    "dob": "2007-12-12",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/ef0d0f6570b3e33b1e1d097da5f5b976",
+    "timestamp": "25/9/2025, 08:57:23"
   }
 ]
