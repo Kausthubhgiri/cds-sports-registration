@@ -589,5 +589,20 @@
     ],
     "photoPath": "/uploads/92eee3d30741c2c870ffff5cfa515dba",
     "timestamp": "25/9/2025, 10:34:40"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "ROHAN JOSH",
+    "chest": 812,
+    "dob": "2009-10-14",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/04a79394f0b29550ca3e834816382d50",
+    "timestamp": "25/9/2025, 10:38:29"
   }
 ]
