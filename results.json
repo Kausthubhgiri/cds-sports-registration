@@ -924,5 +924,21 @@
     ],
     "photoPath": "/uploads/eac21836edc118749605a512026053bc",
     "timestamp": "26/9/2025, 07:31:42"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "MALAVIKA SYAM",
+    "chest": 1027,
+    "dob": "2011-06-11",
+    "ageCategory": "Under 16",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "1500m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/946048fc6ead15f5127bcd724ae1feb7",
+    "timestamp": "26/9/2025, 07:33:23"
   }
 ]
