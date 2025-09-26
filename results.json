@@ -1017,5 +1017,19 @@
     ],
     "photoPath": "/uploads/2c398388edb433e63846b22f66d0f038",
     "timestamp": "26/9/2025, 07:43:03"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "GAYATHRI BS",
+    "chest": 1033,
+    "dob": "2009-10-22",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/cf8e0b8c625e6838231edb30d6377b29",
+    "timestamp": "26/9/2025, 07:45:02"
   }
 ]
