@@ -1061,5 +1061,20 @@
     ],
     "photoPath": "/uploads/a6f4bbf54e5899c80d2876697679b05f",
     "timestamp": "26/9/2025, 07:50:40"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Muhammad Tharif. T",
+    "chest": 1036,
+    "dob": "2013-01-11",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/9c4c625219c06b8fc712a1e6daafac4f",
+    "timestamp": "26/9/2025, 08:07:01"
   }
 ]
