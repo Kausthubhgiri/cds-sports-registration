@@ -806,5 +806,21 @@
     ],
     "photoPath": "/uploads/09e3c1c5d68172531b7ef508f8399d4d",
     "timestamp": "25/9/2025, 11:25:50"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Alshafin J",
+    "chest": 1019,
+    "dob": "2009-07-20",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/b87a72c0dc97742d7b5fccc406378193",
+    "timestamp": "26/9/2025, 06:57:55"
   }
 ]
