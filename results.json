@@ -910,5 +910,19 @@
     ],
     "photoPath": "/uploads/d669c7ff3f7ec51e79c8f879650d9d52",
     "timestamp": "26/9/2025, 07:28:54"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "SARANG JR",
+    "chest": 1026,
+    "dob": "2010-01-19",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "Discus Throw",
+      "High Jump"
+    ],
+    "photoPath": "/uploads/eac21836edc118749605a512026053bc",
+    "timestamp": "26/9/2025, 07:31:42"
   }
 ]
