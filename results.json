@@ -1048,5 +1048,18 @@
     ],
     "photoPath": "/uploads/fa3688be689cbdfc1b30958416192641",
     "timestamp": "26/9/2025, 07:49:27"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "ANANYA B KRISHNA",
+    "chest": 1035,
+    "dob": "2009-11-07",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/a6f4bbf54e5899c80d2876697679b05f",
+    "timestamp": "26/9/2025, 07:50:40"
   }
 ]
