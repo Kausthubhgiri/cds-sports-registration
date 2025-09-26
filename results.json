@@ -1004,5 +1004,18 @@
     ],
     "photoPath": "/uploads/b71d51357b0d500a7551187c73c92d85",
     "timestamp": "26/9/2025, 07:41:09"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Anna. P. Vinod",
+    "chest": 1032,
+    "dob": "2011-03-01",
+    "ageCategory": "Under 16",
+    "gender": "Female",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/2c398388edb433e63846b22f66d0f038",
+    "timestamp": "26/9/2025, 07:43:03"
   }
 ]
