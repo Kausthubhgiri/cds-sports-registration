@@ -1076,5 +1076,21 @@
     ],
     "photoPath": "/uploads/9c4c625219c06b8fc712a1e6daafac4f",
     "timestamp": "26/9/2025, 08:07:01"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Adithyan AR",
+    "chest": 1037,
+    "dob": "2012-08-31",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "Shot Put",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/4ed71a3a07fed2ea2915916a5c514ed9",
+    "timestamp": "26/9/2025, 08:08:56"
   }
 ]
