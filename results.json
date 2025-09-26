@@ -1092,5 +1092,18 @@
     ],
     "photoPath": "/uploads/4ed71a3a07fed2ea2915916a5c514ed9",
     "timestamp": "26/9/2025, 08:08:56"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "SIDHARTH AG",
+    "chest": 1038,
+    "dob": "2013-06-25",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "High Jump"
+    ],
+    "photoPath": "/uploads/ee518f1299aa4e44b622e26ee98af359",
+    "timestamp": "26/9/2025, 08:42:17"
   }
 ]
