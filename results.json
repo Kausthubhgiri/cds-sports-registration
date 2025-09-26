@@ -1031,5 +1031,22 @@
     ],
     "photoPath": "/uploads/cf8e0b8c625e6838231edb30d6377b29",
     "timestamp": "26/9/2025, 07:45:02"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "NIMISHA S NAIR",
+    "chest": 1034,
+    "dob": "2011-03-11",
+    "ageCategory": "Under 16",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "1500m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/fa3688be689cbdfc1b30958416192641",
+    "timestamp": "26/9/2025, 07:49:27"
   }
 ]
