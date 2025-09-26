@@ -869,5 +869,20 @@
     ],
     "photoPath": "/uploads/fd89827fb2713d9f1c87b2852de93619",
     "timestamp": "26/9/2025, 07:21:04"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "ADHIL SR",
+    "chest": 1023,
+    "dob": "2009-08-05",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "Shot Put",
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/a0b871a894e60ce86827664fde6d983b",
+    "timestamp": "26/9/2025, 07:24:07"
   }
 ]
