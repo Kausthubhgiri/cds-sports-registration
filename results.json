@@ -940,5 +940,21 @@
     ],
     "photoPath": "/uploads/946048fc6ead15f5127bcd724ae1feb7",
     "timestamp": "26/9/2025, 07:33:23"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "VAISHAVI PV",
+    "chest": 1028,
+    "dob": "2009-08-28",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/e778e7836b4154c98e0f60f14e374a00",
+    "timestamp": "26/9/2025, 07:35:17"
   }
 ]
