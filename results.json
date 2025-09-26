@@ -1135,5 +1135,22 @@
     ],
     "photoPath": "/uploads/2973b66f0ee9f32a592bd0132f778179",
     "timestamp": "26/9/2025, 08:48:51"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "CHANGINI MS",
+    "chest": 1041,
+    "dob": "2012-09-20",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "400m Race",
+      "800m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/84ac33e6ea8d8b8b43fbc2db34211457",
+    "timestamp": "26/9/2025, 08:50:38"
   }
 ]
