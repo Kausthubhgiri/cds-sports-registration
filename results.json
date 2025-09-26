@@ -855,5 +855,19 @@
     ],
     "photoPath": "/uploads/21375ef5c18ab400dfccabe9f6cf11ed",
     "timestamp": "26/9/2025, 07:06:12"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Abhi Sajith",
+    "chest": 1022,
+    "dob": "2009-02-25",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/fd89827fb2713d9f1c87b2852de93619",
+    "timestamp": "26/9/2025, 07:21:04"
   }
 ]
