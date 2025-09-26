@@ -989,5 +989,20 @@
     ],
     "photoPath": "/uploads/467aad49fe5fdf4303d1a0b6ec2bf152",
     "timestamp": "26/9/2025, 07:38:53"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Adithya B S",
+    "chest": 1031,
+    "dob": "2010-09-13",
+    "ageCategory": "Under 16",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/b71d51357b0d500a7551187c73c92d85",
+    "timestamp": "26/9/2025, 07:41:09"
   }
 ]
