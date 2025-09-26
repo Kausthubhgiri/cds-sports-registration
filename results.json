@@ -1169,5 +1169,19 @@
     ],
     "photoPath": "/uploads/90d1045b4a5e66ca2b4de582dd86e51e",
     "timestamp": "26/9/2025, 08:54:22"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "ANANYA SS",
+    "chest": 1043,
+    "dob": "2012-03-03",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/98379c3f3dedbfb9e84074b9aa95922d",
+    "timestamp": "26/9/2025, 08:56:44"
   }
 ]
