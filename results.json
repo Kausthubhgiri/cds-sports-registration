@@ -884,5 +884,18 @@
     ],
     "photoPath": "/uploads/a0b871a894e60ce86827664fde6d983b",
     "timestamp": "26/9/2025, 07:24:07"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "ADWAID BP",
+    "chest": 1024,
+    "dob": "2010-10-16",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/9544987e832f34140a49eb39a18c4262",
+    "timestamp": "26/9/2025, 07:26:17"
   }
 ]
