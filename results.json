@@ -1118,5 +1118,22 @@
     ],
     "photoPath": "/uploads/ba72478940d89f314a210665d2340c8d",
     "timestamp": "26/9/2025, 08:47:04"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "PRATHEEKSHA PRABHU",
+    "chest": 1040,
+    "dob": "2013-06-05",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/2973b66f0ee9f32a592bd0132f778179",
+    "timestamp": "26/9/2025, 08:48:51"
   }
 ]
