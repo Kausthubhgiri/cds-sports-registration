@@ -838,5 +838,22 @@
     ],
     "photoPath": "/uploads/d61e07cdee80ddd83b8081809e25fb94",
     "timestamp": "26/9/2025, 07:00:44"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Mahadev.HR",
+    "chest": 1021,
+    "dob": "2009-10-02",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "1500m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/21375ef5c18ab400dfccabe9f6cf11ed",
+    "timestamp": "26/9/2025, 07:06:12"
   }
 ]
