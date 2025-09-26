@@ -1105,5 +1105,18 @@
     ],
     "photoPath": "/uploads/ee518f1299aa4e44b622e26ee98af359",
     "timestamp": "26/9/2025, 08:42:17"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "MUHAMMAD NIHAL",
+    "chest": 1039,
+    "dob": "2012-04-15",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/ba72478940d89f314a210665d2340c8d",
+    "timestamp": "26/9/2025, 08:47:04"
   }
 ]
