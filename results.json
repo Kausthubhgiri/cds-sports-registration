@@ -1183,5 +1183,19 @@
     ],
     "photoPath": "/uploads/98379c3f3dedbfb9e84074b9aa95922d",
     "timestamp": "26/9/2025, 08:56:44"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "SHAFNA JALAL",
+    "chest": 1044,
+    "dob": "2012-02-06",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/bddfb6d55ee402bfee77b0bc4b2daabc",
+    "timestamp": "26/9/2025, 08:58:37"
   }
 ]
