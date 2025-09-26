@@ -822,5 +822,21 @@
     ],
     "photoPath": "/uploads/b87a72c0dc97742d7b5fccc406378193",
     "timestamp": "26/9/2025, 06:57:55"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "ASWIN MS",
+    "chest": 1020,
+    "dob": "2009-05-24",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "800m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/d61e07cdee80ddd83b8081809e25fb94",
+    "timestamp": "26/9/2025, 07:00:44"
   }
 ]
