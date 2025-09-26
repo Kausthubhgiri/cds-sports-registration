@@ -956,5 +956,21 @@
     ],
     "photoPath": "/uploads/e778e7836b4154c98e0f60f14e374a00",
     "timestamp": "26/9/2025, 07:35:17"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "DISHNA DILEEP",
+    "chest": 1029,
+    "dob": "2010-06-22",
+    "ageCategory": "Under 16",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "1500m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/f08486cb90455a810af021c90ee25235",
+    "timestamp": "26/9/2025, 07:36:34"
   }
 ]
