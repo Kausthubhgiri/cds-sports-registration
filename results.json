@@ -972,5 +972,22 @@
     ],
     "photoPath": "/uploads/f08486cb90455a810af021c90ee25235",
     "timestamp": "26/9/2025, 07:36:34"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "SIKHAA SHAJI",
+    "chest": 1030,
+    "dob": "2011-01-15",
+    "ageCategory": "Under 16",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/467aad49fe5fdf4303d1a0b6ec2bf152",
+    "timestamp": "26/9/2025, 07:38:53"
   }
 ]
