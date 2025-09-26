@@ -897,5 +897,18 @@
     ],
     "photoPath": "/uploads/9544987e832f34140a49eb39a18c4262",
     "timestamp": "26/9/2025, 07:26:17"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "ARAV D",
+    "chest": 1025,
+    "dob": "2011-02-25",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "High Jump"
+    ],
+    "photoPath": "/uploads/d669c7ff3f7ec51e79c8f879650d9d52",
+    "timestamp": "26/9/2025, 07:28:54"
   }
 ]
