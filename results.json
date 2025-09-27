@@ -1499,5 +1499,18 @@
     ],
     "photoPath": "/uploads/e98ef5cb2a9189e8750b321cba8a0f6b",
     "timestamp": "27/9/2025, 08:50:31"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Aksha R Lal",
+    "chest": 1065,
+    "dob": "2015-04-03",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/4fff9885ae96e5403388234ab7bc1adf",
+    "timestamp": "27/9/2025, 08:51:39"
   }
 ]
