@@ -1555,5 +1555,18 @@
     ],
     "photoPath": "/uploads/b268bd3447f51f7afc13e2227e5d6f05",
     "timestamp": "27/9/2025, 09:17:24"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "SIVA SAJEEV",
+    "chest": 826,
+    "dob": "2010-11-12",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/11294646d26e6029ef1c0208f05f119b",
+    "timestamp": "27/9/2025, 09:18:33"
   }
 ]
