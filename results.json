@@ -1344,5 +1344,21 @@
     ],
     "photoPath": "/uploads/388edde35348f2c291f857da572b4286",
     "timestamp": "27/9/2025, 04:20:58"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Niya. R",
+    "chest": 1054,
+    "dob": "2015-03-26",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/07777f241418e55f92e46956fe9deee1",
+    "timestamp": "27/9/2025, 04:22:26"
   }
 ]
