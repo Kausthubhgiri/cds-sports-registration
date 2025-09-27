@@ -1760,5 +1760,18 @@
     ],
     "photoPath": "/uploads/4c9d4973dec681c08e6fcd17abc36a14",
     "timestamp": "27/9/2025, 13:30:22"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Alfin Muhammad",
+    "chest": 514,
+    "dob": "2011-01-25",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/c8700f93ab01b84e2fff82aa7a93577e",
+    "timestamp": "27/9/2025, 13:32:34"
   }
 ]
