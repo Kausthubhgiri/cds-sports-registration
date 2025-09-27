@@ -1287,5 +1287,19 @@
     ],
     "photoPath": "/uploads/6113a776108e7a2bf17545721b872114",
     "timestamp": "27/9/2025, 04:13:53"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Sreerag",
+    "chest": 1050,
+    "dob": "2012-08-14",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/53e4b5a1c9c58c015b29b167a150f53d",
+    "timestamp": "27/9/2025, 04:15:06"
   }
 ]
