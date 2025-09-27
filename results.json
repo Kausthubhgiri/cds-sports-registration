@@ -1887,5 +1887,21 @@
     ],
     "photoPath": "/uploads/9bd3c779d87786185f1b21e85cc950c1",
     "timestamp": "27/9/2025, 14:17:55"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Aswan",
+    "chest": 523,
+    "dob": "2007-09-17",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "1500m Race",
+      "High Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/d400f4f72800c7d5b13bd4979c0d5ac5",
+    "timestamp": "27/9/2025, 14:19:57"
   }
 ]
