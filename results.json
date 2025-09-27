@@ -1392,5 +1392,20 @@
     ],
     "photoPath": "/uploads/572122d1d78e7d1a64acba7aaa603420",
     "timestamp": "27/9/2025, 08:31:40"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Maheshwar. M",
+    "chest": 1057,
+    "dob": "2015-01-25",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/79d5eeefcff924672d26e4d33670e741",
+    "timestamp": "27/9/2025, 08:32:37"
   }
 ]
