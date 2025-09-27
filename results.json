@@ -1747,5 +1747,18 @@
     ],
     "photoPath": "/uploads/9a0d790e7ce55cf70aabbb3cd7a7d2ff",
     "timestamp": "27/9/2025, 13:28:31"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Govardhan S A",
+    "chest": 513,
+    "dob": "2012-07-20",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/4c9d4973dec681c08e6fcd17abc36a14",
+    "timestamp": "27/9/2025, 13:30:22"
   }
 ]
