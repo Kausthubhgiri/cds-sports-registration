@@ -1801,5 +1801,19 @@
     ],
     "photoPath": "/uploads/bea895b5172abd26bcb5855b4ef152fd",
     "timestamp": "27/9/2025, 13:38:50"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Sreedev S Rajesh",
+    "chest": 517,
+    "dob": "2014-01-06",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/e41a2370b39943914352bb44a8f7dab2",
+    "timestamp": "27/9/2025, 13:54:25"
   }
 ]
