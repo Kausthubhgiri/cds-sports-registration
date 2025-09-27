@@ -1360,5 +1360,21 @@
     ],
     "photoPath": "/uploads/07777f241418e55f92e46956fe9deee1",
     "timestamp": "27/9/2025, 04:22:26"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Aparna. A",
+    "chest": 1055,
+    "dob": "2015-10-31",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/e2f21f4b5b0138effc28e85b9c3aa01c",
+    "timestamp": "27/9/2025, 04:23:29"
   }
 ]
