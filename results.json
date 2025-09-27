@@ -1845,5 +1845,20 @@
     ],
     "photoPath": "/uploads/1109bd2f3bad5b7da5ab60f1ef4636df",
     "timestamp": "27/9/2025, 14:06:15"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Archa Rajeev R",
+    "chest": 520,
+    "dob": "2011-05-30",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/ffecbe321343b318a720172dfd551611",
+    "timestamp": "27/9/2025, 14:11:00"
   }
 ]
