@@ -1258,5 +1258,19 @@
     ],
     "photoPath": "/uploads/d1bf4238ec9e062fbfd0e130dcca9cc7",
     "timestamp": "27/9/2025, 04:12:19"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Adhikesh",
+    "chest": 1049,
+    "dob": "2012-10-09",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "High Jump"
+    ],
+    "photoPath": "/uploads/90988b9feaef034a0af67cb66c86e91f",
+    "timestamp": "27/9/2025, 04:13:43"
   }
 ]
