@@ -1407,5 +1407,18 @@
     ],
     "photoPath": "/uploads/79d5eeefcff924672d26e4d33670e741",
     "timestamp": "27/9/2025, 08:32:37"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Nivedh krishna P Nair",
+    "chest": 1058,
+    "dob": "2015-07-03",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/b11c34e1e3215e34e30d9f0ccba5cc71",
+    "timestamp": "27/9/2025, 08:33:31"
   }
 ]
