@@ -1860,5 +1860,18 @@
     ],
     "photoPath": "/uploads/ffecbe321343b318a720172dfd551611",
     "timestamp": "27/9/2025, 14:11:00"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Bhuvanika D R",
+    "chest": 521,
+    "dob": "2012-06-07",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/8bd1fec832abc2aaeba40ffe5cba403a",
+    "timestamp": "27/9/2025, 14:13:18"
   }
 ]
