@@ -1224,5 +1224,22 @@
     ],
     "photoPath": "/uploads/4c604239010889aaafaec873dadd9535",
     "timestamp": "27/9/2025, 04:03:51"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Vaishnav. M",
+    "chest": 1047,
+    "dob": "2012-04-15",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/5596053e8f67b0eb580e350a5d9f0c28",
+    "timestamp": "27/9/2025, 04:10:17"
   }
 ]
