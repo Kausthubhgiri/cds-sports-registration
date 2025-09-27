@@ -1949,5 +1949,21 @@
     ],
     "photoPath": "/uploads/f7f47dabf604ef0f9466d968b761b028",
     "timestamp": "27/9/2025, 14:37:45"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Sabarinath",
+    "chest": 527,
+    "dob": "2007-09-19",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/62ba8789db5ddda7a3325badf8666775",
+    "timestamp": "27/9/2025, 14:39:19"
   }
 ]
