@@ -1917,5 +1917,20 @@
     ],
     "photoPath": "/uploads/caca8ef3e19a192a9e8905e5e78782f1",
     "timestamp": "27/9/2025, 14:25:08"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Swathy Sooriya",
+    "chest": 525,
+    "dob": "2007-11-21",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "1500m Race"
+    ],
+    "photoPath": "/uploads/479d18343dcf9299623cbe4ef0dd2b9e",
+    "timestamp": "27/9/2025, 14:28:20"
   }
 ]
