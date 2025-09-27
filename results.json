@@ -1486,5 +1486,18 @@
     ],
     "photoPath": "/uploads/9e0dc17a76fd987665e6829300a97a3a",
     "timestamp": "27/9/2025, 08:49:46"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Avanthika RJ",
+    "chest": 1064,
+    "dob": "2015-08-18",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/e98ef5cb2a9189e8750b321cba8a0f6b",
+    "timestamp": "27/9/2025, 08:50:31"
   }
 ]
