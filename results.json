@@ -1932,5 +1932,22 @@
     ],
     "photoPath": "/uploads/479d18343dcf9299623cbe4ef0dd2b9e",
     "timestamp": "27/9/2025, 14:28:20"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "B Sibi",
+    "chest": 526,
+    "dob": "2008-06-27",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/f7f47dabf604ef0f9466d968b761b028",
+    "timestamp": "27/9/2025, 14:37:45"
   }
 ]
