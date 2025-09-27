@@ -1420,5 +1420,18 @@
     ],
     "photoPath": "/uploads/b11c34e1e3215e34e30d9f0ccba5cc71",
     "timestamp": "27/9/2025, 08:33:31"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "V Aadhikesav",
+    "chest": 1059,
+    "dob": "2015-05-28",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/faac3e7e42a8dfd16499e609d38bc808",
+    "timestamp": "27/9/2025, 08:34:31"
   }
 ]
