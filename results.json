@@ -1815,5 +1815,20 @@
     ],
     "photoPath": "/uploads/e41a2370b39943914352bb44a8f7dab2",
     "timestamp": "27/9/2025, 13:54:25"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Aiysha Fathima",
+    "chest": 518,
+    "dob": "2011-02-01",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/0b16dc6b40bed24e36c9a487d4801821",
+    "timestamp": "27/9/2025, 14:00:29"
   }
 ]
