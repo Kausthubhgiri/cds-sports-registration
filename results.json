@@ -1473,5 +1473,18 @@
     ],
     "photoPath": "/uploads/f04c39812b5f1315db82e839eb9f8d86",
     "timestamp": "27/9/2025, 08:47:57"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Parvathi AP",
+    "chest": 1063,
+    "dob": "2016-01-16",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/9e0dc17a76fd987665e6829300a97a3a",
+    "timestamp": "27/9/2025, 08:49:46"
   }
 ]
