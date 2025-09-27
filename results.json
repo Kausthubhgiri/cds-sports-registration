@@ -1376,5 +1376,21 @@
     ],
     "photoPath": "/uploads/e2f21f4b5b0138effc28e85b9c3aa01c",
     "timestamp": "27/9/2025, 04:23:29"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Arjith. AR",
+    "chest": 1056,
+    "dob": "2015-05-29",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/572122d1d78e7d1a64acba7aaa603420",
+    "timestamp": "27/9/2025, 08:31:40"
   }
 ]
