@@ -1328,5 +1328,21 @@
     ],
     "photoPath": "/uploads/295979b5b4d86982203181075fb84e10",
     "timestamp": "27/9/2025, 04:18:28"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Devarenjan AR sai",
+    "chest": 1053,
+    "dob": "2015-06-23",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/388edde35348f2c291f857da572b4286",
+    "timestamp": "27/9/2025, 04:20:58"
   }
 ]
