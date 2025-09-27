@@ -1676,5 +1676,19 @@
     ],
     "photoPath": "/uploads/fc106db7b570f6f9c32078eec2fb91a2",
     "timestamp": "27/9/2025, 12:50:03"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Muhammad Aslam N  S",
+    "chest": 508,
+    "dob": "2014-05-27",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/511235e61b252a4287cbc82fab4fff75",
+    "timestamp": "27/9/2025, 13:05:37"
   }
 ]
