@@ -1459,5 +1459,19 @@
     ],
     "photoPath": "/uploads/331966f1d5355567f107bf66c334c1a7",
     "timestamp": "27/9/2025, 08:46:49"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Sivada S Nair",
+    "chest": 1062,
+    "dob": "2015-09-19",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/ffc07a462cb27cd5475d2e6791403931",
+    "timestamp": "27/9/2025, 08:47:51"
   }
 ]
