@@ -1773,5 +1773,19 @@
     ],
     "photoPath": "/uploads/c8700f93ab01b84e2fff82aa7a93577e",
     "timestamp": "27/9/2025, 13:32:34"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Adhikeshav R S",
+    "chest": 515,
+    "dob": "2012-08-05",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/336aff2778052955da78c48b8afd6f1b",
+    "timestamp": "27/9/2025, 13:34:57"
   }
 ]
