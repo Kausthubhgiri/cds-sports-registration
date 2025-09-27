@@ -1690,5 +1690,19 @@
     ],
     "photoPath": "/uploads/511235e61b252a4287cbc82fab4fff75",
     "timestamp": "27/9/2025, 13:05:37"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Anokhi  D",
+    "chest": 509,
+    "dob": "2014-11-29",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/039089be6c2e2089b9e43e3b862bf2c9",
+    "timestamp": "27/9/2025, 13:13:44"
   }
 ]
