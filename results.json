@@ -1272,5 +1272,20 @@
     ],
     "photoPath": "/uploads/90988b9feaef034a0af67cb66c86e91f",
     "timestamp": "27/9/2025, 04:13:43"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Anton Ezra",
+    "chest": 501,
+    "dob": "2011-03-01",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/6113a776108e7a2bf17545721b872114",
+    "timestamp": "27/9/2025, 04:13:53"
   }
 ]
