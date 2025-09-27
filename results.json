@@ -1314,5 +1314,19 @@
     ],
     "photoPath": "/uploads/ebd194423d3bbad571351b1cae236338",
     "timestamp": "27/9/2025, 04:16:38"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Binduja. S. B",
+    "chest": 1052,
+    "dob": "2012-09-28",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "800m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/295979b5b4d86982203181075fb84e10",
+    "timestamp": "27/9/2025, 04:18:28"
   }
 ]
