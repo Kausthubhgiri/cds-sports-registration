@@ -1581,5 +1581,18 @@
     ],
     "photoPath": "/uploads/e7331eec4447697874efc5e14d9245f8",
     "timestamp": "27/9/2025, 09:19:27"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "ALAN J S",
+    "chest": 901,
+    "dob": "2013-09-23",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race"
+    ],
+    "photoPath": "/uploads/727697a2655937d67c03cfd5e539fe42",
+    "timestamp": "27/9/2025, 09:32:28"
   }
 ]
