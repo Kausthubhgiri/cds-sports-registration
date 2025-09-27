@@ -1830,5 +1830,20 @@
     ],
     "photoPath": "/uploads/0b16dc6b40bed24e36c9a487d4801821",
     "timestamp": "27/9/2025, 14:00:29"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Anaya P S",
+    "chest": 519,
+    "dob": "2011-06-10",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/1109bd2f3bad5b7da5ab60f1ef4636df",
+    "timestamp": "27/9/2025, 14:06:15"
   }
 ]
