@@ -1718,5 +1718,20 @@
     ],
     "photoPath": "/uploads/53aba7ff6d7661f148cf453d26018e6b",
     "timestamp": "27/9/2025, 13:16:07"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Jayakrishnan",
+    "chest": 511,
+    "dob": "2011-05-19",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/98a501b9aaa5e1e9f4a4d076801efb4f",
+    "timestamp": "27/9/2025, 13:24:42"
   }
 ]
