@@ -1446,5 +1446,18 @@
     ],
     "photoPath": "/uploads/fb22f9a1de894a3cbe37e719825c2ddc",
     "timestamp": "27/9/2025, 08:35:16"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Theertha MA",
+    "chest": 1061,
+    "dob": "2015-02-20",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/331966f1d5355567f107bf66c334c1a7",
+    "timestamp": "27/9/2025, 08:46:49"
   }
 ]
