@@ -1650,5 +1650,18 @@
     ],
     "photoPath": "/uploads/025703f4db909ac4e0b201cce9bf4b83",
     "timestamp": "27/9/2025, 12:40:15"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Adithyan D P",
+    "chest": 506,
+    "dob": "2013-01-14",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race"
+    ],
+    "photoPath": "/uploads/bc967b6eaf2667e07d14875c1f740856",
+    "timestamp": "27/9/2025, 12:42:15"
   }
 ]
