@@ -1733,5 +1733,19 @@
     ],
     "photoPath": "/uploads/98a501b9aaa5e1e9f4a4d076801efb4f",
     "timestamp": "27/9/2025, 13:24:42"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Athirshnav",
+    "chest": 512,
+    "dob": "2011-07-24",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "800m Race"
+    ],
+    "photoPath": "/uploads/9a0d790e7ce55cf70aabbb3cd7a7d2ff",
+    "timestamp": "27/9/2025, 13:28:31"
   }
 ]
