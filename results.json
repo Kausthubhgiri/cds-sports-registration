@@ -1512,5 +1512,21 @@
     ],
     "photoPath": "/uploads/4fff9885ae96e5403388234ab7bc1adf",
     "timestamp": "27/9/2025, 08:51:39"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Arshan Siyad",
+    "chest": 1066,
+    "dob": "2010-04-02",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "1500m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/ebd291be703ba76156dcd42826dc196e",
+    "timestamp": "27/9/2025, 09:02:34"
   }
 ]
