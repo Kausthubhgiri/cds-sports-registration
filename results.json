@@ -1301,5 +1301,18 @@
     ],
     "photoPath": "/uploads/53e4b5a1c9c58c015b29b167a150f53d",
     "timestamp": "27/9/2025, 04:15:06"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Niha. A. R",
+    "chest": 1051,
+    "dob": "2013-08-10",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "High Jump"
+    ],
+    "photoPath": "/uploads/ebd194423d3bbad571351b1cae236338",
+    "timestamp": "27/9/2025, 04:16:38"
   }
 ]
