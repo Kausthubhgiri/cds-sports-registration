@@ -1704,5 +1704,19 @@
     ],
     "photoPath": "/uploads/039089be6c2e2089b9e43e3b862bf2c9",
     "timestamp": "27/9/2025, 13:13:44"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Sarvitha R R",
+    "chest": 510,
+    "dob": "2015-09-18",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "50m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/53aba7ff6d7661f148cf453d26018e6b",
+    "timestamp": "27/9/2025, 13:16:07"
   }
 ]
