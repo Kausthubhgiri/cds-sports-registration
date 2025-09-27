@@ -1903,5 +1903,19 @@
     ],
     "photoPath": "/uploads/d400f4f72800c7d5b13bd4979c0d5ac5",
     "timestamp": "27/9/2025, 14:19:57"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Bhavni Ashok S",
+    "chest": 524,
+    "dob": "2007-09-17",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/caca8ef3e19a192a9e8905e5e78782f1",
+    "timestamp": "27/9/2025, 14:25:08"
   }
 ]
