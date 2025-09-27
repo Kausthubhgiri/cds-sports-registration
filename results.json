@@ -1873,5 +1873,19 @@
     ],
     "photoPath": "/uploads/8bd1fec832abc2aaeba40ffe5cba403a",
     "timestamp": "27/9/2025, 14:13:18"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Sreenandha",
+    "chest": 522,
+    "dob": "2009-03-16",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/9bd3c779d87786185f1b21e85cc950c1",
+    "timestamp": "27/9/2025, 14:17:55"
   }
 ]
