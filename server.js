@@ -149,10 +149,10 @@ function getAgeCategory(dob) {
   if (isNaN(birthYear)) return 'Invalid DOB';
   const age = new Date().getFullYear() - birthYear;
   if (age <= 10) return 'Under 11';
-  if (age <= 13) return 'Under 14';
-  if (age <= 15) return 'Under 16';
-  if (age === 16) return 'Under 17';
-  if (age <= 18) return 'Under 19';
+  if (age <= 14) return 'Under 14';
+  if (age <= 16) return 'Under 16';
+  if (age === 17) return 'Under 17';
+  if (age <= 19) return 'Under 19';
   return 'Overage';
 }
 
