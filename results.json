@@ -1528,5 +1528,19 @@
     ],
     "photoPath": "/uploads/ebd291be703ba76156dcd42826dc196e",
     "timestamp": "27/9/2025, 09:02:34"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "ALTHAF",
+    "chest": 824,
+    "dob": "2007-12-08",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/6fe9c41d3a82ad0ccd5f720b81545de9",
+    "timestamp": "27/9/2025, 09:16:18"
   }
 ]
