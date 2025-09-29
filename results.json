@@ -2069,5 +2069,22 @@
     ],
     "photoPath": "/uploads/1624bbcea62b656fcc332ee31176c94b",
     "timestamp": "29/9/2025, 03:24:17"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Naumika S Nair",
+    "chest": 105,
+    "dob": "2009-02-01",
+    "ageCategory": "Under 16",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/1b4ec2c59e5554a24ad55ff644ba229d",
+    "timestamp": "29/9/2025, 03:31:50"
   }
 ]
