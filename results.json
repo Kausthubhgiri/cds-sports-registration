@@ -2772,5 +2772,18 @@
     ],
     "photoPath": "/uploads/c358608e1a5ae5bf004bb4aafd57db60",
     "timestamp": "29/9/2025, 07:55:15"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Karthik Krishnan K",
+    "chest": 151,
+    "dob": "2015-08-15",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/65783c6efddfaba4d13f95df2bd6448f",
+    "timestamp": "29/9/2025, 07:57:35"
   }
 ]
