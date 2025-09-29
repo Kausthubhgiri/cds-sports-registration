@@ -3326,5 +3326,20 @@
     ],
     "photoPath": "/uploads/89c34830246fced5eb58770f97e36ae5",
     "timestamp": "29/9/2025, 10:03:53"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "RIYA RENJITH",
+    "chest": 709,
+    "dob": "2015-12-10",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "50m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/9f46fac55fac9048baf9e82c8f396790",
+    "timestamp": "29/9/2025, 10:06:10"
   }
 ]
