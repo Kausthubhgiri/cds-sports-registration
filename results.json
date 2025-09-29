@@ -3836,5 +3836,22 @@
     ],
     "photoPath": "/uploads/a1554589fe01c5cae096dc85c4e296e7",
     "timestamp": "29/9/2025, 17:03:51"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ALOK J PRASAD",
+    "chest": 326,
+    "dob": "2012-07-13",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/9f677ea591cdb067b208a292946bda5f",
+    "timestamp": "29/9/2025, 17:09:39"
   }
 ]
