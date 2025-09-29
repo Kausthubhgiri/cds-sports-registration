@@ -2392,5 +2392,19 @@
     ],
     "photoPath": "/uploads/d492a8be98a70dd313f49e042dcffc8d",
     "timestamp": "29/9/2025, 05:12:13"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "V M Manas sarovar",
+    "chest": 127,
+    "dob": "2010-05-27",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/03620b5556050f8f86510235bbbba8d8",
+    "timestamp": "29/9/2025, 05:21:39"
   }
 ]
