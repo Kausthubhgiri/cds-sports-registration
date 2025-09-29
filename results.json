@@ -2144,5 +2144,20 @@
     ],
     "photoPath": "/uploads/69c788b26731627764524da563ac59bb",
     "timestamp": "29/9/2025, 04:09:55"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Khaleelul Rahman S S",
+    "chest": 110,
+    "dob": "2010-03-02",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/a3bdf8dab57f69b2c1adc7911a82fbeb",
+    "timestamp": "29/9/2025, 04:19:03"
   }
 ]
