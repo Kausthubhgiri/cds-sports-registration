@@ -3543,5 +3543,19 @@
     ],
     "photoPath": "/uploads/989df1a34c1bb398b6b19b324acd2707",
     "timestamp": "29/9/2025, 14:32:20"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "AROMAL V S",
+    "chest": 306,
+    "dob": "2008-03-01",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/6be4af05ecccb337450817a89f322a7c",
+    "timestamp": "29/9/2025, 14:35:39"
   }
 ]
