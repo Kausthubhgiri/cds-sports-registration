@@ -3229,5 +3229,19 @@
     ],
     "photoPath": "/uploads/a5445e93a2a9a4d8d618dee04c9953fb",
     "timestamp": "29/9/2025, 08:55:37"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Nayana Binu Pillai",
+    "chest": 176,
+    "dob": "2013-10-09",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Long Jump",
+      "High Jump"
+    ],
+    "photoPath": "/uploads/d1dab0a3e0a50c36424070b3fb1bcd36",
+    "timestamp": "29/9/2025, 08:57:00"
   }
 ]
