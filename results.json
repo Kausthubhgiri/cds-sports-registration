@@ -2174,5 +2174,19 @@
     ],
     "photoPath": "/uploads/5b8af6ee18a22efa99f1942ced16b86e",
     "timestamp": "29/9/2025, 04:22:01"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Adith A D",
+    "chest": 112,
+    "dob": "2010-09-06",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/dd63fa11115a17d34953b3c0aecff24e",
+    "timestamp": "29/9/2025, 04:25:14"
   }
 ]
