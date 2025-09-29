@@ -3060,5 +3060,19 @@
     ],
     "photoPath": "/uploads/0cb12a31dc766543894a336e04cdb765",
     "timestamp": "29/9/2025, 08:41:42"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Darshan Jayakumar",
+    "chest": 531,
+    "dob": "2010-10-08",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/c7afd0b4b66de28dd0b498d828296043",
+    "timestamp": "29/9/2025, 08:43:25"
   }
 ]
