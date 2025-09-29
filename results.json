@@ -2811,5 +2811,18 @@
     ],
     "photoPath": "/uploads/bf1cbae6066615481d7b1ab54aef5198",
     "timestamp": "29/9/2025, 08:01:41"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Ridhika V R",
+    "chest": 154,
+    "dob": "2015-04-01",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/ebb925292d4e46f18bbbf916c16bfb59",
+    "timestamp": "29/9/2025, 08:08:00"
   }
 ]
