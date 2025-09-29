@@ -3776,5 +3776,21 @@
     ],
     "photoPath": "/uploads/028aa3ef1c0015f0602ea4d631d5dcd9",
     "timestamp": "29/9/2025, 16:08:41"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "NIVEDITHA A P",
+    "chest": 322,
+    "dob": "2013-12-14",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/2cba76f3388b29d7b554c79d4eebc7cb",
+    "timestamp": "29/9/2025, 16:37:30"
   }
 ]
