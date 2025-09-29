@@ -2921,5 +2921,19 @@
     ],
     "photoPath": "/uploads/670bfa059199e0d1bcda62e59be0293c",
     "timestamp": "29/9/2025, 08:19:31"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Arjun Fazio Nathan",
+    "chest": 162,
+    "dob": "2013-02-04",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/609f659efc4a7c02855693eb4ed7995b",
+    "timestamp": "29/9/2025, 08:24:53"
   }
 ]
