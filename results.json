@@ -2867,5 +2867,19 @@
     ],
     "photoPath": "/uploads/07a928510e1899dc79f6ff6083fa0442",
     "timestamp": "29/9/2025, 08:13:55"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Dakshina M S",
+    "chest": 158,
+    "dob": "2015-08-16",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race"
+    ],
+    "photoPath": "/uploads/ee588ee2b0d9976f16df6adea871f163",
+    "timestamp": "29/9/2025, 08:15:03"
   }
 ]
