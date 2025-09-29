@@ -2188,5 +2188,19 @@
     ],
     "photoPath": "/uploads/dd63fa11115a17d34953b3c0aecff24e",
     "timestamp": "29/9/2025, 04:25:14"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Devakiran C V",
+    "chest": 113,
+    "dob": "2011-08-02",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Long Jump",
+      "High Jump"
+    ],
+    "photoPath": "/uploads/776fafa7cedc099358f8aedc554a94b8",
+    "timestamp": "29/9/2025, 04:27:00"
   }
 ]
