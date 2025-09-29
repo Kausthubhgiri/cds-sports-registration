@@ -3631,5 +3631,22 @@
     ],
     "photoPath": "/uploads/31ab4858f20443dcfb60433188081d63",
     "timestamp": "29/9/2025, 15:01:59"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ANURUDH BABU",
+    "chest": 312,
+    "dob": "2008-01-07",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/5cdfeda3fae374052f78ba91fb7cb090",
+    "timestamp": "29/9/2025, 15:18:13"
   }
 ]
