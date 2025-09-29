@@ -3020,5 +3020,18 @@
     ],
     "photoPath": "/uploads/f4af020ca765ecfaac55d82d1238e27c",
     "timestamp": "29/9/2025, 08:36:09"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Vivan Vinay",
+    "chest": 530,
+    "dob": "2010-09-16",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/1b7c611676a1954b622077033b29459f",
+    "timestamp": "29/9/2025, 08:38:01"
   }
 ]
