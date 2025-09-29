@@ -2360,5 +2360,21 @@
     ],
     "photoPath": "/uploads/d17debcd7c47eac426b2ba785d6b5866",
     "timestamp": "29/9/2025, 05:07:25"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Abhinaya N A",
+    "chest": 125,
+    "dob": "2009-08-27",
+    "ageCategory": "Under 16",
+    "gender": "Female",
+    "events": [
+      "Long Jump",
+      "High Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/8657f91010e589be74ad51068f6b2240",
+    "timestamp": "29/9/2025, 05:10:16"
   }
 ]
