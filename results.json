@@ -3703,5 +3703,21 @@
     ],
     "photoPath": "/uploads/2755f9c8fe957db444df8543163d84e7",
     "timestamp": "29/9/2025, 15:42:52"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "NIRANJINI",
+    "chest": 317,
+    "dob": "2015-03-12",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/1af02831ef4904ae9cb0f43bdba51289",
+    "timestamp": "29/9/2025, 15:48:04"
   }
 ]
