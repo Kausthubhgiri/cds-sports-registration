@@ -2706,5 +2706,19 @@
     ],
     "photoPath": "/uploads/00cb75ef17d05080e5270591d5300b59",
     "timestamp": "29/9/2025, 07:43:00"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Aarav Thushar",
+    "chest": 146,
+    "dob": "2015-06-22",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "100m Race"
+    ],
+    "photoPath": "/uploads/5abff34c866566ae6f6b6d9e22b9fc66",
+    "timestamp": "29/9/2025, 07:45:22"
   }
 ]
