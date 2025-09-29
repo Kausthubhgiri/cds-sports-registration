@@ -3160,5 +3160,33 @@
     ],
     "photoPath": "/uploads/9b476d0ec99999d25a6b0e978c1e34ae",
     "timestamp": "29/9/2025, 08:52:26"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "SHEIKHA SANEER",
+    "chest": 704,
+    "dob": "2015-10-31",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/6efd84eb275441028004103b283d6527",
+    "timestamp": "29/9/2025, 08:53:28"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Thanmaya D A",
+    "chest": 174,
+    "dob": "2013-11-05",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/6ac05ecdcb99e1db05d741b66fc495c7",
+    "timestamp": "29/9/2025, 08:53:29"
   }
 ]
