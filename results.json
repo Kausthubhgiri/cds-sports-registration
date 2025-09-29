@@ -3460,5 +3460,18 @@
     ],
     "photoPath": "/uploads/c422689ba0f07b3f142e379dd02d2b99",
     "timestamp": "29/9/2025, 10:25:05"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "G BHARATH NATH",
+    "chest": 718,
+    "dob": "2013-02-27",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/f1d6d9b8a84955f3f02756cd1e0f1449",
+    "timestamp": "29/9/2025, 10:30:37"
   }
 ]
