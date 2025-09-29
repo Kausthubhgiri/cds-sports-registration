@@ -2216,5 +2216,19 @@
     ],
     "photoPath": "/uploads/ad5b6b4aae08da3008220f6600fb5664",
     "timestamp": "29/9/2025, 04:28:29"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Vishnu Vardhan R P",
+    "chest": 115,
+    "dob": "2009-09-16",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/0ca178fa7007891952f76b567ecfb8e1",
+    "timestamp": "29/9/2025, 04:30:56"
   }
 ]
