@@ -3488,5 +3488,21 @@
     ],
     "photoPath": "/uploads/4b86c7734ae9c71ab8dcb9d3c625ec29",
     "timestamp": "29/9/2025, 14:12:55"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "S S SONA",
+    "chest": 302,
+    "dob": "2007-08-31",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/833b6353ee89d711f5c3d0d7acccc14d",
+    "timestamp": "29/9/2025, 14:18:58"
   }
 ]
