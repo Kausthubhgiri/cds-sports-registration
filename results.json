@@ -3243,5 +3243,18 @@
     ],
     "photoPath": "/uploads/d1dab0a3e0a50c36424070b3fb1bcd36",
     "timestamp": "29/9/2025, 08:57:00"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "MUHAMMED ZAYAN",
+    "chest": 707,
+    "dob": "2015-05-11",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/37bd2e437f5d2ab5ccfd87a553f5607f",
+    "timestamp": "29/9/2025, 08:57:43"
   }
 ]
