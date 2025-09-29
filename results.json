@@ -3806,5 +3806,18 @@
     ],
     "photoPath": "/uploads/d51100b6a3983f522a814fbaf375ba93",
     "timestamp": "29/9/2025, 16:56:16"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "VASUDEV V",
+    "chest": 324,
+    "dob": "2012-04-09",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "High Jump"
+    ],
+    "photoPath": "/uploads/7a3301b2893081e25d828c62e4da67e7",
+    "timestamp": "29/9/2025, 16:59:50"
   }
 ]
