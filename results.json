@@ -2230,5 +2230,19 @@
     ],
     "photoPath": "/uploads/0ca178fa7007891952f76b567ecfb8e1",
     "timestamp": "29/9/2025, 04:30:56"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Rishikesh Swapnakumar",
+    "chest": 116,
+    "dob": "2010-01-28",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/d26a6170b002b9e8556fe2283a1987e5",
+    "timestamp": "29/9/2025, 04:33:03"
   }
 ]
