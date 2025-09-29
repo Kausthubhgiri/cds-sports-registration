@@ -3415,5 +3415,21 @@
     ],
     "photoPath": "/uploads/74f0ab40c2f05be1257d54beb704eec2",
     "timestamp": "29/9/2025, 10:15:13"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "KRISHAPRIYA A",
+    "chest": 715,
+    "dob": "2013-01-18",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "800m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/939afd3d3797c2dd84211861c5d73e3c",
+    "timestamp": "29/9/2025, 10:16:20"
   }
 ]
