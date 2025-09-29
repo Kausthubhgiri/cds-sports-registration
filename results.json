@@ -2102,5 +2102,19 @@
     ],
     "photoPath": "/uploads/940d0b37e21e20a0b90114f02ec76014",
     "timestamp": "29/9/2025, 03:46:04"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Anna Abraham Oommen",
+    "chest": 107,
+    "dob": "2011-07-26",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "1500m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/5655058c59d1061cb16836b3a161e83a",
+    "timestamp": "29/9/2025, 03:50:21"
   }
 ]
