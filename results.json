@@ -3384,5 +3384,21 @@
     ],
     "photoPath": "/uploads/79d84acca968087a43f23d1dbc47fca0",
     "timestamp": "29/9/2025, 10:11:14"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "HAJIRA",
+    "chest": 713,
+    "dob": "2012-04-24",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "400m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/ba2a0d3f327a00ab810a91df6453fb71",
+    "timestamp": "29/9/2025, 10:12:28"
   }
 ]
