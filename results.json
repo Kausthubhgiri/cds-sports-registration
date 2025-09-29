@@ -3283,5 +3283,19 @@
     ],
     "photoPath": "/uploads/c8168c45751a9382fe9f9a71c9ee216b",
     "timestamp": "29/9/2025, 08:59:38"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "ALIYA S",
+    "chest": 708,
+    "dob": "2016-12-16",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/e4a170da31f05d12db40b1a4eec575d4",
+    "timestamp": "29/9/2025, 09:00:53"
   }
 ]
