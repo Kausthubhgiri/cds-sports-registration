@@ -3570,5 +3570,22 @@
     ],
     "photoPath": "/uploads/5421b8222ce05a3c5c49d50f0747b76e",
     "timestamp": "29/9/2025, 14:41:49"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "M MOHAMMED HISHAM",
+    "chest": 308,
+    "dob": "2007-12-07",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/90c447fa2faa5736b2715ac26f4e4947",
+    "timestamp": "29/9/2025, 14:47:11"
   }
 ]
