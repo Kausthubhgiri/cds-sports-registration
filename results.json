@@ -3749,5 +3749,19 @@
     ],
     "photoPath": "/uploads/0c98367ad596b01138f51a840aa03aee",
     "timestamp": "29/9/2025, 15:57:32"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "SIVATHEJ R D",
+    "chest": 320,
+    "dob": "2012-04-07",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/79190ebae9400fe181146f3f89997625",
+    "timestamp": "29/9/2025, 16:02:37"
   }
 ]
