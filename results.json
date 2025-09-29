@@ -2663,5 +2663,20 @@
     ],
     "photoPath": "/uploads/232f5d8399c925bb00b98fe4d78f7ba6",
     "timestamp": "29/9/2025, 07:07:49"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Adith R Nair",
+    "chest": 903,
+    "dob": "2013-10-28",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/a3f16a150059b16ca3a658fd4f3f1456",
+    "timestamp": "29/9/2025, 07:10:52"
   }
 ]
