@@ -3446,5 +3446,19 @@
     ],
     "photoPath": "/uploads/7cef14c3d8e54aed862d6fcf1fadb2a8",
     "timestamp": "29/9/2025, 10:23:48"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "DEVIKA A S",
+    "chest": 717,
+    "dob": "2013-11-30",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/c422689ba0f07b3f142e379dd02d2b99",
+    "timestamp": "29/9/2025, 10:25:05"
   }
 ]
