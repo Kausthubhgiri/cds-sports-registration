@@ -2534,5 +2534,19 @@
     ],
     "photoPath": "/uploads/f3e70cd7d444592b1b4aecf8512f7650",
     "timestamp": "29/9/2025, 06:00:05"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Medidi Asmithia",
+    "chest": 137,
+    "dob": "2009-10-29",
+    "ageCategory": "Under 16",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/f263c435a23e889a3edbe6913f8f58d1",
+    "timestamp": "29/9/2025, 06:05:28"
   }
 ]
