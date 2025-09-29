@@ -3370,5 +3370,19 @@
     ],
     "photoPath": "/uploads/2ff471378b1c5ff715ec5529c2449a9d",
     "timestamp": "29/9/2025, 10:10:07"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "GAUTAM KRISHNA",
+    "chest": 712,
+    "dob": "2012-03-25",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "800m Race"
+    ],
+    "photoPath": "/uploads/79d84acca968087a43f23d1dbc47fca0",
+    "timestamp": "29/9/2025, 10:11:14"
   }
 ]
