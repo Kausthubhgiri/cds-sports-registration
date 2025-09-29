@@ -2838,5 +2838,19 @@
     ],
     "photoPath": "/uploads/40d2877bf877e986d80df2cb8bc0b937",
     "timestamp": "29/9/2025, 08:10:41"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Farha Fathima M S",
+    "chest": 156,
+    "dob": "2015-01-12",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "50m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/1a1b0b9424a17f45ecd72d108768602b",
+    "timestamp": "29/9/2025, 08:12:27"
   }
 ]
