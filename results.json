@@ -2647,5 +2647,21 @@
     ],
     "photoPath": "/uploads/ccdf9403409130bdea3261745305a4ac",
     "timestamp": "29/9/2025, 06:59:43"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Muhammed Diyab A",
+    "chest": 902,
+    "dob": "2012-06-03",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/232f5d8399c925bb00b98fe4d78f7ba6",
+    "timestamp": "29/9/2025, 07:07:49"
   }
 ]
