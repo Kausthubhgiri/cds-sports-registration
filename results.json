@@ -2785,5 +2785,18 @@
     ],
     "photoPath": "/uploads/65783c6efddfaba4d13f95df2bd6448f",
     "timestamp": "29/9/2025, 07:57:35"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Avaneeth V R",
+    "chest": 152,
+    "dob": "2015-11-12",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/a8ec8b44e17b5678dfbb9b42f5f184e5",
+    "timestamp": "29/9/2025, 07:59:33"
   }
 ]
