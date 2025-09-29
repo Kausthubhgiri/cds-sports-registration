@@ -3146,5 +3146,19 @@
     ],
     "photoPath": "/uploads/d8a72615b6720b3f53c364afec8c03e2",
     "timestamp": "29/9/2025, 08:51:35"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "ADHANI S JOY",
+    "chest": 703,
+    "dob": "2015-08-19",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/9b476d0ec99999d25a6b0e978c1e34ae",
+    "timestamp": "29/9/2025, 08:52:26"
   }
 ]
