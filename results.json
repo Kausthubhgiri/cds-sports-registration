@@ -2434,5 +2434,20 @@
     ],
     "photoPath": "/uploads/173b0133e95e10a37befa53395b923c9",
     "timestamp": "29/9/2025, 05:26:09"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Ananthapadmanabh R V",
+    "chest": 130,
+    "dob": "2008-10-10",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/5b6822e30720a0b31924539c5ec4dc1a",
+    "timestamp": "29/9/2025, 05:32:34"
   }
 ]
