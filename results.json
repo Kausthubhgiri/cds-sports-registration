@@ -2086,5 +2086,21 @@
     ],
     "photoPath": "/uploads/1b4ec2c59e5554a24ad55ff644ba229d",
     "timestamp": "29/9/2025, 03:31:50"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Nia Nair Sanju Nair",
+    "chest": 106,
+    "dob": "2011-02-10",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "High Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/940d0b37e21e20a0b90114f02ec76014",
+    "timestamp": "29/9/2025, 03:46:04"
   }
 ]
