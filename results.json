@@ -2476,5 +2476,20 @@
     ],
     "photoPath": "/uploads/62478a8b9ea3c5b071b880049b3db79f",
     "timestamp": "29/9/2025, 05:40:35"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Vignesh G",
+    "chest": 133,
+    "dob": "2008-06-23",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "Long Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/204b1613fc32bec7ae7e00ef238929f7",
+    "timestamp": "29/9/2025, 05:43:40"
   }
 ]
