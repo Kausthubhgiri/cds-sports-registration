@@ -3735,5 +3735,19 @@
     ],
     "photoPath": "/uploads/9964a773bf6b39ca4cbce22c2882431a",
     "timestamp": "29/9/2025, 15:52:23"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "PRANAV S R",
+    "chest": 319,
+    "dob": "2015-03-26",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "100m Race"
+    ],
+    "photoPath": "/uploads/0c98367ad596b01138f51a840aa03aee",
+    "timestamp": "29/9/2025, 15:57:32"
   }
 ]
