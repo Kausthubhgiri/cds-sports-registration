@@ -2978,5 +2978,18 @@
     ],
     "photoPath": "/uploads/d8c65bd79a9a6cc34798a35b480bb2c7",
     "timestamp": "29/9/2025, 08:31:15"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Manav Kunimmal",
+    "chest": 166,
+    "dob": "2012-04-19",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "800m Race"
+    ],
+    "photoPath": "/uploads/8b3a9414d3f28aeff3ac1ed8fe317f9b",
+    "timestamp": "29/9/2025, 08:32:40"
   }
 ]
