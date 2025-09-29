@@ -3530,5 +3530,18 @@
     ],
     "photoPath": "/uploads/80c805175f9a6b019604f4bdf174c7ed",
     "timestamp": "29/9/2025, 14:28:07"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ALEN N S",
+    "chest": 305,
+    "dob": "2007-12-19",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "High Jump"
+    ],
+    "photoPath": "/uploads/989df1a34c1bb398b6b19b324acd2707",
+    "timestamp": "29/9/2025, 14:32:20"
   }
 ]
