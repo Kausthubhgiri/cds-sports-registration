@@ -2619,5 +2619,19 @@
     ],
     "photoPath": "/uploads/718737c8526fb80febee88e3cde754d9",
     "timestamp": "29/9/2025, 06:35:00"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Dev Krishna",
+    "chest": 143,
+    "dob": "2007-11-06",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/2d0bc45da868b4756ddf0e81a5ca164f",
+    "timestamp": "29/9/2025, 06:38:24"
   }
 ]
