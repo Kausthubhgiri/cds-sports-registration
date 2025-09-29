@@ -2520,5 +2520,19 @@
     ],
     "photoPath": "/uploads/3c32e1f03f3ac02d8d40c57aaf9c56a8",
     "timestamp": "29/9/2025, 05:54:37"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Varsha S",
+    "chest": 136,
+    "dob": "2008-11-14",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/f3e70cd7d444592b1b4aecf8512f7650",
+    "timestamp": "29/9/2025, 06:00:05"
   }
 ]
