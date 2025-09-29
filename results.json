@@ -3504,5 +3504,18 @@
     ],
     "photoPath": "/uploads/833b6353ee89d711f5c3d0d7acccc14d",
     "timestamp": "29/9/2025, 14:18:58"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "JESAN D S",
+    "chest": 303,
+    "dob": "2008-10-14",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "800m Race"
+    ],
+    "photoPath": "/uploads/7bfbee23af7289a3ecd79f21b32ef8ff",
+    "timestamp": "29/9/2025, 14:22:33"
   }
 ]
