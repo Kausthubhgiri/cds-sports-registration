@@ -2257,5 +2257,18 @@
     ],
     "photoPath": "/uploads/3fbb11113c9fbf6ffd84d7a6a8b15c38",
     "timestamp": "29/9/2025, 04:34:55"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "S S Abhinav",
+    "chest": 118,
+    "dob": "2009-08-27",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "1500m Race"
+    ],
+    "photoPath": "/uploads/0edbfb97b73aef9001cd71b1ae224652",
+    "timestamp": "29/9/2025, 04:39:09"
   }
 ]
