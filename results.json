@@ -3006,5 +3006,19 @@
     ],
     "photoPath": "/uploads/831b5a1701425977e790946ff921e186",
     "timestamp": "29/9/2025, 08:34:13"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Abhinav R M",
+    "chest": 168,
+    "dob": "2012-03-23",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/f4af020ca765ecfaac55d82d1238e27c",
+    "timestamp": "29/9/2025, 08:36:09"
   }
 ]
