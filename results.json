@@ -3763,5 +3763,18 @@
     ],
     "photoPath": "/uploads/79190ebae9400fe181146f3f89997625",
     "timestamp": "29/9/2025, 16:02:37"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ROSHWIN S",
+    "chest": 321,
+    "dob": "2013-02-27",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/028aa3ef1c0015f0602ea4d631d5dcd9",
+    "timestamp": "29/9/2025, 16:08:41"
   }
 ]
