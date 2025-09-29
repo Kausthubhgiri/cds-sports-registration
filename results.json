@@ -2692,5 +2692,19 @@
     ],
     "photoPath": "/uploads/063e1ddd31d3f40d4d80d201c29840d0",
     "timestamp": "29/9/2025, 07:16:08"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Prathul S S",
+    "chest": 145,
+    "dob": "2015-09-21",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "100m Race"
+    ],
+    "photoPath": "/uploads/00cb75ef17d05080e5270591d5300b59",
+    "timestamp": "29/9/2025, 07:43:00"
   }
 ]
