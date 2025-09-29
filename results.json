@@ -2419,5 +2419,20 @@
     ],
     "photoPath": "/uploads/0e571a8b84ee812c752d7a03f34f949f",
     "timestamp": "29/9/2025, 05:22:51"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Gourav Krishnan J",
+    "chest": 129,
+    "dob": "2009-07-03",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/173b0133e95e10a37befa53395b923c9",
+    "timestamp": "29/9/2025, 05:26:09"
   }
 ]
