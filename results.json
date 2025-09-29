@@ -2852,5 +2852,20 @@
     ],
     "photoPath": "/uploads/1a1b0b9424a17f45ecd72d108768602b",
     "timestamp": "29/9/2025, 08:12:27"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Nakshatra Krishna A",
+    "chest": 157,
+    "dob": "2015-05-13",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "Shot Put",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/07a928510e1899dc79f6ff6083fa0442",
+    "timestamp": "29/9/2025, 08:13:55"
   }
 ]
