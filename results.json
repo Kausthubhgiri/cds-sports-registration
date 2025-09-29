@@ -2604,5 +2604,20 @@
     ],
     "photoPath": "/uploads/35da122bb5c88f1aa93707c43b9afe3a",
     "timestamp": "29/9/2025, 06:31:24"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Sreehari P Krishna",
+    "chest": 142,
+    "dob": "2008-06-21",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/718737c8526fb80febee88e3cde754d9",
+    "timestamp": "29/9/2025, 06:35:00"
   }
 ]
