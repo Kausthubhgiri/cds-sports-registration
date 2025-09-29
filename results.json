@@ -3618,5 +3618,18 @@
     ],
     "photoPath": "/uploads/5d9d9a62532da3f6c374d8984cdc6750",
     "timestamp": "29/9/2025, 14:57:23"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "KRISHNA MURALI",
+    "chest": 311,
+    "dob": "2008-05-23",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "1500m Race"
+    ],
+    "photoPath": "/uploads/31ab4858f20443dcfb60433188081d63",
+    "timestamp": "29/9/2025, 15:01:59"
   }
 ]
