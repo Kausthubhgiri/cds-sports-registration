@@ -3688,5 +3688,20 @@
     ],
     "photoPath": "/uploads/501bdf7d23fbe2e9c1462cb7b83a9305",
     "timestamp": "29/9/2025, 15:38:29"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "NAVEEN S S",
+    "chest": 316,
+    "dob": "2010-07-06",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/2755f9c8fe957db444df8543163d84e7",
+    "timestamp": "29/9/2025, 15:42:52"
   }
 ]
