@@ -3431,5 +3431,20 @@
     ],
     "photoPath": "/uploads/939afd3d3797c2dd84211861c5d73e3c",
     "timestamp": "29/9/2025, 10:16:20"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "DIYA ASHLEY",
+    "chest": 716,
+    "dob": "2012-03-13",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/7cef14c3d8e54aed862d6fcf1fadb2a8",
+    "timestamp": "29/9/2025, 10:23:48"
   }
 ]
