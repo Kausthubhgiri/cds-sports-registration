@@ -3853,5 +3853,20 @@
     ],
     "photoPath": "/uploads/9f677ea591cdb067b208a292946bda5f",
     "timestamp": "29/9/2025, 17:09:39"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "NEERAJ S",
+    "chest": 327,
+    "dob": "2012-08-05",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/3ca4557a55c0c61edb7844a538e83fa6",
+    "timestamp": "29/9/2025, 17:12:58"
   }
 ]
