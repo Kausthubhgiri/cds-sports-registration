@@ -3587,5 +3587,19 @@
     ],
     "photoPath": "/uploads/90c447fa2faa5736b2715ac26f4e4947",
     "timestamp": "29/9/2025, 14:47:11"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "VAIBHAV V NAIR",
+    "chest": 309,
+    "dob": "2009-09-24",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/1dded69d801f3c4a601bb477ea67c19f",
+    "timestamp": "29/9/2025, 14:53:35"
   }
 ]
