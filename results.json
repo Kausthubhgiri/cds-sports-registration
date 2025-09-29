@@ -2040,5 +2040,20 @@
     ],
     "photoPath": "/uploads/6ecd0daea41cc43dd153df29d389af55",
     "timestamp": "29/9/2025, 03:18:40"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Hritika Mohan",
+    "chest": 103,
+    "dob": "2011-09-03",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "800m Race",
+      "1500m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/bfd6d180b550a52f002fa74efc5e5983",
+    "timestamp": "29/9/2025, 03:22:06"
   }
 ]
