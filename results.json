@@ -3648,5 +3648,19 @@
     ],
     "photoPath": "/uploads/5cdfeda3fae374052f78ba91fb7cb090",
     "timestamp": "29/9/2025, 15:18:13"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "HARIKRISHNA S A",
+    "chest": 313,
+    "dob": "2010-04-06",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/ea72fb2c43ea4d51aa1afeba5cb65fb5",
+    "timestamp": "29/9/2025, 15:23:26"
   }
 ]
