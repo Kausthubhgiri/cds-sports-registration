@@ -2506,5 +2506,19 @@
     ],
     "photoPath": "/uploads/58c25b762e433563a21bc7a2bf0cf2d7",
     "timestamp": "29/9/2025, 05:46:20"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Abhishek B",
+    "chest": 135,
+    "dob": "2007-09-19",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/3c32e1f03f3ac02d8d40c57aaf9c56a8",
+    "timestamp": "29/9/2025, 05:54:37"
   }
 ]
