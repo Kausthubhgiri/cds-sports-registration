@@ -2024,5 +2024,21 @@
     ],
     "photoPath": "/uploads/22c823d7f18cc9604d0f16377d188c07",
     "timestamp": "29/9/2025, 03:16:30"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Niranjana V",
+    "chest": 102,
+    "dob": "2011-06-02",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/6ecd0daea41cc43dd153df29d389af55",
+    "timestamp": "29/9/2025, 03:18:40"
   }
 ]
