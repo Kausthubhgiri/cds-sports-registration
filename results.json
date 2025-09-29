@@ -2270,5 +2270,20 @@
     ],
     "photoPath": "/uploads/0edbfb97b73aef9001cd71b1ae224652",
     "timestamp": "29/9/2025, 04:39:09"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Amith Krishna A",
+    "chest": 119,
+    "dob": "2009-06-27",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "1500m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/cc1f40f5b71fa2d7abc40389380e73d5",
+    "timestamp": "29/9/2025, 04:44:41"
   }
 ]
