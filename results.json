@@ -2055,5 +2055,19 @@
     ],
     "photoPath": "/uploads/bfd6d180b550a52f002fa74efc5e5983",
     "timestamp": "29/9/2025, 03:22:06"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "V M Manas Sathwika",
+    "chest": 104,
+    "dob": "2011-11-11",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/1624bbcea62b656fcc332ee31176c94b",
+    "timestamp": "29/9/2025, 03:24:17"
   }
 ]
