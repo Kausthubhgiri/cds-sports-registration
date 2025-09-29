@@ -1995,5 +1995,18 @@
     ],
     "photoPath": "/uploads/33f7389a4ccee047da8f2de539acedd9",
     "timestamp": "27/9/2025, 14:45:06"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Shanie Kerstin K",
+    "chest": 100,
+    "dob": "2010-03-05",
+    "ageCategory": "Under 16",
+    "gender": "Female",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/9caa57356d564ad1610c1a2fe42de019",
+    "timestamp": "29/9/2025, 03:11:07"
   }
 ]
