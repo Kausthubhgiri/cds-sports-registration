@@ -2376,5 +2376,21 @@
     ],
     "photoPath": "/uploads/8657f91010e589be74ad51068f6b2240",
     "timestamp": "29/9/2025, 05:10:16"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Arathi S P",
+    "chest": 126,
+    "dob": "2011-04-03",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "800m Race",
+      "Long Jump",
+      "High Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/d492a8be98a70dd313f49e042dcffc8d",
+    "timestamp": "29/9/2025, 05:12:13"
   }
 ]
