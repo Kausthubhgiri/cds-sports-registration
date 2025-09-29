@@ -3201,5 +3201,19 @@
     ],
     "photoPath": "/uploads/faf6af7b25e9459158624ec4f6774243",
     "timestamp": "29/9/2025, 08:54:20"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "NASHWA I S",
+    "chest": 706,
+    "dob": "2017-07-14",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/0f65d9564e625f94f36bd3ef269f4c00",
+    "timestamp": "29/9/2025, 08:55:04"
   }
 ]
