@@ -2116,5 +2116,19 @@
     ],
     "photoPath": "/uploads/5655058c59d1061cb16836b3a161e83a",
     "timestamp": "29/9/2025, 03:50:21"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Vaiga S Nair",
+    "chest": 108,
+    "dob": "2011-09-03",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/cbab6469bf66212a361779dc9e429164",
+    "timestamp": "29/9/2025, 03:53:15"
   }
 ]
