@@ -3270,5 +3270,18 @@
     ],
     "photoPath": "/uploads/8dcfd95839db9650c18dae1c70c27c66",
     "timestamp": "29/9/2025, 08:58:20"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Karthika Kareti",
+    "chest": 178,
+    "dob": "2013-02-20",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "High Jump"
+    ],
+    "photoPath": "/uploads/c8168c45751a9382fe9f9a71c9ee216b",
+    "timestamp": "29/9/2025, 08:59:38"
   }
 ]
