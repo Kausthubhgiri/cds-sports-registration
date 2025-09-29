@@ -3341,5 +3341,20 @@
     ],
     "photoPath": "/uploads/9f46fac55fac9048baf9e82c8f396790",
     "timestamp": "29/9/2025, 10:06:10"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "VEDIKA DILEEPKUMAR",
+    "chest": 710,
+    "dob": "2015-03-21",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/98b4b44ba8e894890ba45d3e4aaa7589",
+    "timestamp": "29/9/2025, 10:07:21"
   }
 ]
