@@ -2798,5 +2798,18 @@
     ],
     "photoPath": "/uploads/a8ec8b44e17b5678dfbb9b42f5f184e5",
     "timestamp": "29/9/2025, 07:59:33"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Samuel Alex Panicker",
+    "chest": 153,
+    "dob": "2015-04-29",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/bf1cbae6066615481d7b1ab54aef5198",
+    "timestamp": "29/9/2025, 08:01:41"
   }
 ]
