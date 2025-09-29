@@ -2316,5 +2316,19 @@
     ],
     "photoPath": "/uploads/9050f648e120ddc0d0e742eec30ac163",
     "timestamp": "29/9/2025, 05:01:45"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Sreelekshmi Anil",
+    "chest": 122,
+    "dob": "2008-07-01",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "1500m Race"
+    ],
+    "photoPath": "/uploads/3457c9b73314d36ac5958e01bb753f83",
+    "timestamp": "29/9/2025, 05:03:36"
   }
 ]
