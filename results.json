@@ -2678,5 +2678,19 @@
     ],
     "photoPath": "/uploads/a3f16a150059b16ca3a658fd4f3f1456",
     "timestamp": "29/9/2025, 07:10:52"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Mohammed Shafeek",
+    "chest": 904,
+    "dob": "2013-05-05",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/063e1ddd31d3f40d4d80d201c29840d0",
+    "timestamp": "29/9/2025, 07:16:08"
   }
 ]
