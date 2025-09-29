@@ -3601,5 +3601,22 @@
     ],
     "photoPath": "/uploads/1dded69d801f3c4a601bb477ea67c19f",
     "timestamp": "29/9/2025, 14:53:35"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "AKHIL S S",
+    "chest": 310,
+    "dob": "2009-02-06",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "High Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/5d9d9a62532da3f6c374d8984cdc6750",
+    "timestamp": "29/9/2025, 14:57:23"
   }
 ]
