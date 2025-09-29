@@ -3473,5 +3473,20 @@
     ],
     "photoPath": "/uploads/f1d6d9b8a84955f3f02756cd1e0f1449",
     "timestamp": "29/9/2025, 10:30:37"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "DAKSHINA A S",
+    "chest": 301,
+    "dob": "2008-02-14",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/4b86c7734ae9c71ab8dcb9d3c625ec29",
+    "timestamp": "29/9/2025, 14:12:55"
   }
 ]
