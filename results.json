@@ -3131,5 +3131,20 @@
     ],
     "photoPath": "/uploads/95c01984baef5f9b71eeb46ce3024703",
     "timestamp": "29/9/2025, 08:51:15"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Angelina Ann Nithin",
+    "chest": 173,
+    "dob": "2012-01-19",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/d8a72615b6720b3f53c364afec8c03e2",
+    "timestamp": "29/9/2025, 08:51:35"
   }
 ]
