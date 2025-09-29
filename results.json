@@ -2908,5 +2908,18 @@
     ],
     "photoPath": "/uploads/9a0ec22480be150aaa66927dd85f09ba",
     "timestamp": "29/9/2025, 08:18:18"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Raksha R Nair",
+    "chest": 161,
+    "dob": "2015-03-27",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/670bfa059199e0d1bcda62e59be0293c",
+    "timestamp": "29/9/2025, 08:19:31"
   }
 ]
