@@ -2008,5 +2008,21 @@
     ],
     "photoPath": "/uploads/9caa57356d564ad1610c1a2fe42de019",
     "timestamp": "29/9/2025, 03:11:07"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Vyshnavi R Nair",
+    "chest": 101,
+    "dob": "2010-04-22",
+    "ageCategory": "Under 16",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "400m Race",
+      "High Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/22c823d7f18cc9604d0f16377d188c07",
+    "timestamp": "29/9/2025, 03:16:30"
   }
 ]
