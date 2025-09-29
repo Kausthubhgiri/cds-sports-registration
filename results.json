@@ -3884,5 +3884,19 @@
     ],
     "photoPath": "/uploads/a09ea899911d9f8f21ed52c6bdbc8f9e",
     "timestamp": "29/9/2025, 17:16:11"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "KARTHIK S A",
+    "chest": 329,
+    "dob": "2012-11-24",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/f95a5d4850489f346d263fd56b1238f1",
+    "timestamp": "29/9/2025, 17:19:36"
   }
 ]
