@@ -2462,5 +2462,19 @@
     ],
     "photoPath": "/uploads/55dfd3968a3c877d315b90018e1a826a",
     "timestamp": "29/9/2025, 05:34:24"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Abhishek R Nair",
+    "chest": 132,
+    "dob": "2008-03-02",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/62478a8b9ea3c5b071b880049b3db79f",
+    "timestamp": "29/9/2025, 05:40:35"
   }
 ]
