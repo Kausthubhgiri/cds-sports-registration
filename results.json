@@ -2720,5 +2720,18 @@
     ],
     "photoPath": "/uploads/5abff34c866566ae6f6b6d9e22b9fc66",
     "timestamp": "29/9/2025, 07:45:22"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Devan U A",
+    "chest": 147,
+    "dob": "2015-07-07",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/f116a35f4fae0d871df031c17c0c5a9d",
+    "timestamp": "29/9/2025, 07:48:23"
   }
 ]
