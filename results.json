@@ -2244,5 +2244,18 @@
     ],
     "photoPath": "/uploads/d26a6170b002b9e8556fe2283a1987e5",
     "timestamp": "29/9/2025, 04:33:03"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Abhimanyu Rajesh S",
+    "chest": 117,
+    "dob": "2010-08-08",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/3fbb11113c9fbf6ffd84d7a6a8b15c38",
+    "timestamp": "29/9/2025, 04:34:55"
   }
 ]
