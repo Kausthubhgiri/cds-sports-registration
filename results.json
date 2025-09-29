@@ -2949,5 +2949,21 @@
     ],
     "photoPath": "/uploads/5e725d3c4909b4a1a2d50e12fd5c883f",
     "timestamp": "29/9/2025, 08:26:31"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Sivasurya S S Nair",
+    "chest": 164,
+    "dob": "2012-04-07",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/352e1a023af261f5c0718775b075fc49",
+    "timestamp": "29/9/2025, 08:29:22"
   }
 ]
