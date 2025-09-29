@@ -2406,5 +2406,18 @@
     ],
     "photoPath": "/uploads/03620b5556050f8f86510235bbbba8d8",
     "timestamp": "29/9/2025, 05:21:39"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Adhityan R Augustin",
+    "chest": 128,
+    "dob": "2010-11-26",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/0e571a8b84ee812c752d7a03f34f949f",
+    "timestamp": "29/9/2025, 05:22:51"
   }
 ]
