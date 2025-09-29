@@ -3298,5 +3298,18 @@
     ],
     "photoPath": "/uploads/4259b6e43cd8bbe63615f62a72867af2",
     "timestamp": "29/9/2025, 09:01:16"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Sreenandha A",
+    "chest": 180,
+    "dob": "2012-10-23",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "400m Race"
+    ],
+    "photoPath": "/uploads/83f336bac81c03fff6022b5cc1b9d28b",
+    "timestamp": "29/9/2025, 09:02:36"
   }
 ]
