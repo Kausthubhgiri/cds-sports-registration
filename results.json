@@ -3517,5 +3517,18 @@
     ],
     "photoPath": "/uploads/7bfbee23af7289a3ecd79f21b32ef8ff",
     "timestamp": "29/9/2025, 14:22:33"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ABHIJITH A S",
+    "chest": 304,
+    "dob": "2008-01-27",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "400m Race"
+    ],
+    "photoPath": "/uploads/80c805175f9a6b019604f4bdf174c7ed",
+    "timestamp": "29/9/2025, 14:28:07"
   }
 ]
