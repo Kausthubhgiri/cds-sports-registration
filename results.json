@@ -2746,5 +2746,18 @@
     ],
     "photoPath": "/uploads/e6110b4aad1c395c791fbfd911077b16",
     "timestamp": "29/9/2025, 07:51:15"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Madhav G Nair",
+    "chest": 149,
+    "dob": "2015-07-07",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "200m Race"
+    ],
+    "photoPath": "/uploads/7a11690f79bd6a3f257d73c2b9649ac8",
+    "timestamp": "29/9/2025, 07:53:26"
   }
 ]
