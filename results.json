@@ -3089,5 +3089,19 @@
     ],
     "photoPath": "/uploads/8d3998ae2e1e0017641234cb915a8f31",
     "timestamp": "29/9/2025, 08:47:37"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Krishna Deepu",
+    "chest": 171,
+    "dob": "2012-04-13",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/7f43d4061de7b4cea00b7fffe1a7ee1f",
+    "timestamp": "29/9/2025, 08:48:40"
   }
 ]
