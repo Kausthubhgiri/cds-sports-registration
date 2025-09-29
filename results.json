@@ -3256,5 +3256,19 @@
     ],
     "photoPath": "/uploads/37bd2e437f5d2ab5ccfd87a553f5607f",
     "timestamp": "29/9/2025, 08:57:43"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Sreyaraj S S",
+    "chest": 177,
+    "dob": "2013-09-10",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Long Jump",
+      "High Jump"
+    ],
+    "photoPath": "/uploads/8dcfd95839db9650c18dae1c70c27c66",
+    "timestamp": "29/9/2025, 08:58:20"
   }
 ]
