@@ -2824,5 +2824,19 @@
     ],
     "photoPath": "/uploads/ebb925292d4e46f18bbbf916c16bfb59",
     "timestamp": "29/9/2025, 08:08:00"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Faiha F",
+    "chest": 155,
+    "dob": "2015-03-22",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "50m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/40d2877bf877e986d80df2cb8bc0b937",
+    "timestamp": "29/9/2025, 08:10:41"
   }
 ]
