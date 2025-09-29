@@ -2491,5 +2491,20 @@
     ],
     "photoPath": "/uploads/204b1613fc32bec7ae7e00ef238929f7",
     "timestamp": "29/9/2025, 05:43:40"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Harinandan J S",
+    "chest": 134,
+    "dob": "2008-08-06",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/58c25b762e433563a21bc7a2bf0cf2d7",
+    "timestamp": "29/9/2025, 05:46:20"
   }
 ]
