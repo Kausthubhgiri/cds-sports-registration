@@ -2562,5 +2562,18 @@
     ],
     "photoPath": "/uploads/1bd0d25fbe16cfce56a5e57e271d169c",
     "timestamp": "29/9/2025, 06:07:24"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Adwaid P B",
+    "chest": 139,
+    "dob": "2007-10-04",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "High Jump"
+    ],
+    "photoPath": "/uploads/dff8a587d30c2a9b90a827f98fe1b848",
+    "timestamp": "29/9/2025, 06:20:24"
   }
 ]
