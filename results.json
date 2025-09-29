@@ -3188,5 +3188,18 @@
     ],
     "photoPath": "/uploads/6ac05ecdcb99e1db05d741b66fc495c7",
     "timestamp": "29/9/2025, 08:53:29"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "RAMCHAND",
+    "chest": 705,
+    "dob": "2015-04-01",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/faf6af7b25e9459158624ec4f6774243",
+    "timestamp": "29/9/2025, 08:54:20"
   }
 ]
