@@ -3285,17 +3285,18 @@
     "timestamp": "29/9/2025, 08:59:38"
   },
   {
-    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
-    "name": "ALIYA S",
-    "chest": 708,
-    "dob": "2016-12-16",
-    "ageCategory": "Under 11",
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Rithuparna Swapnakumar",
+    "chest": 179,
+    "dob": "2012-09-04",
+    "ageCategory": "Under 14",
     "gender": "Female",
     "events": [
-      "100m Race",
+      "200m Race",
+      "800m Race",
       "4x100m Relay"
     ],
-    "photoPath": "/uploads/e4a170da31f05d12db40b1a4eec575d4",
-    "timestamp": "29/9/2025, 09:00:53"
+    "photoPath": "/uploads/4259b6e43cd8bbe63615f62a72867af2",
+    "timestamp": "29/9/2025, 09:01:16"
   }
 ]
