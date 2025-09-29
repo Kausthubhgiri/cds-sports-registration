@@ -3898,5 +3898,18 @@
     ],
     "photoPath": "/uploads/f95a5d4850489f346d263fd56b1238f1",
     "timestamp": "29/9/2025, 17:19:36"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ANANTHANARAYAN R J",
+    "chest": 330,
+    "dob": "2012-04-16",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "400m Race"
+    ],
+    "photoPath": "/uploads/fab5b8581009a8fa73cf245a2191477c",
+    "timestamp": "29/9/2025, 17:23:19"
   }
 ]
