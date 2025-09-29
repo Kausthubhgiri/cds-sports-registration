@@ -3719,5 +3719,21 @@
     ],
     "photoPath": "/uploads/1af02831ef4904ae9cb0f43bdba51289",
     "timestamp": "29/9/2025, 15:48:04"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ANUSHA S B",
+    "chest": 318,
+    "dob": "2015-09-21",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/9964a773bf6b39ca4cbce22c2882431a",
+    "timestamp": "29/9/2025, 15:52:23"
   }
 ]
