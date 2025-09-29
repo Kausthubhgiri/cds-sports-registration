@@ -3819,5 +3819,22 @@
     ],
     "photoPath": "/uploads/7a3301b2893081e25d828c62e4da67e7",
     "timestamp": "29/9/2025, 16:59:50"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "AKHINA B",
+    "chest": 325,
+    "dob": "2012-11-02",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/a1554589fe01c5cae096dc85c4e296e7",
+    "timestamp": "29/9/2025, 17:03:51"
   }
 ]
