@@ -2759,5 +2759,18 @@
     ],
     "photoPath": "/uploads/7a11690f79bd6a3f257d73c2b9649ac8",
     "timestamp": "29/9/2025, 07:53:26"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Kailas G A",
+    "chest": 150,
+    "dob": "2015-10-25",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/c358608e1a5ae5bf004bb4aafd57db60",
+    "timestamp": "29/9/2025, 07:55:15"
   }
 ]
