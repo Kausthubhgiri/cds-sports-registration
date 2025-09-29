@@ -3792,5 +3792,19 @@
     ],
     "photoPath": "/uploads/2cba76f3388b29d7b554c79d4eebc7cb",
     "timestamp": "29/9/2025, 16:37:30"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "NIVIYA P J",
+    "chest": 323,
+    "dob": "2013-05-22",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Long Jump",
+      "High Jump"
+    ],
+    "photoPath": "/uploads/d51100b6a3983f522a814fbaf375ba93",
+    "timestamp": "29/9/2025, 16:56:16"
   }
 ]
