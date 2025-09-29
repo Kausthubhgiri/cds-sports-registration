@@ -2965,5 +2965,18 @@
     ],
     "photoPath": "/uploads/352e1a023af261f5c0718775b075fc49",
     "timestamp": "29/9/2025, 08:29:22"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Deva V Nair",
+    "chest": 165,
+    "dob": "2013-02-14",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/d8c65bd79a9a6cc34798a35b480bb2c7",
+    "timestamp": "29/9/2025, 08:31:15"
   }
 ]
