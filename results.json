@@ -2991,5 +2991,20 @@
     ],
     "photoPath": "/uploads/8b3a9414d3f28aeff3ac1ed8fe317f9b",
     "timestamp": "29/9/2025, 08:32:40"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Abdulla Khan",
+    "chest": 167,
+    "dob": "2012-05-17",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/831b5a1701425977e790946ff921e186",
+    "timestamp": "29/9/2025, 08:34:13"
   }
 ]
