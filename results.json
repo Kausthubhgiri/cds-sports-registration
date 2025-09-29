@@ -3074,5 +3074,20 @@
     ],
     "photoPath": "/uploads/c7afd0b4b66de28dd0b498d828296043",
     "timestamp": "29/9/2025, 08:43:25"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "AADIDEV P AKHIL",
+    "chest": 701,
+    "dob": "2015-07-16",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/8d3998ae2e1e0017641234cb915a8f31",
+    "timestamp": "29/9/2025, 08:47:37"
   }
 ]
