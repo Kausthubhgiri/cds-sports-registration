@@ -2894,5 +2894,19 @@
     ],
     "photoPath": "/uploads/17a29a610c3d73fc35ad4074bf22ba8e",
     "timestamp": "29/9/2025, 08:16:29"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Aneena P S",
+    "chest": 160,
+    "dob": "2015-06-03",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/9a0ec22480be150aaa66927dd85f09ba",
+    "timestamp": "29/9/2025, 08:18:18"
   }
 ]
