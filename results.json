@@ -2345,5 +2345,20 @@
     ],
     "photoPath": "/uploads/583f22b5e73f198ea9757a2144cda1df",
     "timestamp": "29/9/2025, 05:05:26"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Sreelakshmi S Warrier",
+    "chest": 124,
+    "dob": "2007-09-12",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "1500m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/d17debcd7c47eac426b2ba785d6b5866",
+    "timestamp": "29/9/2025, 05:07:25"
   }
 ]
