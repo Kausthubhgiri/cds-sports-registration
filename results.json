@@ -3675,5 +3675,18 @@
     ],
     "photoPath": "/uploads/d4f74d7935482a48f11b64849e608db5",
     "timestamp": "29/9/2025, 15:28:32"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ADWAITH V NAIR",
+    "chest": 315,
+    "dob": "2010-09-26",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/501bdf7d23fbe2e9c1462cb7b83a9305",
+    "timestamp": "29/9/2025, 15:38:29"
   }
 ]
