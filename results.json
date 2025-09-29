@@ -2330,5 +2330,20 @@
     ],
     "photoPath": "/uploads/3457c9b73314d36ac5958e01bb753f83",
     "timestamp": "29/9/2025, 05:03:36"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Anaina Rahul",
+    "chest": 123,
+    "dob": "2008-08-02",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "800m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/583f22b5e73f198ea9757a2144cda1df",
+    "timestamp": "29/9/2025, 05:05:26"
   }
 ]
