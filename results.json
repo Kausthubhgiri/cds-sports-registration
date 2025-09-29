@@ -2285,5 +2285,20 @@
     ],
     "photoPath": "/uploads/cc1f40f5b71fa2d7abc40389380e73d5",
     "timestamp": "29/9/2025, 04:44:41"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Gopika G S",
+    "chest": 120,
+    "dob": "2007-12-12",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/c1069edb10a9c72c8db01e91cf5747d1",
+    "timestamp": "29/9/2025, 05:00:04"
   }
 ]
