@@ -3868,5 +3868,21 @@
     ],
     "photoPath": "/uploads/3ca4557a55c0c61edb7844a538e83fa6",
     "timestamp": "29/9/2025, 17:12:58"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ABEN S ARUN",
+    "chest": 328,
+    "dob": "2012-09-11",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/a09ea899911d9f8f21ed52c6bdbc8f9e",
+    "timestamp": "29/9/2025, 17:16:11"
   }
 ]
