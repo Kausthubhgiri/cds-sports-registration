@@ -2130,5 +2130,19 @@
     ],
     "photoPath": "/uploads/cbab6469bf66212a361779dc9e429164",
     "timestamp": "29/9/2025, 03:53:15"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "D Mayoora Nair",
+    "chest": 109,
+    "dob": "2009-03-09",
+    "ageCategory": "Under 16",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/69c788b26731627764524da563ac59bb",
+    "timestamp": "29/9/2025, 04:09:55"
   }
 ]
