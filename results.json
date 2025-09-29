@@ -2575,5 +2575,20 @@
     ],
     "photoPath": "/uploads/dff8a587d30c2a9b90a827f98fe1b848",
     "timestamp": "29/9/2025, 06:20:24"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Amal S R",
+    "chest": 140,
+    "dob": "2008-05-16",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/8109d44beb1989fe7ff5d44bcf93ee8b",
+    "timestamp": "29/9/2025, 06:24:23"
   }
 ]
