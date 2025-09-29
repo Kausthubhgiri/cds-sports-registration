@@ -3662,5 +3662,18 @@
     ],
     "photoPath": "/uploads/ea72fb2c43ea4d51aa1afeba5cb65fb5",
     "timestamp": "29/9/2025, 15:23:26"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ANURAG S A",
+    "chest": 314,
+    "dob": "2010-11-22",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "200m Race"
+    ],
+    "photoPath": "/uploads/d4f74d7935482a48f11b64849e608db5",
+    "timestamp": "29/9/2025, 15:28:32"
   }
 ]
