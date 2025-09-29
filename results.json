@@ -3117,5 +3117,19 @@
     ],
     "photoPath": "/uploads/7bb639767f5456867962fbd45deff64c",
     "timestamp": "29/9/2025, 08:50:05"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "ALIN S",
+    "chest": 702,
+    "dob": "2016-05-19",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/95c01984baef5f9b71eeb46ce3024703",
+    "timestamp": "29/9/2025, 08:51:15"
   }
 ]
