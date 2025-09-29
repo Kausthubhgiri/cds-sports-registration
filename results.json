@@ -2935,5 +2935,19 @@
     ],
     "photoPath": "/uploads/609f659efc4a7c02855693eb4ed7995b",
     "timestamp": "29/9/2025, 08:24:53"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Agney Sai R",
+    "chest": 163,
+    "dob": "2013-05-14",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/5e725d3c4909b4a1a2d50e12fd5c883f",
+    "timestamp": "29/9/2025, 08:26:31"
   }
 ]
