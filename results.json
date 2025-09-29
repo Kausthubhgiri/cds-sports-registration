@@ -2590,5 +2590,19 @@
     ],
     "photoPath": "/uploads/8109d44beb1989fe7ff5d44bcf93ee8b",
     "timestamp": "29/9/2025, 06:24:23"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Roshan J S",
+    "chest": 141,
+    "dob": "2008-10-07",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "1500m Race"
+    ],
+    "photoPath": "/uploads/35da122bb5c88f1aa93707c43b9afe3a",
+    "timestamp": "29/9/2025, 06:31:24"
   }
 ]
