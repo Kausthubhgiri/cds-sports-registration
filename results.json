@@ -2300,5 +2300,21 @@
     ],
     "photoPath": "/uploads/c1069edb10a9c72c8db01e91cf5747d1",
     "timestamp": "29/9/2025, 05:00:04"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Darsana U Nair",
+    "chest": 121,
+    "dob": "2008-04-23",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/9050f648e120ddc0d0e742eec30ac163",
+    "timestamp": "29/9/2025, 05:01:45"
   }
 ]
