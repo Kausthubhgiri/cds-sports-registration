@@ -2633,5 +2633,19 @@
     ],
     "photoPath": "/uploads/2d0bc45da868b4756ddf0e81a5ca164f",
     "timestamp": "29/9/2025, 06:38:24"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Kasinath R",
+    "chest": 144,
+    "dob": "2007-04-26",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Long Jump",
+      "High Jump"
+    ],
+    "photoPath": "/uploads/ccdf9403409130bdea3261745305a4ac",
+    "timestamp": "29/9/2025, 06:59:43"
   }
 ]
