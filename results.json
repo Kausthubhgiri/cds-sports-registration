@@ -3557,5 +3557,18 @@
     ],
     "photoPath": "/uploads/6be4af05ecccb337450817a89f322a7c",
     "timestamp": "29/9/2025, 14:35:39"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "PRATHEESH P K",
+    "chest": 307,
+    "dob": "2007-09-25",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "High Jump"
+    ],
+    "photoPath": "/uploads/5421b8222ce05a3c5c49d50f0747b76e",
+    "timestamp": "29/9/2025, 14:41:49"
   }
 ]
