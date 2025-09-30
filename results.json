@@ -3996,5 +3996,22 @@
     ],
     "photoPath": "/uploads/0312dbab7485a5976a5b0cef98f0b468",
     "timestamp": "30/9/2025, 04:38:26"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "JIYA P J",
+    "chest": 337,
+    "dob": "2010-03-04",
+    "ageCategory": "Under 16",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Long Jump",
+      "High Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/2714f1549f8807611cae83614b699de8",
+    "timestamp": "30/9/2025, 04:41:05"
   }
 ]
