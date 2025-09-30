@@ -3983,5 +3983,18 @@
     ],
     "photoPath": "/uploads/8ec63c1b1f05489947593b68480dfe4b",
     "timestamp": "30/9/2025, 04:36:14"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ANN MARY RAJESH",
+    "chest": 336,
+    "dob": "2010-12-13",
+    "ageCategory": "Under 16",
+    "gender": "Female",
+    "events": [
+      "200m Race"
+    ],
+    "photoPath": "/uploads/0312dbab7485a5976a5b0cef98f0b468",
+    "timestamp": "30/9/2025, 04:38:26"
   }
 ]
