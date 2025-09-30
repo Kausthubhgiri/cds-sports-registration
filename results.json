@@ -3967,5 +3967,21 @@
     ],
     "photoPath": "/uploads/142a8efba2788c58cc5282fd7e5bfa02",
     "timestamp": "30/9/2025, 04:29:01"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "AKSHIMA S AJITH",
+    "chest": 335,
+    "dob": "2010-04-12",
+    "ageCategory": "Under 16",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/8ec63c1b1f05489947593b68480dfe4b",
+    "timestamp": "30/9/2025, 04:36:14"
   }
 ]
