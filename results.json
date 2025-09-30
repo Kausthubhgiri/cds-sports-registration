@@ -4027,5 +4027,20 @@
     ],
     "photoPath": "/uploads/2745e64611061390e76e55adabf5bd25",
     "timestamp": "30/9/2025, 04:52:56"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "THEJASWINI R D",
+    "chest": 339,
+    "dob": "2010-09-17",
+    "ageCategory": "Under 16",
+    "gender": "Female",
+    "events": [
+      "High Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/3b1a1e01ae5c59d2eace8d1b339e94a4",
+    "timestamp": "30/9/2025, 04:54:36"
   }
 ]
