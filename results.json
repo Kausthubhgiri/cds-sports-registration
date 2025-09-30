@@ -3954,5 +3954,18 @@
     ],
     "photoPath": "/uploads/d9b87e1a80a9f0b57be95a026e945621",
     "timestamp": "30/9/2025, 04:25:55"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ABHINAV KRISHNA K",
+    "chest": 334,
+    "dob": "2009-10-19",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/142a8efba2788c58cc5282fd7e5bfa02",
+    "timestamp": "30/9/2025, 04:29:01"
   }
 ]
