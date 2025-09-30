@@ -4074,5 +4074,21 @@
     ],
     "photoPath": "/uploads/920cd6434f58bce8ce8324fcdb2701c2",
     "timestamp": "30/9/2025, 15:13:05"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ASHWINI S A",
+    "chest": 342,
+    "dob": "2008-09-28",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/0e53f30f079464d798c0167a46a7dbd5",
+    "timestamp": "30/9/2025, 15:17:10"
   }
 ]
