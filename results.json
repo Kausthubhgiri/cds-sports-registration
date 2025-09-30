@@ -4133,5 +4133,20 @@
     ],
     "photoPath": "/uploads/c162eedb4d827939912c42c8915f1235",
     "timestamp": "30/9/2025, 15:35:28"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "AKSA M JAGAL",
+    "chest": 346,
+    "dob": "2013-12-17",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/64056b8665995bc44256f7ef9646d411",
+    "timestamp": "30/9/2025, 16:24:36"
   }
 ]
