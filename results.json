@@ -3911,5 +3911,19 @@
     ],
     "photoPath": "/uploads/fab5b8581009a8fa73cf245a2191477c",
     "timestamp": "29/9/2025, 17:23:19"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "MIDHUN N MANU",
+    "chest": 331,
+    "dob": "2009-09-07",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "High Jump"
+    ],
+    "photoPath": "/uploads/04ebf4cae49a87349b0ba773a95654df",
+    "timestamp": "30/9/2025, 04:20:05"
   }
 ]
