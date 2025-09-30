@@ -4042,5 +4042,22 @@
     ],
     "photoPath": "/uploads/3b1a1e01ae5c59d2eace8d1b339e94a4",
     "timestamp": "30/9/2025, 04:54:36"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "SAFWANA A",
+    "chest": 340,
+    "dob": "2010-08-09",
+    "ageCategory": "Under 16",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Shot Put",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/69dca17ab94ccf0c1d17963c282e46a0",
+    "timestamp": "30/9/2025, 04:57:07"
   }
 ]
