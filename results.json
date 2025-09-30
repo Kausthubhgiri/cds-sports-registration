@@ -4059,5 +4059,20 @@
     ],
     "photoPath": "/uploads/69dca17ab94ccf0c1d17963c282e46a0",
     "timestamp": "30/9/2025, 04:57:07"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ANASWARA A ANEESH",
+    "chest": 341,
+    "dob": "2013-07-03",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/920cd6434f58bce8ce8324fcdb2701c2",
+    "timestamp": "30/9/2025, 15:13:05"
   }
 ]
