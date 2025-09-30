@@ -3940,5 +3940,19 @@
     ],
     "photoPath": "/uploads/6c4f4b7690246c0b3ffc38461f208648",
     "timestamp": "30/9/2025, 04:21:25"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "SANJAY L SAJI",
+    "chest": 333,
+    "dob": "2010-03-18",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "Long Jump",
+      "High Jump"
+    ],
+    "photoPath": "/uploads/d9b87e1a80a9f0b57be95a026e945621",
+    "timestamp": "30/9/2025, 04:25:55"
   }
 ]
