@@ -3925,5 +3925,20 @@
     ],
     "photoPath": "/uploads/04ebf4cae49a87349b0ba773a95654df",
     "timestamp": "30/9/2025, 04:20:05"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ARUSH RAMEESH",
+    "chest": 332,
+    "dob": "2010-10-22",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/6c4f4b7690246c0b3ffc38461f208648",
+    "timestamp": "30/9/2025, 04:21:25"
   }
 ]
