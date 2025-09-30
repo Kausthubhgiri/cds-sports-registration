@@ -4090,5 +4090,20 @@
     ],
     "photoPath": "/uploads/0e53f30f079464d798c0167a46a7dbd5",
     "timestamp": "30/9/2025, 15:17:10"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "A S AROMAL",
+    "chest": 343,
+    "dob": "2010-01-05",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/124cde034a6a347b4a4e283e089efd04",
+    "timestamp": "30/9/2025, 15:22:03"
   }
 ]
