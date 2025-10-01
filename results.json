@@ -4181,5 +4181,20 @@
     ],
     "photoPath": "/uploads/0920897a41ee13da1c4a6437312ec500",
     "timestamp": "1/10/2025, 07:27:56"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "AMITH  S P",
+    "chest": 1303,
+    "dob": "2010-12-10",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "Discus Throw",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/f935abd81cc41e579b5eb340e7674fa8",
+    "timestamp": "1/10/2025, 07:38:16"
   }
 ]
