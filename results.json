@@ -4165,5 +4165,21 @@
     ],
     "photoPath": "/uploads/fbd25ab15de173466130c11b6665cd73",
     "timestamp": "1/10/2025, 07:24:47"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "AKHIL NATH R K",
+    "chest": 1302,
+    "dob": "2009-02-14",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/0920897a41ee13da1c4a6437312ec500",
+    "timestamp": "1/10/2025, 07:27:56"
   }
 ]
