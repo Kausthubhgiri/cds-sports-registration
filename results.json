@@ -4148,5 +4148,22 @@
     ],
     "photoPath": "/uploads/64056b8665995bc44256f7ef9646d411",
     "timestamp": "30/9/2025, 16:24:36"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "ADITHYAN D",
+    "chest": 1301,
+    "dob": "2010-07-07",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "Shot Put",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/fbd25ab15de173466130c11b6665cd73",
+    "timestamp": "1/10/2025, 07:24:47"
   }
 ]
