@@ -4256,5 +4256,21 @@
     ],
     "photoPath": "/uploads/eb1581b07e6c62b6086eb1728910c4c2",
     "timestamp": "1/10/2025, 08:04:43"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "AVANI S NAIR",
+    "chest": 1308,
+    "dob": "2010-02-04",
+    "ageCategory": "Under 16",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/0e2339c521826071a03228bcf752dfb6",
+    "timestamp": "1/10/2025, 08:17:33"
   }
 ]
