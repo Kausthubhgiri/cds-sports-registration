@@ -4243,5 +4243,18 @@
     ],
     "photoPath": "/uploads/6cf2099465b9c803925e177231c8e1ba",
     "timestamp": "1/10/2025, 08:02:02"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "GOPI KRISHNA L",
+    "chest": 1307,
+    "dob": "2007-11-13",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/eb1581b07e6c62b6086eb1728910c4c2",
+    "timestamp": "1/10/2025, 08:04:43"
   }
 ]
