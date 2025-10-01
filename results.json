@@ -4196,5 +4196,20 @@
     ],
     "photoPath": "/uploads/f935abd81cc41e579b5eb340e7674fa8",
     "timestamp": "1/10/2025, 07:38:16"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "ARYAK D",
+    "chest": 1304,
+    "dob": "2010-07-26",
+    "ageCategory": "Under 16",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/5762eb752107abe7e36508e69db37489",
+    "timestamp": "1/10/2025, 07:53:10"
   }
 ]
