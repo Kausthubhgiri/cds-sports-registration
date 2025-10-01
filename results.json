@@ -4211,5 +4211,21 @@
     ],
     "photoPath": "/uploads/5762eb752107abe7e36508e69db37489",
     "timestamp": "1/10/2025, 07:53:10"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "SARANG S",
+    "chest": 1305,
+    "dob": "2011-03-24",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "Discus Throw",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/90353e7a0d05d68a86342ea4c3e17073",
+    "timestamp": "1/10/2025, 07:56:08"
   }
 ]
