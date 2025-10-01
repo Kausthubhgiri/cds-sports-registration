@@ -4227,5 +4227,21 @@
     ],
     "photoPath": "/uploads/90353e7a0d05d68a86342ea4c3e17073",
     "timestamp": "1/10/2025, 07:56:08"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "YADHU KRISHN A  R",
+    "chest": 1306,
+    "dob": "2011-12-14",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "1500m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/6cf2099465b9c803925e177231c8e1ba",
+    "timestamp": "1/10/2025, 08:02:02"
   }
 ]
