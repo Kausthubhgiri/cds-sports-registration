@@ -374,11 +374,10 @@
       const age = 2025 - year;
 
       let category = '';
-      if (age <= 10) category = 'Under 11';
-      else if (age <= 13) category = 'Under 14';
-      else if (age <= 15) category = 'Under 16';
-      else if (age === 16) category = 'Under 17';
-      else if (age <= 18) category = 'Under 19';
+      if (age <= 11) category = 'Under 11';
+      else if (age <= 14) category = 'Under 14';
+      else if (age <= 17) category = 'Under 17';
+      else if (age <= 19) category = 'Under 19';
 
       const optionToSelect = Array.from(ageCategorySelect.options).find(opt => opt.value === category);
       if (optionToSelect) {
