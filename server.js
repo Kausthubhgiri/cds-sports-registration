@@ -150,7 +150,6 @@ function getAgeCategory(dob) {
   const age = new Date().getFullYear() - birthYear;
   if (age <= 11) return 'Under 11';
   if (age <= 14) return 'Under 14';
-  if (age <= 16) return 'Under 16';
   if (age === 17) return 'Under 17';
   if (age <= 19) return 'Under 19';
   return 'Overage';
