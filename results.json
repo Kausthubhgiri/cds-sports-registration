@@ -4351,5 +4351,18 @@
     ],
     "photoPath": "/uploads/e12626edbaf39e339c9dce9f5b7167e2",
     "timestamp": "3/10/2025, 15:04:56"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "AMRNATH B A",
+    "chest": 1315,
+    "dob": "2015-03-27",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/000b27f022c869660fb77e2afa3de951",
+    "timestamp": "3/10/2025, 15:14:13"
   }
 ]
