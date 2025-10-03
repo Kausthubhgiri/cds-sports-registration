@@ -4325,5 +4325,18 @@
     ],
     "photoPath": "/uploads/2a63f6b2a568176b021380a8d4a0058c",
     "timestamp": "3/10/2025, 14:54:02"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "VYGA BALAKUMAR NAIR",
+    "chest": 1313,
+    "dob": "2012-01-24",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race"
+    ],
+    "photoPath": "/uploads/9130d24e6006c98ada07ba5349c9ef80",
+    "timestamp": "3/10/2025, 14:57:34"
   }
 ]
