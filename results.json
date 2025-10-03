@@ -4272,5 +4272,18 @@
     ],
     "photoPath": "/uploads/0e2339c521826071a03228bcf752dfb6",
     "timestamp": "1/10/2025, 08:17:33"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "ARANYAN",
+    "chest": 1309,
+    "dob": "2013-10-03",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race"
+    ],
+    "photoPath": "/uploads/cdf7022bccae0117366db683f2f97a65",
+    "timestamp": "3/10/2025, 03:16:06"
   }
 ]
