@@ -4338,5 +4338,18 @@
     ],
     "photoPath": "/uploads/9130d24e6006c98ada07ba5349c9ef80",
     "timestamp": "3/10/2025, 14:57:34"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "VIJEESH J B",
+    "chest": 1314,
+    "dob": "2012-05-30",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race"
+    ],
+    "photoPath": "/uploads/e12626edbaf39e339c9dce9f5b7167e2",
+    "timestamp": "3/10/2025, 15:04:56"
   }
 ]
