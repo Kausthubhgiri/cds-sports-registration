@@ -4285,5 +4285,18 @@
     ],
     "photoPath": "/uploads/cdf7022bccae0117366db683f2f97a65",
     "timestamp": "3/10/2025, 03:16:06"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "HRITHIKA S NAIR",
+    "chest": 1310,
+    "dob": "2012-11-27",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "200m Race"
+    ],
+    "photoPath": "/uploads/49b3c45539a33c6cd665a8f2462d60ab",
+    "timestamp": "3/10/2025, 14:43:36"
   }
 ]
