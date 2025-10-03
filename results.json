@@ -4298,5 +4298,19 @@
     ],
     "photoPath": "/uploads/49b3c45539a33c6cd665a8f2462d60ab",
     "timestamp": "3/10/2025, 14:43:36"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "JISHNU PRASAD",
+    "chest": 1311,
+    "dob": "2012-03-18",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "High Jump"
+    ],
+    "photoPath": "/uploads/a9cbdd3e4c07660f50330affa78edfd3",
+    "timestamp": "3/10/2025, 14:49:24"
   }
 ]
