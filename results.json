@@ -4442,5 +4442,18 @@
     ],
     "photoPath": "/uploads/1db71b5ee7e80a7071d059d97953bdda",
     "timestamp": "4/10/2025, 05:00:29"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Vaigha ss",
+    "chest": 1073,
+    "dob": "2012-11-05",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "800m Race"
+    ],
+    "photoPath": "/uploads/b188258dd6289d91540d6cc6aaa13f04",
+    "timestamp": "4/10/2025, 05:03:21"
   }
 ]
