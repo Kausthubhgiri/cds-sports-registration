@@ -4416,5 +4416,18 @@
     ],
     "photoPath": "/uploads/9c6d01141fc7015b099249bca1d631ee",
     "timestamp": "4/10/2025, 04:56:19"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Mohit mohan",
+    "chest": 1071,
+    "dob": "2007-09-20",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/21843a674449c473ebccb4047231faed",
+    "timestamp": "4/10/2025, 04:58:24"
   }
 ]
