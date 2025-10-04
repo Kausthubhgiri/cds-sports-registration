@@ -4364,5 +4364,18 @@
     ],
     "photoPath": "/uploads/000b27f022c869660fb77e2afa3de951",
     "timestamp": "3/10/2025, 15:14:13"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Anagha sateesh",
+    "chest": 1067,
+    "dob": "2011-07-11",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/606b096cc4accf2af23706726d2d735f",
+    "timestamp": "4/10/2025, 04:17:01"
   }
 ]
