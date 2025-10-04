@@ -4390,5 +4390,18 @@
     ],
     "photoPath": "/uploads/1008e445cd81179e5acc6d7df487ea78",
     "timestamp": "4/10/2025, 04:19:21"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Ahalya pS",
+    "chest": 1069,
+    "dob": "2012-10-15",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "High Jump"
+    ],
+    "photoPath": "/uploads/efcbbf8714ca23aa13248ed86f8bde6d",
+    "timestamp": "4/10/2025, 04:24:17"
   }
 ]
