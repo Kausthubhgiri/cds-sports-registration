@@ -4403,5 +4403,18 @@
     ],
     "photoPath": "/uploads/efcbbf8714ca23aa13248ed86f8bde6d",
     "timestamp": "4/10/2025, 04:24:17"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Abhiram ps",
+    "chest": 1070,
+    "dob": "2008-04-22",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/9c6d01141fc7015b099249bca1d631ee",
+    "timestamp": "4/10/2025, 04:56:19"
   }
 ]
