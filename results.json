@@ -4483,5 +4483,18 @@
     ],
     "photoPath": "/uploads/ad4904ac979c4813fc311ef7ceabec7c",
     "timestamp": "6/10/2025, 04:27:25"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Mayookh Chandran B M",
+    "chest": 532,
+    "dob": "2007-06-11",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/41e388a68158cbabcb4f652e654214e9",
+    "timestamp": "6/10/2025, 09:03:22"
   }
 ]
