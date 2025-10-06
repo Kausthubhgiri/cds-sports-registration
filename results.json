@@ -4468,5 +4468,20 @@
     ],
     "photoPath": "/uploads/74b51a3590c85d982995a646bfbd5444",
     "timestamp": "4/10/2025, 05:06:55"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Ardra Ajay",
+    "chest": 1075,
+    "dob": "2007-12-19",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "1500m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/ad4904ac979c4813fc311ef7ceabec7c",
+    "timestamp": "6/10/2025, 04:27:25"
   }
 ]
