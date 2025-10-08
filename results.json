@@ -4555,5 +4555,20 @@
     ],
     "photoPath": "/uploads/36faa0173475144b508673a68a584481",
     "timestamp": "8/10/2025, 03:36:43"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ROJIN S VICTOR",
+    "chest": 351,
+    "dob": "2015-01-26",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/e4da0a35c85b45baeb16cc104bd66642",
+    "timestamp": "8/10/2025, 03:41:03"
   }
 ]
