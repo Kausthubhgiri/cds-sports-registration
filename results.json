@@ -4599,5 +4599,19 @@
     ],
     "photoPath": "/uploads/d68f97a26588a45a7c76a59881bcd39d",
     "timestamp": "8/10/2025, 07:57:50"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "RISHI S R",
+    "chest": 354,
+    "dob": "2015-03-23",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/ad9919ed58affd05327f32a24f07f1cf",
+    "timestamp": "8/10/2025, 08:05:41"
   }
 ]
