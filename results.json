@@ -4586,5 +4586,18 @@
     ],
     "photoPath": "/uploads/19e7e50f9ec1590fd6636600575dc571",
     "timestamp": "8/10/2025, 03:42:52"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ANANTHA PADMANABHAN P V",
+    "chest": 353,
+    "dob": "2015-08-25",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/d68f97a26588a45a7c76a59881bcd39d",
+    "timestamp": "8/10/2025, 07:57:50"
   }
 ]
