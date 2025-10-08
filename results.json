@@ -4570,5 +4570,21 @@
     ],
     "photoPath": "/uploads/e4da0a35c85b45baeb16cc104bd66642",
     "timestamp": "8/10/2025, 03:41:03"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ROHAN S VICTOR",
+    "chest": 352,
+    "dob": "2015-01-26",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/19e7e50f9ec1590fd6636600575dc571",
+    "timestamp": "8/10/2025, 03:42:52"
   }
 ]
