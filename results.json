@@ -4510,5 +4510,20 @@
     ],
     "photoPath": "/uploads/09e834ec2f3911b7616d27909b923e2c",
     "timestamp": "8/10/2025, 03:25:58"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "DEVANANDA B R",
+    "chest": 348,
+    "dob": "2015-11-17",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/fcc3db43fe15dfa2fe81d5eb3451ed69",
+    "timestamp": "8/10/2025, 03:30:00"
   }
 ]
