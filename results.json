@@ -4540,5 +4540,20 @@
     ],
     "photoPath": "/uploads/09cfcfff3ff3b80a14864e41d0b99f3c",
     "timestamp": "8/10/2025, 03:34:24"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ABHISHEK S",
+    "chest": 350,
+    "dob": "2015-04-08",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/36faa0173475144b508673a68a584481",
+    "timestamp": "8/10/2025, 03:36:43"
   }
 ]
