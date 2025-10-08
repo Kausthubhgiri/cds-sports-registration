@@ -4525,5 +4525,20 @@
     ],
     "photoPath": "/uploads/fcc3db43fe15dfa2fe81d5eb3451ed69",
     "timestamp": "8/10/2025, 03:30:00"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "REUBEN BENCILY B V",
+    "chest": 349,
+    "dob": "2015-05-28",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/09cfcfff3ff3b80a14864e41d0b99f3c",
+    "timestamp": "8/10/2025, 03:34:24"
   }
 ]
