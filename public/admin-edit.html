@@ -62,12 +62,18 @@
       border-radius: 8px;
       width: 400px;
       max-width: 90%;
+      max-height: 90%;
+      overflow-y: auto;
     }
     #editModalContent input, #editModalContent select {
       width: 100%;
       margin-bottom: 1rem;
       padding: 0.5rem;
       font-size: 1rem;
+    }
+    #eventCheckboxes label {
+      display: block;
+      margin-bottom: 0.3rem;
     }
   </style>
 </head>
@@ -84,8 +90,9 @@
     <div id="editModalContent">
       <h3>Edit Participant</h3>
       <form id="editForm">
-        <input type="hidden" id="editName">
+        <input type="hidden" id="originalName">
         <input type="hidden" id="editSchool">
+        <label>Name:<br><input type="text" id="editName" required></label>
         <label>DOB:<br><input type="date" id="editDob" required></label>
         <label>Gender:<br>
           <select id="editGender">
@@ -102,7 +109,8 @@
             <option>Under 19</option>
           </select>
         </label>
-        <label>Events:<br><input type="text" id="editEvents" placeholder="Comma-separated events" required></label>
+        <label>Events:</label>
+        <div id="eventCheckboxes" style="margin-bottom:1rem;"></div>
         <button type="submit">✅ Save</button>
         <button type="button" onclick="closeModal()">❌ Cancel</button>
       </form>
@@ -115,13 +123,20 @@
     document.getElementById('schoolHeader').textContent = `🏫 School: ${schoolName}`;
     let schoolEntries = [];
 
+    const allEvents = [
+      "50m Race", "100m Race", "200m Race", "400m Race", "800m Race", "1500m Race",
+      "Shot Put", "Discus Throw", "Long Jump", "High Jump", "4x100m Relay", "4x400m Relay"
+    ];
+
     function loadResults() {
       fetch('/results')
         .then(res => res.json())
         .then(data => {
           const container = document.getElementById('resultsContainer');
           container.innerHTML = '';
-          schoolEntries = data.filter(entry => entry.school === schoolName);
+          schoolEntries = data.filter(entry =>
+            entry.school.trim().toLowerCase() === schoolName.trim().toLowerCase()
+          );
           if (schoolEntries.length === 0) {
             container.innerHTML = '<p>No entries found for this school.</p>';
             return;
@@ -152,7 +167,7 @@
                 <td>${p.gender}</td>
                 <td>${p.events.join(', ')}</td>
                 <td>
-                  <button onclick='openEditModal(${JSON.stringify(p)})'>Edit</button>
+                  <button onclick='openEditModal(${JSON.stringify(p).replace(/'/g, "\\'")})'>Edit</button>
                   <button onclick="removeCandidate('${p.name}', '${p.school}')">Remove</button>
                 </td>
               </tr>
@@ -166,12 +181,21 @@
 
     function openEditModal(entry) {
       document.getElementById('editModal').style.display = 'flex';
-      document.getElementById('editName').value = entry.name;
+      document.getElementById('originalName').value = entry.name;
       document.getElementById('editSchool').value = entry.school;
+      document.getElementById('editName').value = entry.name;
       document.getElementById('editDob').value = entry.dob;
       document.getElementById('editGender').value = entry.gender;
       document.getElementById('editAge').value = entry.ageCategory;
-      document.getElementById('editEvents').value = entry.events.join(', ');
+
+      const container = document.getElementById('eventCheckboxes');
+      container.innerHTML = '';
+      allEvents.forEach(event => {
+        const checked = entry.events.includes(event) ? 'checked' : '';
+        container.innerHTML += `
+          <label><input type="checkbox" value="${event}" ${checked}> ${event}</label>
+        `;
+      });
     }
 
     function closeModal() {
@@ -180,17 +204,20 @@
 
     document.getElementById('editForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      const name = document.getElementById('editName').value;
+      const originalName = document.getElementById('originalName').value;
       const school = document.getElementById('editSchool').value;
+      const name = document.getElementById('editName').value;
       const dob = document.getElementById('editDob').value;
       const gender = document.getElementById('editGender').value;
       const ageCategory = document.getElementById('editAge').value;
-      const events = document.getElementById('editEvents').value.split(',').map(e => e.trim());
+      const events = Array.from(document.querySelectorAll('#eventCheckboxes input:checked')).map(cb => cb.value);
+
+      if (events.length === 0) return alert("Please select at least one event.");
 
       fetch('/edit-events', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, school, dob, gender, ageCategory, events })
+        body: JSON.stringify({ originalName, name, school, dob, gender, ageCategory, events })
       })
         .then(res => res.text())
         .then(msg => {
@@ -216,28 +243,27 @@
     }
 
     function downloadCSV() {
-      if (schoolEntries.length === 0) return alert("No entries to download.");
-      const headers = ["Name", "Chest", "DOB", "Age Category", "Gender", "Events"];
-      const rows = schoolEntries.map(p => [
-        `"${p.name}"`,
-        `"${p.chest}"`,
-        `"${p.dob}"`,
-        `"${p.ageCategory}"`,
-        `"${p.gender}"`,
-        `"${p.events.join('; ')}"`
-      ]);
-      let csvContent = "data:text/csv;charset=utf-8," + headers.join(",") + "\n" + rows.map(r => r.join(",")).join("\n");
-      const encodedUri = encodeURI(csvContent);
-      const link = document.createElement("a");
-      link.setAttribute("href", encodedUri);
-      link.setAttribute("download", `${schoolName.replace(/\s+/g, '_')}_entries.csv`);
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
+  if (schoolEntries.length === 0) return alert("No entries to download.");
 
-    loadResults();
-  </script>
-</body>
-</html>
+  const headers = ["Name", "Chest", "DOB", "Age Category", "Gender", "Events"];
+  const rows = schoolEntries.map(p => [
+    `"${p.name}"`,
+    `"${p.chest}"`,
+    `"${p.dob}"`,
+    `"${p.ageCategory}"`,
+    `"${p.gender}"`,
+    `"${p.events.join('; ')}"`
+  ]);
 
+  const csvContent = "data:text/csv;charset=utf-8," +
+    headers.join(",") + "\n" +
+    rows.map(r => r.join(",")).join("\n");
+
+  const encodedUri = encodeURI(csvContent);
+  const link = document.createElement("a");
+  link.setAttribute("href", encodedUri);
+  link.setAttribute("download", `${schoolName.replace(/\s+/g, '_')}_entries.csv`);
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
