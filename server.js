@@ -371,17 +371,26 @@ app.post('/reset-last', async (req, res) => {
 });
 // ✏️ POST /edit-events
 app.post('/edit-events', async (req, res) => {
-  const { name, school, events } = req.body;
+  const { originalName, name, school, dob, gender, ageCategory, events } = req.body;
+
   const index = data.findIndex(e =>
-    e.name.trim().toLowerCase() === name.trim().toLowerCase() &&
+    e.name.trim().toLowerCase() === originalName.trim().toLowerCase() &&
     e.school.trim().toLowerCase() === school.trim().toLowerCase()
   );
+
   if (index === -1) return res.status(404).send("Participant not found.");
 
+  // Update all editable fields
+  data[index].name = name;
+  data[index].dob = dob;
+  data[index].gender = gender;
+  data[index].ageCategory = ageCategory;
   data[index].events = events;
+
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-  if (USE_GITHUB) await pushToGitHub(data, `Update events for ${name} from ${school}`);
-  res.send("Events updated successfully.");
+  if (USE_GITHUB) await pushToGitHub(data, `Edit info for ${name} from ${school}`);
+
+  res.send("Participant info updated.");
 });
 
 // 🗑️ POST /remove-candidate
