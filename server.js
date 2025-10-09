@@ -270,7 +270,7 @@ app.post('/verify-login', express.urlencoded({ extended: true }), async (req, re
 });
 // Optional: placeholder for admin-edit page
 app.get('/admin-edit', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'edit-login.html'));
+  res.sendFile(path.join(__dirname, 'public', 'admin-edit.html'));
 });
 // 📊 GET /results
 app.get('/results', async (req, res) => {
