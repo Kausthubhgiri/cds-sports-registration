@@ -205,7 +205,8 @@ app.post('/submit', upload.single('photo'), async (req, res) => {
     ageCategory,
     gender,
     events: sanitizedEvents,
-    photoPath: `/uploads/${photo.filename}`,
+    const ext = path.extname(photo.originalname);
+photoPath: `/uploads/${photo.filename}${ext}`
     timestamp
   };
 
