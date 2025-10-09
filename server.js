@@ -7,6 +7,18 @@ const axios = require('axios');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const loginCredentials = [
+  { username: "drgrps", password: "grps823", school: "Dr GR PUBLIC SCHOOL" },
+  { username: "arrps", password: "arrps@276", school: "A.R.R PUBLIC SCHOOL" },
+  { username: "chvs", password: "chvs@361", school: "CHINTHALAYA VIDYALAYA" },
+  { username: "rrvcs", password: "rrvcs@032", school: "RAJA RAVI VARMA CENTRAL SCHOOL" },
+  { username: "ssvs", password: "ssvs@341", school: "SARASWATHI VIDYALAYA" },
+  { username: "ssnsss", password: "ssnsss@981", school: "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL" },
+  { username: "sgps", password: "sgps@231", school: "SREE GOKULAM PUBLIC SCHOOL" },
+  { username: "sasvs1", password: "sasvs1@992", school: "SREE SARASWATHY VIDYALAYAM" },
+  { username: "vbps", password: "vbps@476", school: "VISHWABHARATHY PUBLIC SCHOOL" },
+  { username: "vsdps12", password: "vsdps12@876", school: "VISWADARSHINI PUBLIC SCHOOL" }
+];
 const filePath = path.join(__dirname, 'results.json');
 
 // 🔐 GitHub sync config
@@ -15,6 +27,7 @@ const REPO = 'kausthubhgiri/cds-sports-registration';
 const FILE_PATH = 'results.json';
 const BRANCH = 'main';
 const USE_GITHUB = process.env.USE_GITHUB === 'true';
+
 
 // 📁 Multer config
 const upload = multer({
@@ -143,18 +156,7 @@ async function initializeData() {
     }
   });
 }
-const loginCredentials = [
-  { username: "drgrps", password: "grps823", school: "Dr GR PUBLIC SCHOOL" },
-  { username: "arrps", password: "arrps@276", school: "A.R.R PUBLIC SCHOOL" },
-  { username: "chvs", password: "chvs@361", school: "CHINTHALAYA VIDYALAYA" },
-  { username: "rrvcs", password: "rrvcs@032", school: "RAJA RAVI VARMA CENTRAL SCHOOL" },
-  { username: "ssvs", password: "ssvs@341", school: "SARASWATHI VIDYALAYA" },
-  { username: "ssnsss", password: "ssnsss@981", school: "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL" },
-  { username: "sgps", password: "sgps@231", school: "SREE GOKULAM PUBLIC SCHOOL" },
-  { username: "sasvs1", password: "sasvs1@992", school: "SREE SARASWATHY VIDYALAYAM" },
-  { username: "vbps", password: "vbps@476", school: "VISHWABHARATHY PUBLIC SCHOOL" },
-  { username: "vsdps12", password: "vsdps12@876", school: "VISWADARSHINI PUBLIC SCHOOL" }
-];
+
 function getAgeCategory(dob) {
   const birthYear = new Date(dob).getFullYear();
   if (isNaN(birthYear)) return 'Invalid DOB';
@@ -267,6 +269,11 @@ app.get('/edit-login', (req, res) => {
 // Verify login credentials
 app.post('/verify-login', express.urlencoded({ extended: true }), (req, res) => {
   const { username, password } = req.body;
+
+  // 🔍 Debug logs
+  console.log("Submitted username:", username);
+  console.log("Submitted password:", password);
+  console.log("Available credentials:", loginCredentials);
 
   const match = loginCredentials.find(
     cred =>
