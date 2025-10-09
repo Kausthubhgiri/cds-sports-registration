@@ -241,25 +241,6 @@ const entry = {
     console.log(`🚀 Server running at http://localhost:${PORT}`);
   });
 
-// Load login credentials from Excel
-let loginCredentials = [];
-
-async function loadLoginCredentials() {
-  const workbook = new ExcelJS.Workbook();
-  await workbook.xlsx.readFile('admin_logins.xlsx');
-  const sheet = workbook.getWorksheet(1);
-  loginCredentials = [];
-
-  sheet.eachRow((row, rowIndex) => {
-    if (rowIndex === 1) return;
-    const username = row.getCell(1).value?.toString().trim();
-    const password = row.getCell(2).value?.toString().trim();
-    const school = row.getCell(3).value?.toString().trim();
-    if (username && password && school) {
-      loginCredentials.push({ username, password, school });
-    }
-  });
-}
 
 // Serve the login page
 app.get('/edit-login', (req, res) => {
