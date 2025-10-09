@@ -4613,5 +4613,18 @@
     ],
     "photoPath": "/uploads/ad9919ed58affd05327f32a24f07f1cf",
     "timestamp": "8/10/2025, 08:05:41"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "test",
+    "chest": 201,
+    "dob": "2009-09-20",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "50m Race"
+    ],
+    "photoPath": "/uploads/25a41dc38ae8daeda8ae45215a059982",
+    "timestamp": "9/10/2025, 05:28:59"
   }
 ]
