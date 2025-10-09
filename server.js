@@ -263,12 +263,11 @@ app.post('/verify-login', express.urlencoded({ extended: true }), async (req, re
   );
 
   if (match) {
-    res.redirect('/admin-edit'); // You can customize this route
+    res.redirect(`/admin-edit?school=${encodeURIComponent(match.school)}`);
   } else {
     res.send("❌ Invalid credentials. Please try again.");
   }
 });
-
 // Optional: placeholder for admin-edit page
 app.get('/admin-edit', (req, res) => {
   res.send("✅ Logged in successfully. Admin edit page coming soon.");
