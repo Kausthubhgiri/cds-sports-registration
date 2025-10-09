@@ -318,7 +318,15 @@
     <input type="date" id="dob" name="dob" title="Date of Birth" required>
 
    <label for="ageCategory">Age Category:</label>
-<input type="text" id="ageCategory" name="ageCategory" readonly class="locked-field">
+<label for="ageCategory">Age Category</label>
+<select id="ageCategory" name="ageCategory" required>
+  <option value="" disabled selected>Select Age Category</option>
+  <option value="Under 11">Under 11</option>
+  <option value="Under 14">Under 14</option>
+  <option value="Under 17">Under 17</option>
+  <option value="Under 19">Under 19</option>
+  <option value="Overage">Overage</option>
+</select>
 
       
     <label for="gender">Gender</label>
@@ -363,27 +371,7 @@
   </div>
 
   <script>
-    const dobInput = document.getElementById('dob');
-    const ageCategorySelect = document.getElementById('ageCategory');
 
-    dobInput.addEventListener('change', () => {
-      const dob = new Date(dobInput.value);
-      if (isNaN(dob)) return;
-
-      const year = dob.getFullYear();
-      const age = 2025 - year;
-
-      let category = '';
-      if (age <= 11) category = 'Under 11';
-      else if (age <= 14) category = 'Under 14';
-      else if (age <= 17) category = 'Under 17';
-      else if (age <= 19) category = 'Under 19';
-
-      const optionToSelect = Array.from(ageCategorySelect.options).find(opt => opt.value === category);
-      if (optionToSelect) {
-        ageCategorySelect.value = optionToSelect.value;
-      }
-    });
 
     const form = document.getElementById('regForm');
     const statusDiv = document.getElementById('status');
