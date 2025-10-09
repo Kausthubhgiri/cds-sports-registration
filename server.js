@@ -197,19 +197,18 @@ app.post('/submit', upload.single('photo'), async (req, res) => {
     return res.status(400).json({ error: "No events selected." });
   }
 
-  const entry = {
-    school: school.trim(),
-    name: name.trim(),
-    chest: nextChest,
-    dob,
-    ageCategory,
-    gender,
-    events: sanitizedEvents,
-    const ext = path.extname(photo.originalname);
-photoPath: `/uploads/${photo.filename}${ext}`
-    timestamp
-  };
-
+  const ext = path.extname(photo.originalname);
+const entry = {
+  school: school.trim(),
+  name: name.trim(),
+  chest: nextChest,
+  dob,
+  ageCategory,
+  gender,
+  events: sanitizedEvents,
+  photoPath: `/uploads/${photo.filename}${ext}`,
+  timestamp
+};
   data.push(entry);
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
   if (USE_GITHUB) {
