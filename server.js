@@ -143,7 +143,18 @@ async function initializeData() {
     }
   });
 }
-
+const loginCredentials = [
+  { username: "drgrps", password: "grps823", school: "Dr GR PUBLIC SCHOOL" },
+  { username: "arrps", password: "arrps@276", school: "A.R.R PUBLIC SCHOOL" },
+  { username: "chvs", password: "chvs@361", school: "CHINTHALAYA VIDYALAYA" },
+  { username: "rrvcs", password: "rrvcs@032", school: "RAJA RAVI VARMA CENTRAL SCHOOL" },
+  { username: "ssvs", password: "ssvs@341", school: "SARASWATHI VIDYALAYA" },
+  { username: "ssnsss", password: "ssnsss@981", school: "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL" },
+  { username: "sgps", password: "sgps@231", school: "SREE GOKULAM PUBLIC SCHOOL" },
+  { username: "sasvs1", password: "sasvs1@992", school: "SREE SARASWATHY VIDYALAYAM" },
+  { username: "vbps", password: "vbps@476", school: "VISHWABHARATHY PUBLIC SCHOOL" },
+  { username: "vsdps12", password: "vsdps12@876", school: "VISWADARSHINI PUBLIC SCHOOL" }
+];
 function getAgeCategory(dob) {
   const birthYear = new Date(dob).getFullYear();
   if (isNaN(birthYear)) return 'Invalid DOB';
@@ -254,12 +265,13 @@ app.get('/edit-login', (req, res) => {
 });
 
 // Verify login credentials
-app.post('/verify-login', express.urlencoded({ extended: true }), async (req, res) => {
+app.post('/verify-login', express.urlencoded({ extended: true }), (req, res) => {
   const { username, password } = req.body;
-  await loadLoginCredentials();
 
   const match = loginCredentials.find(
-    cred => cred.username === username && cred.password === password
+    cred =>
+      cred.username.trim().toLowerCase() === username.trim().toLowerCase() &&
+      cred.password.trim() === password.trim()
   );
 
   if (match) {
