@@ -496,3 +496,4 @@ app.get('/next-chest', (req, res) => {
   console.log(`✅ Next chest for ${matchKey}: ${next}`);
   res.json({ chest: next });
 });
+})();
