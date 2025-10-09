@@ -227,6 +227,52 @@ app.post('/submit', upload.single('photo'), async (req, res) => {
   app.listen(PORT, () => {
     console.log(`🚀 Server running at http://localhost:${PORT}`);
   });
+
+// Load login credentials from Excel
+let loginCredentials = [];
+
+async function loadLoginCredentials() {
+  const workbook = new ExcelJS.Workbook();
+  await workbook.xlsx.readFile('admin_logins.xlsx');
+  const sheet = workbook.getWorksheet(1);
+  loginCredentials = [];
+
+  sheet.eachRow((row, rowIndex) => {
+    if (rowIndex === 1) return;
+    const username = row.getCell(1).value?.toString().trim();
+    const password = row.getCell(2).value?.toString().trim();
+    const school = row.getCell(3).value?.toString().trim();
+    if (username && password && school) {
+      loginCredentials.push({ username, password, school });
+    }
+  });
+}
+
+// Serve the login page
+app.get('/edit-login', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'edit-login.html'));
+});
+
+// Verify login credentials
+app.post('/verify-login', express.urlencoded({ extended: true }), async (req, res) => {
+  const { username, password } = req.body;
+  await loadLoginCredentials();
+
+  const match = loginCredentials.find(
+    cred => cred.username === username && cred.password === password
+  );
+
+  if (match) {
+    res.redirect('/admin-edit'); // You can customize this route
+  } else {
+    res.send("❌ Invalid credentials. Please try again.");
+  }
+});
+
+// Optional: placeholder for admin-edit page
+app.get('/admin-edit', (req, res) => {
+  res.send("✅ Logged in successfully. Admin edit page coming soon.");
+});
 })();
 // 📊 GET /results
 app.get('/results', async (req, res) => {
