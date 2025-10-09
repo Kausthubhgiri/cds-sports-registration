@@ -481,22 +481,7 @@
         popup.classList.add('hidden');
       }, 3000);
     }
-    function getAgeCategory(dob) {
-  const birthYear = new Date(dob).getFullYear();
-  const age = new Date().getFullYear() - birthYear;
 
-  if (age <= 11) return 'Under 11';
-  if (age <= 14) return 'Under 14'; 
-  if (age <= 17) return 'Under 17';
-  if (age <= 19) return 'Under 19';
-  return 'Overage';
-}
-
-document.getElementById('dob').addEventListener('change', function () {
-  const dob = this.value;
-  const category = getAgeCategory(dob);
-  document.getElementById('ageCategory').value = category;
-});
  
  
   </script>
