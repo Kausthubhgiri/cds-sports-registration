@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Entries – CDS Sports Meet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    #schoolHeader {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .actions {
+      margin-bottom: 1.5rem;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      margin-right: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.5rem;
+    }
+    th, td {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    img {
+      max-width: 80px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>✏️ Edit Entries – CDS Sports Meet</h1>
+  <div id="schoolHeader"></div>
+  <div class="actions">
+    <button onclick="downloadCSV()">⬇️ Download Entries</button>
+  </div>
+  <div id="resultsContainer">Loading entries...</div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const schoolName = urlParams.get('school');
+    document.getElementById('schoolHeader').textContent = `🏫 School: ${schoolName}`;
+
+    let schoolEntries = [];
+
+    function loadResults() {
+      fetch('/results')
+        .then(res => res.json())
+        .then(data => {
+          const container = document.getElementById('resultsContainer');
+          container.innerHTML = '';
+
+          schoolEntries = data.filter(entry => entry.school === schoolName);
+          if (schoolEntries.length === 0) {
+            container.innerHTML = '<p>No entries found for this school.</p>';
+            return;
+          }
+
+          const table = document.createElement('table');
+          table.innerHTML = `
+            <tr>
+              <th>Photo</th>
+              <th>Name</th>
+              <th>Chest</th>
+              <th>DOB</th>
+              <th>Age Category</th>
+              <th>Gender</th>
+              <th>Events</th>
+              <th>Actions</th>
+            </tr>
+          `;
+
+          schoolEntries.forEach(p => {
+            const row = `
+              <tr>
+                <td><img src="${p.photoPath}" alt="Photo of ${p.name}"></td>
+                <td>${p.name}</td>
+                <td>${p.chest}</td>
+                <td>${p.dob}</td>
+                <td>${p.ageCategory}</td>
+                <td>${p.gender}</td>
+                <td>${p.events.join(', ')}</td>
+                <td>
+                  <button onclick="editEvents('${p.name}', '${p.school}')">Edit</button>
+                  <button onclick="removeCandidate('${p.name}', '${p.school}')">Remove</button>
+                </td>
+              </tr>
+            `;
+            table.innerHTML += row;
+          });
+
+          container.appendChild(table);
+        });
+    }
+
+    function editEvents(name, school) {
+      const allEvents = ["50m Race", "100m Race", "200m Race", "400m Race", "800m Race", "1500m Race", "Shot Put", "Discus Throw", "Long Jump", "High Jump", "4x100m Relay", "4x400m Relay"];
+      fetch('/results')
+        .then(res => res.json())
+        .then(data => {
+          const entry = data.find(e => e.name === name && e.school === school);
+          if (!entry) return alert("Participant not found.");
+
+          const updated = prompt(`Edit events for ${name}:\nAvailable: ${allEvents.join(', ')}`, entry.events.join(', '));
+          if (updated === null) return;
+
+          const newEvents = updated.split(',').map(e => e.trim()).filter(e => allEvents.includes(e));
+          if (newEvents.length === 0) return alert("No valid events selected.");
+
+          fetch('/edit-events', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, school, events: newEvents })
+          })
+            .then(res => res.text())
+            .then(msg => {
+              alert(msg);
+              loadResults();
+            });
+        });
+    }
+
+    function removeCandidate(name, school) {
+      if (!confirm(`Are you sure you want to remove ${name}?`)) return;
+
+      fetch('/remove-candidate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, school })
+      })
+        .then(res => res.text())
+        .then(msg => {
+          alert(msg);
+          loadResults();
+        });
+    }
+
+    function downloadCSV() {
+      if (schoolEntries.length === 0) return alert("No entries to download.");
+
+      const headers = ["Name", "Chest", "DOB", "Age Category", "Gender", "Events"];
+      const rows = schoolEntries.map(p => [
+        `"${p.name}"`,
+        `"${p.chest}"`,
+        `"${p.dob}"`,
+        `"${p.ageCategory}"`,
+        `"${p.gender}"`,
+        `"${p.events.join('; ')}"`
+      ]);
+
+      let csvContent = "data:text/csv;charset=utf-8," + headers.join(",") + "\n" + rows.map(r => r.join(",")).join("\n");
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", `${schoolName.replace(/\s+/g, '_')}_entries.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    loadResults();
+  </script>
+</body>
+</html>
+
