@@ -47,6 +47,28 @@
       max-width: 80px;
       border-radius: 4px;
     }
+    #editModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+    #editModalContent {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      width: 400px;
+      max-width: 90%;
+    }
+    #editModalContent input, #editModalContent select {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -57,11 +79,40 @@
   </div>
   <div id="resultsContainer">Loading entries...</div>
 
+  <!-- Edit Modal -->
+  <div id="editModal">
+    <div id="editModalContent">
+      <h3>Edit Participant</h3>
+      <form id="editForm">
+        <input type="hidden" id="editName">
+        <input type="hidden" id="editSchool">
+        <label>DOB:<br><input type="date" id="editDob" required></label>
+        <label>Gender:<br>
+          <select id="editGender">
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </label>
+        <label>Age Category:<br>
+          <select id="editAge">
+            <option>Under 11</option>
+            <option>Under 14</option>
+            <option>Under 16</option>
+            <option>Under 17</option>
+            <option>Under 19</option>
+          </select>
+        </label>
+        <label>Events:<br><input type="text" id="editEvents" placeholder="Comma-separated events" required></label>
+        <button type="submit">✅ Save</button>
+        <button type="button" onclick="closeModal()">❌ Cancel</button>
+      </form>
+    </div>
+  </div>
+
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const schoolName = urlParams.get('school');
     document.getElementById('schoolHeader').textContent = `🏫 School: ${schoolName}`;
-
     let schoolEntries = [];
 
     function loadResults() {
@@ -70,7 +121,6 @@
         .then(data => {
           const container = document.getElementById('resultsContainer');
           container.innerHTML = '';
-
           schoolEntries = data.filter(entry => entry.school === schoolName);
           if (schoolEntries.length === 0) {
             container.innerHTML = '<p>No entries found for this school.</p>';
@@ -102,7 +152,7 @@
                 <td>${p.gender}</td>
                 <td>${p.events.join(', ')}</td>
                 <td>
-                  <button onclick="editEvents('${p.name}', '${p.school}')">Edit</button>
+                  <button onclick='openEditModal(${JSON.stringify(p)})'>Edit</button>
                   <button onclick="removeCandidate('${p.name}', '${p.school}')">Remove</button>
                 </td>
               </tr>
@@ -114,32 +164,41 @@
         });
     }
 
-    function editEvents(name, school) {
-      const allEvents = ["50m Race", "100m Race", "200m Race", "400m Race", "800m Race", "1500m Race", "Shot Put", "Discus Throw", "Long Jump", "High Jump", "4x100m Relay", "4x400m Relay"];
-      fetch('/results')
-        .then(res => res.json())
-        .then(data => {
-          const entry = data.find(e => e.name === name && e.school === school);
-          if (!entry) return alert("Participant not found.");
-
-          const updated = prompt(`Edit events for ${name}:\nAvailable: ${allEvents.join(', ')}`, entry.events.join(', '));
-          if (updated === null) return;
-
-          const newEvents = updated.split(',').map(e => e.trim()).filter(e => allEvents.includes(e));
-          if (newEvents.length === 0) return alert("No valid events selected.");
-
-          fetch('/edit-events', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, school, events: newEvents })
-          })
-            .then(res => res.text())
-            .then(msg => {
-              alert(msg);
-              loadResults();
-            });
-        });
+    function openEditModal(entry) {
+      document.getElementById('editModal').style.display = 'flex';
+      document.getElementById('editName').value = entry.name;
+      document.getElementById('editSchool').value = entry.school;
+      document.getElementById('editDob').value = entry.dob;
+      document.getElementById('editGender').value = entry.gender;
+      document.getElementById('editAge').value = entry.ageCategory;
+      document.getElementById('editEvents').value = entry.events.join(', ');
     }
+
+    function closeModal() {
+      document.getElementById('editModal').style.display = 'none';
+    }
+
+    document.getElementById('editForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('editName').value;
+      const school = document.getElementById('editSchool').value;
+      const dob = document.getElementById('editDob').value;
+      const gender = document.getElementById('editGender').value;
+      const ageCategory = document.getElementById('editAge').value;
+      const events = document.getElementById('editEvents').value.split(',').map(e => e.trim());
+
+      fetch('/edit-events', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, school, dob, gender, ageCategory, events })
+      })
+        .then(res => res.text())
+        .then(msg => {
+          alert(msg);
+          closeModal();
+          loadResults();
+        });
+    });
 
     function removeCandidate(name, school) {
       if (!confirm(`Are you sure you want to remove ${name}?`)) return;
@@ -158,7 +217,6 @@
 
     function downloadCSV() {
       if (schoolEntries.length === 0) return alert("No entries to download.");
-
       const headers = ["Name", "Chest", "DOB", "Age Category", "Gender", "Events"];
       const rows = schoolEntries.map(p => [
         `"${p.name}"`,
@@ -168,7 +226,6 @@
         `"${p.gender}"`,
         `"${p.events.join('; ')}"`
       ]);
-
       let csvContent = "data:text/csv;charset=utf-8," + headers.join(",") + "\n" + rows.map(r => r.join(",")).join("\n");
       const encodedUri = encodeURI(csvContent);
       const link = document.createElement("a");
