@@ -117,153 +117,173 @@
     </div>
   </div>
 
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const schoolName = urlParams.get('school');
-    document.getElementById('schoolHeader').textContent = `🏫 School: ${schoolName}`;
-    let schoolEntries = [];
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const schoolName = urlParams.get('school');
+  document.getElementById('schoolHeader').textContent = `🏫 School: ${schoolName}`;
+  let schoolEntries = [];
 
-    const allEvents = [
-      "50m Race", "100m Race", "200m Race", "400m Race", "800m Race", "1500m Race",
-      "Shot Put", "Discus Throw", "Long Jump", "High Jump", "4x100m Relay", "4x400m Relay"
-    ];
+  const allEvents = [
+    "50m Race", "100m Race", "200m Race", "400m Race", "800m Race", "1500m Race",
+    "Shot Put", "Discus Throw", "Long Jump", "High Jump", "4x100m Relay", "4x400m Relay"
+  ];
+  const relayEvents = ["4x100m Relay", "4x400m Relay"];
 
-    function loadResults() {
-      fetch('/results')
-        .then(res => res.json())
-        .then(data => {
-          const container = document.getElementById('resultsContainer');
-          container.innerHTML = '';
-          schoolEntries = data.filter(entry =>
-            entry.school.trim().toLowerCase() === schoolName.trim().toLowerCase()
-          );
-          if (schoolEntries.length === 0) {
-            container.innerHTML = '<p>No entries found for this school.</p>';
-            return;
-          }
+  function loadResults() {
+    fetch('/results')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('resultsContainer');
+        container.innerHTML = '';
+        schoolEntries = data.filter(entry =>
+          entry.school.trim().toLowerCase() === schoolName.trim().toLowerCase()
+        );
+        if (schoolEntries.length === 0) {
+          container.innerHTML = '<p>No entries found for this school.</p>';
+          return;
+        }
 
-          const table = document.createElement('table');
-          table.innerHTML = `
+        const table = document.createElement('table');
+        table.innerHTML = `
+          <tr>
+            <th>Photo</th>
+            <th>Name</th>
+            <th>Chest</th>
+            <th>DOB</th>
+            <th>Age Category</th>
+            <th>Gender</th>
+            <th>Events</th>
+            <th>Actions</th>
+          </tr>
+        `;
+
+        schoolEntries.forEach(p => {
+          const row = `
             <tr>
-              <th>Photo</th>
-              <th>Name</th>
-              <th>Chest</th>
-              <th>DOB</th>
-              <th>Age Category</th>
-              <th>Gender</th>
-              <th>Events</th>
-              <th>Actions</th>
+              <td><img src="${p.photoPath}" alt="Photo of ${p.name}"></td>
+              <td>${p.name}</td>
+              <td>${p.chest}</td>
+              <td>${p.dob}</td>
+              <td>${p.ageCategory}</td>
+              <td>${p.gender}</td>
+              <td>${p.events.join(', ')}</td>
+              <td>
+                <button onclick='openEditModal(${JSON.stringify(p).replace(/'/g, "\\'")})'>Edit</button>
+                <button onclick="removeCandidate('${p.name}', '${p.school}')">Remove</button>
+              </td>
             </tr>
           `;
-
-          schoolEntries.forEach(p => {
-            const row = `
-              <tr>
-                <td><img src="${p.photoPath}" alt="Photo of ${p.name}"></td>
-                <td>${p.name}</td>
-                <td>${p.chest}</td>
-                <td>${p.dob}</td>
-                <td>${p.ageCategory}</td>
-                <td>${p.gender}</td>
-                <td>${p.events.join(', ')}</td>
-                <td>
-                  <button onclick='openEditModal(${JSON.stringify(p).replace(/'/g, "\\'")})'>Edit</button>
-                  <button onclick="removeCandidate('${p.name}', '${p.school}')">Remove</button>
-                </td>
-              </tr>
-            `;
-            table.innerHTML += row;
-          });
-
-          container.appendChild(table);
+          table.innerHTML += row;
         });
-    }
 
-    function openEditModal(entry) {
-      document.getElementById('editModal').style.display = 'flex';
-      document.getElementById('originalName').value = entry.name;
-      document.getElementById('editSchool').value = entry.school;
-      document.getElementById('editName').value = entry.name;
-      document.getElementById('editDob').value = entry.dob;
-      document.getElementById('editGender').value = entry.gender;
-      document.getElementById('editAge').value = entry.ageCategory;
-
-      const container = document.getElementById('eventCheckboxes');
-      container.innerHTML = '';
-      allEvents.forEach(event => {
-        const checked = entry.events.includes(event) ? 'checked' : '';
-        container.innerHTML += `
-          <label><input type="checkbox" value="${event}" ${checked}> ${event}</label>
-        `;
+        container.appendChild(table);
       });
-    }
+  }
 
-    function closeModal() {
-      document.getElementById('editModal').style.display = 'none';
-    }
+  function openEditModal(entry) {
+    document.getElementById('editModal').style.display = 'flex';
+    document.getElementById('originalName').value = entry.name;
+    document.getElementById('editSchool').value = entry.school;
+    document.getElementById('editName').value = entry.name;
+    document.getElementById('editDob').value = entry.dob;
+    document.getElementById('editGender').value = entry.gender;
+    document.getElementById('editAge').value = entry.ageCategory;
 
-    document.getElementById('editForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const originalName = document.getElementById('originalName').value;
-      const school = document.getElementById('editSchool').value;
-      const name = document.getElementById('editName').value;
-      const dob = document.getElementById('editDob').value;
-      const gender = document.getElementById('editGender').value;
-      const ageCategory = document.getElementById('editAge').value;
-      const events = Array.from(document.querySelectorAll('#eventCheckboxes input:checked')).map(cb => cb.value);
-
-      if (events.length === 0) return alert("Please select at least one event.");
-
-      fetch('/edit-events', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ originalName, name, school, dob, gender, ageCategory, events })
-      })
-        .then(res => res.text())
-        .then(msg => {
-          alert(msg);
-          closeModal();
-          loadResults();
-        });
+    const container = document.getElementById('eventCheckboxes');
+    container.innerHTML = '';
+    allEvents.forEach(event => {
+      const checked = entry.events.includes(event) ? 'checked' : '';
+      container.innerHTML += `
+        <label>
+          <input type="checkbox" value="${event}" ${checked} onchange="limitNonRelaySelection(this)">
+          ${event}
+        </label>
+      `;
     });
+  }
 
-    function removeCandidate(name, school) {
-      if (!confirm(`Are you sure you want to remove ${name}?`)) return;
+  function limitNonRelaySelection(checkbox) {
+    const selected = Array.from(document.querySelectorAll('#eventCheckboxes input:checked'))
+      .map(cb => cb.value);
+    const nonRelaySelected = selected.filter(e => !relayEvents.includes(e));
 
-      fetch('/remove-candidate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, school })
-      })
-        .then(res => res.text())
-        .then(msg => {
-          alert(msg);
-          loadResults();
-        });
+    if (!relayEvents.includes(checkbox.value) && nonRelaySelected.length > 3) {
+      checkbox.checked = false;
+      alert("You can select up to 3 non-relay events only.");
     }
+  }
 
-    function downloadCSV() {
-  if (schoolEntries.length === 0) return alert("No entries to download.");
+  function closeModal() {
+    document.getElementById('editModal').style.display = 'none';
+  }
 
-  const headers = ["Name", "Chest", "DOB", "Age Category", "Gender", "Events"];
-  const rows = schoolEntries.map(p => [
-    `"${p.name}"`,
-    `"${p.chest}"`,
-    `"${p.dob}"`,
-    `"${p.ageCategory}"`,
-    `"${p.gender}"`,
-    `"${p.events.join('; ')}"`
-  ]);
+  document.getElementById('editForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const originalName = document.getElementById('originalName').value;
+    const school = document.getElementById('editSchool').value;
+    const name = document.getElementById('editName').value;
+    const dob = document.getElementById('editDob').value;
+    const gender = document.getElementById('editGender').value;
+    const ageCategory = document.getElementById('editAge').value;
+    const events = Array.from(document.querySelectorAll('#eventCheckboxes input:checked')).map(cb => cb.value);
 
-  const csvContent = "data:text/csv;charset=utf-8," +
-    headers.join(",") + "\n" +
-    rows.map(r => r.join(",")).join("\n");
+    if (events.length === 0) return alert("Please select at least one event.");
 
-  const encodedUri = encodeURI(csvContent);
-  const link = document.createElement("a");
-  link.setAttribute("href", encodedUri);
-  link.setAttribute("download", `${schoolName.replace(/\s+/g, '_')}_entries.csv`);
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
+    fetch('/edit-events', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ originalName, name, school, dob, gender, ageCategory, events })
+    })
+      .then(res => res.text())
+      .then(msg => {
+        alert(msg);
+        closeModal();
+        loadResults();
+      });
+  });
+
+  function removeCandidate(name, school) {
+    if (!confirm(`Are you sure you want to remove ${name}?`)) return;
+
+       fetch('/remove-candidate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, school })
+    })
+      .then(res => res.text())
+      .then(msg => {
+        alert(msg);
+        loadResults();
+      });
+  }
+
+  function downloadCSV() {
+    if (schoolEntries.length === 0) return alert("No entries to download.");
+
+    const headers = ["Name", "Chest", "DOB", "Age Category", "Gender", "Events"];
+    const rows = schoolEntries.map(p => [
+      `"${p.name}"`,
+      `"${p.chest}"`,
+      `"${p.dob}"`,
+      `"${p.ageCategory}"`,
+      `"${p.gender}"`,
+      `"${p.events.join('; ')}"`
+    ]);
+
+    const csvContent = "data:text/csv;charset=utf-8," +
+      headers.join(",") + "\n" +
+      rows.map(r => r.join(",")).join("\n");
+
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", `${schoolName.replace(/\s+/g, '_')}_entries.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  loadResults();
+</script>
+</body>
+</html>
