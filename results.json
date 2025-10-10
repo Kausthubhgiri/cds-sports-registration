@@ -5484,5 +5484,19 @@
     ],
     "photoPath": "/uploads/604e6abd68192b0ba0922f20484cfa7e.jpg",
     "timestamp": "10/10/2025, 12:12:31"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "ARATHY S M",
+    "chest": 748,
+    "dob": "2010-01-06",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race"
+    ],
+    "photoPath": "/uploads/26b3854c4a4264277dcbf69bab7d7371.jpg",
+    "timestamp": "10/10/2025, 12:14:15"
   }
 ]
