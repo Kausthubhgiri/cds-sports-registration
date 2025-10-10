@@ -5554,5 +5554,18 @@
     ],
     "photoPath": "/uploads/0576e5b1c0c856596c46a299846c93b2.jpeg",
     "timestamp": "10/10/2025, 13:47:28"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "VAIBHAV BALAKUMAR NAIR",
+    "chest": 1320,
+    "dob": "2014-10-14",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/86e25a73ba06f308266cd1e5425bb9f6.jpeg",
+    "timestamp": "10/10/2025, 13:58:35"
   }
 ]
