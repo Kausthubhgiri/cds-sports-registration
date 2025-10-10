@@ -4629,5 +4629,21 @@
     ],
     "photoPath": "/uploads/c50e6712bf149ef197c049098e916456.jpg",
     "timestamp": "10/10/2025, 03:52:59"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Adithya Nandhan H",
+    "chest": 906,
+    "dob": "2011-10-19",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Shot Put",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/91f54b3e80d0c999d65f17056329236d.jpg",
+    "timestamp": "10/10/2025, 04:01:35"
   }
 ]
