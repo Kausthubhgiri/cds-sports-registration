@@ -5012,5 +5012,18 @@
     ],
     "photoPath": "/uploads/ef54af8e093abae6ef87e7e23d1c6e87.jpg",
     "timestamp": "10/10/2025, 07:45:33"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ARUL KRISHNA A T",
+    "chest": 355,
+    "dob": "2014-09-23",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/5f0ac4af336115d4f5b2cb1174aaa54b.jpg",
+    "timestamp": "10/10/2025, 08:45:56"
   }
 ]
