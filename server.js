@@ -340,23 +340,25 @@ app.get('/export', async (req, res) => {
   await workbook.xlsx.write(res);
   res.end();
 });
-  // 📁 GET /export-by-event
+// 📁 GET /export-by-event
 app.get('/export-by-event', async (req, res) => {
   const exportData = await getLatestData();
   const workbook = new ExcelJS.Workbook();
   const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
 
-  // Group all entries by event
-  const eventMap = {};
+  // Group all entries by event + gender
+  const eventGenderMap = {};
   exportData.forEach(entry => {
     entry.events.forEach(event => {
-      eventMap[event] = eventMap[event] || [];
-      eventMap[event].push(entry);
+      const genderKey = entry.gender.toLowerCase();
+      const sheetKey = `${event} – ${genderKey}`;
+      eventGenderMap[sheetKey] = eventGenderMap[sheetKey] || [];
+      eventGenderMap[sheetKey].push(entry);
     });
   });
 
-  for (const [eventName, participants] of Object.entries(eventMap)) {
-    const sheet = workbook.addWorksheet(eventName);
+  for (const [sheetName, participants] of Object.entries(eventGenderMap)) {
+    const sheet = workbook.addWorksheet(sheetName);
     sheet.addRow(['Event', 'Age Category', 'Name', 'Chest', 'DOB', 'Gender', 'School']);
 
     // Group by age category
@@ -373,49 +375,26 @@ app.get('/export-by-event', async (req, res) => {
       sheet.addRow([`Age Category: ${ageCategory}`]);
 
       const group = ageGroups[ageCategory];
+      group.sort((a, b) => a.school.localeCompare(b.school));
 
-      // Separate by gender
-      const males = group.filter(p => p.gender.toLowerCase() === 'male');
-      const females = group.filter(p => p.gender.toLowerCase() === 'female');
+      group.forEach(p => {
+        sheet.addRow([
+          sheetName.split(' – ')[0], // Event name
+          ageCategory,
+          p.name,
+          p.chest,
+          p.dob,
+          p.gender,
+          p.school // replaces timestamp
+        ]);
+      });
 
-      if (males.length > 0) {
-        sheet.addRow(['👦 Male']);
-        males.sort((a, b) => a.school.localeCompare(b.school));
-        males.forEach(p => {
-          sheet.addRow([
-            eventName,
-            ageCategory,
-            p.name,
-            p.chest,
-            p.dob,
-            p.gender,
-            p.school
-          ]);
-        });
-        sheet.addRow([]);
-      }
-
-      if (females.length > 0) {
-        sheet.addRow(['👧 Female']);
-        females.sort((a, b) => a.school.localeCompare(b.school));
-        females.forEach(p => {
-          sheet.addRow([
-            eventName,
-            ageCategory,
-            p.name,
-            p.chest,
-            p.dob,
-            p.gender,
-            p.school
-          ]);
-        });
-        sheet.addRow([]);
-      }
+      sheet.addRow([]);
     }
   }
 
   res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-  res.setHeader('Content-Disposition', 'attachment; filename=cds_eventwise_results.xlsx');
+  res.setHeader('Content-Disposition', 'attachment; filename=cds_event_gender_results.xlsx');
   await workbook.xlsx.write(res);
   res.end();
 });
