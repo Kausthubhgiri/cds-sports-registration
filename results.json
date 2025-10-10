@@ -5416,5 +5416,18 @@
     ],
     "photoPath": "/uploads/1c0282ec5745f5c28947e0c473097982.jpg",
     "timestamp": "10/10/2025, 12:01:21"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "ARYAN",
+    "chest": 743,
+    "dob": "2008-07-15",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/78c6afc83bea4df94166ecfed4e1a211.jpg",
+    "timestamp": "10/10/2025, 12:03:43"
   }
 ]
