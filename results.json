@@ -4849,5 +4849,18 @@
     ],
     "photoPath": "/uploads/e27d4aa27322c9b3966e302a8490c5f6.jpg",
     "timestamp": "10/10/2025, 04:44:43"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Aditi P Nair",
+    "chest": 919,
+    "dob": "2014-09-26",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/ab6dc4b486e4051ac58b9e0336e60fbb.jpg",
+    "timestamp": "10/10/2025, 04:46:08"
   }
 ]
