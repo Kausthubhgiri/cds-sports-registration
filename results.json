@@ -5401,5 +5401,20 @@
     ],
     "photoPath": "/uploads/83d36e88e47ff4170f87798f7ed0549b.jpg",
     "timestamp": "10/10/2025, 11:59:37"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "FARHAN F",
+    "chest": 742,
+    "dob": "2009-10-30",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "1500m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/1c0282ec5745f5c28947e0c473097982.jpg",
+    "timestamp": "10/10/2025, 12:01:21"
   }
 ]
