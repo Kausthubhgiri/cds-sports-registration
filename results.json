@@ -4716,5 +4716,20 @@
     ],
     "photoPath": "/uploads/4f85b7d7cd69631515494f0b47a5e85e.jpg",
     "timestamp": "10/10/2025, 04:17:51"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Adhnan Ali",
+    "chest": 910,
+    "dob": "2008-11-11",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/c33daa74eafd68c7ab2b0743b2199d80.jpg",
+    "timestamp": "10/10/2025, 04:19:23"
   }
 ]
