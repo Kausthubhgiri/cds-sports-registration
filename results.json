@@ -5234,5 +5234,21 @@
     ],
     "photoPath": "/uploads/2bfdfa4d2850c5c002ef43b75e7c36ad.jpg",
     "timestamp": "10/10/2025, 11:11:24"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "ARJUNDEV",
+    "chest": 731,
+    "dob": "2009-06-24",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/c5f1dc0fee304c0ad53768ae6924761e.jpg",
+    "timestamp": "10/10/2025, 11:13:46"
   }
 ]
