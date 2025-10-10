@@ -5310,5 +5310,20 @@
     ],
     "photoPath": "/uploads/49ce3e4ccd51529ce3bd9acbe1a51bd9.jpg",
     "timestamp": "10/10/2025, 11:28:41"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "THEERTHA B",
+    "chest": 736,
+    "dob": "2013-07-31",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "800m Race",
+      "1500m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/36a2e3502d535fe293f61b410b540ef2.jpg",
+    "timestamp": "10/10/2025, 11:33:14"
   }
 ]
