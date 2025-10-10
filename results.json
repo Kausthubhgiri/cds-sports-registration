@@ -5567,5 +5567,18 @@
     ],
     "photoPath": "/uploads/86e25a73ba06f308266cd1e5425bb9f6.jpeg",
     "timestamp": "10/10/2025, 13:58:35"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "NEERAJA V",
+    "chest": 359,
+    "dob": "2007-11-15",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/badb81a23e6fb62b87e059e055f39252.jpg",
+    "timestamp": "10/10/2025, 15:38:02"
   }
 ]
