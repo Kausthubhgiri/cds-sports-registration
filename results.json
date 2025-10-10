@@ -5037,5 +5037,18 @@
     ],
     "photoPath": "/uploads/04feb0d2f94a175179633f0fc3389368.jpg",
     "timestamp": "10/10/2025, 08:47:52"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "AADIDEV V R",
+    "chest": 357,
+    "dob": "2009-06-10",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race"
+    ],
+    "photoPath": "/uploads/d0f08663d5f70ea5e6134301cdf6cc80.jpg",
+    "timestamp": "10/10/2025, 08:51:30"
   }
 ]
