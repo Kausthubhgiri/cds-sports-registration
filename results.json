@@ -5512,5 +5512,19 @@
     ],
     "photoPath": "/uploads/179296358e789b8657c4ea77e9be9d0f.jpg",
     "timestamp": "10/10/2025, 12:26:20"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "NITHA FATHIMA",
+    "chest": 750,
+    "dob": "2009-03-02",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/0e55e73bcbe3f191019524d34aa4565b.jpg",
+    "timestamp": "10/10/2025, 12:28:17"
   }
 ]
