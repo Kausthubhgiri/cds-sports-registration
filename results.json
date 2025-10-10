@@ -4628,12 +4628,11 @@
     "name": "VINAYAK S V",
     "chest": 905,
     "dob": "2011-01-01",
-    "ageCategory": "Under 14",
+    "ageCategory": "Under 17",
     "gender": "Male",
     "events": [
       "100m Race",
       "200m Race",
-      "800m Race",
       "4x100m Relay"
     ],
     "photoPath": "/uploads/c50e6712bf149ef197c049098e916456.jpg",
