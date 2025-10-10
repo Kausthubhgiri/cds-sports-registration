@@ -4913,5 +4913,18 @@
     ],
     "photoPath": "/uploads/5bd6cc1744f31ef2d721b63305a98380.jpg",
     "timestamp": "10/10/2025, 04:54:20"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Nima Rejith",
+    "chest": 923,
+    "dob": "2009-02-05",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/e2910fefd717ed5748bfd9acaa5a6d34.jpg",
+    "timestamp": "10/10/2025, 04:56:17"
   }
 ]
