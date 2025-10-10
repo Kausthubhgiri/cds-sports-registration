@@ -5039,5 +5039,18 @@
     ],
     "photoPath": "/uploads/d0f08663d5f70ea5e6134301cdf6cc80.jpg",
     "timestamp": "10/10/2025, 08:51:30"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "NAKSHATHRA K B",
+    "chest": 358,
+    "dob": "2012-06-02",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/f42d1c4fb4a3424a3ff5944af17e93fc.jpg",
+    "timestamp": "10/10/2025, 09:12:48"
   }
 ]
