@@ -5325,5 +5325,21 @@
     ],
     "photoPath": "/uploads/36a2e3502d535fe293f61b410b540ef2.jpg",
     "timestamp": "10/10/2025, 11:33:14"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "ASHNI DEEPAK",
+    "chest": 737,
+    "dob": "2010-12-13",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/d7e7afddded516714d9576cd08017d3e.jpg",
+    "timestamp": "10/10/2025, 11:36:17"
   }
 ]
