@@ -4763,5 +4763,20 @@
     ],
     "photoPath": "/uploads/c556d261de38562a7c5d8a957199d72d.jpg",
     "timestamp": "10/10/2025, 04:27:42"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Abhidev S Kumar",
+    "chest": 913,
+    "dob": "2008-05-19",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw",
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/3f741f7b639c648b5d82b368a1366ece.jpg",
+    "timestamp": "10/10/2025, 04:31:15"
   }
 ]
