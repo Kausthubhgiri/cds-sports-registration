@@ -5250,5 +5250,18 @@
     ],
     "photoPath": "/uploads/c5f1dc0fee304c0ad53768ae6924761e.jpg",
     "timestamp": "10/10/2025, 11:13:46"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "ABJES B JITH",
+    "chest": 732,
+    "dob": "2009-08-26",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/c7439224c75a126ded41cfd28327e3b0.jpg",
+    "timestamp": "10/10/2025, 11:17:15"
   }
 ]
