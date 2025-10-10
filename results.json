@@ -4675,5 +4675,19 @@
     ],
     "photoPath": "/uploads/2bfcbdd2e8a1970664f65550056f1c02.jpg",
     "timestamp": "10/10/2025, 04:06:22"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Jithin B S",
+    "chest": 907,
+    "dob": "2011-10-27",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/ebc327002cc1fcf3d00c615fb8f9b5dd.jpeg",
+    "timestamp": "10/10/2025, 04:07:15"
   }
 ]
