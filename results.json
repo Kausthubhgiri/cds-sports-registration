@@ -4940,5 +4940,20 @@
     ],
     "photoPath": "/uploads/cef1d3537cafcb477e90f9122dd7e809.jpg",
     "timestamp": "10/10/2025, 04:57:42"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Abhirami Rajeev",
+    "chest": 925,
+    "dob": "2008-11-19",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "400m Race"
+    ],
+    "photoPath": "/uploads/8c45ecf6bb4f55c1f7ea7f261a65b9e1.jpg",
+    "timestamp": "10/10/2025, 04:59:56"
   }
 ]
