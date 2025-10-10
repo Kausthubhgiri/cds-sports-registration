@@ -5371,5 +5371,21 @@
     ],
     "photoPath": "/uploads/7633d48833d7d1bd5c73056f69f450c2.jpg",
     "timestamp": "10/10/2025, 11:48:45"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "ARYAN J S",
+    "chest": 740,
+    "dob": "2009-11-23",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "1500m Race",
+      "High Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/4acc60668a17d4eb37205462a81e1897.jpg",
+    "timestamp": "10/10/2025, 11:55:56"
   }
 ]
