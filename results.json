@@ -5498,5 +5498,19 @@
     ],
     "photoPath": "/uploads/26b3854c4a4264277dcbf69bab7d7371.jpg",
     "timestamp": "10/10/2025, 12:14:15"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "VRISHALI",
+    "chest": 749,
+    "dob": "2010-09-13",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "400m Race"
+    ],
+    "photoPath": "/uploads/179296358e789b8657c4ea77e9be9d0f.jpg",
+    "timestamp": "10/10/2025, 12:26:20"
   }
 ]
