@@ -5294,5 +5294,21 @@
     ],
     "photoPath": "/uploads/30d0cd6ca8bff755b4c7ba5dfc81fbc7.jpg",
     "timestamp": "10/10/2025, 11:25:09"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "ANN RACHEL",
+    "chest": 735,
+    "dob": "2011-08-05",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/49ce3e4ccd51529ce3bd9acbe1a51bd9.jpg",
+    "timestamp": "10/10/2025, 11:28:41"
   }
 ]
