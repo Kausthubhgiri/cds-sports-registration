@@ -4778,5 +4778,18 @@
     ],
     "photoPath": "/uploads/3f741f7b639c648b5d82b368a1366ece.jpg",
     "timestamp": "10/10/2025, 04:31:15"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Devavruth Krishna L S",
+    "chest": 914,
+    "dob": "2011-10-22",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "400m Race"
+    ],
+    "photoPath": "/uploads/f9b8e8b35ad9e57ea11e565cd5d91e05.jpg",
+    "timestamp": "10/10/2025, 04:35:41"
   }
 ]
