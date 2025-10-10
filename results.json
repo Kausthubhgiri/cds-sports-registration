@@ -5086,5 +5086,18 @@
     ],
     "photoPath": "/uploads/8770a993fcdda2da2758c4190c8fea08.jpg",
     "timestamp": "10/10/2025, 10:28:06"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "HARINAND",
+    "chest": 721,
+    "dob": "2015-06-15",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/ee4ef6fcc7f83fc86acaccd9388d4598.jpg",
+    "timestamp": "10/10/2025, 10:33:48"
   }
 ]
