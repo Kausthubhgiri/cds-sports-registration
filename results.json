@@ -4613,5 +4613,21 @@
     ],
     "photoPath": "/uploads/ad9919ed58affd05327f32a24f07f1cf",
     "timestamp": "8/10/2025, 08:05:41"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "VINAYAK S V",
+    "chest": 905,
+    "dob": "2011-01-01",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/c50e6712bf149ef197c049098e916456.jpg",
+    "timestamp": "10/10/2025, 03:52:59"
   }
 ]
