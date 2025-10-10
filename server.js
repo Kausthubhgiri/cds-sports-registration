@@ -357,7 +357,6 @@ app.get('/export-by-event', async (req, res) => {
 
   for (const [eventName, participants] of Object.entries(eventMap)) {
     const sheet = workbook.addWorksheet(eventName);
-
     sheet.addRow(['Event', 'Age Category', 'Name', 'Chest', 'DOB', 'Gender', 'School']);
 
     // Group by age category
@@ -370,22 +369,48 @@ app.get('/export-by-event', async (req, res) => {
     const sortedAgeGroups = ageOrder.filter(age => ageGroups[age]);
 
     for (const ageCategory of sortedAgeGroups) {
+      sheet.addRow([]);
+      sheet.addRow([`Age Category: ${ageCategory}`]);
+
       const group = ageGroups[ageCategory];
-      group.sort((a, b) => a.school.localeCompare(b.school));
 
-      group.forEach(p => {
-        sheet.addRow([
-          eventName,
-          ageCategory,
-          p.name,
-          p.chest,
-          p.dob,
-          p.gender,
-          p.school // 👈 This replaces timestamp
-        ]);
-      });
+      // Separate by gender
+      const males = group.filter(p => p.gender.toLowerCase() === 'male');
+      const females = group.filter(p => p.gender.toLowerCase() === 'female');
 
-      sheet.addRow([]); // Spacer between age groups
+      if (males.length > 0) {
+        sheet.addRow(['👦 Male']);
+        males.sort((a, b) => a.school.localeCompare(b.school));
+        males.forEach(p => {
+          sheet.addRow([
+            eventName,
+            ageCategory,
+            p.name,
+            p.chest,
+            p.dob,
+            p.gender,
+            p.school
+          ]);
+        });
+        sheet.addRow([]);
+      }
+
+      if (females.length > 0) {
+        sheet.addRow(['👧 Female']);
+        females.sort((a, b) => a.school.localeCompare(b.school));
+        females.forEach(p => {
+          sheet.addRow([
+            eventName,
+            ageCategory,
+            p.name,
+            p.chest,
+            p.dob,
+            p.gender,
+            p.school
+          ]);
+        });
+        sheet.addRow([]);
+      }
     }
   }
 
