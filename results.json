@@ -1590,7 +1590,8 @@
     "ageCategory": "Under 14",
     "gender": "Male",
     "events": [
-      "100m Race"
+      "100m Race",
+      "4x100m Relay"
     ],
     "photoPath": "/uploads/727697a2655937d67c03cfd5e539fe42",
     "timestamp": "27/9/2025, 09:32:28"
