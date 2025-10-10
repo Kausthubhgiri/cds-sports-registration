@@ -5442,5 +5442,20 @@
     ],
     "photoPath": "/uploads/afec7b2c658af3668fddf7b2e879cf08.jpg",
     "timestamp": "10/10/2025, 12:06:10"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "JEAN J",
+    "chest": 745,
+    "dob": "2007-02-11",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/c2400ac13acabd689e39e394ecf88368.jpg",
+    "timestamp": "10/10/2025, 12:08:21"
   }
 ]
