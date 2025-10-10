@@ -2441,12 +2441,11 @@
     "name": "Ananthapadmanabh R V",
     "chest": 130,
     "dob": "2008-10-10",
-    "ageCategory": "Under 17",
+    "ageCategory": "Under 19",
     "gender": "Male",
     "events": [
       "100m Race",
-      "4x100m Relay",
-      "4x400m Relay"
+      "4x100m Relay"
     ],
     "photoPath": "/uploads/5b6822e30720a0b31924539c5ec4dc1a",
     "timestamp": "29/9/2025, 05:32:34"
