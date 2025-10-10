@@ -4882,5 +4882,20 @@
     ],
     "photoPath": "/uploads/d5022904ef44112083ec3d4e39df2448.jpg",
     "timestamp": "10/10/2025, 04:49:56"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Gayathri Gopal",
+    "chest": 921,
+    "dob": "2009-04-23",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/1d4e3b24698109dcbd4e57920ee45e0e.jpg",
+    "timestamp": "10/10/2025, 04:53:15"
   }
 ]
