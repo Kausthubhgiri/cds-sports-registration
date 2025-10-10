@@ -5457,5 +5457,19 @@
     ],
     "photoPath": "/uploads/c2400ac13acabd689e39e394ecf88368.jpg",
     "timestamp": "10/10/2025, 12:08:21"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "JAIN J",
+    "chest": 746,
+    "dob": "2007-02-11",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/da0477fc68b8043d9ff88a124d39675c.jpg",
+    "timestamp": "10/10/2025, 12:09:16"
   }
 ]
