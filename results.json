@@ -5073,5 +5073,18 @@
     ],
     "photoPath": "/uploads/48b56814bc5427e8cd49a6d835898fce.jpg",
     "timestamp": "10/10/2025, 10:20:53"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "DASHNA MANU",
+    "chest": 720,
+    "dob": "2015-01-28",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/8770a993fcdda2da2758c4190c8fea08.jpg",
+    "timestamp": "10/10/2025, 10:28:06"
   }
 ]
