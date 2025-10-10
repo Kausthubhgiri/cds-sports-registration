@@ -5156,5 +5156,20 @@
     ],
     "photoPath": "/uploads/b9b41dd4ffea31c0f98d71aeb022700b.jpg",
     "timestamp": "10/10/2025, 10:49:33"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "KRISHNA PRIYA R S",
+    "chest": 726,
+    "dob": "2014-03-20",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw",
+      "High Jump"
+    ],
+    "photoPath": "/uploads/3d4248aaaffbc3e4ef0c0d15b3dde523.jpg",
+    "timestamp": "10/10/2025, 10:51:45"
   }
 ]
