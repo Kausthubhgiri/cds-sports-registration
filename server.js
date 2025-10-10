@@ -340,6 +340,60 @@ app.get('/export', async (req, res) => {
   await workbook.xlsx.write(res);
   res.end();
 });
+  // 📁 GET /export-by-event
+app.get('/export-by-event', async (req, res) => {
+  const exportData = await getLatestData();
+  const workbook = new ExcelJS.Workbook();
+  const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
+
+  // Group all entries by event
+  const eventMap = {};
+  exportData.forEach(entry => {
+    entry.events.forEach(event => {
+      eventMap[event] = eventMap[event] || [];
+      eventMap[event].push(entry);
+    });
+  });
+
+  for (const [eventName, participants] of Object.entries(eventMap)) {
+    const sheet = workbook.addWorksheet(eventName);
+
+    sheet.addRow(['Event', 'Age Category', 'Name', 'Chest', 'DOB', 'Gender', 'School']);
+
+    // Group by age category
+    const ageGroups = {};
+    participants.forEach(p => {
+      ageGroups[p.ageCategory] = ageGroups[p.ageCategory] || [];
+      ageGroups[p.ageCategory].push(p);
+    });
+
+    const sortedAgeGroups = ageOrder.filter(age => ageGroups[age]);
+
+    for (const ageCategory of sortedAgeGroups) {
+      const group = ageGroups[ageCategory];
+      group.sort((a, b) => a.school.localeCompare(b.school));
+
+      group.forEach(p => {
+        sheet.addRow([
+          eventName,
+          ageCategory,
+          p.name,
+          p.chest,
+          p.dob,
+          p.gender,
+          p.school // 👈 This replaces timestamp
+        ]);
+      });
+
+      sheet.addRow([]); // Spacer between age groups
+    }
+  }
+
+  res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+  res.setHeader('Content-Disposition', 'attachment; filename=cds_eventwise_results.xlsx');
+  await workbook.xlsx.write(res);
+  res.end();
+});
 
 // 🔁 POST /reset-all
 app.post('/reset-all', async (req, res) => {
