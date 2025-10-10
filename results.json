@@ -4999,5 +4999,19 @@
     ],
     "photoPath": "/uploads/7d6eca6fdd61eefe7b848bbeccef5daf.jpg",
     "timestamp": "10/10/2025, 07:32:14"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Shradha P Nair",
+    "chest": 181,
+    "dob": "2007-12-01",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/17948ba20358cc5047cf9ff7faac2c7a.jpg",
+    "timestamp": "10/10/2025, 07:42:10"
   }
 ]
