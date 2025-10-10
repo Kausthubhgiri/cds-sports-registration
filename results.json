@@ -4985,5 +4985,19 @@
     ],
     "photoPath": "/uploads/be28640a84a8586b6ff7c8e966b7edfe.jpeg",
     "timestamp": "10/10/2025, 07:13:41"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "VARUN N K",
+    "chest": 1317,
+    "dob": "2012-10-22",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race"
+    ],
+    "photoPath": "/uploads/7d6eca6fdd61eefe7b848bbeccef5daf.jpg",
+    "timestamp": "10/10/2025, 07:32:14"
   }
 ]
