@@ -5624,5 +5624,21 @@
     ],
     "photoPath": "/uploads/f108d9d071b9cba04e36d3d83a5b76b4.jpeg",
     "timestamp": "10/10/2025, 17:07:38"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Pranav K R",
+    "chest": 538,
+    "dob": "2010-10-25",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/7df9fa91d793700121163a899ac7a169.jpeg",
+    "timestamp": "10/10/2025, 17:10:43"
   }
 ]
