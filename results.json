@@ -5263,5 +5263,20 @@
     ],
     "photoPath": "/uploads/c7439224c75a126ded41cfd28327e3b0.jpg",
     "timestamp": "10/10/2025, 11:17:15"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "AARSHEL BALU",
+    "chest": 733,
+    "dob": "2009-08-26",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Discus Throw",
+      "Long Jump",
+      "High Jump"
+    ],
+    "photoPath": "/uploads/33b13c686549b383f24a0fd28da643c1.jpg",
+    "timestamp": "10/10/2025, 11:21:48"
   }
 ]
