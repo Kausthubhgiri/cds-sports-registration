@@ -5541,5 +5541,18 @@
     ],
     "photoPath": "/uploads/6dd0855d29ac15ab7f9c7d1531f6013e.jpg",
     "timestamp": "10/10/2025, 12:30:03"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "VIGNESH S A",
+    "chest": 1319,
+    "dob": "2014-06-19",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "200m Race"
+    ],
+    "photoPath": "/uploads/0576e5b1c0c856596c46a299846c93b2.jpeg",
+    "timestamp": "10/10/2025, 13:47:28"
   }
 ]
