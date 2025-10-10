@@ -4955,5 +4955,19 @@
     ],
     "photoPath": "/uploads/8c45ecf6bb4f55c1f7ea7f261a65b9e1.jpg",
     "timestamp": "10/10/2025, 04:59:56"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Anirudh Syam",
+    "chest": 926,
+    "dob": "2008-12-19",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/00bc6f01f00dbd7f9017a2acaa2b68d9.jpg",
+    "timestamp": "10/10/2025, 05:12:45"
   }
 ]
