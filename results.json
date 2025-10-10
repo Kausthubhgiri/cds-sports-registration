@@ -4898,5 +4898,18 @@
     ],
     "photoPath": "/uploads/1d4e3b24698109dcbd4e57920ee45e0e.jpg",
     "timestamp": "10/10/2025, 04:53:15"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Hashna Hidash",
+    "chest": 922,
+    "dob": "2010-07-19",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "400m Race"
+    ],
+    "photoPath": "/uploads/5bd6cc1744f31ef2d721b63305a98380.jpg",
+    "timestamp": "10/10/2025, 04:54:20"
   }
 ]
