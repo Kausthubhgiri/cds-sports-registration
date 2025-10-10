@@ -4703,5 +4703,18 @@
     ],
     "photoPath": "/uploads/efcd9015c558121faeb28dfdbc3299a8.jpg",
     "timestamp": "10/10/2025, 04:11:11"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Madhav Krishna S V",
+    "chest": 909,
+    "dob": "2011-11-10",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/4f85b7d7cd69631515494f0b47a5e85e.jpg",
+    "timestamp": "10/10/2025, 04:17:51"
   }
 ]
