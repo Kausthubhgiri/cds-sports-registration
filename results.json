@@ -5052,5 +5052,18 @@
     ],
     "photoPath": "/uploads/f42d1c4fb4a3424a3ff5944af17e93fc.jpg",
     "timestamp": "10/10/2025, 09:12:48"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "NIVEDHIKA B S",
+    "chest": 1318,
+    "dob": "2013-11-26",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "400m Race"
+    ],
+    "photoPath": "/uploads/2176e9448d8679ffd72b557e88e3a24a.jpeg",
+    "timestamp": "10/10/2025, 09:59:53"
   }
 ]
