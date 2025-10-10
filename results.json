@@ -4791,5 +4791,21 @@
     ],
     "photoPath": "/uploads/f9b8e8b35ad9e57ea11e565cd5d91e05.jpg",
     "timestamp": "10/10/2025, 04:35:41"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Anshika S",
+    "chest": 915,
+    "dob": "2012-03-31",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/f4cd1451b868738f746956ee31ae815e.jpg",
+    "timestamp": "10/10/2025, 04:38:51"
   }
 ]
