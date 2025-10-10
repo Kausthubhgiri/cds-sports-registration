@@ -5057,5 +5057,21 @@
     ],
     "photoPath": "/uploads/2176e9448d8679ffd72b557e88e3a24a.jpeg",
     "timestamp": "10/10/2025, 09:59:53"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "ARSSAN B FASSAL",
+    "chest": 719,
+    "dob": "2015-10-14",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "200m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/48b56814bc5427e8cd49a6d835898fce.jpg",
+    "timestamp": "10/10/2025, 10:20:53"
   }
 ]
