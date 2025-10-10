@@ -4926,5 +4926,19 @@
     ],
     "photoPath": "/uploads/e2910fefd717ed5748bfd9acaa5a6d34.jpg",
     "timestamp": "10/10/2025, 04:56:17"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Devapriya Dhanyan",
+    "chest": 924,
+    "dob": "2009-05-17",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/cef1d3537cafcb477e90f9122dd7e809.jpg",
+    "timestamp": "10/10/2025, 04:57:42"
   }
 ]
