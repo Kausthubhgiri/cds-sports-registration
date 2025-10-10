@@ -5594,5 +5594,20 @@
     ],
     "photoPath": "/uploads/4c6c401a321402f01714fef8c389182c.jpeg",
     "timestamp": "10/10/2025, 17:00:03"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Abin Jos",
+    "chest": 536,
+    "dob": "2011-08-06",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "Long Jump",
+      "High Jump"
+    ],
+    "photoPath": "/uploads/0653c806445de1de7aa1706063cc5ed6.jpeg",
+    "timestamp": "10/10/2025, 17:05:54"
   }
 ]
