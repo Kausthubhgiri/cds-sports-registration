@@ -5278,5 +5278,21 @@
     ],
     "photoPath": "/uploads/33b13c686549b383f24a0fd28da643c1.jpg",
     "timestamp": "10/10/2025, 11:21:48"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "S DEVIKA MANU",
+    "chest": 734,
+    "dob": "2010-05-20",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/30d0cd6ca8bff755b4c7ba5dfc81fbc7.jpg",
+    "timestamp": "10/10/2025, 11:25:09"
   }
 ]
