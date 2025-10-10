@@ -5609,5 +5609,20 @@
     ],
     "photoPath": "/uploads/0653c806445de1de7aa1706063cc5ed6.jpeg",
     "timestamp": "10/10/2025, 17:05:54"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Sreelekshmi",
+    "chest": 537,
+    "dob": "2010-10-28",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Discus Throw",
+      "High Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/f108d9d071b9cba04e36d3d83a5b76b4.jpeg",
+    "timestamp": "10/10/2025, 17:07:38"
   }
 ]
