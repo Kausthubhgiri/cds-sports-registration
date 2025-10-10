@@ -4659,5 +4659,21 @@
     ],
     "photoPath": "/uploads/4d4b2a7073dfe089c9f9ebde76484ace.jpg",
     "timestamp": "10/10/2025, 04:03:43"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Aman sajeev",
+    "chest": 534,
+    "dob": "2010-01-02",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "1500m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/2bfcbdd2e8a1970664f65550056f1c02.jpg",
+    "timestamp": "10/10/2025, 04:06:22"
   }
 ]
