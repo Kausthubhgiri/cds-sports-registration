@@ -4645,5 +4645,19 @@
     ],
     "photoPath": "/uploads/91f54b3e80d0c999d65f17056329236d.jpg",
     "timestamp": "10/10/2025, 04:01:35"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Sreehari j",
+    "chest": 533,
+    "dob": "2009-10-12",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/4d4b2a7073dfe089c9f9ebde76484ace.jpg",
+    "timestamp": "10/10/2025, 04:03:43"
   }
 ]
