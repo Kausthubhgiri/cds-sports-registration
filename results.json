@@ -4823,5 +4823,18 @@
     ],
     "photoPath": "/uploads/8cdc1de10ab3c56194a3a2144241e71c.jpg",
     "timestamp": "10/10/2025, 04:39:55"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Arundhathi A B",
+    "chest": 917,
+    "dob": "2012-11-30",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/1dc5469bc60ff6312842945d811cdfb4.jpg",
+    "timestamp": "10/10/2025, 04:42:01"
   }
 ]
