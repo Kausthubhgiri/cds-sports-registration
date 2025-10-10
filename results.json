@@ -4731,5 +4731,21 @@
     ],
     "photoPath": "/uploads/c33daa74eafd68c7ab2b0743b2199d80.jpg",
     "timestamp": "10/10/2025, 04:19:23"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Dheeraj S Shibu",
+    "chest": 911,
+    "dob": "2008-10-15",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "1500m Race",
+      "Long Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/5439150c360a604a7243de78810f68dd.jpg",
+    "timestamp": "10/10/2025, 04:20:39"
   }
 ]
