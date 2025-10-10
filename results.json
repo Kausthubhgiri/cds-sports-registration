@@ -5205,5 +5205,20 @@
     ],
     "photoPath": "/uploads/4c02820f6a6e128bdf6ad031c1a485f7.jpg",
     "timestamp": "10/10/2025, 11:06:28"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "VAISAKH S",
+    "chest": 729,
+    "dob": "2011-04-15",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "1500m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/717fe637a2a268145122266546f55819.jpg",
+    "timestamp": "10/10/2025, 11:08:56"
   }
 ]
