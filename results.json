@@ -5143,5 +5143,18 @@
     ],
     "photoPath": "/uploads/9ce2e42a5b4b858a2202919a6999a381.jpg",
     "timestamp": "10/10/2025, 10:47:19"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "ADHAV S LAL",
+    "chest": 725,
+    "dob": "2013-09-26",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/b9b41dd4ffea31c0f98d71aeb022700b.jpg",
+    "timestamp": "10/10/2025, 10:49:33"
   }
 ]
