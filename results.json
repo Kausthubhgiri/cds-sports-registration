@@ -4747,5 +4747,21 @@
     ],
     "photoPath": "/uploads/5439150c360a604a7243de78810f68dd.jpg",
     "timestamp": "10/10/2025, 04:20:39"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Hari Prasad H",
+    "chest": 912,
+    "dob": "2007-11-08",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "800m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/c556d261de38562a7c5d8a957199d72d.jpg",
+    "timestamp": "10/10/2025, 04:27:42"
   }
 ]
