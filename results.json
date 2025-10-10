@@ -5220,5 +5220,19 @@
     ],
     "photoPath": "/uploads/717fe637a2a268145122266546f55819.jpg",
     "timestamp": "10/10/2025, 11:08:56"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "MUHAMMED BILAL",
+    "chest": 730,
+    "dob": "2009-03-04",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/2bfdfa4d2850c5c002ef43b75e7c36ad.jpg",
+    "timestamp": "10/10/2025, 11:11:24"
   }
 ]
