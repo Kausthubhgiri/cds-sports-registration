@@ -5114,5 +5114,20 @@
     ],
     "photoPath": "/uploads/135703c8abf454a473a164553fce7c06.jpg",
     "timestamp": "10/10/2025, 10:37:24"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "AADINARAYANA S",
+    "chest": 723,
+    "dob": "2012-02-06",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/f671fee3801bd3507e45ccf7934628fe.jpg",
+    "timestamp": "10/10/2025, 10:43:24"
   }
 ]
