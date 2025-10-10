@@ -5129,5 +5129,19 @@
     ],
     "photoPath": "/uploads/f671fee3801bd3507e45ccf7934628fe.jpg",
     "timestamp": "10/10/2025, 10:43:24"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "J RAHUL",
+    "chest": 724,
+    "dob": "2012-06-19",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/9ce2e42a5b4b858a2202919a6999a381.jpg",
+    "timestamp": "10/10/2025, 10:47:19"
   }
 ]
