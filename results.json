@@ -5580,5 +5580,19 @@
     ],
     "photoPath": "/uploads/badb81a23e6fb62b87e059e055f39252.jpg",
     "timestamp": "10/10/2025, 15:38:02"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Devadath S R",
+    "chest": 535,
+    "dob": "2013-09-05",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/4c6c401a321402f01714fef8c389182c.jpeg",
+    "timestamp": "10/10/2025, 17:00:03"
   }
 ]
