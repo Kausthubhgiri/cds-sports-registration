@@ -4689,5 +4689,19 @@
     ],
     "photoPath": "/uploads/ebc327002cc1fcf3d00c615fb8f9b5dd.jpeg",
     "timestamp": "10/10/2025, 04:07:15"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Drisanth A S",
+    "chest": 908,
+    "dob": "2009-08-08",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/efcd9015c558121faeb28dfdbc3299a8.jpg",
+    "timestamp": "10/10/2025, 04:11:11"
   }
 ]
