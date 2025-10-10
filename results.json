@@ -5387,5 +5387,19 @@
     ],
     "photoPath": "/uploads/4acc60668a17d4eb37205462a81e1897.jpg",
     "timestamp": "10/10/2025, 11:55:56"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "ADWAITH SANTHOSH",
+    "chest": 741,
+    "dob": "2008-09-19",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/83d36e88e47ff4170f87798f7ed0549b.jpg",
+    "timestamp": "10/10/2025, 11:59:37"
   }
 ]
