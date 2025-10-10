@@ -5355,5 +5355,21 @@
     ],
     "photoPath": "/uploads/9cc909e08549055648561c5ce7d10ccd.jpg",
     "timestamp": "10/10/2025, 11:38:42"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "ANANTHAKRISHNAN A",
+    "chest": 739,
+    "dob": "2008-07-22",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Long Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/7633d48833d7d1bd5c73056f69f450c2.jpg",
+    "timestamp": "10/10/2025, 11:48:45"
   }
 ]
