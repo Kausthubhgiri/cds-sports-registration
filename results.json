@@ -5099,5 +5099,20 @@
     ],
     "photoPath": "/uploads/ee4ef6fcc7f83fc86acaccd9388d4598.jpg",
     "timestamp": "10/10/2025, 10:33:48"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "MOUL S",
+    "chest": 722,
+    "dob": "2012-05-24",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "400m Race",
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/135703c8abf454a473a164553fce7c06.jpg",
+    "timestamp": "10/10/2025, 10:37:24"
   }
 ]
