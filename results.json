@@ -5341,5 +5341,19 @@
     ],
     "photoPath": "/uploads/d7e7afddded516714d9576cd08017d3e.jpg",
     "timestamp": "10/10/2025, 11:36:17"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "ANANYA A S",
+    "chest": 738,
+    "dob": "2011-09-17",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/9cc909e08549055648561c5ce7d10ccd.jpg",
+    "timestamp": "10/10/2025, 11:38:42"
   }
 ]
