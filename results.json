@@ -5667,5 +5667,18 @@
     ],
     "photoPath": "/uploads/36aac1306e98226314851e8d8e35e71c.jpg",
     "timestamp": "11/10/2025, 04:15:39"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "G KASINATH",
+    "chest": 1321,
+    "dob": "2015-06-16",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "100m Race"
+    ],
+    "photoPath": "/uploads/3b88f427ea4089356bca6c6f55b651ea.jpeg",
+    "timestamp": "11/10/2025, 05:51:25"
   }
 ]
