@@ -5680,5 +5680,18 @@
     ],
     "photoPath": "/uploads/3b88f427ea4089356bca6c6f55b651ea.jpeg",
     "timestamp": "11/10/2025, 05:51:25"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "NIRUPAM R S",
+    "chest": 1322,
+    "dob": "2015-05-18",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "50m Race"
+    ],
+    "photoPath": "/uploads/03d7919902df32d29d19ab152c0d0280.jpeg",
+    "timestamp": "11/10/2025, 06:02:39"
   }
 ]
