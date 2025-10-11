@@ -5693,5 +5693,18 @@
     ],
     "photoPath": "/uploads/03d7919902df32d29d19ab152c0d0280.jpeg",
     "timestamp": "11/10/2025, 06:02:39"
+  },
+  {
+    "school": "SREE SARASWATHY VIDYALAYAM",
+    "name": "HARI GOVIND R S",
+    "chest": 1323,
+    "dob": "2010-05-01",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "High Jump"
+    ],
+    "photoPath": "/uploads/ce68da04d44815e69f638eb12fe03b8c.jpeg",
+    "timestamp": "11/10/2025, 07:55:13"
   }
 ]
