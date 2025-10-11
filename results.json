@@ -5653,5 +5653,19 @@
     ],
     "photoPath": "/uploads/7c12462ae94f80d1191dd678c8a3a677.jpeg",
     "timestamp": "10/10/2025, 17:19:44"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Agoornath",
+    "chest": 540,
+    "dob": "2009-04-26",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/36aac1306e98226314851e8d8e35e71c.jpg",
+    "timestamp": "11/10/2025, 04:15:39"
   }
 ]
