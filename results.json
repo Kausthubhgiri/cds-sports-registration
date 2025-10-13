@@ -982,7 +982,7 @@
     "name": "SIKHAA SHAJI",
     "chest": 1030,
     "dob": "2011-01-15",
-    "ageCategory": "Under 17",
+    "ageCategory": "Under 14",
     "gender": "Female",
     "events": [
       "400m Race",
@@ -1004,6 +1004,7 @@
     "events": [
       "400m Race",
       "800m Race",
+      "4x100m Relay",
       "4x400m Relay"
     ],
     "photoPath": "/uploads/b71d51357b0d500a7551187c73c92d85",
