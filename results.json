@@ -771,11 +771,10 @@
     "name": "GOPIKA M V",
     "chest": 1016,
     "dob": "2008-05-01",
-    "ageCategory": "Under 17",
+    "ageCategory": "Under 19",
     "gender": "Female",
     "events": [
-      "Shot Put",
-      "High Jump"
+      "Shot Put"
     ],
     "photoPath": "/uploads/feb36f509b6cade0f66654340069e836",
     "timestamp": "25/9/2025, 11:22:36"
