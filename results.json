@@ -5706,5 +5706,19 @@
     ],
     "photoPath": "/uploads/d24baaa878747787d7e90a0075503e1e.jpg",
     "timestamp": "13/10/2025, 08:11:46"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "DIYA S LAL",
+    "chest": 752,
+    "dob": "2011-11-16",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/471384a057c8d4eee07a836283da13e5.jpg",
+    "timestamp": "13/10/2025, 08:20:00"
   }
 ]
