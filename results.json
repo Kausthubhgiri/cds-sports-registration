@@ -5677,5 +5677,18 @@
     ],
     "photoPath": "/uploads/d9743ffa866dbe6a92b71e2f6606dfa3.jpg",
     "timestamp": "13/10/2025, 05:34:46"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Alfiya Shaji",
+    "chest": 1076,
+    "dob": "2008-10-04",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "High Jump"
+    ],
+    "photoPath": "/uploads/9f15c14c45b1194ecd17f9ce2c331ac6.jpeg",
+    "timestamp": "13/10/2025, 07:06:06"
   }
 ]
