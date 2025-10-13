@@ -5690,5 +5690,21 @@
     ],
     "photoPath": "/uploads/9f15c14c45b1194ecd17f9ce2c331ac6.jpeg",
     "timestamp": "13/10/2025, 07:06:06"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Sanvika.R",
+    "chest": 541,
+    "dob": "2012-02-09",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/d24baaa878747787d7e90a0075503e1e.jpg",
+    "timestamp": "13/10/2025, 08:11:46"
   }
 ]
