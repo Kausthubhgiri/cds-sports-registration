@@ -5663,5 +5663,20 @@
     ],
     "photoPath": "/uploads/ce68da04d44815e69f638eb12fe03b8c.jpeg",
     "timestamp": "11/10/2025, 07:55:13"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Rohit Shine",
+    "chest": 927,
+    "dob": "2008-11-18",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/d9743ffa866dbe6a92b71e2f6606dfa3.jpg",
+    "timestamp": "13/10/2025, 05:34:46"
   }
 ]
