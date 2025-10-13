@@ -1206,20 +1206,6 @@
   },
   {
     "school": "CHINTHALAYA VIDYALAYA",
-    "name": "SIVA SHAJI",
-    "chest": 1045,
-    "dob": "2014-05-12",
-    "ageCategory": "Under 11",
-    "gender": "Male",
-    "events": [
-      "50m Race",
-      "4x100m Relay"
-    ],
-    "photoPath": "/uploads/cc697a916afb1726c053791442f7c5a5",
-    "timestamp": "26/9/2025, 09:00:26"
-  },
-  {
-    "school": "CHINTHALAYA VIDYALAYA",
     "name": "Ahalya",
     "chest": 1046,
     "dob": "2012-05-15",
