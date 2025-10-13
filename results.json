@@ -1324,15 +1324,15 @@
   },
   {
     "school": "CHINTHALAYA VIDYALAYA",
-    "name": "Devarenjan AR sai",
+    "name": "Devarenjan AR Sai",
     "chest": 1053,
-    "dob": "2015-06-23",
+    "dob": "2015-10-23",
     "ageCategory": "Under 11",
     "gender": "Male",
     "events": [
-      "50m Race",
       "100m Race",
       "200m Race",
+      "Long Jump",
       "4x100m Relay"
     ],
     "photoPath": "/uploads/388edde35348f2c291f857da572b4286",
