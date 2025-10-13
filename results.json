@@ -4390,11 +4390,12 @@
     "school": "CHINTHALAYA VIDYALAYA",
     "name": "Sreerag RP",
     "chest": 1074,
-    "dob": "2013-10-20",
+    "dob": "2013-04-20",
     "ageCategory": "Under 14",
     "gender": "Male",
     "events": [
-      "4x100m Relay"
+      "4x100m Relay",
+      "4x400m Relay"
     ],
     "photoPath": "/uploads/74b51a3590c85d982995a646bfbd5444",
     "timestamp": "4/10/2025, 05:06:55"
