@@ -1206,13 +1206,14 @@
   },
   {
     "school": "CHINTHALAYA VIDYALAYA",
-    "name": "Ahalya",
+    "name": "Ahalya P S",
     "chest": 1046,
     "dob": "2012-05-15",
     "ageCategory": "Under 14",
     "gender": "Female",
     "events": [
-      "High Jump"
+      "High Jump",
+      "4x100m Relay"
     ],
     "photoPath": "/uploads/4c604239010889aaafaec873dadd9535",
     "timestamp": "27/9/2025, 04:03:51"
