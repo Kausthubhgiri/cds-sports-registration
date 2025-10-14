@@ -6284,5 +6284,22 @@
     ],
     "photoPath": "/uploads/9cdaccfc396003ed43ef6d2563189cfc.png",
     "timestamp": "14/10/2025, 10:31:13"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "NIVEDITHA",
+    "chest": 237,
+    "dob": "2011-08-06",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "Long Jump",
+      "High Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/e7685db7e2ef5d7d484b06d6cd98e59d.png",
+    "timestamp": "14/10/2025, 10:32:10"
   }
 ]
