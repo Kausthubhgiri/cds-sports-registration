@@ -6301,5 +6301,21 @@
     ],
     "photoPath": "/uploads/e7685db7e2ef5d7d484b06d6cd98e59d.png",
     "timestamp": "14/10/2025, 10:32:10"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "RIYA",
+    "chest": 238,
+    "dob": "2012-01-04",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/1f1a8c0247db3a90f83c768538851cfc.png",
+    "timestamp": "14/10/2025, 10:32:59"
   }
 ]
