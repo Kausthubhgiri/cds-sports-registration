@@ -6019,5 +6019,21 @@
     ],
     "photoPath": "/uploads/3216442cf49bd4a059b9a4e8d098b32b.png",
     "timestamp": "14/10/2025, 10:10:03"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "vismaya MURALI",
+    "chest": 219,
+    "dob": "2012-08-15",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/fd5e651faa42b4b3e1fbdd3784b42857.png",
+    "timestamp": "14/10/2025, 10:12:55"
   }
 ]
