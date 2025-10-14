@@ -5787,5 +5787,20 @@
     ],
     "photoPath": "/uploads/b18872be90d5c27d442e136c34e8ed47.jpg",
     "timestamp": "14/10/2025, 09:30:08"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "sainath suvi",
+    "chest": 203,
+    "dob": "2015-12-06",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "Shot Put",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/fcca25b0971aeca7c1cd9e6cf58ed84b.png",
+    "timestamp": "14/10/2025, 09:41:24"
   }
 ]
