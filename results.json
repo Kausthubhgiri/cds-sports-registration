@@ -5842,5 +5842,21 @@
     ],
     "photoPath": "/uploads/8bc31e16a65254c7edf5f2b7200f6004.png",
     "timestamp": "14/10/2025, 09:50:10"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "DHARAPRAMODH",
+    "chest": 207,
+    "dob": "2015-01-06",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/57bcda067de4a8a4f2341d58f0745e0c.png",
+    "timestamp": "14/10/2025, 09:52:12"
   }
 ]
