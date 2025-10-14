@@ -6035,5 +6035,21 @@
     ],
     "photoPath": "/uploads/fd5e651faa42b4b3e1fbdd3784b42857.png",
     "timestamp": "14/10/2025, 10:12:55"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "AVANTHIKA A",
+    "chest": 220,
+    "dob": "2011-09-24",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/06facbca7cc756a6bf2b5aa0b0680786.png",
+    "timestamp": "14/10/2025, 10:14:03"
   }
 ]
