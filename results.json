@@ -5757,5 +5757,20 @@
     ],
     "photoPath": "/uploads/3dd8aa8861166dbf1a8a6162ac6fbcab.jpg",
     "timestamp": "14/10/2025, 08:35:17"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "ADITHYAN L",
+    "chest": 542,
+    "dob": "2010-06-23",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/3d0eb9b1b62d9dc7cec2519b53040dab.jpg",
+    "timestamp": "14/10/2025, 09:28:06"
   }
 ]
