@@ -5858,5 +5858,20 @@
     ],
     "photoPath": "/uploads/57bcda067de4a8a4f2341d58f0745e0c.png",
     "timestamp": "14/10/2025, 09:52:12"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "EVANIA S SHIBU",
+    "chest": 208,
+    "dob": "2015-01-18",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "50m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/c018a8f77bc80519fc664d8be6b05788.png",
+    "timestamp": "14/10/2025, 09:53:51"
   }
 ]
