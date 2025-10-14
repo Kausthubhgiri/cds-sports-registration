@@ -6093,5 +6093,18 @@
     ],
     "photoPath": "/uploads/5eee7f56332334b610144d78f6d30e57.png",
     "timestamp": "14/10/2025, 10:17:35"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "THEJA BLISA BEN",
+    "chest": 224,
+    "dob": "2012-01-09",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/2b8c61e14e9b0c404027e11722af47de.png",
+    "timestamp": "14/10/2025, 10:18:57"
   }
 ]
