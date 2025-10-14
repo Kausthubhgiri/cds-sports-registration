@@ -5992,5 +5992,18 @@
     ],
     "photoPath": "/uploads/6ab2f1b1682f7fe1aae3de06f91b1dae.png",
     "timestamp": "14/10/2025, 10:07:12"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "SRAVAN J S",
+    "chest": 217,
+    "dob": "2012-10-22",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/1b1fab15a2b11b37bcb6b7b79c631b4d.png",
+    "timestamp": "14/10/2025, 10:09:18"
   }
 ]
