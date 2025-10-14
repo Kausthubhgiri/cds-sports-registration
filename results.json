@@ -6239,5 +6239,18 @@
     ],
     "photoPath": "/uploads/5a9e90f6ad909a0455f7eb14d7da7747.png",
     "timestamp": "14/10/2025, 10:28:18"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ADHITHYAN D A",
+    "chest": 234,
+    "dob": "2009-08-29",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/c54605fccb4c69bf1759840f6eca2e0d.png",
+    "timestamp": "14/10/2025, 10:29:03"
   }
 ]
