@@ -420,11 +420,7 @@ function closePopup() {
   document.getElementById('popup').style.display = 'none';
 }
 
-// Show "Registrations Closing Soon" on page load
-window.addEventListener('load', () => {
-  showPopup("🚨 Registrations Closing Soon!");
-  setTimeout(closePopup, 10000); // Auto-close after 10 seconds
-});
+
     eventCheckboxes.forEach(checkbox => {
       checkbox.addEventListener('change', () => {
         const selected = Array.from(eventCheckboxes).filter(cb => cb.checked);
