@@ -6225,5 +6225,19 @@
     ],
     "photoPath": "/uploads/cf84f3bc744b62a546ab12586d3889b8.png",
     "timestamp": "14/10/2025, 10:27:31"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "SREEHARI R S",
+    "chest": 233,
+    "dob": "2009-09-01",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/5a9e90f6ad909a0455f7eb14d7da7747.png",
+    "timestamp": "14/10/2025, 10:28:18"
   }
 ]
