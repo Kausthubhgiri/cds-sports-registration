@@ -6252,5 +6252,20 @@
     ],
     "photoPath": "/uploads/c54605fccb4c69bf1759840f6eca2e0d.png",
     "timestamp": "14/10/2025, 10:29:03"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "SREELEKSHMI PS",
+    "chest": 235,
+    "dob": "2010-06-20",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/9dca9feb2fa1cba58b3e840e2fe89630.png",
+    "timestamp": "14/10/2025, 10:30:19"
   }
 ]
