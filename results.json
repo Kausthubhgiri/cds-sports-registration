@@ -6333,5 +6333,19 @@
     ],
     "photoPath": "/uploads/08a42da6448d8e99fd9d6eefe2567830.png",
     "timestamp": "14/10/2025, 10:34:50"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "SYGA LEKSHMI",
+    "chest": 240,
+    "dob": "2012-10-06",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/2793878f9b9dd122ed813a6d2d59506a.png",
+    "timestamp": "14/10/2025, 10:36:02"
   }
 ]
