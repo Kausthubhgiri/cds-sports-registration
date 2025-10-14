@@ -6005,5 +6005,18 @@
     ],
     "photoPath": "/uploads/1b1fab15a2b11b37bcb6b7b79c631b4d.png",
     "timestamp": "14/10/2025, 10:09:18"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "SAURV",
+    "chest": 218,
+    "dob": "2011-11-04",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/3216442cf49bd4a059b9a4e8d098b32b.png",
+    "timestamp": "14/10/2025, 10:10:03"
   }
 ]
