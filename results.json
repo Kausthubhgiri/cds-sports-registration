@@ -5964,5 +5964,19 @@
     ],
     "photoPath": "/uploads/4db1ded94c43dbab9049b880fdb88d62.png",
     "timestamp": "14/10/2025, 10:01:44"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ABHI DEV",
+    "chest": 215,
+    "dob": "2013-01-03",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "High Jump"
+    ],
+    "photoPath": "/uploads/71eeed119ce4d631557f5beaa4ed32b7.png",
+    "timestamp": "14/10/2025, 10:03:31"
   }
 ]
