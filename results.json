@@ -5816,5 +5816,18 @@
     ],
     "photoPath": "/uploads/97218aec958cb70a0466623770d27478.png",
     "timestamp": "14/10/2025, 09:46:32"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "neeraj .s",
+    "chest": 205,
+    "dob": "2015-01-30",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/be32d1bc269a626bd52ef6068e3673fe.png",
+    "timestamp": "14/10/2025, 09:48:09"
   }
 ]
