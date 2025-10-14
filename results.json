@@ -6080,5 +6080,18 @@
     ],
     "photoPath": "/uploads/56b84a07d93898cd17a7c3628fb74089.png",
     "timestamp": "14/10/2025, 10:16:26"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "HAFSA UVAIS",
+    "chest": 223,
+    "dob": "2013-01-07",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/5eee7f56332334b610144d78f6d30e57.png",
+    "timestamp": "14/10/2025, 10:17:35"
   }
 ]
