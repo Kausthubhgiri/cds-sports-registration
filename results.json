@@ -5948,5 +5948,21 @@
     ],
     "photoPath": "/uploads/1b9cb0760f37c888ca80c388eaced741.png",
     "timestamp": "14/10/2025, 10:00:26"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ISHAN AHAMED",
+    "chest": 214,
+    "dob": "2012-01-23",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "Long Jump",
+      "High Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/4db1ded94c43dbab9049b880fdb88d62.png",
+    "timestamp": "14/10/2025, 10:01:44"
   }
 ]
