@@ -5916,5 +5916,21 @@
     ],
     "photoPath": "/uploads/c5c47d62486deb9de94045615cd633f1.png",
     "timestamp": "14/10/2025, 09:57:27"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "RISHIKESH J P",
+    "chest": 212,
+    "dob": "2012-03-22",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/226c683689d417a81e22f3abaab82535.png",
+    "timestamp": "14/10/2025, 09:59:29"
   }
 ]
