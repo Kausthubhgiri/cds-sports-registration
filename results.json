@@ -6267,5 +6267,22 @@
     ],
     "photoPath": "/uploads/9dca9feb2fa1cba58b3e840e2fe89630.png",
     "timestamp": "14/10/2025, 10:30:19"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "PRATHEEKSHA",
+    "chest": 236,
+    "dob": "2009-06-11",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "1500m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/9cdaccfc396003ed43ef6d2563189cfc.png",
+    "timestamp": "14/10/2025, 10:31:13"
   }
 ]
