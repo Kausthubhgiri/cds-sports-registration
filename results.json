@@ -6180,5 +6180,21 @@
     ],
     "photoPath": "/uploads/9075c7ac58cb8e0f9f20479c30b61b6e.png",
     "timestamp": "14/10/2025, 10:24:41"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "SHAIN RAJ",
+    "chest": 230,
+    "dob": "2010-05-20",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "1500m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/d1b32314d62837ccee5fceefbd3c36c0.png",
+    "timestamp": "14/10/2025, 10:25:37"
   }
 ]
