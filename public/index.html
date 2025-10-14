@@ -393,7 +393,7 @@
     
 
   <label for="photo">Upload Photo</label>
-    <input type="file" id="photo" name="photo" accept="image/*" optional>
+    <input type="file" id="photo" name="photo" accept="image/*"
     <img id="preview" alt="Photo Preview">
 
     <button type="submit">Submit</button>
@@ -421,11 +421,6 @@
     const eventCheckboxes = document.querySelectorAll('input[name="events"]');
     const chestDisplay = document.getElementById('chestDisplay');
     const schoolInput = document.getElementById('school');
-function showPopup(message) {
-  const popup = document.getElementById('popup');
-  popup.querySelector('h2').textContent = message;
-  popup.style.display = 'flex';
-}
 
 function closePopup() {
   document.getElementById('popup').style.display = 'none';
