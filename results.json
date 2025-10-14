@@ -6119,5 +6119,18 @@
     ],
     "photoPath": "/uploads/2f1cddeab0f8261abe0f6bc9aaacf2ee.png",
     "timestamp": "14/10/2025, 10:19:43"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "GOWRI NANDHANA S",
+    "chest": 226,
+    "dob": "2012-09-19",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/5284d0a2c4e749ff66522d04a99922f9.png",
+    "timestamp": "14/10/2025, 10:21:26"
   }
 ]
