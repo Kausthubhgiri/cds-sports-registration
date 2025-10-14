@@ -5978,5 +5978,19 @@
     ],
     "photoPath": "/uploads/71eeed119ce4d631557f5beaa4ed32b7.png",
     "timestamp": "14/10/2025, 10:03:31"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "FLEMIN SOLOMAN",
+    "chest": 216,
+    "dob": "2011-12-04",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/6ab2f1b1682f7fe1aae3de06f91b1dae.png",
+    "timestamp": "14/10/2025, 10:07:12"
   }
 ]
