@@ -6149,5 +6149,20 @@
     ],
     "photoPath": "/uploads/0fb24d3944c82f36ef71aad3dab5f47f.png",
     "timestamp": "14/10/2025, 10:22:55"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "BLESIN BINU",
+    "chest": 228,
+    "dob": "2010-05-31",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/5f286599268d2d4f19caa1be437fb12b.png",
+    "timestamp": "14/10/2025, 10:23:50"
   }
 ]
