@@ -6211,5 +6211,19 @@
     ],
     "photoPath": "/uploads/3891a8707c28b088b029b7e324f13642.png",
     "timestamp": "14/10/2025, 10:26:33"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ABEY ALOSHIOUS",
+    "chest": 232,
+    "dob": "2010-07-31",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "High Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/cf84f3bc744b62a546ab12586d3889b8.png",
+    "timestamp": "14/10/2025, 10:27:31"
   }
 ]
