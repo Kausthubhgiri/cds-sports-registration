@@ -5725,5 +5725,21 @@
     ],
     "photoPath": "/uploads/471384a057c8d4eee07a836283da13e5.jpg",
     "timestamp": "13/10/2025, 08:20:00"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "JAYADEV R.S",
+    "chest": 201,
+    "dob": "2014-04-25",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "Shot Put",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/92b1581d2d31012d274394ce6fbaad17.jpg",
+    "timestamp": "14/10/2025, 08:33:15"
   }
 ]
