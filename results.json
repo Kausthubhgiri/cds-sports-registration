@@ -5772,5 +5772,20 @@
     ],
     "photoPath": "/uploads/3d0eb9b1b62d9dc7cec2519b53040dab.jpg",
     "timestamp": "14/10/2025, 09:28:06"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "ADHIL MUHAMMED",
+    "chest": 543,
+    "dob": "2013-06-19",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "Shot Put",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/b18872be90d5c27d442e136c34e8ed47.jpg",
+    "timestamp": "14/10/2025, 09:30:08"
   }
 ]
