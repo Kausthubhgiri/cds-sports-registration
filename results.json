@@ -5829,5 +5829,18 @@
     ],
     "photoPath": "/uploads/be32d1bc269a626bd52ef6068e3673fe.png",
     "timestamp": "14/10/2025, 09:48:09"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "SIVANAND D S",
+    "chest": 206,
+    "dob": "2013-01-01",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/8bc31e16a65254c7edf5f2b7200f6004.png",
+    "timestamp": "14/10/2025, 09:50:10"
   }
 ]
