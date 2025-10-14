@@ -6320,17 +6320,18 @@
   },
   {
     "school": "Dr GR PUBLIC SCHOOL",
-    "name": "ATHIRA B R",
+    "name": "DELNA SHAB",
     "chest": 239,
-    "dob": "2010-11-28",
+    "dob": "2010-06-16",
     "ageCategory": "Under 17",
     "gender": "Female",
     "events": [
-      "800m Race",
-      "4x100m Relay",
+      "1500m Race",
+      "Long Jump",
+      "High Jump",
       "4x400m Relay"
     ],
-    "photoPath": "/uploads/65e91ebd43277e648a36592553e95673.png",
-    "timestamp": "14/10/2025, 10:33:52"
+    "photoPath": "/uploads/08a42da6448d8e99fd9d6eefe2567830.png",
+    "timestamp": "14/10/2025, 10:34:50"
   }
 ]
