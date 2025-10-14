@@ -6065,5 +6065,20 @@
     ],
     "photoPath": "/uploads/31fe2d2d028247eab70a8ca79a7ccb50.png",
     "timestamp": "14/10/2025, 10:14:48"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ARCHITHA",
+    "chest": 222,
+    "dob": "2013-06-29",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/56b84a07d93898cd17a7c3628fb74089.png",
+    "timestamp": "14/10/2025, 10:16:26"
   }
 ]
