@@ -6196,5 +6196,20 @@
     ],
     "photoPath": "/uploads/d1b32314d62837ccee5fceefbd3c36c0.png",
     "timestamp": "14/10/2025, 10:25:37"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "VAIBHAV B ANIL",
+    "chest": 231,
+    "dob": "2010-05-07",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "1500m Race",
+      "High Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/3891a8707c28b088b029b7e324f13642.png",
+    "timestamp": "14/10/2025, 10:26:33"
   }
 ]
