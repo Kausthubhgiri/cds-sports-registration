@@ -6132,5 +6132,22 @@
     ],
     "photoPath": "/uploads/5284d0a2c4e749ff66522d04a99922f9.png",
     "timestamp": "14/10/2025, 10:21:26"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "RICHIN BEN",
+    "chest": 227,
+    "dob": "2009-11-23",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "400m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/0fb24d3944c82f36ef71aad3dab5f47f.png",
+    "timestamp": "14/10/2025, 10:22:55"
   }
 ]
