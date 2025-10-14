@@ -6106,5 +6106,18 @@
     ],
     "photoPath": "/uploads/2b8c61e14e9b0c404027e11722af47de.png",
     "timestamp": "14/10/2025, 10:18:57"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "KEERTHANA GOVIND",
+    "chest": 225,
+    "dob": "2013-02-22",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/2f1cddeab0f8261abe0f6bc9aaacf2ee.png",
+    "timestamp": "14/10/2025, 10:19:43"
   }
 ]
