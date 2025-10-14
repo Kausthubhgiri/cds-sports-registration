@@ -6051,5 +6051,19 @@
     ],
     "photoPath": "/uploads/06facbca7cc756a6bf2b5aa0b0680786.png",
     "timestamp": "14/10/2025, 10:14:03"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ANJANA SS",
+    "chest": 221,
+    "dob": "2014-04-15",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "High Jump"
+    ],
+    "photoPath": "/uploads/31fe2d2d028247eab70a8ca79a7ccb50.png",
+    "timestamp": "14/10/2025, 10:14:48"
   }
 ]
