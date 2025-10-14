@@ -5873,5 +5873,19 @@
     ],
     "photoPath": "/uploads/c018a8f77bc80519fc664d8be6b05788.png",
     "timestamp": "14/10/2025, 09:53:51"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "IRIN R GEORGE",
+    "chest": 209,
+    "dob": "2014-04-28",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/d66ff28a0116dde4bc72df7cd3454ea2.png",
+    "timestamp": "14/10/2025, 09:55:18"
   }
 ]
