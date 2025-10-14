@@ -5932,5 +5932,21 @@
     ],
     "photoPath": "/uploads/226c683689d417a81e22f3abaab82535.png",
     "timestamp": "14/10/2025, 09:59:29"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "MUHAMMED SHAFFIN",
+    "chest": 213,
+    "dob": "2011-07-18",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "Shot Put",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/1b9cb0760f37c888ca80c388eaced741.png",
+    "timestamp": "14/10/2025, 10:00:26"
   }
 ]
