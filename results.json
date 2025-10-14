@@ -6347,5 +6347,18 @@
     ],
     "photoPath": "/uploads/2793878f9b9dd122ed813a6d2d59506a.png",
     "timestamp": "14/10/2025, 10:36:02"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ANAKHA",
+    "chest": 241,
+    "dob": "2010-10-05",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/f9d59fccaf58400f3eb5c6cb205a3b2b.png",
+    "timestamp": "14/10/2025, 10:36:36"
   }
 ]
