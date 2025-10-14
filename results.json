@@ -5903,5 +5903,18 @@
     ],
     "photoPath": "/uploads/6b46b33453c9b65ccb594ecd65b5c7c7.png",
     "timestamp": "14/10/2025, 09:56:30"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "DAKSHA BOSE",
+    "chest": 211,
+    "dob": "2014-04-08",
+    "ageCategory": "Under 11",
+    "gender": "Female",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/c5c47d62486deb9de94045615cd633f1.png",
+    "timestamp": "14/10/2025, 09:57:27"
   }
 ]
