@@ -5802,5 +5802,19 @@
     ],
     "photoPath": "/uploads/fcca25b0971aeca7c1cd9e6cf58ed84b.png",
     "timestamp": "14/10/2025, 09:41:24"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "devanandhan",
+    "chest": 204,
+    "dob": "2014-01-28",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/97218aec958cb70a0466623770d27478.png",
+    "timestamp": "14/10/2025, 09:46:32"
   }
 ]
