@@ -5741,5 +5741,21 @@
     ],
     "photoPath": "/uploads/92b1581d2d31012d274394ce6fbaad17.jpg",
     "timestamp": "14/10/2025, 08:33:15"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "JUAN JOSHI",
+    "chest": 202,
+    "dob": "2014-06-15",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/3dd8aa8861166dbf1a8a6162ac6fbcab.jpg",
+    "timestamp": "14/10/2025, 08:35:17"
   }
 ]
