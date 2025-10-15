@@ -6509,5 +6509,19 @@
     ],
     "photoPath": "/uploads/5402b8531555e318e3483bffde19ccb1.jpg",
     "timestamp": "15/10/2025, 04:52:20"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "VISMAYA VISWAM",
+    "chest": 252,
+    "dob": "2008-06-16",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/e478adfc41b76521be52e8618cfc2b00.jpg",
+    "timestamp": "15/10/2025, 04:53:30"
   }
 ]
