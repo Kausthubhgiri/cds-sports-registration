@@ -6569,5 +6569,18 @@
     ],
     "photoPath": "/uploads/7487c6a9bd65803e21d0ed3e64353e3d.jpg",
     "timestamp": "15/10/2025, 06:16:39"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "ELANO",
+    "chest": 1105,
+    "dob": "2015-02-12",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/c09142e5ad4e0f6b1d463efe237c3084.jpg",
+    "timestamp": "15/10/2025, 06:17:24"
   }
 ]
