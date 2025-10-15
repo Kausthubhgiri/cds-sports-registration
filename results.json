@@ -6818,5 +6818,20 @@
     ],
     "photoPath": "/uploads/be92ad68fdb745a00c06d54ca88d3ae6.jpg",
     "timestamp": "15/10/2025, 06:29:06"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "BHAGYASREE",
+    "chest": 1124,
+    "dob": "2012-01-30",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "400m Race"
+    ],
+    "photoPath": "/uploads/bf55ede12bf0bb6fb05a077e38eb9af6.jpg",
+    "timestamp": "15/10/2025, 06:29:46"
   }
 ]
