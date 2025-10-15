@@ -6660,5 +6660,19 @@
     ],
     "photoPath": "/uploads/6a267172c7481751a4c336e1b71ec662.jpg",
     "timestamp": "15/10/2025, 06:21:49"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "HEBIN",
+    "chest": 1112,
+    "dob": "2012-10-14",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/d3d4c9dd2b1e4d02911205370adc0106.jpg",
+    "timestamp": "15/10/2025, 06:22:21"
   }
 ]
