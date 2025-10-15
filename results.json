@@ -6360,5 +6360,22 @@
     ],
     "photoPath": "/uploads/f9d59fccaf58400f3eb5c6cb205a3b2b.png",
     "timestamp": "14/10/2025, 10:36:36"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ABHISHEK S.S",
+    "chest": 242,
+    "dob": "2009-02-06",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "400m Race",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/a97a23b837e3d05ddb0e16a0ad9079d5.jpg",
+    "timestamp": "15/10/2025, 04:29:17"
   }
 ]
