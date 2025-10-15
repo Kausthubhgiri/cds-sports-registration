@@ -6674,5 +6674,18 @@
     ],
     "photoPath": "/uploads/d3d4c9dd2b1e4d02911205370adc0106.jpg",
     "timestamp": "15/10/2025, 06:22:21"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "GOURINATH",
+    "chest": 1113,
+    "dob": "2012-08-20",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "400m Race"
+    ],
+    "photoPath": "/uploads/3f9bfd9b38fa28a714058be4f9bd2539.jpg",
+    "timestamp": "15/10/2025, 06:23:01"
   }
 ]
