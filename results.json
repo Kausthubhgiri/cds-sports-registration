@@ -6687,5 +6687,18 @@
     ],
     "photoPath": "/uploads/3f9bfd9b38fa28a714058be4f9bd2539.jpg",
     "timestamp": "15/10/2025, 06:23:01"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "PRATANCH",
+    "chest": 1114,
+    "dob": "2013-07-08",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "400m Race"
+    ],
+    "photoPath": "/uploads/ddecc69b52bcbd69e8bcd862d2407d7e.jpg",
+    "timestamp": "15/10/2025, 06:23:36"
   }
 ]
