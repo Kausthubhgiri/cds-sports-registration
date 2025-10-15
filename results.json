@@ -6908,5 +6908,18 @@
     ],
     "photoPath": "/uploads/d6cf65aac5d0a9f2a34d8fcc3f22f769.jpg",
     "timestamp": "15/10/2025, 06:36:13"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "HARIHARAN",
+    "chest": 1130,
+    "dob": "2008-11-29",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "200m Race"
+    ],
+    "photoPath": "/uploads/e6172727f4077e3918fafa2337c4fd9c.jpg",
+    "timestamp": "15/10/2025, 06:36:56"
   }
 ]
