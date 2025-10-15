@@ -6494,5 +6494,20 @@
     ],
     "photoPath": "/uploads/2b34907218b2f0937c313d8325693e00.jpg",
     "timestamp": "15/10/2025, 04:48:25"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "MEENAKSHI VINOD",
+    "chest": 251,
+    "dob": "2009-03-04",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/5402b8531555e318e3483bffde19ccb1.jpg",
+    "timestamp": "15/10/2025, 04:52:20"
   }
 ]
