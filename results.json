@@ -6863,5 +6863,21 @@
     ],
     "photoPath": "/uploads/1229f94a03174306feada03fb1a1e10d.jpg",
     "timestamp": "15/10/2025, 06:33:32"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "ALJIN DAS",
+    "chest": 1127,
+    "dob": "2008-02-14",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "1500m Race",
+      "Long Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/0d803b8ba082e6471c1e0c02565b35a9.jpg",
+    "timestamp": "15/10/2025, 06:34:31"
   }
 ]
