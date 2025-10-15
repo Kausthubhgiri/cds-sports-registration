@@ -6908,5 +6908,18 @@
     ],
     "photoPath": "/uploads/cedcb1b7bfef341f64bdf1c620c00386.jpg",
     "timestamp": "15/10/2025, 06:54:23"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ABHINAV SP",
+    "chest": 259,
+    "dob": "2008-11-07",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/c2371f09726cd3db55dded94a70eb87e.jpg",
+    "timestamp": "15/10/2025, 08:25:23"
   }
 ]
