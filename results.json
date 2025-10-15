@@ -6727,5 +6727,18 @@
     ],
     "photoPath": "/uploads/088d164329e54cfd286ddcce7482229e.jpg",
     "timestamp": "15/10/2025, 06:24:43"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "GOUTHAM",
+    "chest": 1117,
+    "dob": "2013-05-01",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/cf161054f9bd4918cc2e0e5b2380f51e.jpg",
+    "timestamp": "15/10/2025, 06:25:14"
   }
 ]
