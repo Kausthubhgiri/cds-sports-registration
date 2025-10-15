@@ -6634,5 +6634,19 @@
     ],
     "photoPath": "/uploads/3daf5c051a7a40db88791312b562e922.jpg",
     "timestamp": "15/10/2025, 06:19:49"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "GOURISH",
+    "chest": 1110,
+    "dob": "2012-05-01",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/2edf4ae18707ddceab4a9e9f9328fd80.jpg",
+    "timestamp": "15/10/2025, 06:20:29"
   }
 ]
