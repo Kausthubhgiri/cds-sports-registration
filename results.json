@@ -6792,5 +6792,18 @@
     ],
     "photoPath": "/uploads/59260c207375395679084166470fc21f.jpg",
     "timestamp": "15/10/2025, 06:27:56"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "SHON",
+    "chest": 1122,
+    "dob": "2013-01-04",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/ffa8d9c4592794286294c4a36f70eb80.jpg",
+    "timestamp": "15/10/2025, 06:28:31"
   }
 ]
