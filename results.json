@@ -6490,5 +6490,19 @@
     ],
     "photoPath": "/uploads/aa074791d768dc54a3590deec66fc924.jpg",
     "timestamp": "15/10/2025, 05:01:54"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ANURUDH BABU",
+    "chest": 362,
+    "dob": "2008-01-07",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "1500m Race"
+    ],
+    "photoPath": "/uploads/c499a470cd7963245d417a2fce781843.jpg",
+    "timestamp": "15/10/2025, 05:08:29"
   }
 ]
