@@ -1521,13 +1521,13 @@
   },
   {
     "school": "A.R.R PUBLIC SCHOOL",
-    "name": "Aslam T N",
+    "name": "Aslam P N",
     "chest": 504,
     "dob": "2014-06-28",
     "ageCategory": "Under 11",
     "gender": "Male",
     "events": [
-      "200m Race",
+      "100m Race",
       "4x100m Relay"
     ],
     "photoPath": "/uploads/c7025c4c6ee5522d4626bd259ffc32c1",
