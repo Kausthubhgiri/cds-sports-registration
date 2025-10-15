@@ -6502,5 +6502,21 @@
     ],
     "photoPath": "/uploads/c499a470cd7963245d417a2fce781843.jpg",
     "timestamp": "15/10/2025, 05:08:29"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ABIRAMI AP",
+    "chest": 253,
+    "dob": "2008-06-26",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "Shot Put",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/0fdb97525e6fa073c1f9e9b860fef086.jpg",
+    "timestamp": "15/10/2025, 05:17:56"
   }
 ]
