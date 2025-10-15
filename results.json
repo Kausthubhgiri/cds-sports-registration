@@ -6377,5 +6377,18 @@
     ],
     "photoPath": "/uploads/a97a23b837e3d05ddb0e16a0ad9079d5.jpg",
     "timestamp": "15/10/2025, 04:29:17"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "MADHAV SHANKAR",
+    "chest": 243,
+    "dob": "2008-02-05",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race"
+    ],
+    "photoPath": "/uploads/4edff029347e7a838db22c25546d20e9.jpg",
+    "timestamp": "15/10/2025, 04:31:59"
   }
 ]
