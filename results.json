@@ -6921,5 +6921,18 @@
     ],
     "photoPath": "/uploads/cb74dbca7811e288a82565a198ecd359.jpg",
     "timestamp": "15/10/2025, 10:13:43"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ACHSAH JH",
+    "chest": 264,
+    "dob": "2008-05-27",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "High Jump"
+    ],
+    "photoPath": "/uploads/c876d47b5ab1958d0fe58dadbbed3923.jpg",
+    "timestamp": "15/10/2025, 10:19:34"
   }
 ]
