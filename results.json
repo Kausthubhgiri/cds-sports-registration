@@ -6561,5 +6561,19 @@
     ],
     "photoPath": "/uploads/57acba5f3743c75a20bb7b89a8c0f12f.jpg",
     "timestamp": "15/10/2025, 05:21:48"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ADHISREE",
+    "chest": 257,
+    "dob": "2008-04-09",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/fd8bc8e7163000fb336e17b3c2e7d912.jpg",
+    "timestamp": "15/10/2025, 05:50:01"
   }
 ]
