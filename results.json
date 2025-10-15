@@ -6621,5 +6621,18 @@
     ],
     "photoPath": "/uploads/0fb8ab7efd53acbea255ec2164f52a3f.jpg",
     "timestamp": "15/10/2025, 06:19:18"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "SHIFAN",
+    "chest": 1109,
+    "dob": "2012-10-11",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race"
+    ],
+    "photoPath": "/uploads/3daf5c051a7a40db88791312b562e922.jpg",
+    "timestamp": "15/10/2025, 06:19:49"
   }
 ]
