@@ -292,14 +292,14 @@
   },
   {
     "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
-    "name": "SREE HARINARAYANA S",
+    "name": "SREE HARINARAYANAN S",
     "chest": 806,
     "dob": "2013-07-05",
     "ageCategory": "Under 14",
     "gender": "Male",
     "events": [
-      "50m Race",
       "100m Race",
+      "200m Race",
       "4x100m Relay"
     ],
     "photoPath": "/uploads/5d8b3a7eae9dcd5634086e17a568b74f",
