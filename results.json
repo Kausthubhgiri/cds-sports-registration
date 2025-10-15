@@ -6477,5 +6477,18 @@
     ],
     "photoPath": "/uploads/bd2eafa0785135753e4b46e1fa137b12.jpg",
     "timestamp": "15/10/2025, 04:59:48"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "JIYA P.S",
+    "chest": 361,
+    "dob": "2010-03-04",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/aa074791d768dc54a3590deec66fc924.jpg",
+    "timestamp": "15/10/2025, 05:01:54"
   }
 ]
