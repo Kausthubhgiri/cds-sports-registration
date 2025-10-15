@@ -6714,5 +6714,18 @@
     ],
     "photoPath": "/uploads/1e95f447ffe46735bd5686fc31d6280d.jpg",
     "timestamp": "15/10/2025, 06:24:08"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "KASHINADH",
+    "chest": 1116,
+    "dob": "2014-09-24",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "800m Race"
+    ],
+    "photoPath": "/uploads/088d164329e54cfd286ddcce7482229e.jpg",
+    "timestamp": "15/10/2025, 06:24:43"
   }
 ]
