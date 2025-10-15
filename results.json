@@ -6479,5 +6479,20 @@
     ],
     "photoPath": "/uploads/1e10b600596fc7ec87ce24c4b3a773b4.jpg",
     "timestamp": "15/10/2025, 04:42:46"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "JOSHUA",
+    "chest": 250,
+    "dob": "2007-11-20",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "1500m Race",
+      "High Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/2b34907218b2f0937c313d8325693e00.jpg",
+    "timestamp": "15/10/2025, 04:48:25"
   }
 ]
