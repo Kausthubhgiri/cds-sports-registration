@@ -6595,5 +6595,18 @@
     ],
     "photoPath": "/uploads/99acf8c743895993f89005d3c00f04ae.jpg",
     "timestamp": "15/10/2025, 06:17:59"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "AISHIK",
+    "chest": 1107,
+    "dob": "2016-08-20",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/6e5af2373cd8916337a54ed0061fdf6f.jpg",
+    "timestamp": "15/10/2025, 06:18:42"
   }
 ]
