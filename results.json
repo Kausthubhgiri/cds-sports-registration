@@ -6069,9 +6069,10 @@
     "name": "NIVEDITHA",
     "chest": 237,
     "dob": "2011-08-06",
-    "ageCategory": "Under 14",
+    "ageCategory": "Under 17",
     "gender": "Female",
     "events": [
+      "200m Race",
       "Long Jump",
       "High Jump",
       "4x100m Relay",
