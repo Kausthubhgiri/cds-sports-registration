@@ -1,19 +1,5 @@
 [
   {
-    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
-    "name": "SREE HARINARAYANAN S",
-    "chest": 801,
-    "dob": "2013-07-05",
-    "ageCategory": "Under 14",
-    "gender": "Male",
-    "events": [
-      "50m Race",
-      "100m Race"
-    ],
-    "photoPath": "/uploads/a88159b004127f966648e133e943008f",
-    "timestamp": "22/9/2025, 08:59:14"
-  },
-  {
     "school": "VISWADARSHINI PUBLIC SCHOOL",
     "name": "MUHAMMED HARIS",
     "chest": 1201,
