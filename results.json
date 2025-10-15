@@ -6421,5 +6421,22 @@
     ],
     "photoPath": "/uploads/6f42020123a5ecb010594e69489241cf.jpg",
     "timestamp": "15/10/2025, 04:35:56"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "NIRANJANV",
+    "chest": 246,
+    "dob": "2010-01-20",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "1500m Race",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/a7785702316f2f278d83d02ddbc099dc.jpg",
+    "timestamp": "15/10/2025, 04:38:27"
   }
 ]
