@@ -6548,5 +6548,18 @@
     ],
     "photoPath": "/uploads/0e6cfc969dfd60b4b7fc562ffe3df29b.jpg",
     "timestamp": "15/10/2025, 05:20:19"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "SANIA NAZEER",
+    "chest": 255,
+    "dob": "2008-02-02",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/c4082fc9a6a0a690e57b011863ebb190.jpg",
+    "timestamp": "15/10/2025, 05:21:04"
   }
 ]
