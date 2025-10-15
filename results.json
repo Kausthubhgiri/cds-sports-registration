@@ -696,8 +696,9 @@
     "ageCategory": "Under 17",
     "gender": "Male",
     "events": [
+      "100m Race",
       "Discus Throw",
-      "Long Jump"
+      "4x100m Relay"
     ],
     "photoPath": "/uploads/334d0914328146aabaab23cc79a0b761",
     "timestamp": "25/9/2025, 11:02:58"
