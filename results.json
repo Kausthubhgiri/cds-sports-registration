@@ -6608,5 +6608,18 @@
     ],
     "photoPath": "/uploads/6e5af2373cd8916337a54ed0061fdf6f.jpg",
     "timestamp": "15/10/2025, 06:18:42"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "SREEJESH",
+    "chest": 1108,
+    "dob": "2016-07-27",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/0fb8ab7efd53acbea255ec2164f52a3f.jpg",
+    "timestamp": "15/10/2025, 06:19:18"
   }
 ]
