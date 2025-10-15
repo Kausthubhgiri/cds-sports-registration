@@ -6438,5 +6438,18 @@
     ],
     "photoPath": "/uploads/a7785702316f2f278d83d02ddbc099dc.jpg",
     "timestamp": "15/10/2025, 04:38:27"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "NIKHIL",
+    "chest": 247,
+    "dob": "2008-05-29",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "High Jump"
+    ],
+    "photoPath": "/uploads/6b961781c9922bdbcb96c6b269d4f92e.jpg",
+    "timestamp": "15/10/2025, 04:40:37"
   }
 ]
