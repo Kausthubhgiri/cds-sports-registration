@@ -6465,5 +6465,19 @@
     ],
     "photoPath": "/uploads/1c65eccb68cd93cff9b840e221d07327.jpg",
     "timestamp": "15/10/2025, 04:41:26"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "KEVIN ARBY",
+    "chest": 249,
+    "dob": "2008-11-08",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/1e10b600596fc7ec87ce24c4b3a773b4.jpg",
+    "timestamp": "15/10/2025, 04:42:46"
   }
 ]
