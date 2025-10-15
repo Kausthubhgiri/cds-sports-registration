@@ -6905,5 +6905,18 @@
     ],
     "photoPath": "/uploads/c2371f09726cd3db55dded94a70eb87e.jpg",
     "timestamp": "15/10/2025, 08:25:23"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ANANTHANATH S.J",
+    "chest": 260,
+    "dob": "2011-03-01",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race"
+    ],
+    "photoPath": "/uploads/4912c6db375676fca07fbb12768307e7.jpg",
+    "timestamp": "15/10/2025, 08:31:24"
   }
 ]
