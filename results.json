@@ -6753,5 +6753,18 @@
     ],
     "photoPath": "/uploads/c1864316518c85e3b61ae673be16e24e.jpg",
     "timestamp": "15/10/2025, 06:26:04"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "GARAZ",
+    "chest": 1119,
+    "dob": "2013-07-17",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/b31620133b1d603b399b5a43bb691ac9.jpg",
+    "timestamp": "15/10/2025, 06:26:36"
   }
 ]
