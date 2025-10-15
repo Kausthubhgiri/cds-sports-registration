@@ -6961,5 +6961,18 @@
     ],
     "photoPath": "/uploads/62add922b9ce95e5f093375a1f0df68e.jpg",
     "timestamp": "15/10/2025, 10:41:39"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ATHMAJ (GR)",
+    "chest": 267,
+    "dob": "2010-10-26",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/b5e1a29d2ddafdd1f2ab46681ecb7625.jpg",
+    "timestamp": "15/10/2025, 10:48:53"
   }
 ]
