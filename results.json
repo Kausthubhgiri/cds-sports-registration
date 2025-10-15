@@ -6700,5 +6700,19 @@
     ],
     "photoPath": "/uploads/ddecc69b52bcbd69e8bcd862d2407d7e.jpg",
     "timestamp": "15/10/2025, 06:23:36"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "MELVIN",
+    "chest": 1115,
+    "dob": "2013-09-10",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/1e95f447ffe46735bd5686fc31d6280d.jpg",
+    "timestamp": "15/10/2025, 06:24:08"
   }
 ]
