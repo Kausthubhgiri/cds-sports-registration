@@ -6540,5 +6540,20 @@
     ],
     "photoPath": "/uploads/5d604cfde948cc1766fc9008221f73a9.jpg",
     "timestamp": "15/10/2025, 06:14:55"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "SAVIO MONISH",
+    "chest": 1103,
+    "dob": "2015-05-04",
+    "ageCategory": "Under 11",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "Shot Put",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/6ae16abf02c02ed93fe7431cb2dfe96d.jpg",
+    "timestamp": "15/10/2025, 06:15:56"
   }
 ]
