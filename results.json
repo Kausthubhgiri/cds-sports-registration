@@ -6936,5 +6936,19 @@
     ],
     "photoPath": "/uploads/479a1f85404de6a50e5ff08f4d71b83c.jpg",
     "timestamp": "15/10/2025, 06:39:22"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "AKSHAY SS",
+    "chest": 1132,
+    "dob": "2008-05-14",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "1500m Race",
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/24e5faa00c9a89643fdce957c4d0ca83.jpg",
+    "timestamp": "15/10/2025, 06:40:00"
   }
 ]
