@@ -6073,11 +6073,13 @@
     "name": "RIYA",
     "chest": 238,
     "dob": "2012-01-04",
-    "ageCategory": "Under 14",
+    "ageCategory": "Under 17",
     "gender": "Female",
     "events": [
       "400m Race",
-      "4x100m Relay"
+      "800m Race",
+      "4x100m Relay",
+      "4x400m Relay"
     ],
     "photoPath": "/uploads/1f1a8c0247db3a90f83c768538851cfc.png",
     "timestamp": "14/10/2025, 10:32:59"
