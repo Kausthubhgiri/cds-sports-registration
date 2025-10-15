@@ -6879,5 +6879,21 @@
     ],
     "photoPath": "/uploads/0d803b8ba082e6471c1e0c02565b35a9.jpg",
     "timestamp": "15/10/2025, 06:34:31"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "MIDHUN",
+    "chest": 1128,
+    "dob": "2007-12-15",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "400m Race",
+      "Long Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/6872f440942fcd313b7c81331300979f.jpg",
+    "timestamp": "15/10/2025, 06:35:10"
   }
 ]
