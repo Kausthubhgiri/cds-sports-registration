@@ -6934,5 +6934,18 @@
     ],
     "photoPath": "/uploads/c876d47b5ab1958d0fe58dadbbed3923.jpg",
     "timestamp": "15/10/2025, 10:19:34"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ATHIRA BR",
+    "chest": 265,
+    "dob": "2010-11-28",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "800m Race"
+    ],
+    "photoPath": "/uploads/73a7a4ba120eace50abfb29939fc7508.jpg",
+    "timestamp": "15/10/2025, 10:23:31"
   }
 ]
