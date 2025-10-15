@@ -6833,5 +6833,20 @@
     ],
     "photoPath": "/uploads/bf55ede12bf0bb6fb05a077e38eb9af6.jpg",
     "timestamp": "15/10/2025, 06:29:46"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "SREYAS",
+    "chest": 1125,
+    "dob": "2011-11-03",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Long Jump"
+    ],
+    "photoPath": "/uploads/33ed0e0276e700eed80f549d13b00e40.jpg",
+    "timestamp": "15/10/2025, 06:30:46"
   }
 ]
