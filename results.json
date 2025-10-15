@@ -1837,9 +1837,10 @@
     "name": "B Sibi",
     "chest": 526,
     "dob": "2008-06-27",
-    "ageCategory": "Under 17",
+    "ageCategory": "Under 19",
     "gender": "Male",
     "events": [
+      "Shot Put",
       "Discus Throw",
       "Long Jump",
       "4x100m Relay",
