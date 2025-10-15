@@ -6766,5 +6766,18 @@
     ],
     "photoPath": "/uploads/b31620133b1d603b399b5a43bb691ac9.jpg",
     "timestamp": "15/10/2025, 06:26:36"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "ABIN VIJAY",
+    "chest": 1120,
+    "dob": "2012-07-05",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "/uploads/097b2ad8be55a33d0233fd2f031cc046.jpg",
+    "timestamp": "15/10/2025, 06:27:12"
   }
 ]
