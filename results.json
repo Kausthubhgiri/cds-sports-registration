@@ -1653,7 +1653,8 @@
     "ageCategory": "Under 14",
     "gender": "Male",
     "events": [
-      "Long Jump"
+      "Long Jump",
+      "High Jump"
     ],
     "photoPath": "/uploads/4c9d4973dec681c08e6fcd17abc36a14",
     "timestamp": "27/9/2025, 13:30:22"
