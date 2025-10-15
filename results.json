@@ -6464,5 +6464,18 @@
     ],
     "photoPath": "/uploads/e478adfc41b76521be52e8618cfc2b00.jpg",
     "timestamp": "15/10/2025, 04:53:30"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "KARTHIK",
+    "chest": 360,
+    "dob": "2010-09-01",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "/uploads/bd2eafa0785135753e4b46e1fa137b12.jpg",
+    "timestamp": "15/10/2025, 04:59:48"
   }
 ]
