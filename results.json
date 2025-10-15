@@ -6848,5 +6848,20 @@
     ],
     "photoPath": "/uploads/2b2ffecbcbf2285d2ca2b4ed13a15e2d.jpg",
     "timestamp": "15/10/2025, 06:31:00"
+  },
+  {
+    "school": "JAWAHAR PUBLIC SCHOOL",
+    "name": "ARUSH S",
+    "chest": 1126,
+    "dob": "2009-11-25",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "1500m Race"
+    ],
+    "photoPath": "/uploads/1229f94a03174306feada03fb1a1e10d.jpg",
+    "timestamp": "15/10/2025, 06:33:32"
   }
 ]
