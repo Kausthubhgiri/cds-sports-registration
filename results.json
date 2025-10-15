@@ -6404,5 +6404,22 @@
     ],
     "photoPath": "/uploads/7a278b4f6f6477eaafa9f1e83c96e6dc.jpg",
     "timestamp": "15/10/2025, 04:33:32"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "SURAJ KUMAR S.R",
+    "chest": 245,
+    "dob": "2008-05-10",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "800m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "/uploads/6f42020123a5ecb010594e69489241cf.jpg",
+    "timestamp": "15/10/2025, 04:35:56"
   }
 ]
