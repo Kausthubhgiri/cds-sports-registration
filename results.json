@@ -6390,5 +6390,19 @@
     ],
     "photoPath": "/uploads/4edff029347e7a838db22c25546d20e9.jpg",
     "timestamp": "15/10/2025, 04:31:59"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "NITHIN A",
+    "chest": 244,
+    "dob": "2009-07-31",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "/uploads/7a278b4f6f6477eaafa9f1e83c96e6dc.jpg",
+    "timestamp": "15/10/2025, 04:33:32"
   }
 ]
