@@ -372,6 +372,7 @@
     "gender": "Male",
     "events": [
       "200m Race",
+      "400m Race",
       "4x100m Relay"
     ],
     "photoPath": "/uploads/944973f7cb2f1739c8133f683c025c5e",
@@ -543,8 +544,8 @@
     "ageCategory": "Under 17",
     "gender": "Male",
     "events": [
-      "100m Race",
       "200m Race",
+      "400m Race",
       "4x100m Relay"
     ],
     "photoPath": "/uploads/bee600068e90fa60cf4fa47da1c9d525",
