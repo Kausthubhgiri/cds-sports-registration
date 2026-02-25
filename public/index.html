@@ -327,7 +327,6 @@
   <option value="Under 14">Under 14</option>
   <option value="Under 17">Under 17</option>
   <option value="Under 19">Under 19</option>
-  <option value="Overage">Overage</option>
 </select>
 
       
@@ -359,7 +358,7 @@
     
 
   <label for="photo">Upload Photo</label>
-    <input type="file" id="photo" name="photo" accept="image/*"
+    <<input type="file" id="photo" name="photo" accept="image/*">
     <img id="preview" alt="Photo Preview">
 
     <button type="submit">Submit</button>
@@ -388,7 +387,7 @@
     const chestDisplay = document.getElementById('chestDisplay');
     const schoolInput = document.getElementById('school');
 
-function closePopup() {
+function closeMainPopup() {
   document.getElementById('popup').style.display = 'none';
 }
 
@@ -457,7 +456,9 @@ function closePopup() {
         });
 
         const result = await res.json();
-        if (!res.ok) throw new Error(result.error || 'Submission failed');
+        if (!res.ok) {
+  throw new Error(result.error || 'Submission failed');
+}
 
         statusDiv.textContent = `✅ Registration successful! Assigned Chest Number: ${result.chest}`;
         document.getElementById('submittingPopup').classList.add('hidden');
