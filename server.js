@@ -166,7 +166,7 @@ function getAgeCategory(dob) {
   if (age <= 14) return 'Under 14';
   if (age <= 17) return 'Under 17';
   if (age <= 19) return 'Under 19';
-  return 'Overage';
+  
 }
 
 // 📝 Submit route
@@ -284,7 +284,7 @@ app.get('/results', async (req, res) => {
 app.get('/export', async (req, res) => {
   const workbook = new ExcelJS.Workbook();
   const sheet = workbook.addWorksheet('CDS Sports Results');
-  const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
+  const ageOrder = ["Under 11", "Under 14" , "Under 17", "Under 19"];
   const exportData = await getLatestData();
 
   function groupBy(array, key) {
