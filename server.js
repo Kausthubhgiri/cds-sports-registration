@@ -376,10 +376,10 @@ app.get('/export', async (req, res) => {
 
       for (const ageCategory of sortedAgeGroups) {
         sheet.addRow([`Age Category: ${ageCategory}`]);
-        sheet.addRow(['Name', 'Chest', 'DOB', 'Gender', 'Timestamp']);
+        sheet.addRow(['Name', 'Chest', 'DOB', 'Gender', 'Photo URL']);
 
         ageGroups[ageCategory].forEach(p => {
-          sheet.addRow([p.name, p.chest, p.dob, p.gender, p.timestamp]);
+          sheet.addRow([   p.name,   p.chest,   p.dob,   p.gender,   {   text: 'View Photo',   hyperlink: p.photoPath } ]);
         });
 
         sheet.addRow([]);
@@ -415,7 +415,7 @@ app.get('/export-by-event', async (req, res) => {
 
   for (const [sheetName, participants] of Object.entries(eventGenderMap)) {
     const sheet = workbook.addWorksheet(sheetName);
-    sheet.addRow(['Event', 'Age Category', 'Name', 'Chest', 'DOB', 'Gender', 'School']);
+    sheet.addRow(['Event', 'Age Category', 'Name', 'Chest', 'DOB', 'Gender', 'School', 'Photo URL']);
 
     // Group by age category
     const ageGroups = {};
@@ -441,7 +441,8 @@ app.get('/export-by-event', async (req, res) => {
           p.chest,
           p.dob,
           p.gender,
-          p.school // replaces timestamp
+          p.school,
+          {   text: 'View Photo',   hyperlink: p.photoPath }// replaces timestamp
         ]);
       });
 
@@ -574,10 +575,10 @@ app.get('/export-school', async (req, res) => {
 
     for (const ageCategory of sortedAgeGroups) {
       sheet.addRow([`Age Category: ${ageCategory}`]);
-      sheet.addRow(['Name', 'Chest', 'DOB', 'Gender', 'Timestamp']);
+      sheet.addRow(['Name', 'Chest', 'DOB', 'Gender', 'Photo URL']);
 
       ageGroups[ageCategory].forEach(p => {
-        sheet.addRow([p.name, p.chest, p.dob, p.gender, p.timestamp]);
+        sheet.addRow([   p.name,   p.chest,   p.dob,   p.gender,   {   text: 'View Photo',   hyperlink: p.photoPath } ]);
       });
 
       sheet.addRow([]);
