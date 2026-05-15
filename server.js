@@ -32,14 +32,19 @@ const USE_GITHUB = process.env.USE_GITHUB === 'true';
 
 // 📁 Multer config
 const upload = multer({
-  dest: 'uploads/',
+  storage: multer.memoryStorage(),
+  limits: {
+    fileSize: 5 * 1024 * 1024 // 5MB
+  },
   fileFilter: (req, file, cb) => {
-    const allowedTypes = ['image/png', 'image/jpeg'];
-    allowedTypes.includes(file.mimetype) ? cb(null, true) : cb(new Error('Only .png and .jpg files are allowed'));
+    const allowedTypes = ['image/png', 'image/jpeg', 'image/jpg'];
+
+    allowedTypes.includes(file.mimetype)
+      ? cb(null, true)
+      : cb(new Error('Only .png and .jpg files are allowed'));
   }
 });
 
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
@@ -127,6 +132,39 @@ async function pushToGitHub(newData, message = 'Update results.json') {
     console.error("❌ GitHub push failed:", err.response?.data || err.message);
   }
 }
+// 📸 Upload photo to GitHub
+async function uploadPhotoToGitHub(fileBuffer, fileName) {
+  if (!GITHUB_TOKEN) {
+    throw new Error("Missing GitHub token");
+  }
+
+  const headers = {
+    Authorization: `token ${GITHUB_TOKEN}`,
+    Accept: 'application/vnd.github.v3+json',
+  };
+
+  const content = fileBuffer.toString('base64');
+
+  const payload = {
+    message: `Upload photo ${fileName}`,
+    content,
+    branch: BRANCH
+  };
+
+  try {
+    await axios.put(
+      `https://api.github.com/repos/${REPO}/contents/uploads/${fileName}`,
+      payload,
+      { headers }
+    );
+
+return `https://github.com/${REPO}/raw/${BRANCH}/uploads/${fileName}`;
+
+  } catch (err) {
+    console.error("❌ GitHub image upload failed:", err.response?.data || err.message);
+    throw new Error("Image upload failed");
+  }
+}
 
 // 📊 Chest number logic
 async function loadChestRanges() {
@@ -206,12 +244,29 @@ app.post('/submit', upload.single('photo'), async (req, res) => {
     : typeof events === 'string'
       ? [events.trim()]
       : [];
+// 📸 Upload image to GitHub
+const extension =
+  photo.mimetype === 'image/png'
+    ? '.png'
+    : '.jpg';
 
+const safeName = name
+  .trim()
+  .replace(/[^a-zA-Z0-9]/g, '_');
+
+const uniqueFileName =
+  `${Date.now()}-${safeName}${extension}`;
+
+const githubPhotoUrl = await uploadPhotoToGitHub(
+  photo.buffer,
+  uniqueFileName
+);
+  
   if (sanitizedEvents.length === 0) {
     return res.status(400).json({ error: "No events selected." });
   }
 
-  const ext = path.extname(photo.originalname);
+  
 const entry = {
   school: school.trim(),
   name: name.trim(),
@@ -220,7 +275,7 @@ const entry = {
   ageCategory,
   gender,
   events: sanitizedEvents,
-  photoPath: `/uploads/${photo.filename}${ext}`,
+  photoPath: githubPhotoUrl,
   timestamp
 };
   data.push(entry);
@@ -464,8 +519,7 @@ app.post('/remove-candidate', async (req, res) => {
   const removed = data.splice(index, 1)[0];
   chestTracker[school] = Math.max(chestTracker[school] - 1, chestRanges[school].start);
 
-  const photoPath = path.join(__dirname, removed.photoPath);
-  if (fs.existsSync(photoPath)) fs.unlinkSync(photoPath);
+
 
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2)); // ✅ This was missing
   if (USE_GITHUB) await pushToGitHub(data, `Remove candidate ${name} from ${school}`);
