@@ -1,531 +1,906 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CDS Sports Meet Registration</title>
-  <link rel="stylesheet" href="style.css">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5308048673518983"
-     crossorigin="anonymous"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 2rem;
-      background: #1e1e1e;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    label {
-      display: block;
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-    input, select, button {
-      width: 100%;
-      padding: 0.5rem;
-      margin-top: 0.3rem;
-      font-size: 1rem;
-    }
-    fieldset {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-    legend {
-      font-weight: bold;
-    }
-  #event-options {
-  display: block;
-  margin-left: 2rem; /* aligns with form */
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CDS Sports Meet 2026 · Dr.GR Public School</title>
+<link rel="icon" type="image/png" href="drgr_logo_blue_transparent.png">
+<link rel="apple-touch-icon" href="drgr_logo_blue_transparent.png">
+<link rel="stylesheet" href="style.css">
+<style>
+  body{background:#07090f;overflow-x:hidden}
+  #bgVideoDesktop,#bgVideoMobile{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3;opacity:.32;filter:saturate(.75) contrast(1.08)}
+  body:after{content:"";position:fixed;inset:0;background:linear-gradient(135deg,rgba(5,8,15,.88),rgba(5,8,15,.48) 48%,rgba(5,8,15,.88));z-index:-2;pointer-events:none}
+  .hero-kicker{display:inline-flex;gap:8px;align-items:center;padding:7px 11px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:rgba(255,255,255,.05);color:#b9c3ff;font-size:.76rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+  .form-intro{color:#aeb7ca;margin:-12px 0 20px;max-width:620px}
+  .manual-note{font-size:.76rem;color:#8f9bb2;margin-top:6px}
+  .footer-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 
-#event-options label {
-  display: block;
-  position: relative;
-  padding-left: 1.8rem; /* creates space for checkbox */
-  margin: 0.4rem 0;
-  font-size: 1rem;
-  line-height: 1.4;
-}
+  /* Fixed viewport warning: lives directly under <body>, never inside the
+     scrolling/form container. It is therefore anchored to the browser viewport. */
+  #popup.popup {
+    position: fixed !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: max(24px, env(safe-area-inset-bottom)) !important;
+    top: auto !important;
+    width: auto !important;
+    max-width: min(520px, calc(100vw - 48px)) !important;
+    margin: 0 !important;
+    padding: 15px 20px !important;
+    border-radius: 16px !important;
+    border: 1px solid rgba(255,255,255,.11) !important;
+    background: rgba(10,14,24,.96) !important;
+    box-shadow: 0 18px 55px rgba(0,0,0,.45), 0 0 0 1px rgba(113,128,255,.06) !important;
+    color: #eef2ff !important;
+    font-weight: 700 !important;
+    font-size: .94rem !important;
+    line-height: 1.45 !important;
+    text-align: left !important;
+    z-index: 2147483647 !important;
+    pointer-events: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translate3d(-50%,0,0) !important;
+    animation: cdsPopupViewportIn .34s cubic-bezier(.2,.8,.2,1) both !important;
+  }
 
-#event-options input[type="checkbox"] {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  accent-color: #007bff;
-  size: 4rem;
-}
-    button {
-      background-color: #0004ff;
-      color: rgb(230, 230, 230);
-      border: none;
-      border-radius: 23px;
-      margin-top: 1rem;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #2600ff;
-    }
-    #status {
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-    #preview {
-      margin-top: 1rem;
-      max-width: 200px;
-      display: none;
-    }
-    #chestDisplay {
-  background: #007bff;
-  color: #fff;
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
-  display: inline-block;
-  margin-top: 0.5rem;
-}
-    .popup {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #333;
-      color: #fff;
-      padding: 12px 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      z-index: 1000;
-      transition: opacity 0.3s ease;
-    }
-    .popup.hidden {
+  #popup.popup::before {
+    content: "";
+    display: inline-block;
+    width: 38px;
+    height: 3px;
+    margin: 0 11px 3px 0;
+    border-radius: 999px;
+    vertical-align: middle;
+    background: linear-gradient(90deg,#7180ff,#9da9ff);
+    box-shadow: 0 0 16px rgba(113,128,255,.35);
+  }
+
+  #popup.popup.hidden {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    animation: none !important;
+  }
+
+  @keyframes cdsPopupViewportIn {
+    from {
       opacity: 0;
-      pointer-events: none;
+      transform: translate3d(-50%, 20px, 0) scale(.96);
     }
-  /* Shared video styles */
-#bgVideoDesktop,
-#bgVideoMobile {
-  position: fixed;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  z-index: -1;
-  opacity: 0.9;
-  filter: blur(6px);
-}
-
-/* Desktop video fills screen */
-@media (min-width: 768px) {
-  #bgVideoDesktop {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-  }
-  #bgVideoMobile {
-    display: none;
-  }
-}
-
-/* Mobile video locks to 9:16 canvas */
-@media (max-width: 767px) {
-  html, body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    position: relative;
+    to {
+      opacity: 1;
+      transform: translate3d(-50%, 0, 0) scale(1);
+    }
   }
 
-  #bgVideoDesktop {
-    display: none;
+  @media (max-width: 600px) {
+    #popup.popup {
+      left: 50% !important;
+      right: auto !important;
+      bottom: 12px !important;
+      max-width: calc(100vw - 24px) !important;
+      padding: 13px 16px !important;
+      border-radius: 14px !important;
+      font-size: .88rem !important;
+    }
   }
 
-  #bgVideoMobile {
-    display: block;
-    width: 100vw;
-    height: 100vh;
+
+  /* Premium three-image branding: identical visual frames */
+  .brand-banner{
+    position:relative;
+    width:min(1180px,calc(100% - 32px));
+    min-height:280px;
+    margin:28px auto 0;
+    padding:28px 34px 24px;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    align-items:center;
+    gap:28px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:30px;
+    background:
+      radial-gradient(circle at 50% 48%,rgba(113,128,255,.14),transparent 34%),
+      linear-gradient(135deg,rgba(14,19,33,.95),rgba(9,13,23,.84));
+    box-shadow:0 28px 75px rgba(0,0,0,.44),inset 0 1px 0 rgba(255,255,255,.07);
+    backdrop-filter:blur(20px);
+    isolation:isolate;
+    animation:rise .8s ease both;
+  }
+  .brand-banner:before{
+    content:"";position:absolute;inset:1px;border-radius:29px;
+    background:linear-gradient(110deg,rgba(255,255,255,.045),transparent 30%,rgba(113,128,255,.045) 70%,rgba(255,255,255,.025));
+    pointer-events:none;z-index:-1;
+  }
+  .brand-aura{position:absolute;width:260px;height:260px;border-radius:50%;filter:blur(45px);opacity:.16;pointer-events:none;z-index:-1}
+  .brand-aura-left{left:-130px;top:-120px;background:#5b6fff}
+  .brand-aura-right{right:-120px;bottom:-150px;background:#00cfff}
+
+  .brand-card{
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    text-align:center;
+    text-decoration:none;
+    color:inherit;
+    border-radius:22px;
+    padding:10px;
+    transition:transform .3s ease,background .3s ease;
+  }
+  .brand-card:hover{transform:translateY(-5px);background:rgba(255,255,255,.025)}
+  .brand-card:focus-visible{outline:2px solid #9da9ff;outline-offset:4px}
+
+  /* EXACTLY the same dimensions for left, center and right. */
+  .brand-image-frame{
+    width:160px;height:160px;flex:0 0 160px;
+    display:grid;place-items:center;overflow:hidden;
+    border-radius:50%;
+    background:rgba(255,255,255,.055);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 20px 46px rgba(0,0,0,.38),inset 0 1px 0 rgba(255,255,255,.10);
+    transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+  }
+  .brand-card:hover .brand-image-frame{
+    transform:scale(1.035);
+    border-color:rgba(157,169,255,.58);
+    box-shadow:0 27px 58px rgba(0,0,0,.46),0 0 34px rgba(113,128,255,.16);
+  }
+  .brand-image-frame img{width:100%;height:100%;object-fit:contain;display:block}
+  .brand-image-frame img[src="grlogo_portrait.png"]{object-fit:contain}
+  .school-logo-blue{width:132px!important;height:132px!important;object-fit:contain!important;filter:drop-shadow(0 7px 14px rgba(28,72,170,.22))}
+  .brand-caption{display:flex;flex-direction:column;gap:3px;color:#e9edfb}
+  .brand-caption strong{font-size:.72rem;font-weight:900;letter-spacing:.095em;line-height:1.2}
+  .brand-caption span{color:#8994ad;font-size:.59rem;font-weight:800;letter-spacing:.08em}
+
+  @media(max-width:760px){
+    .brand-banner{width:min(100% - 24px,600px);min-height:0;padding:22px 14px 20px;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;border-radius:24px}
+    .brand-image-frame{width:92px;height:92px;flex-basis:92px}
+    .school-logo-blue{width:76px!important;height:76px!important}
+    .brand-card{padding:6px}
+    .brand-caption strong{font-size:.52rem}
+    .brand-caption span{font-size:.44rem}
+  }
+  @media(max-width:480px){
+    .brand-banner{grid-template-columns:1fr;gap:14px}
+    .brand-image-frame{width:118px;height:118px;flex-basis:118px}
+    .school-logo-blue{width:96px!important;height:96px!important}
+    .brand-caption strong{font-size:.62rem}
+    .brand-caption span{font-size:.5rem}
   }
 
-  .form-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    max-width: 400px;
-    background: rgba(0, 0, 0, 0.85);
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    color: #fff;
+  .brand-image-link{
+    display:block;
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    text-decoration:none;
+    color:inherit;
+    outline:none;
   }
-}
+  .brand-image-link:focus-visible{
+    outline:2px solid rgba(130,150,255,.9);
+    outline-offset:5px;
+    border-radius:50%;
+  }
+  .brand-image-link .brand-image-frame{
+    width:160px;
+    height:160px;
+  }
 
-/* 📞 Contact Us Button */
-#contactBtn {
-  background-color: #007bff;
-  color: white;
-  padding: 0.7rem 1.2rem;
-  border: none;
-  border-radius: 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-top: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s ease, transform 0.2s ease;
-}
+</style>
 
-#contactBtn:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
+<style id="premium-school-select-and-branding">
+  /* ===== PREMIUM THREE-IMAGE EVENT BANNER ===== */
+  .brand-banner{
+    position:relative;
+    width:min(1180px,calc(100% - 32px));
+    min-height:292px;
+    margin:28px auto 0;
+    padding:26px 34px 24px;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    align-items:center;
+    gap:30px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:30px;
+    background:
+      radial-gradient(circle at 50% 45%,rgba(109,124,255,.13),transparent 34%),
+      radial-gradient(circle at 100% 100%,rgba(0,203,255,.08),transparent 35%),
+      linear-gradient(135deg,rgba(15,20,35,.97),rgba(8,12,23,.90));
+    box-shadow:
+      0 30px 80px rgba(0,0,0,.42),
+      inset 0 1px 0 rgba(255,255,255,.07);
+    backdrop-filter:blur(22px);
+    isolation:isolate;
+  }
 
-/* 📞 Popup Modal */
-.popup-center {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #222;
-  color: #fff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-  z-index: 1001;
-  text-align: center;
-  width: 300px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
+  .brand-banner:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    border-radius:inherit;
+    background:linear-gradient(
+      110deg,
+      transparent 18%,
+      rgba(255,255,255,.045) 50%,
+      transparent 82%
+    );
+    transform:translateX(-100%);
+    animation:brandSheen 8s ease-in-out infinite;
+  }
 
-.popup-center.hidden {
-  opacity: 0;
-  pointer-events: none;
-  transform: translate(-50%, -60%);
-}
+  @keyframes brandSheen{
+    0%,55%{transform:translateX(-100%)}
+    72%,100%{transform:translateX(100%)}
+  }
 
-/* 🎯 Action Buttons Container */
-.popup-actions {
-  display: flex;
-  justify-content: center;
-  gap: 1rem; /* Adds spacing between buttons */
-  margin-top: 1.2rem;
-  flex-wrap: wrap;
-}
+  .brand-aura{
+    position:absolute;
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    filter:blur(55px);
+    opacity:.13;
+    pointer-events:none;
+    z-index:-1;
+  }
+  .brand-aura-left{
+    left:-150px;
+    top:-150px;
+    background:#596dff;
+  }
+  .brand-aura-right{
+    right:-140px;
+    bottom:-160px;
+    background:#00cfff;
+  }
 
-/* 🎨 Base Button Style */
-.popup-btn {
-  background-color: #007bff;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease, transform 0.2s ease;
-  min-width: 100px;
-  text-align: center;
-}
+  .brand-item{
+    min-width:0;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:13px;
+    position:relative;
+    z-index:2;
+  }
 
-/* ✨ Hover Effect */
-.popup-btn:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-}
+  /* EXACTLY THE SAME FRAME FOR ALL THREE IMAGES */
+  .brand-image-frame{
+    width:160px;
+    height:160px;
+    flex:0 0 160px;
+    display:grid;
+    place-items:center;
+    overflow:hidden;
+    border-radius:50%;
+    background:
+      radial-gradient(circle at 50% 35%,rgba(255,255,255,.075),rgba(255,255,255,.025) 65%,rgba(0,0,0,.12));
+    border:1px solid rgba(255,255,255,.16);
+    box-shadow:
+      0 20px 45px rgba(0,0,0,.38),
+      inset 0 1px 0 rgba(255,255,255,.10);
+    transition:
+      transform .35s cubic-bezier(.2,.8,.2,1),
+      border-color .35s ease,
+      box-shadow .35s ease;
+  }
 
-/* ❌ Close Button */
-.popup-btn.close {
-  background-color: #555;
-}
-.popup-btn.close:hover {
-  background-color: #333;
-}
+  .brand-image-frame img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:contain;
+  }
 
-/* 📞 Call Button */
-.popup-btn.call {
-  background: linear-gradient(135deg, #28a745, #218838);
-  box-shadow: 0 0 10px rgba(40, 167, 69, 0.6);
-}
+  /* Exact supplied CDS image */
+  .brand-item:first-of-type .brand-image-frame img{
+    object-fit:contain;
+  }
 
-/* 💬 WhatsApp Button */
-.popup-btn.whatsapp {
-  background: linear-gradient(135deg, #25D366, #128C7E);
-  box-shadow: 0 0 10px rgba(37, 211, 102, 0.6);
-}
-.form-wrapper {
-  width: 480px;
-  background: rgb(0, 0, 0); /* deep black with slight transparency */
-  padding: 2rem;
-  margin: 60px 0 0 60px; /* left-aligned */
-  border-radius: 12px;
-  box-shadow: 0 0 30px rgb(0, 0, 0);
-  color: #fff;
-  position: relative;
-  z-index: 1;
-}
+  /* Exact supplied blue transparent school logo */
+  .school-logo-blue{
+    width:132px !important;
+    height:132px !important;
+    object-fit:contain !important;
+    filter:drop-shadow(0 8px 18px rgba(38,82,190,.22));
+  }
 
-.form-wrapper h1 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.4;
-}
-   
-  </style>
+  /* Exact supplied portrait — never crop it */
+  .brand-item:last-child .brand-image-frame img{
+    object-fit:contain;
+  }
+
+  .brand-item:hover .brand-image-frame{
+    transform:translateY(-5px) scale(1.025);
+    border-color:rgba(145,160,255,.55);
+    box-shadow:
+      0 27px 55px rgba(0,0,0,.44),
+      0 0 34px rgba(109,124,255,.13),
+      inset 0 1px 0 rgba(255,255,255,.12);
+  }
+
+  /* Only the center logo is actually clickable */
+  .brand-image-link{
+    display:block;
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    text-decoration:none;
+    color:inherit;
+    outline:none;
+  }
+
+  .brand-image-link .brand-image-frame{
+    width:160px;
+    height:160px;
+  }
+
+  .brand-image-link:hover .brand-image-frame{
+    transform:translateY(-6px) scale(1.035);
+    border-color:rgba(135,153,255,.72);
+    box-shadow:
+      0 28px 58px rgba(0,0,0,.46),
+      0 0 42px rgba(91,111,255,.22),
+      inset 0 1px 0 rgba(255,255,255,.13);
+  }
+
+  .brand-image-link:focus-visible{
+    outline:2px solid rgba(135,153,255,.9);
+    outline-offset:6px;
+    border-radius:50%;
+  }
+
+  .brand-label{
+    min-height:43px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    gap:5px;
+    max-width:100%;
+    color:#eef1fb;
+  }
+
+  .brand-label strong{
+    display:block;
+    max-width:100%;
+    font-size:.70rem;
+    line-height:1.28;
+    font-weight:900;
+    letter-spacing:.075em;
+    text-transform:uppercase;
+    text-wrap:balance;
+  }
+
+  .brand-label span{
+    display:block;
+    color:#8994ad;
+    font-size:.57rem;
+    line-height:1.25;
+    font-weight:800;
+    letter-spacing:.095em;
+    text-transform:uppercase;
+  }
+
+  /* Right-side longer title gets controlled wrapping instead of overflowing. */
+  .brand-item:last-child .brand-label{
+    max-width:300px;
+  }
+  .brand-item:last-child .brand-label strong{
+    font-size:.64rem;
+    letter-spacing:.055em;
+  }
+  .brand-item:last-child .brand-label span{
+    font-size:.57rem;
+  }
+
+  @media(max-width:760px){
+    .brand-banner{
+      width:min(100% - 24px,620px);
+      min-height:0;
+      padding:24px 14px 22px;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:10px;
+      border-radius:24px;
+    }
+    .brand-image-frame,
+    .brand-image-link,
+    .brand-image-link .brand-image-frame{
+      width:100px;
+      height:100px;
+      flex-basis:100px;
+    }
+    .school-logo-blue{
+      width:82px !important;
+      height:82px !important;
+    }
+    .brand-label strong{
+      font-size:.50rem;
+      letter-spacing:.045em;
+    }
+    .brand-label span{
+      font-size:.43rem;
+      letter-spacing:.055em;
+    }
+    .brand-item:last-child .brand-label strong{
+      font-size:.47rem;
+    }
+    .premium-select-wrap select#school{
+      min-height:55px;
+      padding:15px 54px 15px 16px;
+      font-size:.94rem;
+    }
+  }
+
+  @media(max-width:480px){
+    .brand-banner{
+      grid-template-columns:1fr;
+      gap:18px;
+    }
+    .brand-image-frame,
+    .brand-image-link,
+    .brand-image-link .brand-image-frame{
+      width:118px;
+      height:118px;
+      flex-basis:118px;
+    }
+    .school-logo-blue{
+      width:96px !important;
+      height:96px !important;
+    }
+    .brand-label strong,
+    .brand-item:last-child .brand-label strong{
+      font-size:.60rem;
+    }
+    .brand-label span{
+      font-size:.48rem;
+    }
+  }
+</style>
+
+<style id="school-dropdown-premium-only">
+.premium-select-wrap{position:relative;width:100%;margin-top:9px;border-radius:20px;z-index:30}
+.premium-select-glow{position:absolute;inset:1px;border-radius:19px;background:radial-gradient(circle at 10% 0%,rgba(130,145,255,.22),transparent 38%),radial-gradient(circle at 95% 100%,rgba(0,216,255,.10),transparent 34%);pointer-events:none;z-index:-1}
+.premium-select-wrap:before{content:"";position:absolute;inset:-1px;border-radius:21px;padding:1px;background:linear-gradient(115deg,rgba(255,255,255,.20),rgba(111,128,255,.72) 42%,rgba(0,216,255,.35) 72%,rgba(255,255,255,.10));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.75;pointer-events:none;transition:opacity .3s ease,filter .3s ease}
+.premium-school-trigger{position:relative;width:100%;min-height:60px;padding:16px 66px 16px 20px;display:flex;align-items:center;border:0;border-radius:19px;background:linear-gradient(120deg,rgba(16,22,38,.97),rgba(10,15,28,.94));color:#f7f8ff;font:inherit;font-size:1rem;font-weight:700;letter-spacing:.012em;text-align:left;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),inset 0 -1px 0 rgba(0,0,0,.25),0 12px 34px rgba(0,0,0,.16);transition:transform .25s ease,background .25s ease,box-shadow .25s ease}
+.premium-school-trigger:hover{background:linear-gradient(120deg,rgba(22,29,49,.99),rgba(12,19,34,.97));transform:translateY(-1px)}
+.premium-school-trigger:focus-visible{outline:2px solid rgba(145,160,255,.85);outline-offset:3px}
+.premium-select-wrap.is-open:before{opacity:1;filter:brightness(1.12)}
+.premium-select-icon{position:absolute;top:50%;right:16px;width:34px;height:34px;display:grid;place-items:center;transform:translateY(-50%);border:1px solid rgba(157,169,255,.20);border-radius:11px;background:linear-gradient(145deg,rgba(113,130,255,.30),rgba(0,216,255,.10));color:#dce1ff;font-size:1.05rem;font-weight:900;line-height:1;pointer-events:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.10),0 5px 15px rgba(0,0,0,.18);transition:transform .32s cubic-bezier(.2,.8,.2,1),background .3s ease}
+.premium-select-wrap.is-open .premium-select-icon{transform:translateY(-50%) rotate(180deg);background:linear-gradient(145deg,rgba(137,151,255,.52),rgba(0,216,255,.20))}
+.premium-school-menu{position:absolute;left:0;right:0;top:calc(100% + 10px);padding:7px;border:1px solid rgba(145,160,255,.20);border-radius:17px;background:linear-gradient(145deg,rgba(13,18,31,.985),rgba(7,11,21,.985));box-shadow:0 24px 65px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.035),inset 0 1px 0 rgba(255,255,255,.07);backdrop-filter:blur(22px);opacity:0;visibility:hidden;transform:translateY(-7px) scale(.985);transform-origin:top center;transition:opacity .18s ease,visibility .18s ease,transform .22s cubic-bezier(.2,.8,.2,1);z-index:1000}
+.premium-select-wrap.is-open .premium-school-menu{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+.premium-school-options{max-height:270px;overflow-y:auto;overflow-x:hidden;scrollbar-width:none;-ms-overflow-style:none;padding:1px}
+.premium-school-options::-webkit-scrollbar{width:0;height:0;display:none}
+.premium-school-option{width:100%;min-height:44px;display:flex;align-items:center;padding:10px 13px;border:0;border-radius:11px;background:transparent;color:#e9edfb;font:inherit;font-size:.92rem;font-weight:650;line-height:1.25;text-align:left;cursor:pointer;transition:background .16s ease,color .16s ease,transform .16s ease}
+.premium-school-option:hover,.premium-school-option:focus-visible{background:linear-gradient(90deg,rgba(111,128,255,.18),rgba(0,216,255,.07));color:#fff;outline:none}
+.premium-school-option[aria-selected="true"]{background:linear-gradient(90deg,rgba(92,108,238,.34),rgba(0,190,255,.10));color:#fff;box-shadow:inset 2px 0 0 #7180ff}
+.premium-school-option.placeholder{color:#aeb7ca}
+.premium-school-menu:after{content:"";position:absolute;top:-5px;left:50%;width:9px;height:9px;transform:translateX(-50%) rotate(45deg);background:#101725;border-left:1px solid rgba(145,160,255,.20);border-top:1px solid rgba(145,160,255,.20)}
+.premium-select-native-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media(max-width:760px){.premium-school-trigger{min-height:57px;padding:15px 61px 15px 17px;font-size:.95rem}.premium-school-options{max-height:245px}}
+</style>
 </head>
 <body>
+<video autoplay muted loop playsinline id="bgVideoDesktop"><source src="desktop-bg.mp4" type="video/mp4"></video>
+<video autoplay muted loop playsinline id="bgVideoMobile"><source src="mobile-bg.mp4" type="video/mp4"></video>
+<div class="brand-banner" aria-label="CDS Sports Meet 2026 official branding">
+  <div class="brand-aura brand-aura-left"></div>
+  <div class="brand-aura brand-aura-right"></div>
 
-  <!-- Desktop Background Video -->
-<video autoplay muted loop id="bgVideoDesktop">
-  <source src="desktop-bg.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-<!-- Mobile Background Video -->
-<video autoplay muted loop id="bgVideoMobile">
-  <source src="mobile-bg.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-  <div class="banner">
-    <img src="banner.png" alt="CDS Sports Meet Banner">
-  </div>
-  <div class="form-wrapper">
-  <h1>🏆 CDS Sports Meet 2025
-    Hosted by Dr.GR Public School – Registration</h1>
-
-  <form id="regForm" enctype="multipart/form-data">
-    <label for="school">School Name</label>
-    <select id="school" name="school" required>
-      <option value="" disabled selected>Select School Name</option>
-      <option>SARASWATHI VIDYALAYA</option>
-      <option>Dr GR PUBLIC SCHOOL</option>
-      <option>VISHWABHARATHY PUBLIC SCHOOL</option>
-      <option>N.S.S PUBLIC SCHOOL PERUNTHANNI</option>
-      <option>A.R.R PUBLIC SCHOOL</option>
-      <option>HOLY TRINITY PUBLIC SCHOOL</option>
-      <option>SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL</option>
-      <option>RAJA RAVI VARMA CENTRAL SCHOOL</option>
-      <option>SREE GOKULAM PUBLIC SCHOOL</option>
-      <option>CHINTHALAYA VIDYALAYA</option>
-      <option>JAWAHAR PUBLIC SCHOOL</option>
-      <option>VISWADARSHINI PUBLIC SCHOOL</option>
-      <option>SREE SARASWATHY VIDYALAYAM</option>
-      <option>THUNCHAN SMARAKA PUBLIC SCHOOL</option>
-     </select>
-
-    <label for="name">Participant Name</label>
-    <input type="text" id="name" name="name" placeholder="Participant Name" required>
-
-    <label>Assigned Chest Number</label>
-    <div id="chestDisplay">Please select a school</div>
-
-    <label for="dob">Date of Birth</label>
-    <input type="date" id="dob" name="dob" title="Date of Birth" required>
-
-   <label for="ageCategory">Age Category:</label>
-<label for="ageCategory">Age Category</label>
-<select id="ageCategory" name="ageCategory" required>
-  <option value="" disabled selected>Select Age Category</option>
-  <option value="Under 11">Under 11</option>
-  <option value="Under 14">Under 14</option>
-  <option value="Under 17">Under 17</option>
-  <option value="Under 19">Under 19</option>
-</select>
-
-      
-    <label for="gender">Gender</label>
-    <select id="gender" name="gender" required>
-      <option value="" disabled selected>Select Gender</option>
-      <option>Male</option>
-      <option>Female</option>
-      <option>Other</option>
-    </select>
-
-    <fieldset>
-      <legend>Choose Events (Max 3 non-relays & 2 relays)</legend>
-      <div id="event-options">
-        <label><input type="checkbox" name="events" value="50m Race"> 50m Race</label>
-        <label><input type="checkbox" name="events" value="100m Race"> 100m Race</label>
-        <label><input type="checkbox" name="events" value="200m Race"> 200m Race</label>
-        <label><input type="checkbox" name="events" value="400m Race"> 400m Race</label>
-        <label><input type="checkbox" name="events" value="800m Race"> 800m Race</label>
-        <label><input type="checkbox" name="events" value="1500m Race"> 1500m Race</label>
-        <label><input type="checkbox" name="events" value="Shot Put"> Shot Put</label>
-        <label><input type="checkbox" name="events" value="Discus Throw"> Discus Throw</label>
-        <label><input type="checkbox" name="events" value="Long Jump"> Long Jump</label>
-        <label><input type="checkbox" name="events" value="High Jump"> High Jump</label>
-        <label><input type="checkbox" name="events" value="4x100m Relay" class="relay"> 4x100m Relay</label>
-        <label><input type="checkbox" name="events" value="4x400m Relay" class="relay"> 4x400m Relay</label>
-      </div>
-    </fieldset>
-    
-
-  <label for="photo">Upload Photo</label>
-<input type="file" id="photo" name="photo" accept="image/*">
-<img id="preview" alt="Photo Preview">
-
-<button type="submit">Submit</button>
-</form>
-
-<div id="submittingPopup" class="popup hidden">Submitting your registration...</div>
-<div id="status" role="status" aria-live="polite"></div>
-<div id="popup" class="popup hidden"><span id="popupMessage"></span></div>
-
-
-
-  
-  <!-- ✅ Popup container -->
-  <div id="popup" class="popup hidden">
-    <span id="popupMessage"></span>
-  </div>
-
-  <script>
-    
-
-
-    const form = document.getElementById('regForm');
-    const statusDiv = document.getElementById('status');
-    const photoInput = document.getElementById('photo');
-    const preview = document.getElementById('preview');
-    const eventCheckboxes = document.querySelectorAll('input[name="events"]');
-    const chestDisplay = document.getElementById('chestDisplay');
-    const schoolInput = document.getElementById('school');
-
-function closeMainPopup() {
-  document.getElementById('popup').style.display = 'none';
-}
-
-
-    eventCheckboxes.forEach(checkbox => {
-      checkbox.addEventListener('change', () => {
-        const selected = Array.from(eventCheckboxes).filter(cb => cb.checked);
-        const nonRelaySelected = selected.filter(cb => !cb.classList.contains('relay'));
-        const relaySelected = selected.filter(cb => cb.classList.contains('relay'));
-
-        if (!checkbox.checked) return;
-
-        if (!checkbox.classList.contains('relay') && nonRelaySelected.length > 3) {
-          checkbox.checked = false;
-         showPopup("⚠️ You can select up to 3 non-relay events only.");
-        }
-
-        if (checkbox.classList.contains('relay') && relaySelected.length > 2) {
-          checkbox.checked = false;
-         showPopup("⚠️ You can select up to 2 relay events only.");
-        }
-      });
-    });
-
-    schoolInput.addEventListener('change', async function () {
-      const school = this.value;
-      try {
-        const res = await fetch(`/next-chest?school=${encodeURIComponent(school)}`);
-        const data = await res.json();
-                chestDisplay.textContent = data.chest ? `Chest Number: ${data.chest}` : 'Unavailable';
-      } catch (err) {
-        chestDisplay.textContent = 'Error fetching chest number';
-      }
-    });
-
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-        document.getElementById('submittingPopup').classList.remove('hidden');
-
-      const eventsChecked = document.querySelectorAll('input[name="events"]:checked');
-      const nonRelayChecked = Array.from(eventsChecked).filter(cb => !cb.classList.contains('relay'));
-      const relayChecked = Array.from(eventsChecked).filter(cb => cb.classList.contains('relay'));
-
-      if (nonRelayChecked.length > 3 || relayChecked.length > 2) {
-        statusDiv.textContent = "❌ Please follow the event selection limits: max 3 non-relays and 2 relays.";
-        showPopup("❌ Invalid event selection.");
-        return;
-      }
-
-      const formData = new FormData();
-      formData.append('school', form.school.value);
-      formData.append('name', form.name.value);
-      formData.append('dob', form.dob.value);
-      formData.append('ageCategory', form.ageCategory.value);
-      formData.append('gender', form.gender.value);
-      formData.append('photo', photoInput.files[0]);
-
-      eventsChecked.forEach(event => {
-        formData.append('events', event.value);
-      });
-
-      try {
-        const res = await fetch('/submit', {
-          method: 'POST',
-          body: formData
-        });
-
-        const result = await res.json();
-        if (!res.ok) {
-  throw new Error(result.error || 'Submission failed');
-}
-
-        statusDiv.textContent = `✅ Registration successful! Assigned Chest Number: ${result.chest}`;
-        document.getElementById('submittingPopup').classList.add('hidden');
-        showPopup(`✅ Registration successful!\nChest Number: ${result.chest}`);
-        form.reset();
-        preview.style.display = 'none';
-        chestDisplay.textContent = 'Please select a school';
-      } catch (err) {
-        console.error("❌ Submission error:", err);
-        statusDiv.textContent = `❌ ${err.message}`;
-        document.getElementById('submittingPopup').classList.add('hidden');
-        showPopup(`❌ ${err.message}`);
-      }
-    });
-
-    function showPopup(message) {
-      const popup = document.getElementById('popup');
-      const popupMessage = document.getElementById('popupMessage');
-      popupMessage.textContent = message;
-      popup.classList.remove('hidden');
-
-      setTimeout(() => {
-        popup.classList.add('hidden');
-      }, 3000);
-    }
-
- 
- 
-  </script>
- <!-- 📞 Contact Us Button -->
-  <button id="contactBtn">📞 Contact Us</button>
-
-  <!-- 📞 Contact Popup Modal -->
-  <div id="contactPopup" class="popup-center hidden">
-    <h3>Need Help?</h3>
-    <p>Reach out to Reji: <strong>+91 8086326780</strong></p>
-    <div class="popup-actions">
-      <a href="tel:+918086326780" class="popup-btn">📞 Call</a>
-      <a href="https://wa.me/918086326780" target="_blank" class="popup-btn">💬 WhatsApp</a>
-      <button id="closePopup" class="popup-btn close">❌ Close</button>
+  <div class="brand-item">
+    <div class="brand-image-frame">
+      <img src="banner.png" alt="Capital District Sahodaya Thiruvananthapuram">
+    </div>
+    <div class="brand-label">
+      <strong>CAPITAL DISTRICT SAHODAYA</strong>
+      <span>THIRUVANANTHAPURAM</span>
     </div>
   </div>
 
-  <script>
-    const contactBtn = document.getElementById('contactBtn');
-    const contactPopup = document.getElementById('contactPopup');
-    const closePopup = document.getElementById('closePopup');
+  <div class="brand-item">
+    <a class="brand-image-link"
+       href="https://drgrpublicschool.edu.in/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Visit Dr.GR Public School website">
+      <div class="brand-image-frame">
+        <img src="drgr_logo_blue_transparent.png"
+             alt="Dr.GR Public School"
+             class="school-logo-blue">
+      </div>
+    </a>
+    <div class="brand-label">
+      <strong>DR.GR PUBLIC SCHOOL</strong>
+      <span>OFFICIAL WEBSITE</span>
+    </div>
+  </div>
 
-    contactBtn.addEventListener('click', () => {
-      contactPopup.classList.remove('hidden');
-    });
-
-    closePopup.addEventListener('click', () => {
-      contactPopup.classList.add('hidden');
-    });
-  </script>
-    <button id="editBtn">✏️ Edit Entries</button>
-    <script>
-  document.getElementById('editBtn').addEventListener('click', () => {
-    window.location.href = '/edit-login';
-  });
-</script>
-
+  <div class="brand-item">
+    <div class="brand-image-frame">
+      <img src="grlogo_portrait.png"
+           alt="G.R Ramachandran and Sister Mythili">
+    </div>
+    <div class="brand-label">
+      <strong>G.R RAMACHANDRAN AND SISTER MYTHILI</strong>
+      <span>FOUNDATION</span>
+    </div>
+  </div>
 </div>
-</form>
-</body>
-</html>
+
+<div class="form-wrapper">
+  <div class="hero-kicker">● Athletics Registration Portal</div>
+  <h1>🏆 CDS Sports Meet 2026<br><span style="color:#9da9ff">Dr.GR Public School</span></h1>
+  <p class="form-intro">Register your participant with precision. Choose the competition category and events manually, then review the assigned chest number before submitting.</p>
+  <form id="regForm" enctype="multipart/form-data">
+    <label for="school">School Name</label>
+    <div class="premium-select-wrap" id="schoolDropdown">
+      <div class="premium-select-glow"></div>
+      <button type="button" class="premium-school-trigger" id="schoolTrigger" aria-haspopup="listbox" aria-expanded="false">
+        <span id="schoolTriggerText">Select School Name</span>
+        <span class="premium-select-icon" aria-hidden="true">⌄</span>
+      </button>
+      <div class="premium-school-menu" id="schoolMenu">
+        <div class="premium-school-options" id="schoolOptions" role="listbox" aria-label="School Name">
+          <button type="button" class="premium-school-option placeholder" data-value="" role="option" aria-selected="true">Select School Name</button>
+          <button type="button" class="premium-school-option" data-value="SARASWATHI VIDYALAYA" role="option">SARASWATHI VIDYALAYA</button>
+          <button type="button" class="premium-school-option" data-value="Dr GR PUBLIC SCHOOL" role="option">Dr GR PUBLIC SCHOOL</button>
+          <button type="button" class="premium-school-option" data-value="VISHWABHARATHY PUBLIC SCHOOL" role="option">VISHWABHARATHY PUBLIC SCHOOL</button>
+          <button type="button" class="premium-school-option" data-value="N.S.S PUBLIC SCHOOL PERUNTHANNI" role="option">N.S.S PUBLIC SCHOOL PERUNTHANNI</button>
+          <button type="button" class="premium-school-option" data-value="A.R.R PUBLIC SCHOOL" role="option">A.R.R PUBLIC SCHOOL</button>
+          <button type="button" class="premium-school-option" data-value="HOLY TRINITY PUBLIC SCHOOL" role="option">HOLY TRINITY PUBLIC SCHOOL</button>
+          <button type="button" class="premium-school-option" data-value="SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL" role="option">SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL</button>
+          <button type="button" class="premium-school-option" data-value="RAJA RAVI VARMA CENTRAL SCHOOL" role="option">RAJA RAVI VARMA CENTRAL SCHOOL</button>
+          <button type="button" class="premium-school-option" data-value="SREE GOKULAM PUBLIC SCHOOL" role="option">SREE GOKULAM PUBLIC SCHOOL</button>
+          <button type="button" class="premium-school-option" data-value="CHINTHALAYA VIDYALAYA" role="option">CHINTHALAYA VIDYALAYA</button>
+          <button type="button" class="premium-school-option" data-value="JAWAHAR PUBLIC SCHOOL" role="option">JAWAHAR PUBLIC SCHOOL</button>
+          <button type="button" class="premium-school-option" data-value="VISWADARSHINI PUBLIC SCHOOL" role="option">VISWADARSHINI PUBLIC SCHOOL</button>
+          <button type="button" class="premium-school-option" data-value="SREE SARASWATHY VIDYALAYAM" role="option">SREE SARASWATHY VIDYALAYAM</button>
+          <button type="button" class="premium-school-option" data-value="THUNCHAN SMARAKA PUBLIC SCHOOL" role="option">THUNCHAN SMARAKA PUBLIC SCHOOL</button>
+        </div>
+      </div>
+      <select id="school" name="school" required class="premium-select-native-hidden" tabindex="-1" aria-hidden="true">
+        <option value="" disabled selected>Select School Name</option>
+        <option>SARASWATHI VIDYALAYA</option><option>Dr GR PUBLIC SCHOOL</option><option>VISHWABHARATHY PUBLIC SCHOOL</option><option>N.S.S PUBLIC SCHOOL PERUNTHANNI</option><option>A.R.R PUBLIC SCHOOL</option><option>HOLY TRINITY PUBLIC SCHOOL</option><option>SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL</option><option>RAJA RAVI VARMA CENTRAL SCHOOL</option><option>SREE GOKULAM PUBLIC SCHOOL</option><option>CHINTHALAYA VIDYALAYA</option><option>JAWAHAR PUBLIC SCHOOL</option><option>VISWADARSHINI PUBLIC SCHOOL</option><option>SREE SARASWATHY VIDYALAYAM</option><option>THUNCHAN SMARAKA PUBLIC SCHOOL</option>
+      </select>
+    </div>
+    <label>Assigned Chest Number</label><div id="chestDisplay">Please select a school</div>
+    <label for="name">Participant Name</label><input type="text" id="name" name="name" placeholder="Full participant name" required>
+    <label for="dob">Date of Birth</label><input type="date" id="dob" name="dob" required>
+    <label for="ageCategory">Age Category</label>
+    <select id="ageCategory" name="ageCategory" required>
+      <option value="" disabled selected>Select Age Category</option>
+      <option value="Under 11">Under 11</option><option value="Under 14">Under 14</option><option value="Under 17">Under 17</option><option value="Under 19">Under 19</option>
+    </select>
+    <div class="manual-note">Age category is selected manually and is never calculated from the date of birth.</div>
+    <label for="gender">Gender</label><select id="gender" name="gender" required><option value="" disabled selected>Select Gender</option><option>Male</option><option>Female</option><option>Other</option></select>
+    <fieldset><legend>Choose Events <span style="color:#8f9bb2">· max 3 non-relays + 2 relays</span></legend>
+      <div id="event-options">
+        <label><input type="checkbox" name="events" value="50m Race">50m Race</label><label><input type="checkbox" name="events" value="100m Race">100m Race</label><label><input type="checkbox" name="events" value="200m Race">200m Race</label><label><input type="checkbox" name="events" value="400m Race">400m Race</label><label><input type="checkbox" name="events" value="800m Race">800m Race</label><label><input type="checkbox" name="events" value="1500m Race">1500m Race</label><label><input type="checkbox" name="events" value="Shot Put">Shot Put</label><label><input type="checkbox" name="events" value="Discus Throw">Discus Throw</label><label><input type="checkbox" name="events" value="Long Jump">Long Jump</label><label><input type="checkbox" name="events" value="High Jump">High Jump</label><label><input type="checkbox" name="events" value="4x100m Relay" class="relay">4x100m Relay</label><label><input type="checkbox" name="events" value="4x400m Relay" class="relay">4x400m Relay</label>
+      </div>
+    </fieldset>
+    <label for="photo">Participant Photo</label><input type="file" id="photo" name="photo" accept="image/png,image/jpeg,image/jpg"><img id="preview" alt="Photo Preview">
+    <button type="submit">Submit Registration →</button>
+  </form>
+  <div id="submittingPopup" class="popup hidden">Submitting your registration…</div>
+  <div id="status" role="status" aria-live="polite"></div>
+  <div class="footer-actions"><button id="contactBtn" type="button">Need Help</button><button id="editBtn" type="button">Edit Entries</button></div>
+</div>
+<div id="popup" class="popup hidden" role="alertdialog" aria-live="assertive" aria-atomic="true"><span id="popupMessage"></span></div>
+<div id="contactPopup" class="popup-center hidden"><h3>Need Help?</h3><p style="color:#aeb7ca">Reach out to Reji</p><p><strong>+91 8086326780</strong></p><div class="popup-actions"><a href="tel:+918086326780" class="popup-btn">📞 Call</a><a href="https://wa.me/918086326780" target="_blank" class="popup-btn">💬 WhatsApp</a><button id="closePopup" class="popup-btn" type="button">Close</button></div></div>
+<script>
+(() => {
+  const wrap = document.getElementById('schoolDropdown');
+  const trigger = document.getElementById('schoolTrigger');
+  const triggerText = document.getElementById('schoolTriggerText');
+  const menu = document.getElementById('schoolMenu');
+  const options = [...document.querySelectorAll('.premium-school-option')];
+  const nativeSelect = document.getElementById('school');
+  if (!wrap || !trigger || !triggerText || !menu || !nativeSelect) return;
+
+  const close = () => {
+    wrap.classList.remove('is-open');
+    trigger.setAttribute('aria-expanded', 'false');
+  };
+  const open = () => {
+    wrap.classList.add('is-open');
+    trigger.setAttribute('aria-expanded', 'true');
+  };
+  const sync = value => {
+    const selected = options.find(o => o.dataset.value === value);
+    triggerText.textContent = selected ? selected.textContent.trim() : 'Select School Name';
+    options.forEach(o => o.setAttribute('aria-selected', o.dataset.value === value ? 'true' : 'false'));
+  };
+
+  trigger.addEventListener('click', () => wrap.classList.contains('is-open') ? close() : open());
+  options.forEach(option => option.addEventListener('click', () => {
+    if (!option.dataset.value) return;
+    nativeSelect.value = option.dataset.value;
+    sync(nativeSelect.value);
+    nativeSelect.dispatchEvent(new Event('change', {bubbles:true}));
+    close();
+  }));
+  document.addEventListener('click', e => { if (!wrap.contains(e.target)) close(); });
+  trigger.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault(); open(); options[1]?.focus();
+    } else if (e.key === 'Escape') { close(); }
+  });
+  menu.addEventListener('keydown', e => {
+    const i = options.indexOf(document.activeElement);
+    if (e.key === 'Escape') { e.preventDefault(); close(); trigger.focus(); }
+    else if (e.key === 'ArrowDown' && i >= 0) { e.preventDefault(); options[Math.min(i+1, options.length-1)].focus(); }
+    else if (e.key === 'ArrowUp' && i >= 0) { e.preventDefault(); options[Math.max(i-1, 0)].focus(); }
+  });
+  nativeSelect.addEventListener('change', () => sync(nativeSelect.value));
+  sync(nativeSelect.value);
+})();
+const form = document.getElementById('regForm');
+
+    const statusDiv = document.getElementById('status');
+
+    const photoInput = document.getElementById('photo');
+
+    const preview = document.getElementById('preview');
+
+    const eventCheckboxes = document.querySelectorAll('input[name="events"]');
+
+    const chestDisplay = document.getElementById('chestDisplay');
+
+    const schoolInput = document.getElementById('school');
+
+
+
+let popupTimer = null;
+
+function closeMainPopup() {
+  const popup = document.getElementById('popup');
+  if (popupTimer) {
+    clearTimeout(popupTimer);
+    popupTimer = null;
+  }
+  popup.classList.add('hidden');
+}
+
+
+
+
+
+    eventCheckboxes.forEach(checkbox => {
+
+      checkbox.addEventListener('change', () => {
+
+        const selected = Array.from(eventCheckboxes).filter(cb => cb.checked);
+
+        const nonRelaySelected = selected.filter(cb => !cb.classList.contains('relay'));
+
+        const relaySelected = selected.filter(cb => cb.classList.contains('relay'));
+
+
+
+        if (!checkbox.checked) return;
+
+
+
+        if (!checkbox.classList.contains('relay') && nonRelaySelected.length > 3) {
+
+          checkbox.checked = false;
+
+         showPopup("⚠️ You can select up to 3 non-relay events only.");
+
+        }
+
+
+
+        if (checkbox.classList.contains('relay') && relaySelected.length > 2) {
+
+          checkbox.checked = false;
+
+         showPopup("⚠️ You can select up to 2 relay events only.");
+
+        }
+
+      });
+
+    });
+
+
+
+    schoolInput.addEventListener('change', async function () {
+
+      const school = this.value;
+
+      try {
+
+        const res = await fetch(`/next-chest?school=${encodeURIComponent(school)}`);
+
+        const data = await res.json();
+
+                chestDisplay.textContent = data.chest ? `Chest Number: ${data.chest}` : 'Unavailable';
+
+      } catch (err) {
+
+        chestDisplay.textContent = 'Error fetching chest number';
+
+      }
+
+    });
+
+
+
+    form.addEventListener('submit', async function (e) {
+
+      e.preventDefault();
+
+        document.getElementById('submittingPopup').classList.remove('hidden');
+
+
+
+      const eventsChecked = document.querySelectorAll('input[name="events"]:checked');
+
+      const nonRelayChecked = Array.from(eventsChecked).filter(cb => !cb.classList.contains('relay'));
+
+      const relayChecked = Array.from(eventsChecked).filter(cb => cb.classList.contains('relay'));
+
+
+
+      if (nonRelayChecked.length > 3 || relayChecked.length > 2) {
+
+        statusDiv.textContent = "❌ Please follow the event selection limits: max 3 non-relays and 2 relays.";
+
+        showPopup("❌ Invalid event selection.");
+
+        return;
+
+      }
+
+
+
+      const formData = new FormData();
+
+      formData.append('school', form.school.value);
+
+      formData.append('name', form.name.value);
+
+      formData.append('dob', form.dob.value);
+
+      formData.append('ageCategory', form.ageCategory.value);
+
+      formData.append('gender', form.gender.value);
+
+      formData.append('photo', photoInput.files[0]);
+
+
+
+      eventsChecked.forEach(event => {
+
+        formData.append('events', event.value);
+
+      });
+
+
+
+      try {
+
+        const res = await fetch('/submit', {
+
+          method: 'POST',
+
+          body: formData
+
+        });
+
+
+
+        const result = await res.json();
+
+        if (!res.ok) {
+
+  throw new Error(result.error || 'Submission failed');
+
+}
+
+
+
+        statusDiv.textContent = `✅ Registration successful! Assigned Chest Number: ${result.chest}`;
+
+        document.getElementById('submittingPopup').classList.add('hidden');
+
+        showPopup(`✅ Registration successful!\nChest Number: ${result.chest}`);
+
+        form.reset();
+
+        preview.style.display = 'none';
+
+        chestDisplay.textContent = 'Please select a school';
+
+      } catch (err) {
+
+        console.error("❌ Submission error:", err);
+
+        statusDiv.textContent = `❌ ${err.message}`;
+
+        document.getElementById('submittingPopup').classList.add('hidden');
+
+        showPopup(`❌ ${err.message}`);
+
+      }
+
+    });
+    function showPopup(message) {
+      const popup = document.getElementById('popup');
+      const popupMessage = document.getElementById('popupMessage');
+
+      if (popupTimer) clearTimeout(popupTimer);
+
+      popupMessage.textContent = message;
+      popup.classList.remove('hidden');
+
+      popupTimer = setTimeout(() => {
+        popup.classList.add('hidden');
+        popupTimer = null;
+      }, 3000);
+    }
+
+
+photoInput.addEventListener('change', () => {
+  const file = photoInput.files && photoInput.files[0];
+  if (!file) { preview.style.display = 'none'; return; }
+  const reader = new FileReader();
+  reader.onload = e => { preview.src = e.target.result; preview.style.display = 'block'; };
+  reader.readAsDataURL(file);
+});
+
+</script>
+<script>
+
+
+    const contactBtn = document.getElementById('contactBtn');
+
+    const contactPopup = document.getElementById('contactPopup');
+
+    const closePopup = document.getElementById('closePopup');
+
+
+
+    contactBtn.addEventListener('click', () => {
+
+      contactPopup.classList.remove('hidden');
+
+    });
+
+
+
+    closePopup.addEventListener('click', () => {
+
+      contactPopup.classList.add('hidden');
+
+    });
+
+  
+</script>
+<script>
+
+
+  document.getElementById('editBtn').addEventListener('click', () => {
+
+    window.location.href = '/edit-login';
+
+  });
+
+
+</script>
+</body></html>
