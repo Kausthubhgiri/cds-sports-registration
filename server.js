@@ -7,6 +7,9 @@ const axios = require('axios');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+// Prefer setting EDIT_BYPASS_KEY in the deployment environment.
+// The fallback preserves the requested key for the current installation.
+const EDIT_BYPASS_KEY = process.env.EDIT_BYPASS_KEY || 'GRPS@ADMIN';
 const loginCredentials = [
   { username: "drgrps", password: "grps823", school: "Dr GR PUBLIC SCHOOL" },
   { username: "arrps", password: "arrps@276", school: "A.R.R PUBLIC SCHOOL" },
@@ -306,17 +309,21 @@ app.get('/edit-login', (req, res) => {
 // Verify login credentials
 app.post('/verify-login', express.urlencoded({ extended: true }), (req, res) => {
   const { username, password } = req.body;
+  const submittedUsername = String(username || '').trim().toLowerCase();
+  const submittedPassword = String(password || '').trim();
 
-  // 🔍 Debug logs
-  console.log("Submitted username:", username);
-  console.log("Submitted password:", password);
-  console.log("Available credentials:", loginCredentials);
-
-  const match = loginCredentials.find(
+  const credentialMatch = loginCredentials.find(
     cred =>
-      cred.username.trim().toLowerCase() === username.trim().toLowerCase() &&
-      cred.password.trim() === password.trim()
+      cred.username.trim().toLowerCase() === submittedUsername &&
+      cred.password.trim() === submittedPassword
   );
+  // Bypass: exact school name in the username field plus the administrator key.
+  // Only schools already configured in loginCredentials can use this route.
+  const schoolMatch = loginCredentials.find(
+    cred => cred.school.trim().toLowerCase() === submittedUsername
+  );
+  const match = credentialMatch ||
+    (schoolMatch && submittedPassword === EDIT_BYPASS_KEY ? schoolMatch : null);
 
   if (match) {
     res.redirect(`/admin-edit?school=${encodeURIComponent(match.school)}`);
