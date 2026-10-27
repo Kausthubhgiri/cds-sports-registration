@@ -23,3 +23,65 @@ body>h1{max-width:1280px;margin:36px auto 10px;padding:0 22px;font-size:clamp(1.
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 @media (max-width:640px){.popup{top:14px;right:14px;width:calc(100% - 28px);padding:17px 18px;border-radius:16px}}
+
+
+/* ===== CENTER SCHOOL LOGO: MATCH THE OTHER CIRCULAR FRAMES ===== */
+/* Override the previous enlarged-square rules. Keep the same circle
+   size as the other two logos and let the crest fill the circle. */
+.brand-banner .brand-item:has(img.school-logo-blue) .brand-image-link,
+.brand-banner .brand-item:has(img.school-logo-blue) .brand-image-link .brand-image-frame {
+  width: 160px !important;
+  height: 160px !important;
+  flex: 0 0 160px !important;
+  border-radius: 50% !important;
+}
+
+.brand-banner .brand-item:has(img.school-logo-blue) .brand-image-link .brand-image-frame {
+  padding: 0 !important;
+  overflow: hidden !important;
+  display: grid !important;
+  place-items: center !important;
+  background: #fff !important;
+  border: 1px solid rgba(255,255,255,.18) !important;
+  box-shadow: 0 20px 45px rgba(0,0,0,.38), inset 0 1px 0 rgba(255,255,255,.10) !important;
+}
+
+.brand-banner .brand-item:has(img.school-logo-blue) img.school-logo-blue {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  filter: none !important;
+}
+
+/* Restore the same banner height as the other-logo layout */
+.brand-banner:has(img.school-logo-blue) {
+  min-height: 292px !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 760px) {
+  .brand-banner .brand-item:has(img.school-logo-blue) .brand-image-link,
+  .brand-banner .brand-item:has(img.school-logo-blue) .brand-image-link .brand-image-frame {
+    width: 100px !important;
+    height: 100px !important;
+    flex-basis: 100px !important;
+  }
+  .brand-banner:has(img.school-logo-blue) {
+    min-height: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-banner .brand-item:has(img.school-logo-blue) .brand-image-link,
+  .brand-banner .brand-item:has(img.school-logo-blue) .brand-image-link .brand-image-frame {
+    width: 118px !important;
+    height: 118px !important;
+    flex-basis: 118px !important;
+  }
+}

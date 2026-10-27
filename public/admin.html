@@ -1,229 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CDS Sports Results Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0a4b78">
+  <title>CDS Sports Meet | Admin Dashboard</title>
+  <!-- PDF libraries are loaded from CDN. Keep these two lines when deploying this file. -->
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.3/dist/jspdf.plugin.autotable.min.js"></script>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 2rem;
-      background: #f2f2f2;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    #count {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-    }
-    button {
-      margin-right: 10px;
-      margin-bottom: 1rem;
-      padding: 0.6rem 1rem;
-      font-size: 1rem;
-      cursor: pointer;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 4px;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-    .card {
-      background: white;
-      padding: 1rem;
-      margin: 0.5rem 0;
-      border-left: 6px solid #007bff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .info {
-      margin-bottom: 0.3rem;
-    }
-    .timestamp {
-      font-size: 0.9rem;
-      color: #555;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 0.5rem;
-    }
-    th, td {
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      text-align: left;
-    }
-    summary {
-      cursor: pointer;
-      font-weight: bold;
-      margin-top: 0.5rem;
-    }
-    details {
-      margin-bottom: 1rem;
-    }
+    :root{--ink:#102a43;--muted:#627d98;--line:#d9e2ec;--navy:#0a4b78;--blue:#087eae;--mint:#20b486;--orange:#f59e0b;--red:#e53e3e;--surface:#fff;--canvas:#f3f7fb;--shadow:0 14px 38px rgba(20,53,83,.11)}
+    *{box-sizing:border-box} body{margin:0;font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--canvas)}
+    button,select{font:inherit} button{border:0;cursor:pointer;transition:transform .18s,box-shadow .18s,background .18s} button:hover{transform:translateY(-1px)} button:focus-visible,select:focus-visible{outline:3px solid rgba(8,126,174,.3);outline-offset:2px}
+    .hero{color:#fff;background:radial-gradient(circle at 88% 10%,#23a7d6 0,transparent 29%),linear-gradient(125deg,#07375b,#0b5b88 62%,#087eae);padding:32px max(20px,calc((100vw - 1440px)/2));box-shadow:0 2px 12px rgba(2,35,57,.2)}
+    .eyebrow{font-size:11px;letter-spacing:.14em;font-weight:800;text-transform:uppercase;opacity:.78}.hero-row{display:flex;justify-content:space-between;gap:20px;align-items:flex-end}.hero h1{margin:4px 0 2px;font-size:clamp(25px,4vw,38px);letter-spacing:-.04em}.hero p{margin:0;opacity:.86}.live{display:flex;align-items:center;gap:8px;white-space:nowrap;font-weight:700;font-size:12px}.live i{width:9px;height:9px;border-radius:50%;background:#65f1b9;box-shadow:0 0 0 5px rgba(101,241,185,.18)}
+    .shell{max-width:1440px;margin:0 auto;padding:24px 20px 54px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-1px}.stat{background:var(--surface);border:1px solid rgba(217,226,236,.85);border-radius:16px;padding:17px 18px;box-shadow:0 7px 20px rgba(20,53,83,.06)}.stat b{display:block;font-size:27px;letter-spacing:-.05em}.stat span{color:var(--muted);font-size:12px;font-weight:650}.stat .accent{color:var(--blue)}
+    .panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;margin-top:20px;box-shadow:var(--shadow)}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.toolbar h2{font-size:17px;margin:0}.toolbar p{margin:2px 0 0;color:var(--muted);font-size:12px}.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{display:inline-flex;gap:8px;align-items:center;border-radius:9px;padding:10px 13px;font-size:13px;font-weight:750;color:#fff;background:var(--navy);box-shadow:0 4px 10px rgba(10,75,120,.2)}.btn.primary{background:var(--blue)}.btn.success{background:var(--mint)}.btn.warning{color:#563900;background:#fbd36d}.btn.danger{background:#fff0f0;color:#bd2424;box-shadow:none;border:1px solid #fecaca}.btn.subtle{color:var(--navy);background:#e9f5fa;box-shadow:none}.btn[disabled]{cursor:wait;opacity:.62;transform:none}
+    .filters{display:flex;align-items:center;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:18px;padding-top:16px}.search{position:relative;flex:1;min-width:210px}.search input{width:100%;border:1px solid var(--line);background:#fbfdff;border-radius:9px;padding:10px 12px 10px 35px;color:var(--ink)}.search:before{content:'⌕';position:absolute;left:12px;top:6px;font-size:22px;color:#789}.filter-select{border:1px solid var(--line);border-radius:9px;padding:10px;background:#fff;color:var(--ink);min-width:145px}.note{margin:16px 0 0;padding:11px 13px;border-radius:9px;background:#edf8fd;color:#28536d;font-size:12px}.note strong{color:#0a4b78}.event-list{display:grid;gap:14px;margin-top:20px}.event-card{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}.event-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;background:linear-gradient(90deg,#f7fbfd,#fff)}.event-title{display:flex;gap:11px;align-items:center}.event-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:#d9f1fa;font-size:17px}.event-title h3{margin:0;font-size:15px}.event-title p{margin:0;color:var(--muted);font-size:12px}.event-tools{display:flex;align-items:center;gap:10px}.tag{font-size:11px;font-weight:800;padding:4px 8px;border-radius:20px;background:#e8f7f1;color:#087956}.event-body{overflow:auto}.school-group+.school-group{border-top:1px solid var(--line)}.school-title{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;background:#fbfdff;font-weight:800;font-size:13px}.school-title small{color:var(--muted);font-weight:600}.age-label{padding:8px 16px;background:#f6f9fb;color:#507086;font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.08em}.data-table{width:100%;border-collapse:collapse;min-width:880px}.data-table th{background:#fff;color:#607d91;font-size:10px;text-transform:uppercase;letter-spacing:.06em;text-align:left;padding:9px 12px;border-bottom:1px solid var(--line)}.data-table td{padding:10px 12px;border-bottom:1px solid #edf2f7;vertical-align:middle}.data-table tr:last-child td{border-bottom:0}.photo{width:43px;height:43px;border-radius:9px;object-fit:cover;background:#e5edf3;border:1px solid #d4e0e8}.avatar-fallback{display:grid;place-items:center;color:#44667d;font-weight:800}.person{font-weight:800}.chest{font:700 12px ui-monospace,monospace;background:#eff5f8;padding:3px 6px;border-radius:5px}.table-actions{display:flex;gap:6px}.icon-btn{padding:7px 8px;border-radius:7px;background:#edf7fb;color:#0a6488;font-size:12px;font-weight:750}.icon-btn.remove{background:#fff1f1;color:#c62828}.empty{text-align:center;padding:52px 20px;color:var(--muted)}.empty strong{display:block;color:var(--ink);font-size:16px;margin:7px}.toast{position:fixed;right:18px;bottom:18px;z-index:20;max-width:340px;color:#fff;background:#113b58;padding:12px 15px;border-radius:10px;box-shadow:var(--shadow);transform:translateY(120px);opacity:0;transition:.25s}.toast.show{transform:translateY(0);opacity:1}.toast.error{background:#a92d2d}.progress{position:fixed;inset:0;z-index:30;background:rgba(8,42,67,.38);display:none;place-items:center;padding:20px}.progress.show{display:grid}.progress-box{background:#fff;border-radius:16px;padding:25px;min-width:280px;box-shadow:var(--shadow);text-align:center}.spinner{margin:0 auto 14px;width:31px;height:31px;border:4px solid #d8edf5;border-top-color:var(--blue);border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+    @media(max-width:760px){.hero{padding:24px 20px}.hero-row{align-items:flex-start;flex-direction:column}.shell{padding:16px 12px 36px}.stats{grid-template-columns:repeat(2,1fr);gap:9px}.stat{padding:12px}.panel{padding:14px;border-radius:14px}.event-header{align-items:flex-start;flex-direction:column}.event-tools{width:100%;justify-content:space-between}.actions .btn{flex:1;justify-content:center}.filters{align-items:stretch}.filter-select{flex:1}.btn{padding:9px 10px}}
   </style>
 </head>
 <body>
-  <h1>🏅 CDS Sports Meet – Admin Dashboard</h1>
-  <div id="count">Loading entries...</div>
-
-  <button onclick="window.location.href='/export'">⬇ Export to Excel</button>
-  <button onclick="window.location.href='/export-by-event'">📂 Export by Event</button>
-  <button onclick="resetAll()">🗑️ Reset All Responses</button>
-  <button onclick="resetLast()">↩️ Undo Last Response</button>
-
-  <div id="resultsContainer"></div>
-
+  <header class="hero"><div class="hero-row"><div><div class="eyebrow">Admin Page</div><h1>CDS Sports Meet 2026</h1><p>Participant registrations, events and official exports.</p></div><div class="live"><i></i><span id="lastUpdated">Loading live entries…</span></div></div></header>
+  <main class="shell">
+    <section class="stats" aria-label="Summary"><div class="stat"><b id="statParticipants">—</b><span>Registered participants</span></div><div class="stat"><b class="accent" id="statEvents">—</b><span>Events represented</span></div><div class="stat"><b id="statSchools">—</b><span>Schools represented</span></div><div class="stat"><b id="statSlots">—</b><span>Event registrations</span></div></section>
+    <section class="panel"><div class="toolbar"><div><h2>Exports & data controls</h2><p>PDFs are sorted by event, school and age category, ready for A4 printing.</p></div><div class="actions"><button class="btn subtle" id="excelBtn">⇩ Excel</button><button class="btn subtle" id="excelEventBtn">▦ Excel by event</button><button class="btn success" id="masterPdfBtn">⤓ Master PDF</button><button class="btn primary" id="eventPdfBtn">⤓ Event PDF</button><button class="btn warning" id="undoBtn">↶ Undo last</button><button class="btn danger" id="resetBtn">⌫ Reset all</button></div></div>
+      <div class="filters"><label class="search"><input id="searchInput" type="search" placeholder="Search participant, school, chest number…" autocomplete="off"></label><select id="eventFilter" class="filter-select"><option value="">All events</option></select><select id="ageFilter" class="filter-select"><option value="">All age categories</option></select><span id="shownLabel" style="color:var(--muted);font-size:12px;font-weight:650"></span></div>
+    </section>
+    <section id="resultsContainer" class="event-list" aria-live="polite"><div class="empty">Loading registrations…</div></section>
+  </main>
+  <div class="toast" id="toast" role="status"></div><div class="progress" id="progress"><div class="progress-box"><div class="spinner"></div><strong id="progressText">Preparing export…</strong><p style="color:#627d98;font-size:12px;margin:7px 0 0">Photos are being included at print quality.</p></div></div>
 <script>
-  const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
-  let previousData = [];
-
-  function loadResults() {
-    fetch('/results')
-      .then(res => res.json())
-      .then(data => {
-        if (JSON.stringify(data) === JSON.stringify(previousData)) return;
-        previousData = data;
-
-        const container = document.getElementById('resultsContainer');
-        const countDiv = document.getElementById('count');
-        countDiv.textContent = `📋 Total Entries: ${data.length}`;
-        container.innerHTML = '';
-
-        const schools = [...new Set(data.map(entry => entry.school))].sort();
-
-        schools.forEach(school => {
-          const schoolSection = document.createElement('details');
-          schoolSection.innerHTML = `<summary>🏫 <strong>${school}</strong></summary>`;
-
-          const schoolEntries = data.filter(e => e.school === school);
-          const eventMap = {};
-
-          schoolEntries.forEach(entry => {
-            entry.events.forEach(event => {
-              eventMap[event] = eventMap[event] || [];
-              eventMap[event].push(entry);
-            });
-          });
-
-          Object.entries(eventMap).forEach(([eventName, participants]) => {
-            const eventSection = document.createElement('details');
-            eventSection.innerHTML = `<summary>🎯 <strong>${eventName}</strong></summary>`;
-
-            participants.sort((a, b) =>
-              ageOrder.indexOf(a.ageCategory) - ageOrder.indexOf(b.ageCategory)
-            );
-
-            const table = document.createElement('table');
-            table.innerHTML = `
-              <tr>
-                <th>Photo</th>
-                <th>Name</th>
-                <th>Chest</th>
-                <th>DOB</th>
-                <th>Age Category</th>
-                <th>Gender</th>
-                <th>Timestamp</th>
-                <th>Actions</th>
-              </tr>
-            `;
-
-            participants.forEach(p => {
-              const row = `
-                <tr>
-                  <td><img src="${p.photoPath}" alt="Photo of ${p.name}" style="max-width:80px; border-radius:4px;"></td>
-                  <td>${p.name}</td>
-                  <td>${p.chest}</td>
-                  <td>${p.dob}</td>
-                  <td>${p.ageCategory}</td>
-                  <td>${p.gender}</td>
-                  <td>${p.timestamp}</td>
-                  <td>
-                    <button onclick="editEvents('${p.name}', '${p.school}')">✏️ Edit Events</button>
-                    <button onclick="removeCandidate('${p.name}', '${p.school}')">🗑️ Remove</button>
-                  </td>
-                </tr>
-              `;
-              table.innerHTML += row;
-            });
-
-            eventSection.appendChild(table);
-            schoolSection.appendChild(eventSection);
-          });
-
-          container.appendChild(schoolSection);
-        });
-      });
-  }
-
-  function resetAll() {
-    if (!confirm("⚠️ Are you sure you want to reset ALL responses? This cannot be undone.")) return;
-    fetch('/reset-all', { method: 'POST' })
-      .then(res => res.text())
-      .then(msg => {
-        alert(msg);
-        loadResults();
-      });
-  }
-
-  function resetLast() {
-    if (!confirm("↩️ Do you want to undo the last response?")) return;
-    fetch('/reset-last', { method: 'POST' })
-      .then(res => res.text())
-      .then(msg => {
-        alert(msg);
-        loadResults();
-      });
-  }
-
-  function editEvents(name, school) {
-    const entry = previousData.find(e =>
-      e.name === name && e.school === school
-    );
-    if (!entry) return alert("Participant not found.");
-
-    const allEvents = ["50m Race", "100m Race", "200m Race", " 400m Race", "800m Race","1500m Race","Shot Put","Discus Throw","Long Jump","High Jump","4x100m Relay","4x400m Relay"]; // Customize this list
-    const updated = prompt(
-      `Edit events for ${name} (comma-separated):\nAvailable: ${allEvents.join(', ')}`,
-      entry.events.join(', ')
-    );
-    if (updated === null) return;
-
-    const newEvents = updated.split(',').map(e => e.trim()).filter(e => allEvents.includes(e));
-    if (newEvents.length === 0) return alert("No valid events selected.");
-
-    fetch('/edit-events', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, school, events: newEvents })
-    })
-      .then(res => res.text())
-      .then(msg => {
-        alert(msg);
-        loadResults();
-      });
-  }
-
-  function removeCandidate(name, school) {
-    if (!confirm(`⚠️ Are you sure you want to remove ${name} from ${school}?`)) return;
-
-    fetch('/remove-candidate', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, school })
-    })
-      .then(res => res.text())
-      .then(msg => {
-        alert(msg);
-        loadResults();
-      });
-  }
-
-  setInterval(loadResults, 5000);
-  loadResults();
+(() => {
+  'use strict';
+  const AGE_ORDER = ['Under 11','Under 14','Under 16','Under 17','Under 19'];
+  const ALL_EVENTS = ['50m Race','100m Race','200m Race','400m Race','800m Race','1500m Race','Shot Put','Discus Throw','Long Jump','High Jump','4x100m Relay','4x400m Relay'];
+  let previousData = [], filteredData = [], toastTimer;
+  const $ = id => document.getElementById(id);
+  const escapeHTML = value => String(value ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+  const ageIndex = age => { const n = AGE_ORDER.indexOf(age); return n === -1 ? 999 : n; };
+  const cleanEvent = event => String(event || '').trim().replace(/\s+/g,' ');
+  const sortPeople = (a,b) => ageIndex(a.ageCategory)-ageIndex(b.ageCategory) || String(a.name).localeCompare(String(b.name));
+  function showToast(message, error=false) { const el=$('toast'); el.textContent=message; el.className='toast show'+(error?' error':''); clearTimeout(toastTimer); toastTimer=setTimeout(()=>el.className='toast',4200); }
+  function setProgress(show, text='Preparing export…') { $('progressText').textContent=text; $('progress').classList.toggle('show',show); document.querySelectorAll('.btn').forEach(b=>b.disabled=show); }
+  function stats(data) { const events=new Set(),schools=new Set(); let slots=0; data.forEach(p=>{schools.add(p.school||'Unassigned'); (p.events||[]).forEach(e=>{events.add(cleanEvent(e));slots++});}); $('statParticipants').textContent=data.length; $('statEvents').textContent=events.size; $('statSchools').textContent=schools.size; $('statSlots').textContent=slots; }
+  function refreshFilters(data) { const keepEvent=$('eventFilter').value,keepAge=$('ageFilter').value; const events=[...new Set(data.flatMap(p=>(p.events||[]).map(cleanEvent)))].filter(Boolean).sort(); const ages=[...new Set(data.map(p=>p.ageCategory).filter(Boolean))].sort((a,b)=>ageIndex(a)-ageIndex(b)); $('eventFilter').innerHTML='<option value="">All events</option>'+events.map(e=>`<option>${escapeHTML(e)}</option>`).join(''); $('ageFilter').innerHTML='<option value="">All age categories</option>'+ages.map(a=>`<option>${escapeHTML(a)}</option>`).join(''); $('eventFilter').value=events.includes(keepEvent)?keepEvent:''; $('ageFilter').value=ages.includes(keepAge)?keepAge:''; }
+  function applyFilters() { const query=$('searchInput').value.trim().toLowerCase(), event=$('eventFilter').value, age=$('ageFilter').value; filteredData=previousData.filter(p=>{const blob=[p.name,p.school,p.chest,p.dob,p.gender,p.ageCategory,...(p.events||[])].join(' ').toLowerCase(); return (!query||blob.includes(query))&&(!age||p.ageCategory===age)&&(!event||(p.events||[]).map(cleanEvent).includes(event));}); $('shownLabel').textContent=`Showing ${filteredData.length} of ${previousData.length} participants`; render(filteredData); }
+  function groupedByEvent(data) { const map=new Map(); data.forEach(person=>(person.events||[]).forEach(raw=>{const event=cleanEvent(raw);if(!event)return;if(!map.has(event))map.set(event,new Map());const schools=map.get(event),school=person.school||'Unassigned school';if(!schools.has(school))schools.set(school,[]);schools.get(school).push(person);})); return new Map([...map].sort(([a],[b])=>a.localeCompare(b))); }
+  function genderMark(gender) { const value=String(gender||'').toLowerCase(); return value.startsWith('f')?'♀':value.startsWith('m')?'♂':'●'; }
+  function photoCell(p) { const mark=genderMark(p.gender); if(!p.photoPath)return `<div class="photo avatar-fallback" title="Default ${escapeHTML(p.gender||'participant')} portrait">${mark}</div>`; return `<img class="photo" src="${escapeHTML(p.photoPath)}" alt="Photo of ${escapeHTML(p.name)}" onerror="this.outerHTML='<div class=\\'photo avatar-fallback\\' title=\\'Default portrait\\'>${mark}</div>'">`; }
+  function render(data) { const container=$('resultsContainer'),events=groupedByEvent(data); if(!data.length){container.innerHTML='<div class="panel empty"><div style="font-size:30px">🏁</div><strong>No registrations match these filters</strong>Try another search or clear a filter.</div>';return;} container.innerHTML=''; for(const [event,schools] of events){const total=[...schools.values()].reduce((n,people)=>n+people.length,0);const card=document.createElement('article');card.className='event-card';card.innerHTML=`<div class="event-header"><div class="event-title"><span class="event-icon">🏅</span><div><h3>${escapeHTML(event)}</h3><p>School → age category → participant</p></div></div><div class="event-tools"><span class="tag">${total} participant${total===1?'':'s'}</span><button class="btn subtle event-export" data-event="${escapeHTML(event)}">⤓ PDF</button></div></div><div class="event-body"></div>`; const body=card.querySelector('.event-body'); for(const [school,people] of [...schools].sort(([a],[b])=>a.localeCompare(b))){const section=document.createElement('section');section.className='school-group';const byAge=new Map();people.sort(sortPeople).forEach(p=>{const age=p.ageCategory||'Not assigned';if(!byAge.has(age))byAge.set(age,[]);byAge.get(age).push(p)});section.innerHTML=`<div class="school-title"><span>🏫 ${escapeHTML(school)}</span><small>${people.length} participant${people.length===1?'':'s'}</small></div>`;for(const [age,members] of [...byAge].sort(([a],[b])=>ageIndex(a)-ageIndex(b))){const wrapper=document.createElement('div');wrapper.innerHTML=`<div class="age-label">${escapeHTML(age)}</div><table class="data-table"><thead><tr><th>Photo</th><th>Participant</th><th>Chest</th><th>Date of birth</th><th>Gender</th><th>Registered at</th><th>Actions</th></tr></thead><tbody>${members.map((p,i)=>`<tr><td>${photoCell(p)}</td><td><span class="person">${escapeHTML(p.name)}</span></td><td><span class="chest">${escapeHTML(p.chest||'—')}</span></td><td>${escapeHTML(p.dob||'—')}</td><td>${escapeHTML(p.gender||'—')}</td><td>${escapeHTML(p.timestamp||'—')}</td><td><div class="table-actions"><button class="icon-btn edit-person" data-index="${previousData.indexOf(p)}">Edit events</button><button class="icon-btn remove remove-person" data-index="${previousData.indexOf(p)}">Remove</button></div></td></tr>`).join('')}</tbody></table>`;section.appendChild(wrapper)}body.appendChild(section)}container.appendChild(card)} }
+  async function loadResults(force=false) { try{const res=await fetch('/results',{cache:'no-store'});if(!res.ok)throw new Error(`Server returned ${res.status}`);const data=await res.json();if(!Array.isArray(data))throw new Error('Results are not an array');const changed=JSON.stringify(data)!==JSON.stringify(previousData);previousData=data;stats(data);if(changed||force){refreshFilters(data);applyFilters();}$('lastUpdated').textContent=`Live · updated ${new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}`;}catch(err){$('resultsContainer').innerHTML='<div class="panel empty"><strong>Could not load registrations</strong>Check that this dashboard is served by the CDS application and that <code>/results</code> is available.</div>';$('lastUpdated').textContent='Connection needs attention';console.error(err)} }
+  async function postAction(path, payload, confirmText) { if(confirmText&&!confirm(confirmText))return;try{const res=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:payload?JSON.stringify(payload):undefined});const msg=await res.text();if(!res.ok)throw new Error(msg||'Action failed');showToast(msg||'Saved');loadResults(true)}catch(err){showToast(err.message||'Unable to complete action',true)} }
+  function editEvents(index) { const entry=previousData[index];if(!entry)return;const updated=prompt(`Edit events for ${entry.name} (comma-separated):\nAvailable: ${ALL_EVENTS.join(', ')}`,(entry.events||[]).map(cleanEvent).join(', '));if(updated===null)return;const selected=[...new Set(updated.split(',').map(cleanEvent).filter(e=>ALL_EVENTS.includes(e)))];if(!selected.length)return showToast('Choose at least one event from the available list.',true);postAction('/edit-events',{name:entry.name,school:entry.school,events:selected}); }
+  function removeCandidate(index) { const entry=previousData[index];if(entry)postAction('/remove-candidate',{name:entry.name,school:entry.school},`Remove ${entry.name} from ${entry.school}? This cannot be undone.`); }
+  function exportExcel(path) { window.location.href=path; }
+  function defaultPortraitData(gender) { const female=String(gender||'').toLowerCase().startsWith('f'), male=String(gender||'').toLowerCase().startsWith('m'); const c=document.createElement('canvas');c.width=c.height=240;const x=c.getContext('2d');x.fillStyle=female?'#f9e4ef':male?'#e1effa':'#e8f1f5';x.fillRect(0,0,240,240);x.fillStyle=female?'#b84278':male?'#2178b9':'#547080';x.beginPath();x.arc(120,81,42,0,Math.PI*2);x.fill();x.beginPath();x.arc(120,267,88,Math.PI,0);x.fill();x.fillStyle='rgba(255,255,255,.88)';x.font='700 44px Arial';x.textAlign='center';x.fillText(female?'F':male?'M':'P',120,220);return c.toDataURL('image/jpeg',.9); }
+  function blobToDataUrl(blob) { return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsDataURL(blob);}); }
+  function photoUrls(path) { const urls=[path];const github=String(path||'').match(/^https:\/\/github\.com\/([^/]+)\/([^/]+)\/raw\/([^/]+)\/(.+)$/i);if(github)urls.unshift(`https://raw.githubusercontent.com/${github[1]}/${github[2]}/${github[3]}/${github[4]}`);return [...new Set(urls)]; }
+  async function loadImage(path) { if(!path)return null; return new Promise(resolve=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>resolve(null);img.src=path;}); }
+  async function imageData(path, gender) { if(!path)return defaultPortraitData(gender);const urls=photoUrls(path);for(const url of urls){try{const response=await fetch(url,{cache:'no-store'});if(response.ok){const blob=await response.blob();if(blob.type.startsWith('image/'))return await blobToDataUrl(blob);}}catch(err){console.warn('Photo fetch failed:',url,err);}}for(const url of urls){const img=await loadImage(url);if(!img)continue;try{const c=document.createElement('canvas');const max=300;const scale=Math.min(1,max/Math.max(img.naturalWidth,img.naturalHeight));c.width=Math.max(1,Math.round(img.naturalWidth*scale));c.height=Math.max(1,Math.round(img.naturalHeight*scale));c.getContext('2d').drawImage(img,0,0,c.width,c.height);return c.toDataURL('image/jpeg',.88)}catch(err){console.warn('Photo canvas conversion failed:',url,err);}}return defaultPortraitData(gender); }
+  function filename(text){return text.replace(/[^a-z0-9]+/gi,'-').replace(/^-|-$/g,'').toLowerCase();}
+  function pdfHeader(doc){const w=doc.internal.pageSize.getWidth();doc.setFillColor(8,75,120);doc.rect(0,0,w,25,'F');doc.setTextColor(255);doc.setFont('helvetica','bold');doc.setFontSize(16);doc.text('CDS SPORTS MEET',14,11);doc.setFontSize(8);doc.setFont('helvetica','normal');doc.text('PARTICIPANT REGISTER',14,17);}
+  function pdfFooter(doc){const pages=doc.internal.getNumberOfPages();for(let p=1;p<=pages;p++){doc.setPage(p);const w=doc.internal.pageSize.getWidth(),h=doc.internal.pageSize.getHeight();doc.setDrawColor(217,226,236);doc.line(14,h-14,w-14,h-14);doc.setFontSize(7);doc.setTextColor(98,125,152);doc.text('CDS Sports Meet • Official participant register',14,h-9);doc.text(`Page ${p} of ${pages}`,w-14,h-9,{align:'right'});}}
+  async function createPdf(eventName=null) { if(!window.jspdf?.jsPDF||!window.jspdf?.jsPDF.API.autoTable)throw new Error('PDF library did not load. Check the internet connection or host the two library files locally.');const entries=eventName?previousData.filter(p=>(p.events||[]).map(cleanEvent).includes(eventName)):previousData;if(!entries.length)throw new Error('There are no participants to export.');setProgress(true,'Building print-ready PDF…');try{const {jsPDF}=window.jspdf;const doc=new jsPDF({orientation:'landscape',unit:'mm',format:'a4',compress:true});pdfHeader(doc);let y=34;const groups=eventName?new Map([[eventName,groupedByEvent(entries).get(eventName)||new Map()]]):groupedByEvent(entries);for(const [event,schools] of groups){if(y>176){doc.addPage();pdfHeader(doc);y=34;}doc.setFillColor(225,244,250);doc.roundedRect(14,y,269,8,2,2,'F');doc.setTextColor(10,75,120);doc.setFont('helvetica','bold');doc.setFontSize(11);doc.text(`EVENT  •  ${event}`,17,y+5.4);y+=11;for(const [school,people] of [...schools].sort(([a],[b])=>a.localeCompare(b))){const byAge=new Map();people.sort(sortPeople).forEach(p=>{const age=p.ageCategory||'Not assigned';if(!byAge.has(age))byAge.set(age,[]);byAge.get(age).push(p)});for(const [age,members] of [...byAge].sort(([a],[b])=>ageIndex(a)-ageIndex(b))){if(y>180){doc.addPage();pdfHeader(doc);y=34;}doc.setFont('helvetica','bold');doc.setFontSize(9);doc.setTextColor(16,42,67);doc.text(`${school}  /  ${age}`,14,y+4);const rows=[];for(let i=0;i<members.length;i++){setProgress(true,`Embedding photos… ${i+1}/${members.length} for ${event}`);const p=members[i],photo=await imageData(p.photoPath,p.gender);rows.push([{content:'',photo},{content:p.name||'—'},{content:p.chest||'—'},{content:p.dob||'—'},{content:p.gender||'—'},{content:p.timestamp||'—'}]);}doc.autoTable({startY:y+6,head:[['Photo','Participant','Chest','Date of birth','Gender','Registered at']],body:rows,margin:{left:14,right:14},theme:'grid',styles:{font:'helvetica',fontSize:8,cellPadding:2.3,valign:'middle',lineColor:[217,226,236],lineWidth:.1},headStyles:{fillColor:[8,75,120],textColor:255,fontStyle:'bold',fontSize:7.5},columnStyles:{0:{cellWidth:18},1:{cellWidth:62,fontStyle:'bold'},2:{cellWidth:23},3:{cellWidth:31},4:{cellWidth:25},5:{cellWidth:96}},didDrawCell: d=>{const photo=d.cell.raw?.photo;if(photo&&d.section==='body'&&d.column.index===0){const size=Math.min(13,d.cell.height-2);doc.addImage(photo,'JPEG',d.cell.x+(d.cell.width-size)/2,d.cell.y+(d.cell.height-size)/2,size,size);}},didParseCell:d=>{if(d.section==='body')d.cell.styles.minCellHeight=17},showHead:'everyPage'});y=doc.lastAutoTable.finalY+8;}}}pdfFooter(doc);doc.save(`cds-sports-${eventName?filename(eventName):'master-register'}.pdf`);showToast('PDF downloaded successfully.');}finally{setProgress(false)}}
+  $('excelBtn').addEventListener('click',()=>exportExcel('/export'));$('excelEventBtn').addEventListener('click',()=>exportExcel('/export-by-event'));$('masterPdfBtn').addEventListener('click',()=>createPdf().catch(e=>showToast(e.message,true)));$('eventPdfBtn').addEventListener('click',()=>{const event=$('eventFilter').value;if(!event)return showToast('Select an event in the filter first, then choose Event PDF.',true);createPdf(event).catch(e=>showToast(e.message,true));});$('undoBtn').addEventListener('click',()=>postAction('/reset-last',null,'Undo the latest registration?'));$('resetBtn').addEventListener('click',()=>postAction('/reset-all',null,'Reset ALL responses? This cannot be undone.'));$('searchInput').addEventListener('input',applyFilters);$('eventFilter').addEventListener('change',applyFilters);$('ageFilter').addEventListener('change',applyFilters);$('resultsContainer').addEventListener('click',e=>{const index=Number(e.target.dataset.index);if(e.target.matches('.edit-person'))editEvents(index);if(e.target.matches('.remove-person'))removeCandidate(index);if(e.target.matches('.event-export'))createPdf(e.target.dataset.event).catch(err=>showToast(err.message,true));});
+  loadResults(true);setInterval(loadResults,5000);
+})();
 </script>
 </body>
 </html>

@@ -1,300 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Edit Entries – CDS Sports Meet</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      padding: 2rem;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    #schoolHeader {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-    }
-    .actions {
-      margin-bottom: 1.5rem;
-    }
-    button {
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      margin-right: 1rem;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 0.5rem;
-    }
-    th, td {
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      text-align: left;
-    }
-    img {
-      max-width: 80px;
-      border-radius: 4px;
-    }
-    #editModal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-      justify-content: center;
-      align-items: center;
-    }
-    #editModalContent {
-      background: white;
-      padding: 2rem;
-      border-radius: 8px;
-      width: 400px;
-      max-width: 90%;
-      max-height: 90%;
-      overflow-y: auto;
-    }
-    #editModalContent input, #editModalContent select {
-      width: 100%;
-      margin-bottom: 1rem;
-      padding: 0.5rem;
-      font-size: 1rem;
-    }
-   #eventCheckboxes {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0a4b78"><title>CDS Sports Meet | Entry Management</title><style>
+:root{--ink:#102a43;--muted:#627d98;--line:#d9e2ec;--navy:#0a4b78;--blue:#087eae;--red:#c93434;--canvas:#f3f7fb;--shadow:0 14px 38px rgba(20,53,83,.11)}*{box-sizing:border-box}body{margin:0;background:var(--canvas);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink)}button,input,select{font:inherit}button{border:0;cursor:pointer;transition:.18s}button:hover{transform:translateY(-1px)}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid rgba(8,126,174,.25);outline-offset:2px}.hero{color:#fff;background:radial-gradient(circle at 85% 10%,#2caad7 0,transparent 30%),linear-gradient(120deg,#063654,#0b5c89);padding:30px max(20px,calc((100vw - 1280px)/2))}.hero-row{display:flex;align-items:flex-end;justify-content:space-between;gap:16px}.eyebrow{font-size:10px;letter-spacing:.15em;text-transform:uppercase;font-weight:850;opacity:.78}.hero h1{font-size:clamp(25px,4vw,35px);line-height:1.1;letter-spacing:-.045em;margin:6px 0 4px}.hero p{margin:0;opacity:.86}.school-chip{border:1px solid rgba(255,255,255,.26);border-radius:20px;padding:7px 11px;background:rgba(255,255,255,.1);font-size:12px;font-weight:750}.shell{max-width:1280px;margin:0 auto;padding:24px 20px 54px}.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.stat,.panel{border:1px solid var(--line);background:#fff;border-radius:16px;box-shadow:0 7px 20px rgba(20,53,83,.06)}.stat{padding:16px 18px}.stat b{display:block;font-size:26px;letter-spacing:-.05em}.stat span{font-size:12px;color:var(--muted);font-weight:650}.panel{margin-top:20px;padding:20px;box-shadow:var(--shadow)}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}.toolbar h2{margin:0;font-size:17px}.toolbar p{margin:3px 0 0;font-size:12px;color:var(--muted)}.btn{display:inline-flex;align-items:center;gap:8px;border-radius:9px;padding:10px 13px;font-size:13px;font-weight:800;color:#fff;background:var(--navy);box-shadow:0 4px 10px rgba(10,75,120,.2)}.btn.primary{background:var(--blue)}.btn.danger{background:#fff0f0;color:var(--red);box-shadow:none}.search{position:relative;margin-top:18px}.search:before{content:'⌕';position:absolute;left:12px;top:5px;font-size:22px;color:#789}.search input{width:100%;border:1px solid var(--line);border-radius:9px;padding:10px 12px 10px 35px;background:#fbfdff;color:var(--ink)}.table-wrap{overflow:auto;margin-top:18px;border:1px solid var(--line);border-radius:12px}.data-table{width:100%;border-collapse:collapse;min-width:850px}.data-table th{padding:10px 12px;text-align:left;color:#647f92;background:#f7fafc;font-size:10px;text-transform:uppercase;letter-spacing:.06em}.data-table td{padding:11px 12px;border-top:1px solid #edf2f7;vertical-align:middle}.photo{width:47px;height:47px;border-radius:10px;object-fit:cover;background:#e5edf3;border:1px solid #d4e0e8}.avatar{display:grid;place-items:center;font-weight:850;color:#547080}.name{font-weight:800}.chest{font:700 12px ui-monospace,monospace;background:#eff5f8;padding:3px 6px;border-radius:5px}.events{color:#46657b;max-width:300px}.row-actions{display:flex;gap:7px}.small-btn{padding:7px 9px;border-radius:7px;background:#eaf6fb;color:#07658b;font-size:12px;font-weight:800}.small-btn.remove{background:#fff1f1;color:var(--red)}.empty{text-align:center;padding:48px 18px;color:var(--muted)}.empty strong{display:block;color:var(--ink);font-size:16px;margin:7px}.modal{display:none;position:fixed;z-index:10;inset:0;background:rgba(4,31,49,.52);padding:20px;align-items:center;justify-content:center}.modal.open{display:flex}.modal-card{width:min(100%,670px);max-height:min(90vh,760px);overflow:auto;background:#fff;border-radius:18px;box-shadow:0 24px 60px rgba(0,26,43,.28)}.modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:21px 22px 15px;border-bottom:1px solid var(--line)}.modal-head h3{margin:0;font-size:19px}.modal-head p{margin:3px 0 0;color:var(--muted);font-size:12px}.close{width:32px;height:32px;border-radius:8px;background:#f1f6f9;color:#567}.form{padding:20px 22px 22px}.fields{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.field label,.event-title{display:block;color:#38566c;font-size:12px;font-weight:800;margin-bottom:6px}.field input,.field select{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;color:var(--ink);background:#fff}.event-title{margin-top:18px}.event-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.event-grid label{display:flex;align-items:center;gap:7px;padding:9px;border:1px solid #e0eaf0;border-radius:8px;background:#fbfdff;font-size:12px}.event-grid input{accent-color:var(--blue)}.form-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:21px}.toast{position:fixed;z-index:20;right:18px;bottom:18px;color:#fff;background:#113b58;padding:12px 15px;border-radius:10px;box-shadow:var(--shadow);transform:translateY(120px);opacity:0;transition:.25s}.toast.show{transform:translateY(0);opacity:1}.toast.error{background:#a92d2d}@media(max-width:700px){.hero{padding:24px 20px}.hero-row{align-items:flex-start;flex-direction:column}.shell{padding:16px 12px 36px}.stat-row{grid-template-columns:repeat(2,1fr);gap:9px}.stat{padding:12px}.panel{padding:14px}.fields,.event-grid{grid-template-columns:1fr}.form-actions .btn{flex:1;justify-content:center}}
+</style>
+<style id="cds-premium-refresh">
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{
+  --ink:#f3f6ff;--muted:#9daac3;--line:rgba(181,198,232,.15);
+  --navy:#0b1020;--blue:#7385ff;--red:#ff7189;--canvas:#070a12;
+  --shadow:0 24px 70px rgba(0,0,0,.32);--panel:rgba(16,22,39,.82);
 }
-#eventCheckboxes label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: #f9f9f9;
-  padding: 0.4rem 0.6rem;
-  border-radius: 4px;
-  font-size: 0.95rem;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--ink);background:
+    radial-gradient(ellipse at 12% 0%,rgba(91,111,255,.16),transparent 35%),
+    radial-gradient(ellipse at 100% 45%,rgba(0,205,255,.08),transparent 30%),var(--canvas);
+  font:14px/1.55 'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  min-height:100vh;
 }
-  </style>
-</head>
-<body>
-  <h1>✏️ Edit Entries – CDS Sports Meet</h1>
-  <div id="schoolHeader"></div>
-  <div class="actions">
-    <button onclick="downloadCSV()">⬇️ Download Entries</button>
-  </div>
-  <div id="resultsContainer">Loading entries...</div>
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background:linear-gradient(135deg,rgba(255,255,255,.018),transparent 45%,rgba(117,133,255,.025))}
+h1,h2,h3{font-family:Manrope,'DM Sans',sans-serif;letter-spacing:-.04em}
+button,input,select{font:inherit}
+button{cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease}
+button:hover{transform:translateY(-1px)}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid rgba(115,133,255,.48);outline-offset:3px}
+.hero{
+  position:relative;overflow:hidden;color:#fff;
+  padding:38px max(22px,calc((100vw - 1280px)/2));
+  background:linear-gradient(115deg,rgba(15,22,43,.98),rgba(16,34,66,.95) 58%,rgba(23,45,84,.88));
+  border-bottom:1px solid rgba(255,255,255,.1);
+  box-shadow:0 18px 55px rgba(0,0,0,.22)
+}
+.hero:after{content:"";position:absolute;width:380px;height:380px;border-radius:50%;right:-90px;top:-250px;
+  background:rgba(113,132,255,.22);filter:blur(8px);pointer-events:none}
+.hero-row{position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:space-between;gap:22px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:#aab6ff}
+.eyebrow:before{content:"";width:22px;height:2px;border-radius:9px;background:#8b9aff}
+.hero h1{font-size:clamp(28px,4vw,42px);line-height:1.08;letter-spacing:-.055em;margin:11px 0 8px;font-weight:800}
+.hero p{margin:0;color:#b9c4dc;font-size:14px}
+.school-chip{max-width:100%;overflow-wrap:anywhere;border:1px solid rgba(190,203,255,.22);border-radius:13px;padding:10px 14px;
+  background:rgba(255,255,255,.065);backdrop-filter:blur(14px);font-size:12px;font-weight:750;color:#e6ebff;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+.shell{max-width:1280px;margin:0 auto;padding:28px 22px 64px}
+.stat-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.stat,.panel{border:1px solid var(--line);background:linear-gradient(145deg,rgba(20,27,46,.94),rgba(13,18,32,.91));
+  border-radius:19px;box-shadow:0 12px 32px rgba(0,0,0,.16)}
+.stat{position:relative;overflow:hidden;padding:21px 22px;min-height:112px}
+.stat:after{content:"";position:absolute;width:100px;height:100px;right:-40px;top:-45px;border-radius:50%;background:rgba(115,133,255,.11)}
+.stat b{display:block;font-family:Manrope,sans-serif;font-size:33px;line-height:1.2;letter-spacing:-.06em;color:#f7f8ff}
+.stat span{display:block;margin-top:7px;font-size:11px;color:#a8b4cc;font-weight:700;letter-spacing:.04em}
+.stat:nth-child(2) b{color:#9ce9ff}.stat:nth-child(3) b{color:#c2c9ff}
+.panel{margin-top:19px;padding:23px;box-shadow:var(--shadow)}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.toolbar h2{margin:0;font-size:20px;font-weight:800}
+.toolbar p{margin:5px 0 0;color:var(--muted);font-size:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid rgba(255,255,255,.13);
+  border-radius:11px;padding:11px 15px;font-size:12px;font-weight:800;color:#f8f9ff;
+  background:linear-gradient(135deg,#7586ff,#5367ec);box-shadow:0 8px 22px rgba(83,103,236,.22)}
+.btn:hover{box-shadow:0 12px 28px rgba(83,103,236,.3)}
+.btn.primary{background:linear-gradient(135deg,#7e8cff,#5268ed)}
+.btn.danger{background:rgba(255,113,137,.09);border-color:rgba(255,113,137,.25);color:#ff9aaa;box-shadow:none}
+.search{position:relative;display:block;margin-top:21px}
+.search:before{content:'⌕';position:absolute;left:14px;top:7px;font-size:22px;color:#8290b1;pointer-events:none}
+.search input{width:100%;border:1px solid rgba(181,198,232,.17);border-radius:12px;padding:12px 14px 12px 42px;
+  background:rgba(5,9,18,.52);color:#f3f6ff;transition:border-color .2s,box-shadow .2s}
+.search input::placeholder{color:#75819d}
+.search input:focus{border-color:rgba(115,133,255,.65);box-shadow:0 0 0 4px rgba(115,133,255,.09);outline:none}
+#resultsContainer{min-width:0}
+.table-wrap{overflow:auto;margin-top:18px;border:1px solid rgba(181,198,232,.14);border-radius:14px;background:rgba(5,9,18,.28)}
+.data-table{width:100%;border-collapse:separate;border-spacing:0;min-width:850px}
+.data-table th{position:sticky;top:0;padding:13px 14px;text-align:left;color:#8f9fbe;background:#151c30;
+  font-size:10px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;white-space:nowrap}
+.data-table td{padding:13px 14px;border-top:1px solid rgba(181,198,232,.09);vertical-align:middle;color:#cbd4e8}
+.data-table tbody tr{transition:background .18s}
+.data-table tbody tr:hover{background:rgba(115,133,255,.055)}
+.photo{width:48px;height:48px;border-radius:13px;object-fit:cover;background:#202a42;border:1px solid rgba(181,198,232,.18);box-shadow:0 5px 15px rgba(0,0,0,.16)}
+.avatar{display:inline-grid;place-items:center;font-weight:850;color:#b7c4ff;background:linear-gradient(145deg,#27345a,#161e34)}
+.name{font-weight:800;color:#f3f5ff}
+.chest{display:inline-block;font:800 11px ui-monospace,SFMono-Regular,monospace;letter-spacing:.04em;color:#a9eaff;
+  background:rgba(0,205,255,.08);border:1px solid rgba(0,205,255,.14);padding:5px 8px;border-radius:7px}
+.events{color:#aebbd4;max-width:300px;line-height:1.7}
+.row-actions{display:flex;gap:7px;align-items:center}
+.small-btn{padding:8px 10px;border:1px solid rgba(115,133,255,.19);border-radius:8px;background:rgba(115,133,255,.11);
+  color:#c1caff;font-size:11px;font-weight:800;white-space:nowrap}
+.small-btn:hover{background:rgba(115,133,255,.2)}
+.small-btn.remove{background:rgba(255,113,137,.08);border-color:rgba(255,113,137,.18);color:#ff9aaa}
+.empty{text-align:center;padding:58px 20px;color:#93a0bb}
+.empty strong{display:block;color:#eaf0ff;font-size:16px;margin:8px 0}
+.modal{display:none;position:fixed;z-index:100;inset:0;background:rgba(1,4,12,.76);padding:20px;align-items:center;justify-content:center;backdrop-filter:blur(10px)}
+.modal.open{display:flex}
+.modal-card{width:min(100%,700px);max-height:min(91vh,800px);overflow:auto;background:linear-gradient(145deg,#151c30,#0c1120);
+  border:1px solid rgba(181,198,232,.18);border-radius:22px;box-shadow:0 35px 100px rgba(0,0,0,.58)}
+.modal-head{position:sticky;top:0;z-index:2;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding:23px 25px 18px;border-bottom:1px solid var(--line);background:rgba(19,26,44,.96);backdrop-filter:blur(15px)}
+.modal-head h3{margin:0;font-size:22px;color:#f4f6ff}
+.modal-head p{margin:5px 0 0;color:#9daac3;font-size:12px}
+.close{width:36px;height:36px;flex:0 0 auto;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.05);color:#cbd5ee}
+.form{padding:23px 25px 25px}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.field label,.event-title{display:block;color:#c4cfea;font-size:11px;font-weight:800;letter-spacing:.04em;margin-bottom:7px}
+.field input,.field select{width:100%;padding:12px;border:1px solid rgba(181,198,232,.17);border-radius:10px;color:#f3f6ff;
+  background:#0b1020;min-height:44px}
+.field input:focus,.field select:focus{outline:none;border-color:rgba(115,133,255,.7);box-shadow:0 0 0 3px rgba(115,133,255,.1)}
+.field select option{background:#10172a;color:#f3f6ff}
+.event-title{margin-top:24px;margin-bottom:10px}
+.event-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.event-grid label{display:flex;align-items:center;gap:9px;padding:11px;border:1px solid rgba(181,198,232,.13);border-radius:10px;
+  background:rgba(255,255,255,.025);font-size:11px;color:#c9d3e9;transition:background .18s,border-color .18s;cursor:pointer}
+.event-grid label:hover{background:rgba(115,133,255,.08);border-color:rgba(115,133,255,.35)}
+.event-grid input{accent-color:#8190ff;width:15px;height:15px;flex:0 0 auto}
+.form-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:25px;padding-top:18px;border-top:1px solid var(--line)}
+.toast{position:fixed;z-index:200;right:20px;bottom:20px;max-width:min(420px,calc(100vw - 40px));color:#f7f8ff;
+  background:#1a2944;border:1px solid rgba(181,198,232,.2);padding:13px 17px;border-radius:12px;
+  box-shadow:0 20px 55px rgba(0,0,0,.4);transform:translateY(140%);opacity:0;transition:.28s}
+.toast.show{transform:translateY(0);opacity:1}.toast.error{background:#411c2a;border-color:rgba(255,113,137,.3)}
+@media(max-width:760px){
+  .hero{padding:27px 18px}.hero-row{align-items:flex-start;flex-direction:column;gap:16px}
+  .shell{padding:19px 13px 42px}.stat-row{gap:9px}.stat{padding:15px;min-height:98px;border-radius:15px}
+  .stat b{font-size:27px}.stat span{font-size:10px}.panel{padding:16px;border-radius:16px}
+  .toolbar{align-items:flex-start}.toolbar h2{font-size:18px}.toolbar>.btn{width:100%}
+  .fields,.event-grid{grid-template-columns:1fr}.form{padding:18px}
+  .modal{padding:10px}.modal-card{border-radius:17px;max-height:95vh}.modal-head{padding:18px}
+  .form-actions{position:sticky;bottom:-18px;background:#0e1424;padding:14px 0 4px}
+  .form-actions .btn{flex:1}.row-actions{flex-wrap:wrap}
+}
+@media(max-width:390px){.stat-row{grid-template-columns:1fr}.stat{min-height:0}.stat b{font-size:25px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
 
-  <!-- Edit Modal -->
-  <div id="editModal">
-    <div id="editModalContent">
-      <h3>Edit Participant</h3>
-      <form id="editForm">
-        <input type="hidden" id="originalName">
-        <input type="hidden" id="editSchool">
-        <label>Name:<br><input type="text" id="editName" required></label>
-        <label>DOB:<br><input type="date" id="editDob" required></label>
-        <label>Gender:<br>
-          <select id="editGender">
-            <option>Male</option>
-            <option>Female</option>
-          </select>
-        </label>
-        <label>Age Category:<br>
-          <select id="editAge">
-            <option>Under 11</option>
-            <option>Under 14</option>
-            <option>Under 16</option>
-            <option>Under 17</option>
-            <option>Under 19</option>
-          </select>
-        </label>
-        <label>Events:</label>
-        <div id="eventCheckboxes" style="margin-bottom:1rem;"></div>
-        <button type="submit">✅ Save</button>
-        <button type="button" onclick="closeModal()">❌ Cancel</button>
-      </form>
-    </div>
-  </div>
-
-<script>
-  const urlParams = new URLSearchParams(window.location.search);
-  const schoolName = urlParams.get('school');
-  document.getElementById('schoolHeader').textContent = `🏫 School: ${schoolName}`;
-  let schoolEntries = [];
-
-  const allEvents = [
-    "50m Race", "100m Race", "200m Race", "400m Race", "800m Race", "1500m Race",
-    "Shot Put", "Discus Throw", "Long Jump", "High Jump", "4x100m Relay", "4x400m Relay"
-  ];
-  const relayEvents = ["4x100m Relay", "4x400m Relay"];
-
-  function loadResults() {
-    fetch('/results')
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById('resultsContainer');
-        container.innerHTML = '';
-        schoolEntries = data.filter(entry =>
-          entry.school.trim().toLowerCase() === schoolName.trim().toLowerCase()
-        );
-        if (schoolEntries.length === 0) {
-          container.innerHTML = '<p>No entries found for this school.</p>';
-          return;
-        }
-
-        const table = document.createElement('table');
-        table.innerHTML = `
-          <tr>
-            <th>Photo</th>
-            <th>Name</th>
-            <th>Chest</th>
-            <th>DOB</th>
-            <th>Age Category</th>
-            <th>Gender</th>
-            <th>Events</th>
-            <th>Actions</th>
-          </tr>
-        `;
-
-        schoolEntries.forEach(p => {
-          const row = `
-            <tr>
-              <td><img src="${p.photoPath}" alt="Photo of ${p.name}"></td>
-              <td>${p.name}</td>
-              <td>${p.chest}</td>
-              <td>${p.dob}</td>
-              <td>${p.ageCategory}</td>
-              <td>${p.gender}</td>
-              <td>${p.events.join(', ')}</td>
-              <td>
-                <button onclick='openEditModal(${JSON.stringify(p).replace(/'/g, "\\'")})'>Edit</button>
-                <button onclick="removeCandidate('${p.name}', '${p.school}')">Remove</button>
-              </td>
-            </tr>
-          `;
-          table.innerHTML += row;
-        });
-
-        container.appendChild(table);
-      });
-  }
-
-  function openEditModal(entry) {
-    document.getElementById('editModal').style.display = 'flex';
-    document.getElementById('originalName').value = entry.name;
-    document.getElementById('editSchool').value = entry.school;
-    document.getElementById('editName').value = entry.name;
-    document.getElementById('editDob').value = entry.dob;
-    document.getElementById('editGender').value = entry.gender;
-    document.getElementById('editAge').value = entry.ageCategory;
-
-    const container = document.getElementById('eventCheckboxes');
-    container.innerHTML = '';
-    allEvents.forEach(event => {
-      const checked = entry.events.includes(event) ? 'checked' : '';
-      container.innerHTML += `
-        <label>
-          <input type="checkbox" value="${event}" ${checked} onchange="limitNonRelaySelection(this)">
-          ${event}
-        </label>
-      `;
-    });
-  }
-
-  function limitNonRelaySelection(checkbox) {
-    const selected = Array.from(document.querySelectorAll('#eventCheckboxes input:checked'))
-      .map(cb => cb.value);
-    const nonRelaySelected = selected.filter(e => !relayEvents.includes(e));
-
-    if (!relayEvents.includes(checkbox.value) && nonRelaySelected.length > 3) {
-      checkbox.checked = false;
-      alert("You can select up to 3 non-relay events only.");
-    }
-  }
-
-  function closeModal() {
-    document.getElementById('editModal').style.display = 'none';
-  }
-
-  document.getElementById('editForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const originalName = document.getElementById('originalName').value;
-    const school = document.getElementById('editSchool').value;
-    const name = document.getElementById('editName').value;
-    const dob = document.getElementById('editDob').value;
-    const gender = document.getElementById('editGender').value;
-    const ageCategory = document.getElementById('editAge').value;
-    const events = Array.from(document.querySelectorAll('#eventCheckboxes input:checked')).map(cb => cb.value);
-
-    if (events.length === 0) return alert("Please select at least one event.");
-
-    fetch('/edit-events', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ originalName, name, school, dob, gender, ageCategory, events })
-    })
-      .then(res => res.text())
-      .then(msg => {
-        alert(msg);
-        closeModal();
-        loadResults();
-      });
-  });
-
-  function removeCandidate(name, school) {
-    if (!confirm(`Are you sure you want to remove ${name}?`)) return;
-
-       fetch('/remove-candidate', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, school })
-    })
-      .then(res => res.text())
-      .then(msg => {
-        alert(msg);
-        loadResults();
-      });
-  }
-
-  function downloadCSV() {
-    if (schoolEntries.length === 0) return alert("No entries to download.");
-
-    const headers = ["Name", "Chest", "DOB", "Age Category", "Gender", "Events"];
-    const rows = schoolEntries.map(p => [
-      `"${p.name}"`,
-      `"${p.chest}"`,
-      `"${p.dob}"`,
-      `"${p.ageCategory}"`,
-      `"${p.gender}"`,
-      `"${p.events.join('; ')}"`
-    ]);
-
-    const csvContent = "data:text/csv;charset=utf-8," +
-      headers.join(",") + "\n" +
-      rows.map(r => r.join(",")).join("\n");
-
-    const encodedUri = encodeURI(csvContent);
-    const link = document.createElement("a");
-    link.setAttribute("href", encodedUri);
-    link.setAttribute("download", `${schoolName.replace(/\s+/g, '_')}_entries.csv`);
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
-
-  loadResults();
-</script>
-</body>
-</html>
+</head><body><header class="hero"><div class="hero-row"><div><div class="eyebrow">CDS Sports Meet · Entry Editing Portal</div><h1>Manage participant entries</h1><p>Review and update registrations for your school.</p></div><div class="school-chip" id="schoolHeader">Loading school…</div></div></header><main class="shell"><section class="stat-row"><div class="stat"><b id="totalCount">—</b><span>Participants</span></div><div class="stat"><b id="eventCount">—</b><span>Event registrations</span></div><div class="stat"><b id="ageCount">—</b><span>Age categories</span></div></section><section class="panel"><div class="toolbar"><div><h2>Your school’s registrations</h2><p>Changes save directly to the CDS Sports Meet records.</p></div><button class="btn primary" id="downloadBtn">⇩ Download entries</button></div><label class="search"><input id="searchInput" type="search" placeholder="Search participant, chest number or event…" autocomplete="off"></label><div id="resultsContainer"><div class="empty">Loading entries…</div></div></section></main><div class="modal" id="editModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-card"><div class="modal-head"><div><h3 id="modalTitle">Edit participant</h3><p>Update details and event selections.</p></div><button class="close" type="button" id="closeModal" aria-label="Close">✕</button></div><form class="form" id="editForm"><input type="hidden" id="originalName"><input type="hidden" id="editSchool"><div class="fields"><div class="field"><label for="editName">Participant name</label><input type="text" id="editName" required></div><div class="field"><label for="editDob">Date of birth</label><input type="date" id="editDob" required></div><div class="field"><label for="editGender">Gender</label><select id="editGender"><option>Male</option><option>Female</option></select></div><div class="field"><label for="editAge">Age category <span style="color:#8998b5;font-weight:500">(select manually)</span></label><select id="editAge"><option>Under 11</option><option>Under 14</option><option>Under 16</option><option>Under 17</option><option>Under 19</option></select></div></div><div class="event-title">Events <span style="color:#789;font-weight:600">(up to 3 non-relay events)</span></div><div class="event-grid" id="eventCheckboxes"></div><div class="form-actions"><button class="btn danger" id="cancelBtn" type="button">Cancel</button><button class="btn primary" type="submit">Save changes</button></div></form></div></div><div class="toast" id="toast" role="status"></div>
+<script>(()=>{'use strict';const $=id=>document.getElementById(id),allEvents=['50m Race','100m Race','200m Race','400m Race','800m Race','1500m Race','Shot Put','Discus Throw','Long Jump','High Jump','4x100m Relay','4x400m Relay'],relayEvents=['4x100m Relay','4x400m Relay'];let schoolEntries=[],visibleEntries=[],toastTimer;const schoolName=new URLSearchParams(location.search).get('school')||'',esc=v=>String(v??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));function toast(message,error=false){const t=$('toast');t.textContent=message;t.className='toast show'+(error?' error':'');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.className='toast',3800)}function avatar(p){const mark=String(p.gender||'').toLowerCase().startsWith('f')?'♀':String(p.gender||'').toLowerCase().startsWith('m')?'♂':'●';return p.photoPath?`<img class="photo" src="${esc(p.photoPath)}" alt="Photo of ${esc(p.name)}" onerror="this.outerHTML='<div class=\\'photo avatar\\'>${mark}</div>'">`:`<div class="photo avatar">${mark}</div>`}function updateStats(){const events=schoolEntries.reduce((n,p)=>n+(p.events||[]).length,0),ages=new Set(schoolEntries.map(p=>p.ageCategory).filter(Boolean));$('totalCount').textContent=schoolEntries.length;$('eventCount').textContent=events;$('ageCount').textContent=ages.size}function render(){const root=$('resultsContainer');if(!visibleEntries.length){root.innerHTML='<div class="empty"><div style="font-size:28px">🏁</div><strong>No matching registrations</strong>Try another search.</div>';return}root.innerHTML=`<div class="table-wrap"><table class="data-table"><thead><tr><th>Photo</th><th>Participant</th><th>Chest</th><th>DOB</th><th>Age category</th><th>Gender</th><th>Events</th><th>Actions</th></tr></thead><tbody>${visibleEntries.map(p=>`<tr><td>${avatar(p)}</td><td><span class="name">${esc(p.name)}</span></td><td><span class="chest">${esc(p.chest||'—')}</span></td><td>${esc(p.dob||'—')}</td><td>${esc(p.ageCategory||'—')}</td><td>${esc(p.gender||'—')}</td><td class="events">${esc((p.events||[]).join(', '))}</td><td><div class="row-actions"><button class="small-btn" data-action="edit" data-index="${schoolEntries.indexOf(p)}">Edit</button><button class="small-btn remove" data-action="remove" data-index="${schoolEntries.indexOf(p)}">Remove</button></div></td></tr>`).join('')}</tbody></table></div>`}function filter(){const q=$('searchInput').value.trim().toLowerCase();visibleEntries=schoolEntries.filter(p=>[p.name,p.chest,p.dob,p.ageCategory,p.gender,...(p.events||[])].join(' ').toLowerCase().includes(q));render()}async function loadResults(){if(!schoolName){$('schoolHeader').textContent='School not selected';$('resultsContainer').innerHTML='<div class="empty"><strong>School access is missing</strong>Please return to the login page and sign in again.</div>';return}try{const r=await fetch('/results',{cache:'no-store'});if(!r.ok)throw new Error('Could not load records');const data=await r.json();schoolEntries=data.filter(p=>String(p.school||'').trim().toLowerCase()===schoolName.trim().toLowerCase());$('schoolHeader').textContent=`🏫 ${schoolName}`;updateStats();filter()}catch(e){$('resultsContainer').innerHTML='<div class="empty"><strong>Could not load registrations</strong>Please try again shortly.</div>';toast(e.message,true)}}function openModal(index){const p=schoolEntries[index];if(!p)return;$('originalName').value=p.name;$('editSchool').value=p.school;$('editName').value=p.name;$('editDob').value=p.dob;$('editGender').value=p.gender;$('editAge').value=p.ageCategory;const list=$('eventCheckboxes');list.innerHTML=allEvents.map(event=>`<label><input type="checkbox" value="${event}" ${(p.events||[]).includes(event)?'checked':''}>${event}</label>`).join('');$('editModal').classList.add('open');$('editName').focus()}function closeModal(){$('editModal').classList.remove('open')}function checkLimit(input){const selected=[...document.querySelectorAll('#eventCheckboxes input:checked')].map(x=>x.value),count=selected.filter(event=>!relayEvents.includes(event)).length;if(!relayEvents.includes(input.value)&&count>3){input.checked=false;toast('Choose up to 3 non-relay events.',true)}}async function post(path,payload){const r=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const text=await r.text();if(!r.ok)throw new Error(text||'Update failed');return text}$('resultsContainer').addEventListener('click',e=>{const button=e.target.closest('button[data-action]');if(!button)return;const index=Number(button.dataset.index);if(button.dataset.action==='edit')openModal(index);if(button.dataset.action==='remove'){const p=schoolEntries[index];if(p&&confirm(`Remove ${p.name}? This cannot be undone.`))post('/remove-candidate',{name:p.name,school:p.school}).then(msg=>{toast(msg||'Participant removed');loadResults()}).catch(err=>toast(err.message,true))}});$('searchInput').addEventListener('input',filter);$('closeModal').addEventListener('click',closeModal);$('cancelBtn').addEventListener('click',closeModal);$('editModal').addEventListener('click',e=>{if(e.target===$('editModal'))closeModal()});$('eventCheckboxes').addEventListener('change',e=>{if(e.target.matches('input'))checkLimit(e.target)});$('editForm').addEventListener('submit',e=>{e.preventDefault();const events=[...document.querySelectorAll('#eventCheckboxes input:checked')].map(x=>x.value);if(!events.length)return toast('Select at least one event.',true);post('/edit-events',{originalName:$('originalName').value,name:$('editName').value.trim(),school:$('editSchool').value,dob:$('editDob').value,gender:$('editGender').value,ageCategory:$('editAge').value,events}).then(msg=>{toast(msg||'Participant updated');closeModal();loadResults()}).catch(err=>toast(err.message,true))});$('downloadBtn').addEventListener('click',()=>{if(!schoolEntries.length)return toast('No entries to download.',true);const quote=v=>`"${String(v??'').replace(/"/g,'""')}"`,rows=[['Name','Chest','DOB','Age Category','Gender','Events'],...schoolEntries.map(p=>[p.name,p.chest,p.dob,p.ageCategory,p.gender,(p.events||[]).join('; ')])],blob=new Blob([rows.map(row=>row.map(quote).join(',')).join('\n')],{type:'text/csv;charset=utf-8'}),link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download=`${schoolName.replace(/\s+/g,'_')}_entries.csv`;link.click();URL.revokeObjectURL(link.href)});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});loadResults()})();</script></body></html>
