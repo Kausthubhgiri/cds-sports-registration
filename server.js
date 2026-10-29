@@ -340,20 +340,25 @@ app.get('/edit-login', (req, res) => {
 app.post('/verify-login', express.urlencoded({ extended: true }), (req, res) => {
   const { username, password } = req.body;
   const submittedUsername = String(username || '').trim().toLowerCase();
-  const submittedPassword = String(password || '').trim();
+  const submittedPassword = String(password || '').trim().toLowerCase();
+  const normalizedBypassKey = String(EDIT_BYPASS_KEY || '').trim().toLowerCase();
 
   const credentialMatch = loginCredentials.find(
     cred =>
-      cred.username.trim().toLowerCase() === submittedUsername &&
-      cred.password.trim() === submittedPassword
+      String(cred.username || '').trim().toLowerCase() === submittedUsername &&
+      String(cred.password || '').trim().toLowerCase() === submittedPassword
   );
-  // Bypass: exact school name in the username field plus the administrator key.
-  // Only schools already configured in loginCredentials can use this route.
+  // Bypass: school name in the username field plus the administrator key.
+  // Username, school name, regular password, and bypass key are case-insensitive.
   const schoolMatch = loginCredentials.find(
-    cred => cred.school.trim().toLowerCase() === submittedUsername
+    cred => {
+      const normalizedSchool = String(cred.school || '').trim().toLowerCase();
+      const firstSchoolWord = normalizedSchool.split(/\\s+/)[0] || '';
+      return normalizedSchool === submittedUsername || firstSchoolWord === submittedUsername;
+    }
   );
   const match = credentialMatch ||
-    (schoolMatch && submittedPassword === EDIT_BYPASS_KEY ? schoolMatch : null);
+    (schoolMatch && submittedPassword === normalizedBypassKey ? schoolMatch : null);
 
   if (match) {
     res.redirect(`/admin-edit?school=${encodeURIComponent(match.school)}`);
