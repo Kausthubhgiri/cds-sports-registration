@@ -1,15 +1,1 @@
-[
-  {
-    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
-    "name": "test",
-    "chest": 701,
-    "dob": "09/08/2009",
-    "ageCategory": "Under 19",
-    "gender": "Male",
-    "events": [
-      "100m Race"
-    ],
-    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793292060248-test.png",
-    "timestamp": "29/10/2026, 16:41:00"
-  }
-]
+[]
