@@ -579,20 +579,20 @@
     </div>
     <label>Assigned Chest Number</label><div id="chestDisplay">Please select a school</div>
     <label for="name">Participant Name</label><input type="text" id="name" name="name" placeholder="Full participant name" required>
-    <label for="dob">Date of Birth</label><input type="date" id="dob" name="dob" required>
+    <label for="dob">Date of Birth</label><input type="text" id="dob" name="dob" inputmode="numeric" placeholder="DD/MM/YYYY" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(200[0-9]|20[1-9][0-9]|[2-9][0-9]{3})" maxlength="10" autocomplete="bday" required>
     <label for="ageCategory">Age Category</label>
     <select id="ageCategory" name="ageCategory" required>
       <option value="" disabled selected>Select Age Category</option>
-      <option value="Under 11">Under 11</option><option value="Under 14">Under 14</option><option value="Under 17">Under 17</option><option value="Under 19">Under 19</option>
+      <option value="Under 12">Under 12</option><option value="Under 14">Under 14</option><option value="Under 17">Under 17</option><option value="Under 19">Under 19</option>
     </select>
     <div class="manual-note">Age category is selected manually and is never calculated from the date of birth.</div>
-    <label for="gender">Gender</label><select id="gender" name="gender" required><option value="" disabled selected>Select Gender</option><option>Male</option><option>Female</option><option>Other</option></select>
-    <fieldset><legend>Choose Events <span style="color:#8f9bb2">· max 3 non-relays + 2 relays</span></legend>
+    <label for="gender">Gender</label><select id="gender" name="gender" required><option value="" disabled selected>Select Gender</option><option>Male</option><option>Female</option></select>
+    <fieldset><legend>Choose Events <span style="color:#8f9bb2">· max 3 non-relays + 2 relays · max 2 per gender per event per school per age category (4 total: 2 male + 2 female)</span></legend>
       <div id="event-options">
         <label><input type="checkbox" name="events" value="50m Race">50m Race</label><label><input type="checkbox" name="events" value="100m Race">100m Race</label><label><input type="checkbox" name="events" value="200m Race">200m Race</label><label><input type="checkbox" name="events" value="400m Race">400m Race</label><label><input type="checkbox" name="events" value="800m Race">800m Race</label><label><input type="checkbox" name="events" value="1500m Race">1500m Race</label><label><input type="checkbox" name="events" value="Shot Put">Shot Put</label><label><input type="checkbox" name="events" value="Discus Throw">Discus Throw</label><label><input type="checkbox" name="events" value="Long Jump">Long Jump</label><label><input type="checkbox" name="events" value="High Jump">High Jump</label><label><input type="checkbox" name="events" value="4x100m Relay" class="relay">4x100m Relay</label><label><input type="checkbox" name="events" value="4x400m Relay" class="relay">4x400m Relay</label>
       </div>
     </fieldset>
-    <label for="photo">Participant Photo</label><input type="file" id="photo" name="photo" accept="image/png,image/jpeg,image/jpg"><img id="preview" alt="Photo Preview">
+    <label for="photo">Participant Photo</label><input type="file" id="photo" name="photo" accept="image/png,image/jpeg,image/jpg"><img id="preview" alt="Photo Preview" style="display:none;">
     <button type="submit">Submit Registration →</button>
   </form>
   <div id="submittingPopup" class="popup hidden">Submitting your registration…</div>
@@ -661,6 +661,47 @@ const form = document.getElementById('regForm');
     const chestDisplay = document.getElementById('chestDisplay');
 
     const schoolInput = document.getElementById('school');
+    const dobInput = document.getElementById('dob');
+
+    function localTodayISO() {
+      const now = new Date();
+      return `${String(now.getDate()).padStart(2, '0')}/${String(now.getMonth() + 1).padStart(2, '0')}/${now.getFullYear()}`;
+    }
+
+    function parseDobDDMMYYYY(value) {
+      const match = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(value);
+      if (!match) return null;
+      const day = Number(match[1]);
+      const month = Number(match[2]);
+      const year = Number(match[3]);
+      if (year < 2000 || month < 1 || month > 12 || day < 1 || day > 31) return null;
+      const parsed = new Date(year, month - 1, day);
+      if (parsed.getFullYear() !== year || parsed.getMonth() !== month - 1 || parsed.getDate() !== day) return null;
+      return { day, month, year, iso: `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}` };
+    }
+
+    function validateDob(showMessage = true) {
+      const parsed = parseDobDDMMYYYY(dobInput.value.trim());
+      const valid = !!parsed && parsed.iso <= `${new Date().getFullYear()}-${String(new Date().getMonth() + 1).padStart(2, '0')}-${String(new Date().getDate()).padStart(2, '0')}`;
+      dobInput.setCustomValidity(valid ? '' : 'Enter DOB as DD/MM/YYYY, with year 2000 or later, a valid calendar date, and no future date.');
+      if (!valid && showMessage) dobInput.reportValidity();
+      return valid;
+    }
+
+    dobInput.addEventListener('input', () => {
+      // Auto-insert separators as day and month are entered.
+      const digits = dobInput.value.replace(/\D/g, '').slice(0, 8);
+      let formatted = digits.slice(0, 2);
+      if (digits.length > 2) formatted += '/' + digits.slice(2, 4);
+      if (digits.length > 4) formatted += '/' + digits.slice(4, 8);
+      if (dobInput.value !== formatted) {
+        const cursorAtEnd = document.activeElement === dobInput;
+        dobInput.value = formatted;
+        if (cursorAtEnd) dobInput.setSelectionRange(formatted.length, formatted.length);
+      }
+      validateDob(false);
+    });
+    dobInput.addEventListener('change', () => validateDob(true));
 
 
 
@@ -719,31 +760,43 @@ function closeMainPopup() {
 
 
 
-    schoolInput.addEventListener('change', async function () {
+    let chestLookupRequest = 0;
 
-      const school = this.value;
+    async function refreshChestNumber(school) {
+      const requestId = ++chestLookupRequest;
+      if (!school) {
+        chestDisplay.textContent = 'Please select a school';
+        return;
+      }
+      chestDisplay.textContent = 'Loading chest number…';
+      try {
+        const res = await fetch(`/next-chest?school=${encodeURIComponent(school)}`, { cache: 'no-store' });
+        const data = await res.json();
+        if (requestId !== chestLookupRequest || schoolInput.value !== school) return;
+        chestDisplay.textContent = res.ok && data.chest
+          ? `Chest Number: ${data.chest}`
+          : (data.error || 'Unavailable');
+      } catch (err) {
+        if (requestId === chestLookupRequest && schoolInput.value === school) {
+          chestDisplay.textContent = 'Error fetching chest number';
+        }
+      }
+    }
 
-      try {
-
-        const res = await fetch(`/next-chest?school=${encodeURIComponent(school)}`);
-
-        const data = await res.json();
-
-                chestDisplay.textContent = data.chest ? `Chest Number: ${data.chest}` : 'Unavailable';
-
-      } catch (err) {
-
-        chestDisplay.textContent = 'Error fetching chest number';
-
-      }
-
-    });
+    schoolInput.addEventListener('change', function () {
+      refreshChestNumber(this.value);
+    });
 
 
 
     form.addEventListener('submit', async function (e) {
 
       e.preventDefault();
+
+        if (!validateDob(true)) {
+          document.getElementById('submittingPopup').classList.add('hidden');
+          return;
+        }
 
         document.getElementById('submittingPopup').classList.remove('hidden');
 
@@ -771,17 +824,19 @@ function closeMainPopup() {
 
       const formData = new FormData();
 
-      formData.append('school', form.school.value);
+      formData.append('school', schoolInput.value);
 
-      formData.append('name', form.name.value);
+      formData.append('name', document.getElementById('name').value);
 
-      formData.append('dob', form.dob.value);
+      formData.append('dob', dobInput.value.trim());
 
-      formData.append('ageCategory', form.ageCategory.value);
+      formData.append('ageCategory', document.getElementById('ageCategory').value);
 
-      formData.append('gender', form.gender.value);
+      formData.append('gender', document.getElementById('gender').value);
 
-      formData.append('photo', photoInput.files[0]);
+      if (photoInput.files && photoInput.files[0]) {
+          formData.append('photo', photoInput.files[0]);
+        }
 
 
 
@@ -822,10 +877,17 @@ function closeMainPopup() {
         showPopup(`✅ Registration successful!\nChest Number: ${result.chest}`);
 
         form.reset();
+          preview.removeAttribute('src');
+          preview.style.display = 'none';
 
-        preview.style.display = 'none';
-
-        chestDisplay.textContent = 'Please select a school';
+          // Keep the custom school dropdown in sync after resetting the form.
+          const schoolTriggerText = document.getElementById('schoolTriggerText');
+          const schoolOptions = [...document.querySelectorAll('.premium-school-option')];
+          if (schoolTriggerText) schoolTriggerText.textContent = 'Select School Name';
+          schoolOptions.forEach(option => option.setAttribute('aria-selected', option.dataset.value === '' ? 'true' : 'false'));
+          chestLookupRequest++;
+          chestDisplay.textContent = 'Please select a school';
+          dobInput.setCustomValidity('');
 
       } catch (err) {
 
@@ -858,9 +920,28 @@ function closeMainPopup() {
 
 photoInput.addEventListener('change', () => {
   const file = photoInput.files && photoInput.files[0];
-  if (!file) { preview.style.display = 'none'; return; }
+
+  // Hide and clear the preview when no supported image is selected.
+  if (!file || !['image/png', 'image/jpeg'].includes(file.type)) {
+    preview.removeAttribute('src');
+    preview.style.display = 'none';
+    return;
+  }
+
   const reader = new FileReader();
-  reader.onload = e => { preview.src = e.target.result; preview.style.display = 'block'; };
+  reader.onload = event => {
+    if (typeof event.target.result === 'string') {
+      preview.src = event.target.result;
+      preview.style.display = 'block';
+    } else {
+      preview.removeAttribute('src');
+      preview.style.display = 'none';
+    }
+  };
+  reader.onerror = () => {
+    preview.removeAttribute('src');
+    preview.style.display = 'none';
+  };
   reader.readAsDataURL(file);
 });
 
@@ -903,4 +984,8 @@ photoInput.addEventListener('change', () => {
 
 
 </script>
+
+
+
+
 </body></html>
