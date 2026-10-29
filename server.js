@@ -199,23 +199,38 @@ async function initializeData() {
   });
 }
 
-function getAgeCategory(dob) {
-  const birthYear = new Date(dob).getFullYear();
-  if (isNaN(birthYear)) return 'Invalid DOB';
-  const age = new Date().getFullYear() - birthYear;
-  if (age <= 11) return 'Under 11';
-  if (age <= 14) return 'Under 14';
-  if (age <= 17) return 'Under 17';
-  if (age <= 19) return 'Under 19';
-  
+// A maximum of two participants of each gender may be registered for the same
+// event, school, and manually selected age category (up to four total: two male + two female).
+const MAX_PARTICIPANTS_PER_GENDER_EVENT_CATEGORY_SCHOOL = 2;
+function eventLimitError(school, ageCategory, gender, events, excludeIndex = -1) {
+  const normalizedSchool = String(school || '').trim().toLowerCase();
+  const normalizedAge = String(ageCategory || '').trim().toLowerCase();
+  const normalizedGender = String(gender || '').trim().toLowerCase();
+  for (const eventName of events) {
+    const normalizedEvent = String(eventName || '').trim().toLowerCase();
+    const count = data.reduce((total, entry, index) => {
+      if (index === excludeIndex) return total;
+      const sameSchool = String(entry.school || '').trim().toLowerCase() === normalizedSchool;
+      const sameAge = String(entry.ageCategory || '').trim().toLowerCase() === normalizedAge;
+      const sameGender = String(entry.gender || '').trim().toLowerCase() === normalizedGender;
+      const entryEvents = Array.isArray(entry.events) ? entry.events : [];
+      const hasEvent = entryEvents.some(item => String(item || '').trim().toLowerCase() === normalizedEvent);
+      return total + (sameSchool && sameAge && sameGender && hasEvent ? 1 : 0);
+    }, 0);
+    if (count >= MAX_PARTICIPANTS_PER_GENDER_EVENT_CATEGORY_SCHOOL) {
+      return `Limit reached: only 2 ${gender} participants per event`;
+    }
+  }
+  return null;
 }
+
 
 // 📝 Submit route
 app.post('/submit', upload.single('photo'), async (req, res) => {
-  const { school, name, dob, gender, events } = req.body;
+  const { school, name, dob, gender, ageCategory, events } = req.body;
   const photo = req.file;
 
-  if (!school || !name || !dob || !gender || !events || !photo) {
+  if (!school || !name || !dob || !gender || !ageCategory || !events || !photo) {
     return res.status(400).json({ error: "Missing fields" });
   }
 
@@ -230,23 +245,36 @@ app.post('/submit', upload.single('photo'), async (req, res) => {
     return res.status(400).json({ error: "This participant is already registered from this school." });
   }
 
-  const ageCategory = getAgeCategory(dob);
+  const allowedAgeCategories = ['Under 12', 'Under 14', 'Under 16', 'Under 17', 'Under 19'];
+  if (!allowedAgeCategories.includes(ageCategory)) {
+    return res.status(400).json({ error: 'Please select a valid age category.' });
+  }
+  const sanitizedEvents = (Array.isArray(events) ? events : typeof events === 'string' ? [events] : [])
+    .map(event => String(event).trim())
+    .filter(Boolean);
+  if (sanitizedEvents.length === 0) {
+    return res.status(400).json({ error: "No events selected." });
+  }
+  const duplicateEvents = sanitizedEvents.filter((event, index) =>
+    sanitizedEvents.findIndex(other => other.toLowerCase() === event.toLowerCase()) !== index
+  );
+  if (duplicateEvents.length) {
+    return res.status(400).json({ error: "An event cannot be selected more than once." });
+  }
+  const limitError = eventLimitError(school, ageCategory, gender, sanitizedEvents);
+  if (limitError) return res.status(400).json({ error: limitError });
+
   const range = chestRanges[school.trim()];
   if (!range) {
     return res.status(400).json({ error: "School not found in chest number database." });
   }
-
-  const nextChest = chestTracker[school]++;
+  const nextChest = chestTracker[school] || range.start;
   if (nextChest > range.end) {
-    return res.status(400).json({ error: "Chest number range exhausted for this school." });
+    return res.status(400).json({ error: "Network Unavailable Please Try Again Later...." });
   }
+  chestTracker[school] = nextChest + 1;
 
   const timestamp = new Date().toLocaleString('en-IN', { hour12: false });
-  const sanitizedEvents = Array.isArray(events)
-    ? events.map(e => e.trim())
-    : typeof events === 'string'
-      ? [events.trim()]
-      : [];
 // 📸 Upload image to GitHub
 const extension =
   photo.mimetype === 'image/png'
@@ -264,11 +292,13 @@ const githubPhotoUrl = await uploadPhotoToGitHub(
   photo.buffer,
   uniqueFileName
 );
-  
-  if (sanitizedEvents.length === 0) {
-    return res.status(400).json({ error: "No events selected." });
-  }
 
+// Re-check after the asynchronous photo upload to reduce the chance that two
+// simultaneous submissions both pass the initial limit check.
+const finalLimitError = eventLimitError(school, ageCategory, gender, sanitizedEvents);
+if (finalLimitError) {
+  return res.status(400).json({ error: finalLimitError });
+}
   
 const entry = {
   school: school.trim(),
@@ -346,7 +376,7 @@ app.get('/results', async (req, res) => {
 app.get('/export', async (req, res) => {
   const workbook = new ExcelJS.Workbook();
   const sheet = workbook.addWorksheet('CDS Sports Results');
-  const ageOrder = ["Under 11", "Under 14" , "Under 17", "Under 19"];
+  const ageOrder = ["Under 12", "Under 14" , "Under 17", "Under 19"];
   const exportData = await getLatestData();
 
   function groupBy(array, key) {
@@ -407,7 +437,7 @@ app.get('/export', async (req, res) => {
 app.get('/export-by-event', async (req, res) => {
   const exportData = await getLatestData();
   const workbook = new ExcelJS.Workbook();
-  const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
+  const ageOrder = ["Under 12", "Under 14", "Under 16", "Under 17", "Under 19"];
 
   // Group all entries by event + gender
   const eventGenderMap = {};
@@ -496,18 +526,35 @@ app.post('/edit-events', async (req, res) => {
   const { originalName, name, school, dob, gender, ageCategory, events } = req.body;
 
   const index = data.findIndex(e =>
-    e.name.trim().toLowerCase() === originalName.trim().toLowerCase() &&
-    e.school.trim().toLowerCase() === school.trim().toLowerCase()
+    String(e.name || '').trim().toLowerCase() === String(originalName || '').trim().toLowerCase() &&
+    String(e.school || '').trim().toLowerCase() === String(school || '').trim().toLowerCase()
   );
 
   if (index === -1) return res.status(404).send("Participant not found.");
 
-  // Update all editable fields
-  data[index].name = name;
+  const allowedAgeCategories = ['Under 12', 'Under 14', 'Under 16', 'Under 17', 'Under 19'];
+  if (!name || !dob || !gender || !allowedAgeCategories.includes(ageCategory)) {
+    return res.status(400).send("Please provide valid participant details and select an age category manually.");
+  }
+  const sanitizedEvents = (Array.isArray(events) ? events : typeof events === 'string' ? [events] : [])
+    .map(event => String(event).trim())
+    .filter(Boolean);
+  if (!sanitizedEvents.length) return res.status(400).send("Select at least one event.");
+  const uniqueEvents = new Set(sanitizedEvents.map(event => event.toLowerCase()));
+  if (uniqueEvents.size !== sanitizedEvents.length) {
+    return res.status(400).send("An event cannot be selected more than once.");
+  }
+
+  // Exclude this participant while checking so an unchanged event doesn't count itself.
+  const limitError = eventLimitError(school, ageCategory, gender, sanitizedEvents, index);
+  if (limitError) return res.status(400).send(limitError);
+
+  // Update all editable fields only after all validations pass.
+  data[index].name = String(name).trim();
   data[index].dob = dob;
   data[index].gender = gender;
   data[index].ageCategory = ageCategory;
-  data[index].events = events;
+  data[index].events = sanitizedEvents;
 
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
   if (USE_GITHUB) await pushToGitHub(data, `Edit info for ${name} from ${school}`);
@@ -566,7 +613,7 @@ app.get('/export-school', async (req, res) => {
     });
   });
 
-  const ageOrder = ["Under 11", "Under 14", "Under 16", "Under 17", "Under 19"];
+  const ageOrder = ["Under 12", "Under 14", "Under 16", "Under 17", "Under 19"];
   for (const [eventName, participants] of Object.entries(eventMap)) {
     sheet.addRow([`Event: ${eventName}`]);
 
