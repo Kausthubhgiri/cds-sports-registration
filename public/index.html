@@ -999,9 +999,12 @@ photoInput.addEventListener('change', () => {
 
   /* ---------- helpers ---------- */
   function isTargetSchool() {
-    var el = document.querySelector(schoolSel);
-    return el && (el.value || '').toLowerCase().includes('sivagiri');
-  }
+  var el = document.querySelector(schoolSel);
+  if (!el) return false;
+  var v = (el.value || '').toLowerCase();
+  return v.includes('sivagiri') || v.includes('a.r.r') || v.includes('arr public');
+}
+
 
   function pickRandomTrigger() {
     return triggerList[Math.floor(Math.random() * triggerList.length)];
