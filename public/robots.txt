@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Private/admin and data endpoints are not public search landing pages.
+Disallow: /edit-login
+Disallow: /edit-login.html
+Disallow: /admin-edit
+Disallow: /admin-edit.html
+Disallow: /admin
+Disallow: /admin.html
+Disallow: /verify-login
+Disallow: /results
+Disallow: /schools
+Disallow: /export
+Disallow: /export-by-event
+Disallow: /export-school
+Disallow: /next-chest
+Disallow: /submit
+Disallow: /reset-all
+Disallow: /reset-last
+Disallow: /edit-events
+Disallow: /remove-candidate
+
+Sitemap: https://drgrpscdsregistration.us.ci/sitemap.xml
