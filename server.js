@@ -22,6 +22,7 @@ const loginCredentials = [
   { username: "vbps", password: "vbps@476", school: "VISHWABHARATHY PUBLIC SCHOOL" },
   { username: "vsdps12", password: "vsdps12@876", school: "VISWADARSHINI PUBLIC SCHOOL" },
   { username: "mpsp124", password: "mpsp12@764", school: "MODEL PUBLIC SCHOOL PALLIPURAM" },
+  { username: "nssps124", password: "nssps12@764", school: "N.S.S PUBLIC SCHOOL PERUNTHANNI" },
   { username: "jwhr", password: "jwhr@763", school: "JAWAHAR PUBLIC SCHOOL" }
 ];
 const filePath = path.join(__dirname, 'results.json');
