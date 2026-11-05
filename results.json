@@ -28,5 +28,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793867736307-AISWARYA_S.jpg",
     "timestamp": "5/11/2026, 08:35:36"
+  },
+  {
+    "school": "N.S.S PUBLIC SCHOOL PERUNTHANNI",
+    "name": "VAIGA C S",
+    "chest": 403,
+    "dob": "20/11/2012",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793867887607-VAIGA_C_S.jpg",
+    "timestamp": "5/11/2026, 08:38:07"
   }
 ]
