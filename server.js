@@ -201,28 +201,43 @@ async function initializeData() {
   });
 }
 
-// A maximum of two participants of each gender may be registered for the same
-// event, school, and manually selected age category (up to four total: two male + two female).
-const MAX_PARTICIPANTS_PER_GENDER_EVENT_CATEGORY_SCHOOL = 2;
+// Registration capacity limits are scoped by school + manually selected age category
+// + gender + individual event. Relay capacity is five per gender for EACH relay event.
+const MAX_NON_RELAY_PER_GENDER = 2;
+const MAX_RELAY_PER_GENDER = 5;
+const RELAY_EVENTS = new Set(['4x100m relay', '4x400m relay']);
+
 function eventLimitError(school, ageCategory, gender, events, excludeIndex = -1) {
   const normalizedSchool = String(school || '').trim().toLowerCase();
   const normalizedAge = String(ageCategory || '').trim().toLowerCase();
   const normalizedGender = String(gender || '').trim().toLowerCase();
+
   for (const eventName of events) {
     const normalizedEvent = String(eventName || '').trim().toLowerCase();
+    const isRelay = RELAY_EVENTS.has(normalizedEvent);
+    const limit = isRelay ? MAX_RELAY_PER_GENDER : MAX_NON_RELAY_PER_GENDER;
+
     const count = data.reduce((total, entry, index) => {
       if (index === excludeIndex) return total;
+
       const sameSchool = String(entry.school || '').trim().toLowerCase() === normalizedSchool;
       const sameAge = String(entry.ageCategory || '').trim().toLowerCase() === normalizedAge;
       const sameGender = String(entry.gender || '').trim().toLowerCase() === normalizedGender;
       const entryEvents = Array.isArray(entry.events) ? entry.events : [];
-      const hasEvent = entryEvents.some(item => String(item || '').trim().toLowerCase() === normalizedEvent);
+      const hasEvent = entryEvents.some(
+        item => String(item || '').trim().toLowerCase() === normalizedEvent
+      );
+
       return total + (sameSchool && sameAge && sameGender && hasEvent ? 1 : 0);
     }, 0);
-    if (count >= MAX_PARTICIPANTS_PER_GENDER_EVENT_CATEGORY_SCHOOL) {
-      return `Limit reached: only 2 ${gender} participants per event`;
+
+    if (count >= limit) {
+      return isRelay
+        ? `Relay limit reached: maximum 5 ${gender} participants for ${eventName} in this school and age category.`
+        : `Limit reached: maximum 2 ${gender} participants for ${eventName} in this school and age category.`;
     }
   }
+
   return null;
 }
 
