@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "school": "N.S.S PUBLIC SCHOOL PERUNTHANNI",
+    "name": "ANANYA SHIJU",
+    "chest": 401,
+    "dob": "26/05/2012",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793867605242-ANANYA_SHIJU.jpg",
+    "timestamp": "5/11/2026, 08:33:25"
+  }
+]
