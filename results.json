@@ -58,5 +58,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793868375846-ARUNIMA_R_S.jpg",
     "timestamp": "5/11/2026, 08:46:15"
+  },
+  {
+    "school": "N.S.S PUBLIC SCHOOL PERUNTHANNI",
+    "name": "AKHILESH S",
+    "chest": 405,
+    "dob": "13/05/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793869495580-AKHILESH_S.jpg",
+    "timestamp": "5/11/2026, 09:04:55"
   }
 ]
