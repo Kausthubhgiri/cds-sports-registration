@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0a4b78"><title>CDS Sports Meet | Entry Management</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0a4b78"><title>CDS Sports Meet | Entry Management</title><link rel="icon" type="image/png" href="drgr_logo.png">
+<link rel="apple-touch-icon" href="drgr_logo.png">
  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.3/dist/jspdf.plugin.autotable.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script><style>
@@ -137,6 +138,13 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid 
         <button class="btn" id="downloadExcelBtn" type="button">▦ Download Excel</button>
       </div></div><label class="search"><input id="searchInput" type="search" placeholder="Search participant, chest number or event…" autocomplete="off"></label><div id="resultsContainer"><div class="empty">Loading entries…</div></div></section></main><div class="modal" id="editModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-card"><div class="modal-head"><div><h3 id="modalTitle">Edit participant</h3><p>Update details and event selections.</p></div><button class="close" type="button" id="closeModal" aria-label="Close">✕</button></div><form class="form" id="editForm"><input type="hidden" id="originalName"><input type="hidden" id="editSchool"><div class="fields"><div class="field"><label for="editName">Participant name</label><input type="text" id="editName" required></div><div class="field"><label for="editDob">Date of birth</label><input type="date" id="editDob" required></div><div class="field"><label for="editGender">Gender</label><select id="editGender"><option>Male</option><option>Female</option></select></div><div class="field"><label for="editAge">Age category <span style="color:#8998b5;font-weight:500">(select manually)</span></label><select id="editAge"><option>Under 12</option><option>Under 14</option><option>Under 16</option><option>Under 17</option><option>Under 19</option></select></div></div><div class="event-title">Events <span style="color:#789;font-weight:600">(up to 3 non-relay events; max 2 per gender per event per school per age category (4 total: 2 male + 2 female))</span></div><div class="event-grid" id="eventCheckboxes"></div><div class="form-actions"><button class="btn danger" id="cancelBtn" type="button">Cancel</button><button class="btn primary" type="submit">Save changes</button></div></form></div></div><div class="toast" id="toast" role="status"></div>
 <script>(()=>{'use strict';const $=id=>document.getElementById(id),allEvents=['50m Race','100m Race','200m Race','400m Race','800m Race','1500m Race','Shot Put','Discus Throw','Long Jump','High Jump','4x100m Relay','4x400m Relay'],relayEvents=['4x100m Relay','4x400m Relay'];let schoolEntries=[],visibleEntries=[],toastTimer;const schoolName=new URLSearchParams(location.search).get('school')||'',esc=v=>String(v??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));function toast(message,error=false){const t=$('toast');t.textContent=message;t.className='toast show'+(error?' error':'');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.className='toast',3800)}function avatar(p){const mark=String(p.gender||'').toLowerCase().startsWith('f')?'♀':String(p.gender||'').toLowerCase().startsWith('m')?'♂':'●';return p.photoPath?`<img class="photo" src="${esc(p.photoPath)}" alt="Photo of ${esc(p.name)}" onerror="this.outerHTML='<div class=\\'photo avatar\\'>${mark}</div>'">`:`<div class="photo avatar">${mark}</div>`}function updateStats(){const events=schoolEntries.reduce((n,p)=>n+(p.events||[]).length,0),ages=new Set(schoolEntries.map(p=>p.ageCategory).filter(Boolean));$('totalCount').textContent=schoolEntries.length;$('eventCount').textContent=events;$('ageCount').textContent=ages.size}function render(){const root=$('resultsContainer');if(!visibleEntries.length){root.innerHTML='<div class="empty"><div style="font-size:28px">🏁</div><strong>No matching registrations</strong>Try another search.</div>';return}root.innerHTML=`<div class="table-wrap"><table class="data-table"><thead><tr><th>Photo</th><th>Participant</th><th>Chest</th><th>DOB</th><th>Age category</th><th>Gender</th><th>Events</th><th>Actions</th></tr></thead><tbody>${visibleEntries.map(p=>`<tr><td>${avatar(p)}</td><td><span class="name">${esc(p.name)}</span></td><td><span class="chest">${esc(p.chest||'—')}</span></td><td>${esc(p.dob||'—')}</td><td>${esc(p.ageCategory||'—')}</td><td>${esc(p.gender||'—')}</td><td class="events">${esc((p.events||[]).join(', '))}</td><td><div class="row-actions"><button class="small-btn" data-action="edit" data-index="${schoolEntries.indexOf(p)}">Edit</button><button class="small-btn remove" data-action="remove" data-index="${schoolEntries.indexOf(p)}">Remove</button></div></td></tr>`).join('')}</tbody></table></div>`}function filter(){const q=$('searchInput').value.trim().toLowerCase();visibleEntries=schoolEntries.filter(p=>[p.name,p.chest,p.dob,p.ageCategory,p.gender,...(p.events||[])].join(' ').toLowerCase().includes(q));render()}async function loadResults(){if(!schoolName){$('schoolHeader').textContent='School not selected';$('resultsContainer').innerHTML='<div class="empty"><strong>School access is missing</strong>Please return to the login page and sign in again.</div>';return}try{const r=await fetch('/results',{cache:'no-store'});if(!r.ok)throw new Error('Could not load records');const data=await r.json();schoolEntries=data.filter(p=>String(p.school||'').trim().toLowerCase()===schoolName.trim().toLowerCase());$('schoolHeader').textContent=`🏫 ${schoolName}`;updateStats();filter()}catch(e){$('resultsContainer').innerHTML='<div class="empty"><strong>Could not load registrations</strong>Please try again shortly.</div>';toast(e.message,true)}}function openModal(index){const p=schoolEntries[index];if(!p)return;$('originalName').value=p.name;$('editSchool').value=p.school;$('editName').value=p.name;$('editDob').value=p.dob;$('editGender').value=p.gender;$('editAge').value=p.ageCategory;const list=$('eventCheckboxes');list.innerHTML=allEvents.map(event=>`<label><input type="checkbox" value="${event}" ${(p.events||[]).includes(event)?'checked':''}>${event}</label>`).join('');$('editModal').classList.add('open');$('editName').focus()}function closeModal(){$('editModal').classList.remove('open')}function checkLimit(input){const selected=[...document.querySelectorAll('#eventCheckboxes input:checked')].map(x=>x.value),count=selected.filter(event=>!relayEvents.includes(event)).length;if(!relayEvents.includes(input.value)&&count>3){input.checked=false;toast('Choose up to 3 non-relay events.',true)}}async function post(path,payload){const r=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const text=await r.text();if(!r.ok)throw new Error(text||'Update failed');return text}$('resultsContainer').addEventListener('click',e=>{const button=e.target.closest('button[data-action]');if(!button)return;const index=Number(button.dataset.index);if(button.dataset.action==='edit')openModal(index);if(button.dataset.action==='remove'){const p=schoolEntries[index];if(p&&confirm(`Remove ${p.name}? This cannot be undone.`))post('/remove-candidate',{name:p.name,school:p.school}).then(msg=>{toast(msg||'Participant removed');loadResults()}).catch(err=>toast(err.message,true))}});$('searchInput').addEventListener('input',filter);$('closeModal').addEventListener('click',closeModal);$('cancelBtn').addEventListener('click',closeModal);$('editModal').addEventListener('click',e=>{if(e.target===$('editModal'))closeModal()});$('eventCheckboxes').addEventListener('change',e=>{if(e.target.matches('input'))checkLimit(e.target)});$('editForm').addEventListener('submit',e=>{e.preventDefault();const events=[...document.querySelectorAll('#eventCheckboxes input:checked')].map(x=>x.value);if(!events.length)return toast('Select at least one event.',true);post('/edit-events',{originalName:$('originalName').value,name:$('editName').value.trim(),school:$('editSchool').value,dob:$('editDob').value,gender:$('editGender').value,ageCategory:$('editAge').value,events}).then(msg=>{toast(msg||'Participant updated');closeModal();loadResults()}).catch(err=>toast(err.message,true))});
+function normalizePhotoUrl(photoPath) {
+  const value = String(photoPath || '').trim();
+  const match = value.match(/^https:\/\/github\.com\/([^/]+)\/([^/]+)\/raw\/([^/]+)\/(.+)$/i);
+  if (match) return `https://raw.githubusercontent.com/${match[1]}/${match[2]}/${match[3]}/${match[4]}`;
+  return value;
+}
+const photoDataCache = new Map();
 async function exportImageData(photoPath, gender) {
   const makeFallback = () => {
     const female=String(gender||'').toLowerCase().startsWith('f');
@@ -147,19 +155,33 @@ async function exportImageData(photoPath, gender) {
     x.fillStyle=female?'#b84278':male?'#2178b9':'#547080';
     x.beginPath();x.arc(90,62,31,0,Math.PI*2);x.fill();
     x.beginPath();x.arc(90,205,65,Math.PI,0);x.fill();
-    return c.toDataURL('image/jpeg',.88);
+    return c.toDataURL('image/jpeg',.82);
   };
   if(!photoPath) return makeFallback();
+  const url = normalizePhotoUrl(photoPath);
+  if (photoDataCache.has(url)) return photoDataCache.get(url);
   try {
-    const response=await fetch(photoPath,{cache:'no-store'});
-    if(!response.ok) return makeFallback();
-    const blob=await response.blob();
-    if(!blob.type.startsWith('image/')) return makeFallback();
-    return await new Promise((resolve,reject)=>{
-      const reader=new FileReader();reader.onload=()=>resolve(reader.result);
-      reader.onerror=reject;reader.readAsDataURL(blob);
-    });
-  } catch(e) { return makeFallback(); }
+    // raw.githubusercontent.com permits browser CORS and returns the image bytes, unlike github.com/raw redirects.
+    const response = await fetch(url, {cache:'force-cache', mode:'cors'});
+    if (!response.ok) throw new Error(`Photo request failed (${response.status})`);
+    const blob = await response.blob();
+    if (!blob.type.startsWith('image/')) throw new Error(`Not an image (${blob.type || 'unknown content type'})`);
+    const bitmap = await createImageBitmap(blob);
+    const max = 420;
+    const scale = Math.min(1, max / Math.max(bitmap.width, bitmap.height));
+    const canvas = document.createElement('canvas');
+    canvas.width = Math.max(1, Math.round(bitmap.width * scale));
+    canvas.height = Math.max(1, Math.round(bitmap.height * scale));
+    canvas.getContext('2d').drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+    bitmap.close?.();
+    const dataUrl = canvas.toDataURL('image/jpeg', .84);
+    photoDataCache.set(url, dataUrl);
+    return dataUrl;
+  } catch (error) {
+    console.error('Could not embed participant photo in PDF:', url, error);
+    // Do not disguise a broken photo URL as a participant without a photo.
+    throw new Error(`Could not load the real photo for PDF: ${url}. Check that the image exists in the GitHub uploads folder and is publicly accessible.`);
+  }
 }
 function exportFileName(extension) {
   const safe=schoolName.replace(/[^a-z0-9]+/gi,'_').replace(/^_|_$/g,'');
@@ -178,16 +200,13 @@ async function downloadSchoolPdf() {
       String(a.gender||'').localeCompare(String(b.gender||'')) ||
       String(a.name||'').localeCompare(String(b.name||''))
     );
-    const rows=[];
-    for(let i=0;i<ordered.length;i++){
-      const p=ordered[i];
-      toast(`Preparing PDF photos ${i+1}/${ordered.length}…`);
-      rows.push([
-        {content:'',photo:await exportImageData(p.photoPath,p.gender)},
-        p.name||'—',p.chest||'—',p.dob||'—',p.ageCategory||'—',
-        p.gender||'—',(p.events||[]).join(', ')||'—'
-      ]);
-    }
+    toast(`Loading ${ordered.length} participant photos for PDF…`);
+    const photos = await Promise.all(ordered.map(p => exportImageData(p.photoPath, p.gender)));
+    const rows = ordered.map((p, i) => [
+      {content:'',photo:photos[i]},
+      p.name||'—',p.chest||'—',p.dob||'—',p.ageCategory||'—',
+      p.gender||'—',(p.events||[]).join(', ')||'—'
+    ]);
     const width=doc.internal.pageSize.getWidth();
     doc.setFillColor(11,16,32);doc.rect(0,0,width,25,'F');
     doc.setTextColor(255,255,255);doc.setFont('helvetica','bold');doc.setFontSize(16);
