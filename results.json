@@ -2235,5 +2235,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793978987886-AYUSH_A_S.jpg",
     "timestamp": "6/11/2026, 15:29:49"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "NIVEDITHA A P",
+    "chest": 311,
+    "dob": "14/12/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793979590067-NIVEDITHA_A_P.jpg",
+    "timestamp": "6/11/2026, 15:39:51"
   }
 ]
