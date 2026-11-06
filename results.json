@@ -1350,5 +1350,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793948328761-Aadinarayana__B.jpg",
     "timestamp": "6/11/2026, 06:58:48"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Aadinath. S",
+    "chest": 730,
+    "dob": "03/06/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793948415714-Aadinath__S.jpg",
+    "timestamp": "6/11/2026, 07:00:15"
   }
 ]
