@@ -1440,5 +1440,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793949206022-Aathrey_Sudeesh.jpg",
     "timestamp": "6/11/2026, 07:13:25"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Rishi M M",
+    "chest": 140,
+    "dob": "20/07/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793949265582-Rishi_M_M.jpg",
+    "timestamp": "6/11/2026, 07:14:25"
   }
 ]
