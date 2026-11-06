@@ -1176,5 +1176,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793947066477-Farhan_F.jpg",
     "timestamp": "6/11/2026, 06:37:46"
+  },
+  {
+    "school": "N.S.S PUBLIC SCHOOL PERUNTHANNI",
+    "name": "SAYELALJI V",
+    "chest": 412,
+    "dob": "09/12/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793947194073-SAYELALJI_V.jpg",
+    "timestamp": "6/11/2026, 06:39:53"
   }
 ]
