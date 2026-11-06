@@ -1750,5 +1750,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793951710394-Mahalekshmi_K.jpg",
     "timestamp": "6/11/2026, 07:55:10"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Nivedita Asok",
+    "chest": 160,
+    "dob": "13/06/2011",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793951778980-Nivedita_Asok.jpg",
+    "timestamp": "6/11/2026, 07:56:18"
   }
 ]
