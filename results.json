@@ -1424,5 +1424,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793949090117-MEENAKSHI_S_S.jpg",
     "timestamp": "6/11/2026, 07:11:30"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Aathrey Sudeesh",
+    "chest": 139,
+    "dob": "24/05/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793949206022-Aathrey_Sudeesh.jpg",
+    "timestamp": "6/11/2026, 07:13:25"
   }
 ]
