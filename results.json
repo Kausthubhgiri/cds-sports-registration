@@ -2536,5 +2536,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793983827261-ASWANTH_S.jpg",
     "timestamp": "6/11/2026, 16:50:28"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "HARI GOVIND U",
+    "chest": 332,
+    "dob": "26/04/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793983930055-HARI_GOVIND_U.jpg",
+    "timestamp": "6/11/2026, 16:52:12"
   }
 ]
