@@ -1993,5 +1993,22 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952780193-D_Mayoora__Nair.jpg",
     "timestamp": "6/11/2026, 08:13:00"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Krishna priya rs",
+    "chest": 740,
+    "dob": "20/03/2014",
+    "ageCategory": "Under 12",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "Shot Put",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952925386-Krishna_priya_rs.jpg",
+    "timestamp": "6/11/2026, 08:15:25"
   }
 ]
