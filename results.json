@@ -971,5 +971,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945991610-Vaiga_S_Nair.jpg",
     "timestamp": "6/11/2026, 06:19:51"
+  },
+  {
+    "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
+    "name": "Alina S",
+    "chest": 1510,
+    "dob": "10/10/2014",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "400m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946096806-Alina_S.jpg",
+    "timestamp": "6/11/2026, 06:21:36"
   }
 ]
