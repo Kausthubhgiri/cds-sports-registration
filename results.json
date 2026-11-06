@@ -1705,5 +1705,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793951163392-Niranjan_Sarang_A_P.jpg",
     "timestamp": "6/11/2026, 07:46:03"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Akshay Krishna V",
+    "chest": 157,
+    "dob": "10/11/2008",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793951246196-Akshay_Krishna_V.jpg",
+    "timestamp": "6/11/2026, 07:47:26"
   }
 ]
