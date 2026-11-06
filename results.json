@@ -1618,5 +1618,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793950531500-Gourav_Krishnan_J.jpg",
     "timestamp": "6/11/2026, 07:35:31"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Vishnu Vardhan R P",
+    "chest": 151,
+    "dob": "16/09/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "1500m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793950598656-Vishnu_Vardhan_R_P.jpg",
+    "timestamp": "6/11/2026, 07:36:38"
   }
 ]
