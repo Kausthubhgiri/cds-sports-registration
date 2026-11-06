@@ -798,5 +798,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945546002-Srenandanan_A_S.jpg",
     "timestamp": "6/11/2026, 06:12:26"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Lekshmipriya Vidhu",
+    "chest": 128,
+    "dob": "18/09/2012",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945566247-Lekshmipriya_Vidhu.jpg",
+    "timestamp": "6/11/2026, 06:12:46"
   }
 ]
