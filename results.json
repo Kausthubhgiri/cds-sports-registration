@@ -957,5 +957,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945946752-Swathish_A_Dharan.jpg",
     "timestamp": "6/11/2026, 06:19:06"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Vaiga S Nair",
+    "chest": 133,
+    "dob": "03/09/2011",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945991610-Vaiga_S_Nair.jpg",
+    "timestamp": "6/11/2026, 06:19:51"
   }
 ]
