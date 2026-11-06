@@ -1597,4 +1597,24 @@ photoInput.addEventListener('change', () => {
 })();
 </script>
 
+
+<script id="under19-3000m-visibility-fix">
+(() => {
+  const ageCategorySelect = document.getElementById('ageCategory');
+  const option = document.getElementById('under19-3000m-option');
+  const checkbox = option?.querySelector('input[name="events"][value="3000m Race"]');
+  if (!ageCategorySelect || !option || !checkbox) return;
+
+  const sync3000mVisibility = () => {
+    const isUnder19 = ageCategorySelect.value.trim().toLowerCase() === 'under 19';
+    option.style.display = isUnder19 ? '' : 'none';
+    option.setAttribute('aria-hidden', String(!isUnder19));
+    checkbox.disabled = !isUnder19;
+    if (!isUnder19) checkbox.checked = false;
+  };
+
+  ageCategorySelect.addEventListener('change', sync3000mVisibility);
+  sync3000mVisibility();
+})();
+</script>
 </body></html>
