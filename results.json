@@ -2523,5 +2523,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793983731927-ABHINAV_S_D.jpg",
     "timestamp": "6/11/2026, 16:48:53"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ASWANTH S",
+    "chest": 331,
+    "dob": "04/04/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793983827261-ASWANTH_S.jpg",
+    "timestamp": "6/11/2026, 16:50:28"
   }
 ]
