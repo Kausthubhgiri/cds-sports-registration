@@ -2010,5 +2010,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952925386-Krishna_priya_rs.jpg",
     "timestamp": "6/11/2026, 08:15:25"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Alaina s",
+    "chest": 741,
+    "dob": "19/10/2015",
+    "ageCategory": "Under 12",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793953005544-Alaina_s.jpg",
+    "timestamp": "6/11/2026, 08:16:45"
   }
 ]
