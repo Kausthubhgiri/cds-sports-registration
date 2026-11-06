@@ -870,5 +870,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945725776-Hritika_Mohan.jpg",
     "timestamp": "6/11/2026, 06:15:25"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Devika A. S",
+    "chest": 716,
+    "dob": "30/11/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945765917-Devika_A__S.jpg",
+    "timestamp": "6/11/2026, 06:16:05"
   }
 ]
