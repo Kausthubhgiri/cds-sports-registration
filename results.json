@@ -1561,5 +1561,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793949770419-Keshav_S.jpg",
     "timestamp": "6/11/2026, 07:22:50"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Pranav S",
+    "chest": 147,
+    "dob": "05/09/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793949824412-Pranav_S.jpg",
+    "timestamp": "6/11/2026, 07:23:44"
   }
 ]
