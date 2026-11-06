@@ -518,5 +518,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793943545454-Yadav_V_Y.jpg",
     "timestamp": "6/11/2026, 05:39:05"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Agney Sai R",
+    "chest": 126,
+    "dob": "14/05/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793943638011-Agney_Sai_R.jpg",
+    "timestamp": "6/11/2026, 05:40:37"
   }
 ]
