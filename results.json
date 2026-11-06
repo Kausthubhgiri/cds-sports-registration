@@ -2039,5 +2039,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793953064863-Prahald_Mohan.jpg",
     "timestamp": "6/11/2026, 08:17:44"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Eshal fathima sainu",
+    "chest": 742,
+    "dob": "30/01/2014",
+    "ageCategory": "Under 12",
+    "gender": "Female",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793953095474-Eshal_fathima_sainu.jpg",
+    "timestamp": "6/11/2026, 08:18:15"
   }
 ]
