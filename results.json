@@ -355,5 +355,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793942604532-Thanmaya_D_A.jpg",
     "timestamp": "6/11/2026, 05:23:24"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Hita M",
+    "chest": 115,
+    "dob": "23/11/2014",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793942666888-Hita_M.jpg",
+    "timestamp": "6/11/2026, 05:24:26"
   }
 ]
