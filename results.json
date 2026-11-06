@@ -2361,5 +2361,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793982078239-PRABUDH_S_B.jpg",
     "timestamp": "6/11/2026, 16:21:19"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "EBI",
+    "chest": 320,
+    "dob": "04/02/2014",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793982167231-EBI.jpg",
+    "timestamp": "6/11/2026, 16:22:48"
   }
 ]
