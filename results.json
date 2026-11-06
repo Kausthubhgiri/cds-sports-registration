@@ -828,5 +828,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945638211-Rakhee_R.jpg",
     "timestamp": "6/11/2026, 06:13:58"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Gouri. S",
+    "chest": 715,
+    "dob": "01/05/2012",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945643188-Gouri__S.jpg",
+    "timestamp": "6/11/2026, 06:14:03"
   }
 ]
