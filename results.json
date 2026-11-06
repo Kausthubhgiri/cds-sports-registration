@@ -1765,5 +1765,22 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793951778980-Nivedita_Asok.jpg",
     "timestamp": "6/11/2026, 07:56:18"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Naumika S Nair",
+    "chest": 161,
+    "dob": "01/02/2009",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793951874895-Naumika_S_Nair.jpg",
+    "timestamp": "6/11/2026, 07:57:54"
   }
 ]
