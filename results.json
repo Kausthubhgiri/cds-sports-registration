@@ -2154,5 +2154,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793978515010-RAKSHANA_RAJESH.jpg",
     "timestamp": "6/11/2026, 15:21:56"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "RISHI S R",
+    "chest": 305,
+    "dob": "23/03/2015",
+    "ageCategory": "Under 12",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793978628348-RISHI_S_R.jpg",
+    "timestamp": "6/11/2026, 15:23:49"
   }
 ]
