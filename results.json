@@ -2404,5 +2404,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793982476806-ANSH_PRAKASH_P_C.jpg",
     "timestamp": "6/11/2026, 16:27:58"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "AKHINA B",
+    "chest": 323,
+    "dob": "02/11/2012",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793982608924-AKHINA_B.jpg",
+    "timestamp": "6/11/2026, 16:30:10"
   }
 ]
