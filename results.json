@@ -1574,5 +1574,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793949824412-Pranav_S.jpg",
     "timestamp": "6/11/2026, 07:23:44"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Easwar Datt GT",
+    "chest": 148,
+    "dob": "10/10/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793949892756-Easwar_Datt_GT.jpg",
+    "timestamp": "6/11/2026, 07:24:52"
   }
 ]
