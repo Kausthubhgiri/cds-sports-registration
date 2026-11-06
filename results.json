@@ -1733,5 +1733,22 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793951332103-Anirudh_M_Anoop.jpg",
     "timestamp": "6/11/2026, 07:48:51"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Mahalekshmi K",
+    "chest": 159,
+    "dob": "02/11/2009",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "Long Jump",
+      "High Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793951710394-Mahalekshmi_K.jpg",
+    "timestamp": "6/11/2026, 07:55:10"
   }
 ]
