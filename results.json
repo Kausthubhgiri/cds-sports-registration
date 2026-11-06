@@ -1044,5 +1044,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946333667-S_Thanshitha.jpg",
     "timestamp": "6/11/2026, 06:25:33"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Ambadikannan",
+    "chest": 718,
+    "dob": "05/08/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946447701-Ambadikannan.jpg",
+    "timestamp": "6/11/2026, 06:27:27"
   }
 ]
