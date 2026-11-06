@@ -2419,5 +2419,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793982608924-AKHINA_B.jpg",
     "timestamp": "6/11/2026, 16:30:10"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ANUGRAHA",
+    "chest": 324,
+    "dob": "24/11/2011",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793982689539-ANUGRAHA.jpg",
+    "timestamp": "6/11/2026, 16:31:31"
   }
 ]
