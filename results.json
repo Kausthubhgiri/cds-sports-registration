@@ -676,5 +676,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945000054-Najah_Fathimi.jpg",
     "timestamp": "6/11/2026, 06:03:20"
+  },
+  {
+    "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
+    "name": "Udishna Plasid",
+    "chest": 1504,
+    "dob": "10/07/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945153265-Udishna_Plasid.jpg",
+    "timestamp": "6/11/2026, 06:05:53"
   }
 ]
