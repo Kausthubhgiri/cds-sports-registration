@@ -2292,5 +2292,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793980484673-ALONA_B_SWAROOP.jpg",
     "timestamp": "6/11/2026, 15:54:46"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "VAIDEHI M S",
+    "chest": 315,
+    "dob": "25/05/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793980582020-VAIDEHI_M_S.jpg",
+    "timestamp": "6/11/2026, 15:56:23"
   }
 ]
