@@ -987,5 +987,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946096806-Alina_S.jpg",
     "timestamp": "6/11/2026, 06:21:36"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Sreenanda S B",
+    "chest": 134,
+    "dob": "02/11/2010",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946129040-Sreenanda_S_B.jpg",
+    "timestamp": "6/11/2026, 06:22:09"
   }
 ]
