@@ -724,5 +724,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945278503-Devananda_R.jpg",
     "timestamp": "6/11/2026, 06:07:58"
+  },
+  {
+    "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
+    "name": "Rafiya Nazar R",
+    "chest": 1505,
+    "dob": "12/06/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "200m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945329342-Rafiya_Nazar_R.jpg",
+    "timestamp": "6/11/2026, 06:08:49"
   }
 ]
