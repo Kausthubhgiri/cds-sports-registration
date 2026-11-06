@@ -1691,5 +1691,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793951012988-Albin_Raj_N.jpg",
     "timestamp": "6/11/2026, 07:43:32"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Prahlad Mohan",
+    "chest": 156,
+    "dob": "30/09/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793951107493-Prahlad_Mohan.jpg",
+    "timestamp": "6/11/2026, 07:45:07"
   }
 ]
