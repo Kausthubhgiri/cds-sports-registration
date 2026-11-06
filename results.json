@@ -2446,5 +2446,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793982810063-DIYAADATH_S.jpg",
     "timestamp": "6/11/2026, 16:33:31"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "SREEHARI P R",
+    "chest": 326,
+    "dob": "22/03/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "800m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793982882441-SREEHARI_P_R.jpg",
+    "timestamp": "6/11/2026, 16:34:44"
   }
 ]
