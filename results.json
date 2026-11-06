@@ -602,5 +602,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793944425101-Vinay.jpg",
     "timestamp": "6/11/2026, 05:53:45"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "NIHANA H N",
+    "chest": 301,
+    "dob": "26/07/2016",
+    "ageCategory": "Under 12",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793944426826-NIHANA_H_N.jpg",
+    "timestamp": "6/11/2026, 05:53:46"
   }
 ]
