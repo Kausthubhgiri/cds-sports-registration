@@ -1546,5 +1546,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793949687052-AadiKrishna_V_V.jpg",
     "timestamp": "6/11/2026, 07:21:27"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Keshav S",
+    "chest": 146,
+    "dob": "16/09/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Long Jump",
+      "High Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793949770419-Keshav_S.jpg",
+    "timestamp": "6/11/2026, 07:22:50"
   }
 ]
