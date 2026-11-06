@@ -782,5 +782,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945537174-Shreya_aashish.jpg",
     "timestamp": "6/11/2026, 06:12:17"
+  },
+  {
+    "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
+    "name": "Srenandanan A S",
+    "chest": 1506,
+    "dob": "15/04/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945546002-Srenandanan_A_S.jpg",
+    "timestamp": "6/11/2026, 06:12:26"
   }
 ]
