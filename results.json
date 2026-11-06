@@ -1334,5 +1334,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793948153878-Jeevan__G.jpg",
     "timestamp": "6/11/2026, 06:55:53"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Aadinarayana. B",
+    "chest": 729,
+    "dob": "06/02/2012",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "High Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793948328761-Aadinarayana__B.jpg",
+    "timestamp": "6/11/2026, 06:58:48"
   }
 ]
