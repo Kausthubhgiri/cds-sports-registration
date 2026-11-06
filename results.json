@@ -1074,5 +1074,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946515253-NITHISH_J.jpg",
     "timestamp": "6/11/2026, 06:28:35"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Rithuparna  Swapnakumar",
+    "chest": 137,
+    "dob": "04/09/2012",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "800m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946601049-Rithuparna__Swapnakumar.jpg",
+    "timestamp": "6/11/2026, 06:30:00"
   }
 ]
