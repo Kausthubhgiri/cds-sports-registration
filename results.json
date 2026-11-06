@@ -2319,5 +2319,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793980834527-NIVIYA_P_J.jpg",
     "timestamp": "6/11/2026, 16:00:35"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ASHNA S B",
+    "chest": 317,
+    "dob": "04/10/2015",
+    "ageCategory": "Under 12",
+    "gender": "Female",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793981119086-ASHNA_S_B.jpg",
+    "timestamp": "6/11/2026, 16:05:20"
   }
 ]
