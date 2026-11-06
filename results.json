@@ -1532,5 +1532,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793949646167-CHRISTYANO_STEEVE.jpg",
     "timestamp": "6/11/2026, 07:20:46"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "AadiKrishna V V",
+    "chest": 145,
+    "dob": "31/10/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793949687052-AadiKrishna_V_V.jpg",
+    "timestamp": "6/11/2026, 07:21:27"
   }
 ]
