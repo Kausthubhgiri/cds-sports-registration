@@ -2306,5 +2306,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793980582020-VAIDEHI_M_S.jpg",
     "timestamp": "6/11/2026, 15:56:23"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "NIVIYA P J",
+    "chest": 316,
+    "dob": "22/05/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793980834527-NIVIYA_P_J.jpg",
+    "timestamp": "6/11/2026, 16:00:35"
   }
 ]
