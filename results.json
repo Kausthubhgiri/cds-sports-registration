@@ -1364,5 +1364,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793948415714-Aadinath__S.jpg",
     "timestamp": "6/11/2026, 07:00:15"
+  },
+  {
+    "school": "N.S.S PUBLIC SCHOOL PERUNTHANNI",
+    "name": "PRAPANCHA K PRAVEEN",
+    "chest": 415,
+    "dob": "23/04/2014",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Shot Put",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793948476653-PRAPANCHA_K_PRAVEEN.jpg",
+    "timestamp": "6/11/2026, 07:01:16"
   }
 ]
