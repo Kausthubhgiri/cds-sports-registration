@@ -662,5 +662,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793944819561-Najad_Mohammad.jpg",
     "timestamp": "6/11/2026, 06:00:19"
+  },
+  {
+    "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
+    "name": "Najah Fathimi",
+    "chest": 1503,
+    "dob": "08/09/2012",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945000054-Najah_Fathimi.jpg",
+    "timestamp": "6/11/2026, 06:03:20"
   }
 ]
