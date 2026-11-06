@@ -1058,5 +1058,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946447701-Ambadikannan.jpg",
     "timestamp": "6/11/2026, 06:27:27"
+  },
+  {
+    "school": "N.S.S PUBLIC SCHOOL PERUNTHANNI",
+    "name": "NITHISH J",
+    "chest": 408,
+    "dob": "08/09/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Discus Throw",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946515253-NITHISH_J.jpg",
+    "timestamp": "6/11/2026, 06:28:35"
   }
 ]
