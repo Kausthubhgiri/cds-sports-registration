@@ -1874,5 +1874,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952255258-Medidi_Asmitha.jpg",
     "timestamp": "6/11/2026, 08:04:15"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Theertha R",
+    "chest": 165,
+    "dob": "26/10/2009",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "800m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952328074-Theertha_R.jpg",
+    "timestamp": "6/11/2026, 08:05:27"
   }
 ]
