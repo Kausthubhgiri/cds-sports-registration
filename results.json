@@ -1677,5 +1677,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793950886872-S_S_Abhinav.jpg",
     "timestamp": "6/11/2026, 07:41:26"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Albin Raj N",
+    "chest": 155,
+    "dob": "30/08/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "1500m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793951012988-Albin_Raj_N.jpg",
+    "timestamp": "6/11/2026, 07:43:32"
   }
 ]
