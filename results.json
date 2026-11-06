@@ -1116,5 +1116,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946777749-Muhammed_Bilal.jpg",
     "timestamp": "6/11/2026, 06:32:57"
+  },
+  {
+    "school": "N.S.S PUBLIC SCHOOL PERUNTHANNI",
+    "name": "MUHAMMED YASEEN S",
+    "chest": 410,
+    "dob": "18/07/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946849338-MUHAMMED_YASEEN_S.jpg",
+    "timestamp": "6/11/2026, 06:34:09"
   }
 ]
