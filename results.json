@@ -1517,5 +1517,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793949559490-Manav_Kunimmal.jpg",
     "timestamp": "6/11/2026, 07:19:19"
+  },
+  {
+    "school": "N.S.S PUBLIC SCHOOL PERUNTHANNI",
+    "name": "CHRISTYANO STEEVE",
+    "chest": 417,
+    "dob": "28/09/2012",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793949646167-CHRISTYANO_STEEVE.jpg",
+    "timestamp": "6/11/2026, 07:20:46"
   }
 ]
