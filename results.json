@@ -431,5 +431,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793942964430-Shriya_Nirmal.jpg",
     "timestamp": "6/11/2026, 05:29:24"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Deva V Nair",
+    "chest": 120,
+    "dob": "14/02/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793943040561-Deva_V_Nair.jpg",
+    "timestamp": "6/11/2026, 05:30:40"
   }
 ]
