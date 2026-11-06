@@ -1719,5 +1719,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793951246196-Akshay_Krishna_V.jpg",
     "timestamp": "6/11/2026, 07:47:26"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Anirudh M Anoop",
+    "chest": 158,
+    "dob": "30/09/2008",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793951332103-Anirudh_M_Anoop.jpg",
+    "timestamp": "6/11/2026, 07:48:51"
   }
 ]
