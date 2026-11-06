@@ -505,5 +505,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793943374320-Harihar_P_Ratheesh.jpg",
     "timestamp": "6/11/2026, 05:36:14"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Yadav V Y",
+    "chest": 125,
+    "dob": "03/06/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793943545454-Yadav_V_Y.jpg",
+    "timestamp": "6/11/2026, 05:39:05"
   }
 ]
