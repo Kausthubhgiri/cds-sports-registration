@@ -1979,5 +1979,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952765994-Riya_renjith.jpg",
     "timestamp": "6/11/2026, 08:12:45"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "D Mayoora  Nair",
+    "chest": 167,
+    "dob": "09/03/2009",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952780193-D_Mayoora__Nair.jpg",
+    "timestamp": "6/11/2026, 08:13:00"
   }
 ]
