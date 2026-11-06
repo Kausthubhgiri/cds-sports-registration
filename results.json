@@ -560,5 +560,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793943871811-Akaash_A__S.jpg",
     "timestamp": "6/11/2026, 05:44:31"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Mohammed Asif",
+    "chest": 707,
+    "dob": "01/05/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793944094194-Mohammed_Asif.jpg",
+    "timestamp": "6/11/2026, 05:48:14"
   }
 ]
