@@ -1694,15 +1694,16 @@
   },
   {
     "school": "SARASWATHI VIDYALAYA",
-    "name": "Prahlad Mohan",
+    "name": "Niranjan Sarang A P",
     "chest": 156,
-    "dob": "30/09/2009",
+    "dob": "30/12/2008",
     "ageCategory": "Under 19",
     "gender": "Male",
     "events": [
-      "Long Jump"
+      "Long Jump",
+      "High Jump"
     ],
-    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793951107493-Prahlad_Mohan.jpg",
-    "timestamp": "6/11/2026, 07:45:07"
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793951163392-Niranjan_Sarang_A_P.jpg",
+    "timestamp": "6/11/2026, 07:46:03"
   }
 ]
