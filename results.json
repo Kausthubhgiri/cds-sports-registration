@@ -2099,5 +2099,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793953435822-Adhani_s_joy.jpg",
     "timestamp": "6/11/2026, 08:23:55"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Prahald Mohan",
+    "chest": 169,
+    "dob": "30/09/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793953548069-Prahald_Mohan.jpg",
+    "timestamp": "6/11/2026, 08:25:47"
   }
 ]
