@@ -856,5 +856,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945703519-Muhammed_Ameen_N.jpg",
     "timestamp": "6/11/2026, 06:15:03"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Hritika Mohan",
+    "chest": 130,
+    "dob": "03/09/2011",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "800m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945725776-Hritika_Mohan.jpg",
+    "timestamp": "6/11/2026, 06:15:25"
   }
 ]
