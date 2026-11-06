@@ -1603,5 +1603,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793950459685-Ananthapadmanabh_R_V.jpg",
     "timestamp": "6/11/2026, 07:34:19"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Gourav Krishnan J",
+    "chest": 150,
+    "dob": "03/07/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793950531500-Gourav_Krishnan_J.jpg",
+    "timestamp": "6/11/2026, 07:35:31"
   }
 ]
