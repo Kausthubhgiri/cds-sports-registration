@@ -913,5 +913,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945817858-Muhammed_Dhulfiqaar_A.jpg",
     "timestamp": "6/11/2026, 06:16:57"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Anandhapadmanabhan. R",
+    "chest": 717,
+    "dob": "14/12/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945892399-Anandhapadmanabhan__R.jpg",
+    "timestamp": "6/11/2026, 06:18:12"
   }
 ]
