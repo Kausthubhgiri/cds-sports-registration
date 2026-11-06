@@ -1238,5 +1238,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793947359231-ANUSH_RATHEESH_I.jpg",
     "timestamp": "6/11/2026, 06:42:39"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Adwaith santhosh",
+    "chest": 724,
+    "dob": "19/09/2008",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "400m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793947466083-Adwaith_santhosh.jpg",
+    "timestamp": "6/11/2026, 06:44:25"
   }
 ]
