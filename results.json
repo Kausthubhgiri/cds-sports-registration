@@ -2493,5 +2493,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793983090645-BAJESTON_R_J.jpg",
     "timestamp": "6/11/2026, 16:38:12"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "RAJEEV R",
+    "chest": 329,
+    "dob": "28/05/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "1500m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793983285767-RAJEEV_R.jpg",
+    "timestamp": "6/11/2026, 16:41:27"
   }
 ]
