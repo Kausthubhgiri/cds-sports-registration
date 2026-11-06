@@ -1103,5 +1103,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946741632-ROJAR_SEBASTIAN.jpg",
     "timestamp": "6/11/2026, 06:32:21"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Muhammed Bilal",
+    "chest": 719,
+    "dob": "04/03/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946777749-Muhammed_Bilal.jpg",
+    "timestamp": "6/11/2026, 06:32:57"
   }
 ]
