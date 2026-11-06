@@ -143,5 +143,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793939512755-Ramchand.jpg",
     "timestamp": "6/11/2026, 04:31:52"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Prathul. S S",
+    "chest": 100,
+    "dob": "21/09/2015",
+    "ageCategory": "Under 12",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793940286928-Prathul__S_S.jpg",
+    "timestamp": "6/11/2026, 04:44:46"
   }
 ]
