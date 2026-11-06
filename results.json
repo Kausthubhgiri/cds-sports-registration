@@ -1933,5 +1933,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952531321-Theertha__B.jpg",
     "timestamp": "6/11/2026, 08:08:51"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Anna Abraham Oommen",
+    "chest": 166,
+    "dob": "26/07/2011",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "1500m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952601706-Anna_Abraham_Oommen.jpg",
+    "timestamp": "6/11/2026, 08:10:01"
   }
 ]
