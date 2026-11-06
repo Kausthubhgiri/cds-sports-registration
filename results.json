@@ -753,5 +753,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945396849-Vyshnavi_R_Nair.jpg",
     "timestamp": "6/11/2026, 06:09:56"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Krishnapriya A",
+    "chest": 713,
+    "dob": "18/03/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945412048-Krishnapriya_A.jpg",
+    "timestamp": "6/11/2026, 06:10:12"
   }
 ]
