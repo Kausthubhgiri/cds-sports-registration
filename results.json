@@ -1161,5 +1161,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946956948-ABHINAV_A.jpg",
     "timestamp": "6/11/2026, 06:35:56"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Farhan F",
+    "chest": 721,
+    "dob": "30/10/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "1500m Race",
+      "Long Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793947066477-Farhan_F.jpg",
+    "timestamp": "6/11/2026, 06:37:46"
   }
 ]
