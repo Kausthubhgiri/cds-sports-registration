@@ -1302,5 +1302,22 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793947911057-Mouli__S.jpg",
     "timestamp": "6/11/2026, 06:51:51"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Anaswar",
+    "chest": 727,
+    "dob": "05/01/2012",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793948046294-Anaswar.jpg",
+    "timestamp": "6/11/2026, 06:54:06"
   }
 ]
