@@ -446,5 +446,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793943040561-Deva_V_Nair.jpg",
     "timestamp": "6/11/2026, 05:30:40"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Abhikesh A",
+    "chest": 121,
+    "dob": "25/09/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793943110390-Abhikesh_A.jpg",
+    "timestamp": "6/11/2026, 05:31:50"
   }
 ]
