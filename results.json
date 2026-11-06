@@ -370,5 +370,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793942666888-Hita_M.jpg",
     "timestamp": "6/11/2026, 05:24:26"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Nayana Binu Pillai",
+    "chest": 116,
+    "dob": "09/10/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793942739493-Nayana_Binu_Pillai.jpg",
+    "timestamp": "6/11/2026, 05:25:39"
   }
 ]
