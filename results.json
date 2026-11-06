@@ -2264,5 +2264,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793980291340-THEERTHA_PRADEEP.jpg",
     "timestamp": "6/11/2026, 15:51:33"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ASWIDHA S KRISHNA",
+    "chest": 313,
+    "dob": "02/09/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793980373719-ASWIDHA_S_KRISHNA.jpg",
+    "timestamp": "6/11/2026, 15:52:55"
   }
 ]
