@@ -842,5 +842,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945643188-Gouri__S.jpg",
     "timestamp": "6/11/2026, 06:14:03"
+  },
+  {
+    "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
+    "name": "Muhammed Ameen N",
+    "chest": 1507,
+    "dob": "19/12/2012",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945703519-Muhammed_Ameen_N.jpg",
+    "timestamp": "6/11/2026, 06:15:03"
   }
 ]
