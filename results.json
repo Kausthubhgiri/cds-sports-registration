@@ -1664,5 +1664,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793950776955-Dheeraj_S_Nair.jpg",
     "timestamp": "6/11/2026, 07:39:36"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "S S Abhinav",
+    "chest": 154,
+    "dob": "27/08/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793950886872-S_S_Abhinav.jpg",
+    "timestamp": "6/11/2026, 07:41:26"
   }
 ]
