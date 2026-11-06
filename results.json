@@ -708,5 +708,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945166898-K__H_Hiba.jpg",
     "timestamp": "6/11/2026, 06:06:06"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Devananda R",
+    "chest": 712,
+    "dob": "27/05/2014",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945278503-Devananda_R.jpg",
+    "timestamp": "6/11/2026, 06:07:58"
   }
 ]
