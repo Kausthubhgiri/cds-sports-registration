@@ -813,5 +813,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945566247-Lekshmipriya_Vidhu.jpg",
     "timestamp": "6/11/2026, 06:12:46"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Rakhee R",
+    "chest": 129,
+    "dob": "03/03/2011",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945638211-Rakhee_R.jpg",
+    "timestamp": "6/11/2026, 06:13:58"
   }
 ]
