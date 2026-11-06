@@ -1891,5 +1891,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952331707-Devika_manu.jpg",
     "timestamp": "6/11/2026, 08:05:31"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Theertha R",
+    "chest": 165,
+    "dob": "26/10/2009",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "800m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952342941-Theertha_R.jpg",
+    "timestamp": "6/11/2026, 08:05:42"
   }
 ]
