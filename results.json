@@ -2251,5 +2251,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793979590067-NIVEDITHA_A_P.jpg",
     "timestamp": "6/11/2026, 15:39:51"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "THEERTHA PRADEEP",
+    "chest": 312,
+    "dob": "09/03/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793980291340-THEERTHA_PRADEEP.jpg",
+    "timestamp": "6/11/2026, 15:51:33"
   }
 ]
