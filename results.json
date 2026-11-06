@@ -1455,5 +1455,22 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793949271737-Rishi_M_M.jpg",
     "timestamp": "6/11/2026, 07:14:31"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Khaleelul Rahman S S",
+    "chest": 141,
+    "dob": "02/03/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "1500m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793949356774-Khaleelul_Rahman_S_S.jpg",
+    "timestamp": "6/11/2026, 07:15:56"
   }
 ]
