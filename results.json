@@ -1397,5 +1397,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793948500232-Gowtham_Chandra_Bose.jpg",
     "timestamp": "6/11/2026, 07:01:40"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Atul Shiva",
+    "chest": 138,
+    "dob": "20/03/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793948701553-Atul_Shiva.jpg",
+    "timestamp": "6/11/2026, 07:05:01"
   }
 ]
