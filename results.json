@@ -476,5 +476,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793943206037-Amarjith__S_S.jpg",
     "timestamp": "6/11/2026, 05:33:25"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "U Abhay",
+    "chest": 123,
+    "dob": "23/02/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793943286657-U_Abhay.jpg",
+    "timestamp": "6/11/2026, 05:34:46"
   }
 ]
