@@ -1815,5 +1815,22 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952087705-Sivadha_A.jpg",
     "timestamp": "6/11/2026, 08:01:27"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Hajira noushad",
+    "chest": 733,
+    "dob": "24/04/2012",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "400m Race",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952094600-Hajira_noushad.jpg",
+    "timestamp": "6/11/2026, 08:01:34"
   }
 ]
