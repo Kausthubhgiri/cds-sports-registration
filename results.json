@@ -2391,5 +2391,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793982237962-ROSHWIN_S.jpg",
     "timestamp": "6/11/2026, 16:23:59"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ANSH PRAKASH P C",
+    "chest": 322,
+    "dob": "23/10/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793982476806-ANSH_PRAKASH_P_C.jpg",
+    "timestamp": "6/11/2026, 16:27:58"
   }
 ]
