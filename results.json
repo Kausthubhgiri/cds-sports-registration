@@ -1016,5 +1016,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946222868-MOHAMMED_NADEEM.jpg",
     "timestamp": "6/11/2026, 06:23:42"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Nia Nair Sanju Nair",
+    "chest": 135,
+    "dob": "10/02/2011",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "High Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946241788-Nia_Nair_Sanju_Nair.jpg",
+    "timestamp": "6/11/2026, 06:24:01"
   }
 ]
