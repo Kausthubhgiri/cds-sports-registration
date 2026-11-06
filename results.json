@@ -2377,5 +2377,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793982167231-EBI.jpg",
     "timestamp": "6/11/2026, 16:22:48"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ROSHWIN S",
+    "chest": 321,
+    "dob": "27/02/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793982237962-ROSHWIN_S.jpg",
+    "timestamp": "6/11/2026, 16:23:59"
   }
 ]
