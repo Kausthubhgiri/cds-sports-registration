@@ -1269,5 +1269,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793947809882-Muhammad_irfan.jpg",
     "timestamp": "6/11/2026, 06:50:09"
+  },
+  {
+    "school": "N.S.S PUBLIC SCHOOL PERUNTHANNI",
+    "name": "AKSHAY R J",
+    "chest": 414,
+    "dob": "27/04/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "400m Race",
+      "Shot Put",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793947883814-AKSHAY_R_J.jpg",
+    "timestamp": "6/11/2026, 06:51:23"
   }
 ]
