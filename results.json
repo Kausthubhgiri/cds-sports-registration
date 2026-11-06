@@ -1832,5 +1832,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952094600-Hajira_noushad.jpg",
     "timestamp": "6/11/2026, 08:01:34"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Jouharath N",
+    "chest": 734,
+    "dob": "30/04/2011",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "800m Race",
+      "1500m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952170869-Jouharath_N.jpg",
+    "timestamp": "6/11/2026, 08:02:50"
   }
 ]
