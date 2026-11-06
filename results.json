@@ -1587,5 +1587,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793949892756-Easwar_Datt_GT.jpg",
     "timestamp": "6/11/2026, 07:24:52"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Ananthapadmanabh R V",
+    "chest": 149,
+    "dob": "10/10/2008",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "High Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793950459685-Ananthapadmanabh_R_V.jpg",
+    "timestamp": "6/11/2026, 07:34:19"
   }
 ]
