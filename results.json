@@ -2026,5 +2026,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793953005544-Alaina_s.jpg",
     "timestamp": "6/11/2026, 08:16:45"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Prahald Mohan",
+    "chest": 168,
+    "dob": "30/09/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793953057031-Prahald_Mohan.jpg",
+    "timestamp": "6/11/2026, 08:17:37"
   }
 ]
