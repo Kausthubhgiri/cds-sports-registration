@@ -899,5 +899,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945804779-Niya_Prakash.jpg",
     "timestamp": "6/11/2026, 06:16:44"
+  },
+  {
+    "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
+    "name": "Muhammed Dhulfiqaar A",
+    "chest": 1508,
+    "dob": "29/10/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945817858-Muhammed_Dhulfiqaar_A.jpg",
+    "timestamp": "6/11/2026, 06:16:57"
   }
 ]
