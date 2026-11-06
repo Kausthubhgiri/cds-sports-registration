@@ -1782,5 +1782,22 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793951874895-Naumika_S_Nair.jpg",
     "timestamp": "6/11/2026, 07:57:54"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Diya ashley",
+    "chest": 732,
+    "dob": "13/03/2012",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "800m Race",
+      "1500m Race",
+      "High Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793951939267-Diya_ashley.jpg",
+    "timestamp": "6/11/2026, 07:58:58"
   }
 ]
