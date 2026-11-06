@@ -59,23 +59,42 @@ let data = [];
 let chestRanges = {};
 let chestTracker = {};
 
-// 🔄 GitHub fetch
+// Serialize registrations inside this Node process. GitHub's file SHA check below
+// protects against stale writes from other Railway instances.
+let submissionQueue = Promise.resolve();
+function runSerializedSubmission(task) {
+  const result = submissionQueue.then(task, task);
+  submissionQueue = result.catch(() => {});
+  return result;
+}
+
+function normalize(value) {
+  return String(value || '').trim().replace(/\s+/g, ' ').toLocaleLowerCase('en');
+}
+
+function findDuplicateParticipant(records, name, school, excludeIndex = -1) {
+  const normalizedName = normalize(name);
+  const normalizedSchool = normalize(school);
+  return records.findIndex((entry, index) => index !== excludeIndex &&
+    normalize(entry.name) === normalizedName &&
+    normalize(entry.school) === normalizedSchool);
+}
+
+// 🔄 GitHub fetch — fail closed. Never treat a failed remote read as an empty database.
 async function fetchDataFromGitHub() {
+  if (!GITHUB_TOKEN) throw new Error('GITHUB_TOKEN is not configured.');
   const headers = {
     Authorization: `token ${GITHUB_TOKEN}`,
     Accept: 'application/vnd.github.v3+json',
   };
-  try {
-    const { data: fileData } = await axios.get(
-      `https://api.github.com/repos/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}`,
-      { headers }
-    );
-    const content = Buffer.from(fileData.content, 'base64').toString();
-    return JSON.parse(content);
-  } catch (err) {
-    console.error("❌ GitHub fetch failed:", err.message);
-    return [];
-  }
+  const { data: fileData } = await axios.get(
+    `https://api.github.com/repos/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}`,
+    { headers }
+  );
+  if (!fileData || !fileData.content) throw new Error('GitHub results.json is empty or unavailable.');
+  const parsed = JSON.parse(Buffer.from(fileData.content, 'base64').toString());
+  if (!Array.isArray(parsed)) throw new Error('GitHub results.json does not contain a valid records array.');
+  return parsed;
 }
 
 // 🗂️ Local fallback
@@ -93,50 +112,32 @@ async function getLatestData() {
   return USE_GITHUB ? await fetchDataFromGitHub() : fetchDataFromLocal();
 }
 
-// 📤 GitHub push
+// 📤 GitHub push — use the current file SHA and throw on conflicts/failures.
 async function pushToGitHub(newData, message = 'Update results.json') {
-  if (!GITHUB_TOKEN) {
-    console.error("❌ Missing GitHub token. Cannot push to GitHub.");
-    return;
-  }
-
+  if (!GITHUB_TOKEN) throw new Error('Missing GitHub token. Cannot save registrations.');
   const headers = {
     Authorization: `token ${GITHUB_TOKEN}`,
     Accept: 'application/vnd.github.v3+json',
   };
 
-  let sha = null;
-  try {
-    const { data: fileData } = await axios.get(
-      `https://api.github.com/repos/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}`,
-      { headers }
-    );
-    sha = fileData.sha;
-  } catch (err) {
-    if (err.response?.status !== 404) {
-      console.error("❌ GitHub fetch failed:", err.response?.data || err.message);
-      return;
-    }
-  }
-
+  const { data: fileData } = await axios.get(
+    `https://api.github.com/repos/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}`,
+    { headers }
+  );
   const payload = {
     message,
     content: Buffer.from(JSON.stringify(newData, null, 2)).toString('base64'),
     branch: BRANCH,
-    ...(sha && { sha })
+    sha: fileData.sha,
   };
-
-  try {
-    await axios.put(
-      `https://api.github.com/repos/${REPO}/contents/${FILE_PATH}`,
-      payload,
-      { headers }
-    );
-    console.log("✅ GitHub push successful");
-  } catch (err) {
-    console.error("❌ GitHub push failed:", err.response?.data || err.message);
-  }
+  await axios.put(
+    `https://api.github.com/repos/${REPO}/contents/${FILE_PATH}`,
+    payload,
+    { headers }
+  );
+  console.log('✅ GitHub push successful');
 }
+
 // 📸 Upload photo to GitHub
 async function uploadPhotoToGitHub(fileBuffer, fileName) {
   if (!GITHUB_TOKEN) {
@@ -250,101 +251,106 @@ function eventLimitError(school, ageCategory, gender, events, excludeIndex = -1)
 }
 
 
-// 📝 Submit route
+// 📝 Submit route — always validate against the latest persistent records.
 app.post('/submit', upload.single('photo'), async (req, res) => {
   const { school, name, dob, gender, ageCategory, events } = req.body;
   const photo = req.file;
 
   if (!school || !name || !dob || !gender || !ageCategory || !events || !photo) {
-    return res.status(400).json({ error: "Missing fields" });
+    return res.status(400).json({ error: 'Missing fields' });
   }
 
-  const normalizedName = name.trim().toLowerCase();
-  const normalizedSchool = school.trim().toLowerCase();
+  try {
+    await runSerializedSubmission(async () => {
+      // Refresh the source of truth immediately before checking duplicates/capacity.
+      // In GitHub mode, a remote read failure stops registration instead of using stale data.
+      data = await getLatestData();
+      if (!Array.isArray(data)) throw new Error('Stored registration data is invalid.');
 
-  const duplicate = data.find(entry =>
-    entry.name.trim().toLowerCase() === normalizedName &&
-    entry.school.trim().toLowerCase() === normalizedSchool
-  );
-  if (duplicate) {
-    return res.status(400).json({ error: "This participant is already registered from this school." });
+      // Rebuild this school's next chest number from the latest stored records.
+      const normalizedSchool = normalize(school);
+      const schoolKey = Object.keys(chestRanges).find(key => normalize(key) === normalizedSchool);
+      const range = schoolKey ? chestRanges[schoolKey] : null;
+      if (!range) return res.status(400).json({ error: 'School not found in chest number database.' });
+
+      const duplicateIndex = findDuplicateParticipant(data, name, school);
+      if (duplicateIndex !== -1) {
+        return res.status(409).json({ error: 'This participant is already registered from this school.' });
+      }
+
+      const allowedAgeCategories = ['Under 12', 'Under 14', 'Under 16', 'Under 17', 'Under 19'];
+      if (!allowedAgeCategories.includes(ageCategory)) {
+        return res.status(400).json({ error: 'Please select a valid age category.' });
+      }
+      const sanitizedEvents = (Array.isArray(events) ? events : typeof events === 'string' ? [events] : [])
+        .map(event => String(event).trim()).filter(Boolean);
+      const ageRestrictedError = ageRestrictedEventError(ageCategory, sanitizedEvents);
+      if (ageRestrictedError) return res.status(400).json({ error: ageRestrictedError });
+      if (!sanitizedEvents.length) return res.status(400).json({ error: 'No events selected.' });
+      const duplicateEvents = sanitizedEvents.filter((event, index) =>
+        sanitizedEvents.findIndex(other => other.toLowerCase() === event.toLowerCase()) !== index
+      );
+      if (duplicateEvents.length) return res.status(400).json({ error: 'An event cannot be selected more than once.' });
+
+      const limitError = eventLimitError(school, ageCategory, gender, sanitizedEvents);
+      if (limitError) return res.status(400).json({ error: limitError });
+
+      const existingChests = data
+        .filter(entry => normalize(entry.school) === normalizedSchool)
+        .map(entry => Number(entry.chest) || 0);
+      const nextChest = Math.max(range.start - 1, ...existingChests) + 1;
+      if (nextChest > range.end) {
+        return res.status(400).json({ error: 'Chest number range exhausted for this school.' });
+      }
+
+      const extension = photo.mimetype === 'image/png' ? '.png' : '.jpg';
+      const safeName = name.trim().replace(/[^a-zA-Z0-9]/g, '_');
+      const uniqueFileName = `${Date.now()}-${safeName}${extension}`;
+      const githubPhotoUrl = await uploadPhotoToGitHub(photo.buffer, uniqueFileName);
+
+      // Refresh again after photo upload, because another Railway instance may
+      // have committed a registration while this request was uploading the photo.
+      const latestBeforeSave = await getLatestData();
+      const duplicateAfterUpload = findDuplicateParticipant(latestBeforeSave, name, school);
+      if (duplicateAfterUpload !== -1) {
+        data = latestBeforeSave;
+        return res.status(409).json({ error: 'This participant was registered while your request was processing. Refresh the page; no second registration was created.' });
+      }
+      data = latestBeforeSave;
+      const finalLimitError = eventLimitError(school, ageCategory, gender, sanitizedEvents);
+      if (finalLimitError) return res.status(400).json({ error: finalLimitError });
+
+      const entry = {
+        school: school.trim(), name: name.trim(), chest: nextChest,
+        dob, ageCategory, gender, events: sanitizedEvents,
+        photoPath: githubPhotoUrl,
+        timestamp: new Date().toLocaleString('en-IN', { hour12: false })
+      };
+      const updatedData = [...latestBeforeSave, entry];
+
+      // GitHub's SHA-based update rejects a stale concurrent write (HTTP 409).
+      // Do not report success or update the local cache unless the remote save succeeds.
+      if (USE_GITHUB) {
+        await pushToGitHub(updatedData, `Add ${name} from ${school}`);
+      } else {
+        fs.writeFileSync(filePath, JSON.stringify(updatedData, null, 2));
+      }
+
+      data = updatedData;
+      chestTracker[schoolKey] = nextChest + 1;
+      return res.json({ message: 'Success', chest: nextChest });
+    });
+  } catch (err) {
+    console.error('❌ Registration rejected because latest data could not be verified/saved:', err.response?.data || err.message);
+    if (!res.headersSent) {
+      const conflict = err.response?.status === 409;
+      res.status(conflict ? 409 : 503).json({
+        error: conflict
+          ? 'Another registration was saved at the same time. Please refresh and submit again.'
+          : 'Unable to verify or save the latest registrations right now. No registration was confirmed. Please try again.'
+      });
+    }
   }
-
-  const allowedAgeCategories = ['Under 12', 'Under 14', 'Under 16', 'Under 17', 'Under 19'];
-  if (!allowedAgeCategories.includes(ageCategory)) {
-    return res.status(400).json({ error: 'Please select a valid age category.' });
-  }
-  const sanitizedEvents = (Array.isArray(events) ? events : typeof events === 'string' ? [events] : [])
-    .map(event => String(event).trim())
-    .filter(Boolean);
-  const ageRestrictedError = ageRestrictedEventError(ageCategory, sanitizedEvents);
-  if (ageRestrictedError) return res.status(400).json({ error: ageRestrictedError });
-  if (sanitizedEvents.length === 0) {
-    return res.status(400).json({ error: "No events selected." });
-  }
-  const duplicateEvents = sanitizedEvents.filter((event, index) =>
-    sanitizedEvents.findIndex(other => other.toLowerCase() === event.toLowerCase()) !== index
-  );
-  if (duplicateEvents.length) {
-    return res.status(400).json({ error: "An event cannot be selected more than once." });
-  }
-  const limitError = eventLimitError(school, ageCategory, gender, sanitizedEvents);
-  if (limitError) return res.status(400).json({ error: limitError });
-
-  const range = chestRanges[school.trim()];
-  if (!range) {
-    return res.status(400).json({ error: "School not found in chest number database." });
-  }
-  const nextChest = chestTracker[school] || range.start;
-  if (nextChest > range.end) {
-    return res.status(400).json({ error: "Network Unavailable Please Try Again Later...." });
-  }
-  chestTracker[school] = nextChest + 1;
-
-  const timestamp = new Date().toLocaleString('en-IN', { hour12: false });
-// 📸 Upload image to GitHub
-const extension =
-  photo.mimetype === 'image/png'
-    ? '.png'
-    : '.jpg';
-
-const safeName = name
-  .trim()
-  .replace(/[^a-zA-Z0-9]/g, '_');
-
-const uniqueFileName =
-  `${Date.now()}-${safeName}${extension}`;
-
-const githubPhotoUrl = await uploadPhotoToGitHub(
-  photo.buffer,
-  uniqueFileName
-);
-
-// Re-check after the asynchronous photo upload to reduce the chance that two
-// simultaneous submissions both pass the initial limit check.
-const finalLimitError = eventLimitError(school, ageCategory, gender, sanitizedEvents);
-if (finalLimitError) {
-  return res.status(400).json({ error: finalLimitError });
-}
-  
-const entry = {
-  school: school.trim(),
-  name: name.trim(),
-  chest: nextChest,
-  dob,
-  ageCategory,
-  gender,
-  events: sanitizedEvents,
-  photoPath: githubPhotoUrl,
-  timestamp
-};
-  data.push(entry);
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-  if (USE_GITHUB) {
-    await pushToGitHub(data, `Add ${name} from ${school}`);
-  }
-
-  res.json({ message: "Success", chest: nextChest });
 });
 
 // ✅ Add other routes here (results, export, reset, etc.) as needed
@@ -557,12 +563,25 @@ app.post('/reset-last', async (req, res) => {
 app.post('/edit-events', async (req, res) => {
   const { originalName, name, school, dob, gender, ageCategory, events } = req.body;
 
+  try {
+    // Admin edits must also start from the latest persistent records.
+    data = await getLatestData();
+  } catch (err) {
+    console.error('❌ Could not refresh records before admin edit:', err.message);
+    return res.status(503).send('Unable to verify the latest registrations. Please try again.');
+  }
+
   const index = data.findIndex(e =>
     String(e.name || '').trim().toLowerCase() === String(originalName || '').trim().toLowerCase() &&
     String(e.school || '').trim().toLowerCase() === String(school || '').trim().toLowerCase()
   );
 
   if (index === -1) return res.status(404).send("Participant not found.");
+
+  const duplicateIndex = findDuplicateParticipant(data, name, school, index);
+  if (duplicateIndex !== -1) {
+    return res.status(409).send('Another participant from this school already has this name.');
+  }
 
   const allowedAgeCategories = ['Under 12', 'Under 14', 'Under 16', 'Under 17', 'Under 19'];
   if (!name || !dob || !gender || !allowedAgeCategories.includes(ageCategory)) {
