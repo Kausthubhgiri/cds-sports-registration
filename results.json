@@ -385,5 +385,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793942739493-Nayana_Binu_Pillai.jpg",
     "timestamp": "6/11/2026, 05:25:39"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Sunayna Binu Pillai",
+    "chest": 117,
+    "dob": "09/10/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793942822056-Sunayna_Binu_Pillai.jpg",
+    "timestamp": "6/11/2026, 05:27:01"
   }
 ]
