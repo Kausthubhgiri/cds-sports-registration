@@ -417,5 +417,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793942897929-Karthika_Kareti.jpg",
     "timestamp": "6/11/2026, 05:28:17"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Shriya Nirmal",
+    "chest": 119,
+    "dob": "03/01/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793942964430-Shriya_Nirmal.jpg",
+    "timestamp": "6/11/2026, 05:29:24"
   }
 ]
