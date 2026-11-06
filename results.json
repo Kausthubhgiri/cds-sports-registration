@@ -737,5 +737,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945329342-Rafiya_Nazar_R.jpg",
     "timestamp": "6/11/2026, 06:08:49"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Vyshnavi R Nair",
+    "chest": 127,
+    "dob": "22/04/2010",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "400m Race",
+      "High Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945396849-Vyshnavi_R_Nair.jpg",
+    "timestamp": "6/11/2026, 06:09:56"
   }
 ]
