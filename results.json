@@ -227,5 +227,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793941015999-Dhananjai_P_G.jpg",
     "timestamp": "6/11/2026, 04:56:55"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Aarav Thushar",
+    "chest": 106,
+    "dob": "22/06/2015",
+    "ageCategory": "Under 12",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793941116806-Aarav_Thushar.jpg",
+    "timestamp": "6/11/2026, 04:58:36"
   }
 ]
