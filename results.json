@@ -1206,5 +1206,22 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793947203339-Arjun_dev.jpg",
     "timestamp": "6/11/2026, 06:40:03"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Ananthakrishnan. A",
+    "chest": 723,
+    "dob": "28/07/2008",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "Long Jump",
+      "High Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793947336794-Ananthakrishnan__A.jpg",
+    "timestamp": "6/11/2026, 06:42:16"
   }
 ]
