@@ -2196,5 +2196,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793978790734-DEVAPRAYAG_V_L.jpg",
     "timestamp": "6/11/2026, 15:26:32"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ROHAN S VICTOR",
+    "chest": 308,
+    "dob": "26/01/2015",
+    "ageCategory": "Under 12",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793978858309-ROHAN_S_VICTOR.jpg",
+    "timestamp": "6/11/2026, 15:27:39"
   }
 ]
