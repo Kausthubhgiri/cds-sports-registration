@@ -2278,5 +2278,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793980373719-ASWIDHA_S_KRISHNA.jpg",
     "timestamp": "6/11/2026, 15:52:55"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ALONA B SWAROOP",
+    "chest": 314,
+    "dob": "02/05/2014",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793980484673-ALONA_B_SWAROOP.jpg",
+    "timestamp": "6/11/2026, 15:54:46"
   }
 ]
