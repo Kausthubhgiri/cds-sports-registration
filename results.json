@@ -1030,5 +1030,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946241788-Nia_Nair_Sanju_Nair.jpg",
     "timestamp": "6/11/2026, 06:24:01"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "S Thanshitha",
+    "chest": 136,
+    "dob": "28/07/2010",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946333667-S_Thanshitha.jpg",
+    "timestamp": "6/11/2026, 06:25:33"
   }
 ]
