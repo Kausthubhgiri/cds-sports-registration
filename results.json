@@ -490,5 +490,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793943286657-U_Abhay.jpg",
     "timestamp": "6/11/2026, 05:34:46"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Harihar P Ratheesh",
+    "chest": 124,
+    "dob": "13/09/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793943374320-Harihar_P_Ratheesh.jpg",
+    "timestamp": "6/11/2026, 05:36:14"
   }
 ]
