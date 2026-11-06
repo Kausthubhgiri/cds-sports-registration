@@ -461,5 +461,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793943110390-Abhikesh_A.jpg",
     "timestamp": "6/11/2026, 05:31:50"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Amarjith  S S",
+    "chest": 122,
+    "dob": "26/06/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793943206037-Amarjith__S_S.jpg",
+    "timestamp": "6/11/2026, 05:33:25"
   }
 ]
