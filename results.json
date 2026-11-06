@@ -2459,5 +2459,22 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793982882441-SREEHARI_P_R.jpg",
     "timestamp": "6/11/2026, 16:34:44"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ALOK J PRASAD",
+    "chest": 327,
+    "dob": "13/07/2012",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "1500m Race",
+      "Long Jump",
+      "High Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793982979689-ALOK_J_PRASAD.jpg",
+    "timestamp": "6/11/2026, 16:36:21"
   }
 ]
