@@ -884,5 +884,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945765917-Devika_A__S.jpg",
     "timestamp": "6/11/2026, 06:16:05"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Niya Prakash",
+    "chest": 131,
+    "dob": "20/08/2012",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "1500m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945804779-Niya_Prakash.jpg",
+    "timestamp": "6/11/2026, 06:16:44"
   }
 ]
