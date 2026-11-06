@@ -646,5 +646,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793944712476-Adhithya_raj.jpg",
     "timestamp": "6/11/2026, 05:58:32"
+  },
+  {
+    "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
+    "name": "Najad Mohammad",
+    "chest": 1502,
+    "dob": "08/09/2012",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "800m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793944819561-Najad_Mohammad.jpg",
+    "timestamp": "6/11/2026, 06:00:19"
   }
 ]
