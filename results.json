@@ -692,5 +692,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945153265-Udishna_Plasid.jpg",
     "timestamp": "6/11/2026, 06:05:53"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "K. H Hiba",
+    "chest": 711,
+    "dob": "08/06/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945166898-K__H_Hiba.jpg",
+    "timestamp": "6/11/2026, 06:06:06"
   }
 ]
