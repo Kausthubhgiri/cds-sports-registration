@@ -2039,5 +2039,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793953095474-Eshal_fathima_sainu.jpg",
     "timestamp": "6/11/2026, 08:18:15"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Adhidev as",
+    "chest": 743,
+    "dob": "06/07/2014",
+    "ageCategory": "Under 12",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793953200541-Adhidev_as.jpg",
+    "timestamp": "6/11/2026, 08:20:00"
   }
 ]
