@@ -1802,16 +1802,18 @@
   },
   {
     "school": "SARASWATHI VIDYALAYA",
-    "name": "R K mahalekshmi Adithyas",
+    "name": "Sivadha A",
     "chest": 162,
-    "dob": "23/02/2009",
+    "dob": "04/05/2009",
     "ageCategory": "Under 19",
     "gender": "Female",
     "events": [
-      "400m Race",
-      "4x100m Relay"
+      "800m Race",
+      "1500m Race",
+      "4x100m Relay",
+      "4x400m Relay"
     ],
-    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952023088-R_K_mahalekshmi_Adithyas.jpg",
-    "timestamp": "6/11/2026, 08:00:22"
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952087705-Sivadha_A.jpg",
+    "timestamp": "6/11/2026, 08:01:27"
   }
 ]
