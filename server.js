@@ -207,6 +207,14 @@ const MAX_NON_RELAY_PER_GENDER = 2;
 const MAX_RELAY_PER_GENDER = 5;
 const RELAY_EVENTS = new Set(['4x100m relay', '4x400m relay']);
 
+function ageRestrictedEventError(ageCategory, events) {
+  const has3000m = events.some(event => String(event || '').trim().toLowerCase() === '3000m race');
+  if (has3000m && ageCategory !== 'Under 19') {
+    return '3000m Race is available only for the Under 19 age category.';
+  }
+  return null;
+}
+
 function eventLimitError(school, ageCategory, gender, events, excludeIndex = -1) {
   const normalizedSchool = String(school || '').trim().toLowerCase();
   const normalizedAge = String(ageCategory || '').trim().toLowerCase();
@@ -269,6 +277,8 @@ app.post('/submit', upload.single('photo'), async (req, res) => {
   const sanitizedEvents = (Array.isArray(events) ? events : typeof events === 'string' ? [events] : [])
     .map(event => String(event).trim())
     .filter(Boolean);
+  const ageRestrictedError = ageRestrictedEventError(ageCategory, sanitizedEvents);
+  if (ageRestrictedError) return res.status(400).json({ error: ageRestrictedError });
   if (sanitizedEvents.length === 0) {
     return res.status(400).json({ error: "No events selected." });
   }
@@ -561,6 +571,8 @@ app.post('/edit-events', async (req, res) => {
   const sanitizedEvents = (Array.isArray(events) ? events : typeof events === 'string' ? [events] : [])
     .map(event => String(event).trim())
     .filter(Boolean);
+  const ageRestrictedError = ageRestrictedEventError(ageCategory, sanitizedEvents);
+  if (ageRestrictedError) return res.status(400).send(ageRestrictedError);
   if (!sanitizedEvents.length) return res.status(400).send("Select at least one event.");
   const uniqueEvents = new Set(sanitizedEvents.map(event => event.toLowerCase()));
   if (uniqueEvents.size !== sanitizedEvents.length) {
