@@ -631,5 +631,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793944506316-Abhinav_S.jpg",
     "timestamp": "6/11/2026, 05:55:06"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Adhithya raj",
+    "chest": 710,
+    "dob": "26/11/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793944712476-Adhithya_raj.jpg",
+    "timestamp": "6/11/2026, 05:58:32"
   }
 ]
