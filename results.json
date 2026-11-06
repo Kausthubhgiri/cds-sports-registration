@@ -1860,5 +1860,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952177771-Abhinaya_N_A.jpg",
     "timestamp": "6/11/2026, 08:02:57"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Medidi Asmitha",
+    "chest": 164,
+    "dob": "29/10/2009",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952255258-Medidi_Asmitha.jpg",
+    "timestamp": "6/11/2026, 08:04:15"
   }
 ]
