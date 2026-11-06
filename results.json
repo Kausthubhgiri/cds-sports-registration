@@ -401,5 +401,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793942822056-Sunayna_Binu_Pillai.jpg",
     "timestamp": "6/11/2026, 05:27:01"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Karthika Kareti",
+    "chest": 118,
+    "dob": "20/02/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "800m Race",
+      "Shot Put",
+      "Discus Throw",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793942897929-Karthika_Kareti.jpg",
+    "timestamp": "6/11/2026, 05:28:17"
   }
 ]
