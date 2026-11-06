@@ -2070,5 +2070,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793953354058-Kasinath_m.jpg",
     "timestamp": "6/11/2026, 08:22:34"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "R K Mahalekshmi  adithyas",
+    "chest": 168,
+    "dob": "23/02/2009",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793953404322-R_K_Mahalekshmi__adithyas.jpg",
+    "timestamp": "6/11/2026, 08:23:24"
   }
 ]
