@@ -2831,5 +2831,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794034777040-A_V_Vardhana.jpg",
     "timestamp": "7/11/2026, 06:59:38"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Athul Subash.  A",
+    "chest": 1016,
+    "dob": "26/01/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794035289888-Athul_Subash___A.jpg",
+    "timestamp": "7/11/2026, 07:08:10"
   }
 ]
