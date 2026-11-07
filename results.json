@@ -2818,5 +2818,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794034319327-Ahalya_P_S.jpg",
     "timestamp": "7/11/2026, 06:52:00"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "A.V.Vardhana",
+    "chest": 1015,
+    "dob": "23/01/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794034777040-A_V_Vardhana.jpg",
+    "timestamp": "7/11/2026, 06:59:38"
   }
 ]
