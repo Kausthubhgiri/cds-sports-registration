@@ -2648,5 +2648,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794028306070-Thanmaya_Ramesh.jpg",
     "timestamp": "7/11/2026, 05:11:47"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "krishna Deepu",
+    "chest": 172,
+    "dob": "13/04/2012",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794028453840-krishna_Deepu.jpg",
+    "timestamp": "7/11/2026, 05:14:14"
   }
 ]
