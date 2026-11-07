@@ -2688,5 +2688,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794028683912-Roshan_J_S.jpg",
     "timestamp": "7/11/2026, 05:18:05"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Aadidev P",
+    "chest": 174,
+    "dob": "04/09/2010",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "3000m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794028967240-Aadidev_P.jpg",
+    "timestamp": "7/11/2026, 05:22:48"
   }
 ]
