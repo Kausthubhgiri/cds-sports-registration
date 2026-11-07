@@ -2805,5 +2805,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794034178881-Pratheeksha_Prabhu.jpg",
     "timestamp": "7/11/2026, 06:49:40"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Ahalya.P S",
+    "chest": 1014,
+    "dob": "15/05/2012",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794034319327-Ahalya_P_S.jpg",
+    "timestamp": "7/11/2026, 06:52:00"
   }
 ]
