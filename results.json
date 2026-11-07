@@ -2579,5 +2579,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794025833867-Neerav__S.jpg",
     "timestamp": "7/11/2026, 04:30:35"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Anaswar. S A",
+    "chest": 1003,
+    "dob": "14/02/2015",
+    "ageCategory": "Under 12",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794026489157-Anaswar__S_A.jpg",
+    "timestamp": "7/11/2026, 04:41:30"
   }
 ]
