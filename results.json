@@ -2622,5 +2622,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794027759164-Aparna___A.jpg",
     "timestamp": "7/11/2026, 05:02:40"
+  },
+  {
+    "school": "SARASWATHI VIDYALAYA",
+    "name": "Sreenandha A",
+    "chest": 170,
+    "dob": "23/10/2012",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "3000m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794028208769-Sreenandha_A.jpg",
+    "timestamp": "7/11/2026, 05:10:09"
   }
 ]
