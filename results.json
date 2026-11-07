@@ -2789,5 +2789,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794033990328-Mohammed_Nihal.jpg",
     "timestamp": "7/11/2026, 06:46:31"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Pratheeksha Prabhu",
+    "chest": 1013,
+    "dob": "07/10/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794034178881-Pratheeksha_Prabhu.jpg",
+    "timestamp": "7/11/2026, 06:49:40"
   }
 ]
