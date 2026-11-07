@@ -2731,5 +2731,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794032258295-Abhinav___R_S.jpg",
     "timestamp": "7/11/2026, 06:17:39"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Aadikesh A R",
+    "chest": 1009,
+    "dob": "09/10/2012",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794033392137-Aadikesh_A_R.jpg",
+    "timestamp": "7/11/2026, 06:36:33"
   }
 ]
