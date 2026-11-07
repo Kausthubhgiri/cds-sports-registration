@@ -2775,5 +2775,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794033894015-Kasinath__V.jpg",
     "timestamp": "7/11/2026, 06:44:55"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Mohammed Nihal",
+    "chest": 1012,
+    "dob": "15/04/2012",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Discus Throw",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794033990328-Mohammed_Nihal.jpg",
+    "timestamp": "7/11/2026, 06:46:31"
   }
 ]
