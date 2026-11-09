@@ -3144,5 +3144,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794216083271-Aryan_rajeev.jpg",
     "timestamp": "9/11/2026, 09:21:24"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Diya s lal",
+    "chest": 747,
+    "dob": "16/11/2009",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794216617508-Diya_s_lal.jpg",
+    "timestamp": "9/11/2026, 09:30:18"
   }
 ]
