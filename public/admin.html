@@ -191,7 +191,73 @@
       return null;
     }
   }
-  async function imageData(path, gender) { if(!path)return defaultPortraitData(gender);const urls=photoUrls(path);for(const url of urls){try{const response=await fetch(url,{cache:'no-store'});if(response.ok){const blob=await response.blob();if(blob.type.startsWith('image/'))return await blobToDataUrl(blob);}}catch(err){console.warn('Photo fetch failed:',url,err);}}for(const url of urls){const img=await loadImage(url);if(!img)continue;try{const c=document.createElement('canvas');const max=300;const scale=Math.min(1,max/Math.max(img.naturalWidth,img.naturalHeight));c.width=Math.max(1,Math.round(img.naturalWidth*scale));c.height=Math.max(1,Math.round(img.naturalHeight*scale));c.getContext('2d').drawImage(img,0,0,c.width,c.height);return c.toDataURL('image/jpeg',.88)}catch(err){console.warn('Photo canvas conversion failed:',url,err);}}return defaultPortraitData(gender); }
+  const pdfPhotoCache = new Map();
+  const PDF_PHOTO_MAX_SIDE = 180;
+  const PDF_PHOTO_QUALITY = 0.78;
+  async function imageData(path, gender) {
+    const cacheKey = path ? String(path) : `__default_${String(gender||'')}`;
+    if(pdfPhotoCache.has(cacheKey)) return pdfPhotoCache.get(cacheKey);
+    const task = (async()=>{
+      if(!path) return defaultPortraitData(gender);
+      const urls=photoUrls(path);
+      for(const url of urls){
+        try{
+          const response=await fetch(url,{cache:'force-cache'});
+          if(!response.ok)continue;
+          const blob=await response.blob();
+          if(!blob.type.startsWith('image/'))continue;
+          let bitmap=null;
+          try{
+            if(typeof createImageBitmap==='function') bitmap=await createImageBitmap(blob);
+          }catch(_){}
+          if(bitmap){
+            const scale=Math.min(1,PDF_PHOTO_MAX_SIDE/Math.max(bitmap.width,bitmap.height));
+            const width=Math.max(1,Math.round(bitmap.width*scale));
+            const height=Math.max(1,Math.round(bitmap.height*scale));
+            const canvas=document.createElement('canvas');
+            canvas.width=width;canvas.height=height;
+            const ctx=canvas.getContext('2d',{alpha:false});
+            ctx.drawImage(bitmap,0,0,width,height);
+            bitmap.close?.();
+            return canvas.toDataURL('image/jpeg',PDF_PHOTO_QUALITY);
+          }
+          const img=await loadImage(url);
+          if(!img)continue;
+          const scale=Math.min(1,PDF_PHOTO_MAX_SIDE/Math.max(img.naturalWidth,img.naturalHeight));
+          const width=Math.max(1,Math.round(img.naturalWidth*scale));
+          const height=Math.max(1,Math.round(img.naturalHeight*scale));
+          const canvas=document.createElement('canvas');
+          canvas.width=width;canvas.height=height;
+          canvas.getContext('2d',{alpha:false}).drawImage(img,0,0,width,height);
+          return canvas.toDataURL('image/jpeg',PDF_PHOTO_QUALITY);
+        }catch(err){console.warn('PDF photo processing failed:',url,err);}
+      }
+      return defaultPortraitData(gender);
+    })();
+    pdfPhotoCache.set(cacheKey,task);
+    try{return await task;}
+    catch(err){pdfPhotoCache.delete(cacheKey);console.warn('PDF photo fallback used:',err);return defaultPortraitData(gender);}
+  }
+  async function preloadPdfPhotos(participants, concurrency=6) {
+    const unique=new Map();
+    participants.forEach(p=>{
+      const key=p.photoPath?String(p.photoPath):`__default_${String(p.gender||'')}`;
+      if(!unique.has(key))unique.set(key,p);
+    });
+    const jobs=[...unique.values()];
+    let next=0,done=0;
+    const worker=async()=>{
+      while(true){
+        const index=next++;
+        if(index>=jobs.length)return;
+        const p=jobs[index];
+        await imageData(p.photoPath,p.gender);
+        done++;
+        if(done%8===0||done===jobs.length)setProgress(true,`Preparing participant photos… ${done}/${jobs.length}`);
+      }
+    };
+    await Promise.all(Array.from({length:Math.min(concurrency,jobs.length)},worker));
+  }
   function filename(text){return text.replace(/[^a-z0-9]+/gi,'-').replace(/^-|-$/g,'').toLowerCase();}
   function pdfHeader(doc,logoData=null){
     const w=doc.internal.pageSize.getWidth();
@@ -210,24 +276,25 @@
     if(!window.jspdf?.jsPDF||!window.jspdf?.jsPDF.API.autoTable)throw new Error('PDF library did not load. Check the internet connection or host the two library files locally.');
     const entries=eventName?previousData.filter(p=>(p.events||[]).map(cleanEvent).includes(eventName)):previousData;
     if(!entries.length)throw new Error('There are no participants to export.');
-    setProgress(true,'Building compact, event-wise PDF…');
+    setProgress(true,'Building compact, event-wise, gender-separated PDF…');
     try {
       const {jsPDF}=window.jspdf;
       const doc=new jsPDF({orientation:'landscape',unit:'mm',format:'a4',compress:true});
       const pdfLogo=await loadPdfLogo();
+      await preloadPdfPhotos(entries,6);
       const eventOrder=new Map(ALL_EVENTS.map((event,index)=>[event,index]));
-      const genderOrder=value=>{const g=String(value||'').toLowerCase();return g.startsWith('m')?0:g.startsWith('f')?1:2;};
+      const genderGroups=[
+        {label:'MALE PARTICIPANTS',key:'male',match:g=>String(g||'').trim().toLowerCase().startsWith('m')},
+        {label:'FEMALE PARTICIPANTS',key:'female',match:g=>String(g||'').trim().toLowerCase().startsWith('f')},
+        {label:'OTHER / UNSPECIFIED',key:'other',match:g=>!String(g||'').trim().toLowerCase().startsWith('m')&&!String(g||'').trim().toLowerCase().startsWith('f')}
+      ];
       const events=[...new Set(entries.flatMap(p=>(p.events||[]).map(cleanEvent)).filter(Boolean))]
         .filter(event=>!eventName||event===eventName)
         .sort((a,b)=>(eventOrder.get(a)??999)-(eventOrder.get(b)??999)||a.localeCompare(b));
       let pageStarted=false;
       for(const event of events) {
-        const members=entries.filter(p=>(p.events||[]).map(cleanEvent).includes(event)).sort((a,b)=>
-          genderOrder(a.gender)-genderOrder(b.gender) ||
-          ageIndex(a.ageCategory)-ageIndex(b.ageCategory) ||
-          String(a.school||'').localeCompare(String(b.school||'')) ||
-          String(a.name||'').localeCompare(String(b.name||''))
-        );
+        const members=entries.filter(p=>(p.events||[]).map(cleanEvent).includes(event));
+        if(!members.length)continue;
         if(pageStarted)doc.addPage();
         pdfHeader(doc,pdfLogo);
         pageStarted=true;
@@ -238,59 +305,90 @@
         doc.setFont('helvetica','bold');
         doc.setFontSize(10);
         doc.text(`EVENT  •  ${event}`,17,y+4.8);
-        y+=9;
+        y+=11;
 
-        const body=[];
-        for(let i=0;i<members.length;i++) {
-          const p=members[i];
-          setProgress(true,`Embedding photos… ${i+1}/${members.length} for ${event}`);
-          const photo=await imageData(p.photoPath,p.gender);
-          body.push([
-            {content:'',photo},
-            p.name||'—',
-            p.chest||'—',
-            p.dob||'—',
-            p.gender||'—',
-            p.school||'Unassigned',
-            p.ageCategory||'Not assigned'
-          ]);
-        }
-        doc.autoTable({
-          startY:y,
-          head:[['Photo','Participant','Chest','Date of birth','Gender','School','Age category']],
-          body,
-          margin:{left:14,right:14,top:28,bottom:17},
-          theme:'grid',
-          styles:{
-            font:'helvetica',fontSize:7,cellPadding:1.15,valign:'middle',
-            lineColor:[217,226,236],lineWidth:.1,overflow:'linebreak'
-          },
-          headStyles:{fillColor:[8,75,120],textColor:255,fontStyle:'bold',fontSize:6.8,cellPadding:1.5},
-          columnStyles:{
-            0:{cellWidth:15},
-            1:{cellWidth:49,fontStyle:'bold'},
-            2:{cellWidth:17},
-            3:{cellWidth:25},
-            4:{cellWidth:19},
-            5:{cellWidth:55},
-            6:{cellWidth:50}
-          },
-          didDrawCell:d=>{
-            const photo=d.cell.raw?.photo;
-            if(photo&&d.section==='body'&&d.column.index===0){
-              const size=Math.min(10,d.cell.height-1.5);
-              if(size>0)doc.addImage(photo,'JPEG',d.cell.x+(d.cell.width-size)/2,d.cell.y+(d.cell.height-size)/2,size,size);
+        for(const genderGroup of genderGroups) {
+          const genderMembers=members.filter(p=>genderGroup.match(p.gender));
+          if(!genderMembers.length)continue;
+          genderMembers.sort((a,b)=>
+            ageIndex(a.ageCategory)-ageIndex(b.ageCategory) ||
+            String(a.school||'').localeCompare(String(b.school||'')) ||
+            String(a.name||'').localeCompare(String(b.name||''))
+          );
+
+          // Separate gender section, matching the Excel workbook's event-gender sheets.
+          if(y>180){doc.addPage();pdfHeader(doc,pdfLogo);y=31;}
+          doc.setFillColor(238,243,248);
+          doc.roundedRect(14,y,269,6.5,1,1,'F');
+          doc.setTextColor(35,65,90);
+          doc.setFont('helvetica','bold');
+          doc.setFontSize(8.5);
+          doc.text(`${genderGroup.label}  •  ${genderMembers.length} PARTICIPANTS`,17,y+4.5);
+          y+=8;
+
+          const ageCategories=[...new Set(genderMembers.map(p=>String(p.ageCategory||'Not assigned')))]
+            .sort((a,b)=>ageIndex(a)-ageIndex(b)||a.localeCompare(b));
+          for(const ageCategory of ageCategories) {
+            const ageMembers=genderMembers.filter(p=>String(p.ageCategory||'Not assigned')===ageCategory);
+            if(y>180){doc.addPage();pdfHeader(doc,pdfLogo);y=31;}
+            doc.setTextColor(10,75,120);
+            doc.setFont('helvetica','bold');
+            doc.setFontSize(7.5);
+            doc.text(`AGE CATEGORY: ${ageCategory}`,15,y+3.5);
+            y+=5;
+
+            const body=[];
+            for(let i=0;i<ageMembers.length;i++) {
+              const p=ageMembers[i];
+              const photo=await imageData(p.photoPath,p.gender);
+              body.push([
+                {content:'',photo},
+                p.name||'—',
+                p.chest||'—',
+                p.dob||'—',
+                p.gender||'—',
+                p.school||'Unassigned'
+              ]);
             }
-          },
-          didParseCell:d=>{if(d.section==='body')d.cell.styles.minCellHeight=12;},
-          showHead:'everyPage',
-          pageBreak:'auto',
-          rowPageBreak:'avoid'
-        });
+            doc.autoTable({
+              startY:y,
+              head:[['Photo','Participant','Chest','Date of birth','Gender','School']],
+              body,
+              margin:{left:14,right:14,top:28,bottom:17},
+              theme:'grid',
+              styles:{
+                font:'helvetica',fontSize:7,cellPadding:1.05,valign:'middle',
+                lineColor:[217,226,236],lineWidth:.1,overflow:'linebreak'
+              },
+              headStyles:{fillColor:[8,75,120],textColor:255,fontStyle:'bold',fontSize:6.8,cellPadding:1.35},
+              columnStyles:{
+                0:{cellWidth:15},
+                1:{cellWidth:55,fontStyle:'bold'},
+                2:{cellWidth:18},
+                3:{cellWidth:28},
+                4:{cellWidth:22},
+                5:{cellWidth:92}
+              },
+              didDrawCell:d=>{
+                const photo=d.cell.raw?.photo;
+                if(photo&&d.section==='body'&&d.column.index===0){
+                  const size=Math.min(10,d.cell.height-1.5);
+                  if(size>0)doc.addImage(photo,'JPEG',d.cell.x+(d.cell.width-size)/2,d.cell.y+(d.cell.height-size)/2,size,size);
+                }
+              },
+              didParseCell:d=>{if(d.section==='body')d.cell.styles.minCellHeight=12;},
+              showHead:'everyPage',
+              pageBreak:'auto',
+              rowPageBreak:'avoid'
+            });
+            y=doc.lastAutoTable.finalY+3;
+          }
+          y+=2;
+        }
       }
       pdfFooter(doc);
       doc.save(`cds-sports-${eventName?filename(eventName):'master-register'}.pdf`);
-      showToast('Compact event-wise PDF downloaded successfully.');
+      showToast('Gender-separated event-wise PDF downloaded successfully.');
     } finally {
       setProgress(false);
     }
