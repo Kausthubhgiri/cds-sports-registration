@@ -2859,5 +2859,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794198387920-Arjun_A.jpg",
     "timestamp": "9/11/2026, 04:26:28"
+  },
+  {
+    "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
+    "name": "Reyan Plasid",
+    "chest": 1512,
+    "dob": "17/10/2014",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794198642124-Reyan_Plasid.jpg",
+    "timestamp": "9/11/2026, 04:30:43"
   }
 ]
