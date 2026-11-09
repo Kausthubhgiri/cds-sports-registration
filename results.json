@@ -2409,13 +2409,12 @@
     "school": "VISHWABHARATHY PUBLIC SCHOOL",
     "name": "AKHINA B",
     "chest": 323,
-    "dob": "02/11/2012",
+    "dob": "2012-11-02",
     "ageCategory": "Under 17",
     "gender": "Female",
     "events": [
       "200m Race",
-      "Long Jump",
-      "4x100m Relay"
+      "Long Jump"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793982608924-AKHINA_B.jpg",
     "timestamp": "6/11/2026, 16:30:10"
