@@ -3410,5 +3410,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794239552301-Nimisha_S_Nair.jpg",
     "timestamp": "9/11/2026, 15:52:33"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Daya Mohan",
+    "chest": 1028,
+    "dob": "29/11/2011",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794239666493-Daya_Mohan.jpg",
+    "timestamp": "9/11/2026, 15:54:27"
   }
 ]
