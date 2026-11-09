@@ -3496,5 +3496,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794246101650-Shafna_Jalal.jpg",
     "timestamp": "9/11/2026, 17:41:42"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Alshafin. J",
+    "chest": 1034,
+    "dob": "20/07/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794246351531-Alshafin__J.jpg",
+    "timestamp": "9/11/2026, 17:45:52"
   }
 ]
