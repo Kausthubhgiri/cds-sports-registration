@@ -243,6 +243,10 @@
         for(const genderGroup of genderGroups) {
           const genderMembers=members.filter(p=>genderGroup.match(p.gender));
           if(!genderMembers.length)continue;
+          // Start each gender on a dedicated fresh page, just like an event.
+          doc.addPage();
+          pdfHeader(doc,pdfLogo);
+          y=31;
           // Keep age category as a normal data column, as in the earlier register layout.
           genderMembers.sort((a,b)=>
             ageIndex(a.ageCategory)-ageIndex(b.ageCategory) ||
@@ -250,7 +254,6 @@
             String(a.name||'').localeCompare(String(b.name||''))
           );
 
-          if(y>180){doc.addPage();pdfHeader(doc,pdfLogo);y=31;}
           doc.setFillColor(238,243,248);
           doc.roundedRect(14,y,269,6.5,1,1,'F');
           doc.setTextColor(35,65,90);
