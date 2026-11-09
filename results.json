@@ -3202,5 +3202,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794217668138-Vaiga_ps.jpg",
     "timestamp": "9/11/2026, 09:47:49"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Diya ajith",
+    "chest": 904,
+    "dob": "07/11/2012",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794217769446-Diya_ajith.jpg",
+    "timestamp": "9/11/2026, 09:49:31"
   }
 ]
