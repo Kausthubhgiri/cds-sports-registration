@@ -2733,14 +2733,15 @@
     "school": "CHINTHALAYA VIDYALAYA",
     "name": "Arjun. A",
     "chest": 1010,
-    "dob": "15/04/2012",
-    "ageCategory": "Under 14",
+    "dob": "2012-04-15",
+    "ageCategory": "Under 17",
     "gender": "Male",
     "events": [
       "400m Race",
       "800m Race",
       "Long Jump",
-      "4x100m Relay"
+      "4x100m Relay",
+      "4x400m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794033629517-Arjun__A.jpg",
     "timestamp": "7/11/2026, 06:40:30"
