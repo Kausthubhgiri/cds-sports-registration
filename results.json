@@ -2931,5 +2931,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794199336009-Muhammad_Swalih_M.jpg",
     "timestamp": "9/11/2026, 04:42:16"
+  },
+  {
+    "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
+    "name": "Nivin S Renjith",
+    "chest": 1517,
+    "dob": "04/11/2015",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794199382884-Nivin_S_Renjith.jpg",
+    "timestamp": "9/11/2026, 04:43:03"
   }
 ]
