@@ -1139,13 +1139,13 @@
     "school": "N.S.S PUBLIC SCHOOL PERUNTHANNI",
     "name": "ABHINAV A",
     "chest": 411,
-    "dob": "27/08/2012",
+    "dob": "2012-08-27",
     "ageCategory": "Under 14",
     "gender": "Male",
     "events": [
       "400m Race",
       "Long Jump",
-      "4x100m Relay"
+      "4x400m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946956948-ABHINAV_A.jpg",
     "timestamp": "6/11/2026, 06:35:56"
