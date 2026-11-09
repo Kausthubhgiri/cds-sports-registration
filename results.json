@@ -3349,5 +3349,22 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794238957617-Aarav__D.jpg",
     "timestamp": "9/11/2026, 15:42:38"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Sarang. J R",
+    "chest": 1024,
+    "dob": "19/01/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "Discus Throw",
+      "High Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794239135949-Sarang__J_R.jpg",
+    "timestamp": "9/11/2026, 15:45:37"
   }
 ]
