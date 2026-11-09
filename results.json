@@ -1005,14 +1005,14 @@
     "school": "N.S.S PUBLIC SCHOOL PERUNTHANNI",
     "name": "MOHAMMED NADEEM",
     "chest": 407,
-    "dob": "02/11/2009",
+    "dob": "2009-11-02",
     "ageCategory": "Under 19",
     "gender": "Male",
     "events": [
       "800m Race",
       "Shot Put",
       "Discus Throw",
-      "4x100m Relay"
+      "4x400m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946222868-MOHAMMED_NADEEM.jpg",
     "timestamp": "6/11/2026, 06:23:42"
