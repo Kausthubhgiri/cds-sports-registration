@@ -3049,5 +3049,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794205237005-AADHIDEV.jpg",
     "timestamp": "9/11/2026, 06:20:37"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ADWAITH V NAIR",
+    "chest": 337,
+    "dob": "26/09/2010",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "Shot Put",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794205457892-ADWAITH_V_NAIR.jpg",
+    "timestamp": "9/11/2026, 06:24:18"
   }
 ]
