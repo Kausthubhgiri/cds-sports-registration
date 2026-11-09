@@ -2894,10 +2894,11 @@
     "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
     "name": "Niya Fathima",
     "chest": 1514,
-    "dob": "05/05/2014",
+    "dob": "2014-05-05",
     "ageCategory": "Under 14",
     "gender": "Female",
     "events": [
+      "400m Race",
       "Shot Put",
       "Long Jump"
     ],
