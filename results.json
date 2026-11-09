@@ -3436,5 +3436,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794242624690-Nandalal___V_S.jpg",
     "timestamp": "9/11/2026, 16:43:45"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Abi sajith",
+    "chest": 1030,
+    "dob": "25/02/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794242910831-Abi_sajith.jpg",
+    "timestamp": "9/11/2026, 16:48:31"
   }
 ]
