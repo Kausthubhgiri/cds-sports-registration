@@ -3306,5 +3306,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794237388029-Rudra__A_R.jpg",
     "timestamp": "9/11/2026, 15:16:29"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Parvathi.  A P",
+    "chest": 1021,
+    "dob": "11/01/2016",
+    "ageCategory": "Under 12",
+    "gender": "Female",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794237957381-Parvathi___A_P.jpg",
+    "timestamp": "9/11/2026, 15:25:58"
   }
 ]
