@@ -2750,11 +2750,13 @@
     "school": "CHINTHALAYA VIDYALAYA",
     "name": "Kasinath. V",
     "chest": 1011,
-    "dob": "11/02/2013",
+    "dob": "2013-02-11",
     "ageCategory": "Under 14",
     "gender": "Male",
     "events": [
-      "400m Race"
+      "200m Race",
+      "400m Race",
+      "4x100m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794033894015-Kasinath__V.jpg",
     "timestamp": "7/11/2026, 06:44:55"
