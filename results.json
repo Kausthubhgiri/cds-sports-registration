@@ -2874,5 +2874,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794198642124-Reyan_Plasid.jpg",
     "timestamp": "9/11/2026, 04:30:43"
+  },
+  {
+    "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
+    "name": "Veda S S",
+    "chest": 1513,
+    "dob": "06/08/2015",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "50m Race",
+      "800m Race",
+      "Long Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794198830673-Veda_S_S.jpg",
+    "timestamp": "9/11/2026, 04:33:51"
   }
 ]
