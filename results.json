@@ -3482,5 +3482,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794245889291-Malavika_Syam.jpg",
     "timestamp": "9/11/2026, 17:38:10"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Shafna Jalal",
+    "chest": 1033,
+    "dob": "06/02/2012",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794246101650-Shafna_Jalal.jpg",
+    "timestamp": "9/11/2026, 17:41:42"
   }
 ]
