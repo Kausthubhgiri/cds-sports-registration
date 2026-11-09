@@ -2961,5 +2961,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794199494455-Arjun_Sreejith.jpg",
     "timestamp": "9/11/2026, 04:44:55"
+  },
+  {
+    "school": "N.S.S PUBLIC SCHOOL PERUNTHANNI",
+    "name": "S SURYA",
+    "chest": 418,
+    "dob": "27/03/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794203702012-S_SURYA.jpg",
+    "timestamp": "9/11/2026, 05:55:02"
   }
 ]
