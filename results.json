@@ -3264,5 +3264,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794236019476-V_Adhikesav.jpg",
     "timestamp": "9/11/2026, 14:53:41"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Niya. R",
+    "chest": 1018,
+    "dob": "26/03/2015",
+    "ageCategory": "Under 12",
+    "gender": "Female",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794236431809-Niya__R.jpg",
+    "timestamp": "9/11/2026, 15:00:33"
   }
 ]
