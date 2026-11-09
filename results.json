@@ -2591,11 +2591,12 @@
     "school": "CHINTHALAYA VIDYALAYA",
     "name": "Aparna.  A",
     "chest": 1005,
-    "dob": "31/10/2015",
+    "dob": "2015-10-31",
     "ageCategory": "Under 12",
     "gender": "Female",
     "events": [
       "100m Race",
+      "200m Race",
       "Long Jump",
       "4x100m Relay"
     ],
