@@ -2909,12 +2909,13 @@
     "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
     "name": "Alfiya S",
     "chest": 1515,
-    "dob": "02/11/2014",
+    "dob": "2014-02-11",
     "ageCategory": "Under 14",
     "gender": "Female",
     "events": [
       "800m Race",
-      "High Jump"
+      "High Jump",
+      "4x100m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794199243902-Alfiya_S.jpg",
     "timestamp": "9/11/2026, 04:40:44"
