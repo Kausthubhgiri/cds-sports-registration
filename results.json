@@ -1169,12 +1169,11 @@
     "school": "N.S.S PUBLIC SCHOOL PERUNTHANNI",
     "name": "SAYELALJI V",
     "chest": 412,
-    "dob": "09/12/2013",
+    "dob": "2013-12-09",
     "ageCategory": "Under 14",
     "gender": "Male",
     "events": [
-      "Shot Put",
-      "Discus Throw"
+      "Shot Put"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793947194073-SAYELALJI_V.jpg",
     "timestamp": "6/11/2026, 06:39:53"
