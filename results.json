@@ -2889,5 +2889,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794198830673-Veda_S_S.jpg",
     "timestamp": "9/11/2026, 04:33:51"
+  },
+  {
+    "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
+    "name": "Niya Fathima",
+    "chest": 1514,
+    "dob": "05/05/2014",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Long Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794199006850-Niya_Fathima.jpg",
+    "timestamp": "9/11/2026, 04:36:47"
   }
 ]
