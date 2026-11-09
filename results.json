@@ -3131,5 +3131,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794209772529-Aradhya_V_S.jpg",
     "timestamp": "9/11/2026, 07:36:13"
+  },
+  {
+    "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
+    "name": "Aryan rajeev",
+    "chest": 746,
+    "dob": "15/07/2008",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794216083271-Aryan_rajeev.jpg",
+    "timestamp": "9/11/2026, 09:21:24"
   }
 ]
