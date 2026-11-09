@@ -3512,5 +3512,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794246351531-Alshafin__J.jpg",
     "timestamp": "9/11/2026, 17:45:52"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Karthik. P V",
+    "chest": 1035,
+    "dob": "29/12/2008",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794246786754-Karthik__P_V.jpg",
+    "timestamp": "9/11/2026, 17:53:07"
   }
 ]
