@@ -2686,14 +2686,15 @@
     "school": "CHINTHALAYA VIDYALAYA",
     "name": "Vaishnav.  M",
     "chest": 1007,
-    "dob": "07/09/2012",
-    "ageCategory": "Under 14",
+    "dob": "2012-09-07",
+    "ageCategory": "Under 17",
     "gender": "Male",
     "events": [
       "100m Race",
       "200m Race",
-      "Long Jump",
-      "4x100m Relay"
+      "1500m Race",
+      "4x100m Relay",
+      "4x400m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794029484810-Vaishnav___M.jpg",
     "timestamp": "7/11/2026, 05:31:26"
