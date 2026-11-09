@@ -224,29 +224,32 @@
       const events=[...new Set(entries.flatMap(p=>(p.events||[]).map(cleanEvent)).filter(Boolean))]
         .filter(event=>!eventName||event===eventName)
         .sort((a,b)=>(eventOrder.get(a)??999)-(eventOrder.get(b)??999)||a.localeCompare(b));
-      let pageStarted=false;
+      let genderPageStarted=false;
       for(const event of events) {
         const members=entries.filter(p=>(p.events||[]).map(cleanEvent).includes(event));
         if(!members.length)continue;
-        if(pageStarted)doc.addPage();
-        pdfHeader(doc,pdfLogo);
-        pageStarted=true;
-        let y=31;
-        doc.setFillColor(225,244,250);
-        doc.roundedRect(14,y,269,7,1.5,1.5,'F');
-        doc.setTextColor(10,75,120);
-        doc.setFont('helvetica','bold');
-        doc.setFontSize(10);
-        doc.text(`EVENT  •  ${event}`,17,y+4.8);
-        y+=11;
 
         for(const genderGroup of genderGroups) {
           const genderMembers=members.filter(p=>genderGroup.match(p.gender));
           if(!genderMembers.length)continue;
-          // Start each gender on a dedicated fresh page, just like an event.
-          doc.addPage();
+
+          // One continuous sequence: every event/gender section begins at the
+          // top of a page, but there are no standalone event-title pages.
+          if(genderPageStarted)doc.addPage();
           pdfHeader(doc,pdfLogo);
-          y=31;
+          genderPageStarted=true;
+          let y=31;
+
+          doc.setFillColor(225,244,250);
+          doc.roundedRect(14,y,269,7,1.5,1.5,'F');
+          doc.setTextColor(10,75,120);
+          doc.setFont('helvetica','bold');
+          doc.setFontSize(10);
+          doc.text(`EVENT  •  ${event}`,17,y+4.8);
+          y+=10;
+
+          // Each gender starts on a new page; its table may continue naturally
+          // onto following pages with repeated column headers.
           // Keep age category as a normal data column, as in the earlier register layout.
           genderMembers.sort((a,b)=>
             ageIndex(a.ageCategory)-ageIndex(b.ageCategory) ||
