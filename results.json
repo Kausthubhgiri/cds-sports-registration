@@ -3108,5 +3108,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794207987469-VAIBHAV_V_NAIR.jpg",
     "timestamp": "9/11/2026, 07:06:28"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "AANN MARY RAJESH",
+    "chest": 342,
+    "dob": "12/03/2010",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794208164074-AANN_MARY_RAJESH.jpg",
+    "timestamp": "9/11/2026, 07:09:25"
   }
 ]
