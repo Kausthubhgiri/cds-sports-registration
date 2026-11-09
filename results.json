@@ -3186,5 +3186,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794217407285-Anjana_t_nair.jpg",
     "timestamp": "9/11/2026, 09:43:28"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Vaiga ps",
+    "chest": 903,
+    "dob": "11/10/2012",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794217668138-Vaiga_ps.jpg",
+    "timestamp": "9/11/2026, 09:47:49"
   }
 ]
