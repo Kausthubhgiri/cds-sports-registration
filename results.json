@@ -3033,5 +3033,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794205168068-AKHIL_S_S.jpg",
     "timestamp": "9/11/2026, 06:19:29"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "AADHIDEV",
+    "chest": 336,
+    "dob": "10/06/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794205237005-AADHIDEV.jpg",
+    "timestamp": "9/11/2026, 06:20:37"
   }
 ]
