@@ -3395,5 +3395,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794239425140-Dishna_Dileep___M.jpg",
     "timestamp": "9/11/2026, 15:50:26"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Nimisha S Nair",
+    "chest": 1027,
+    "dob": "11/03/2011",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794239552301-Nimisha_S_Nair.jpg",
+    "timestamp": "9/11/2026, 15:52:33"
   }
 ]
