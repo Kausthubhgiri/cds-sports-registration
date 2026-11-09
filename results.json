@@ -1093,13 +1093,13 @@
     "school": "N.S.S PUBLIC SCHOOL PERUNTHANNI",
     "name": "ROJAR SEBASTIAN",
     "chest": 409,
-    "dob": "07/05/2013",
+    "dob": "2013-05-07",
     "ageCategory": "Under 14",
     "gender": "Male",
     "events": [
       "100m Race",
       "200m Race",
-      "4x100m Relay"
+      "4x400m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946741632-ROJAR_SEBASTIAN.jpg",
     "timestamp": "6/11/2026, 06:32:21"
