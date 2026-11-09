@@ -3216,5 +3216,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794217769446-Diya_ajith.jpg",
     "timestamp": "9/11/2026, 09:49:31"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Mariya raj",
+    "chest": 905,
+    "dob": "04/01/2010",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "Shot Put",
+      "Discus Throw",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794217867687-Mariya_raj.jpg",
+    "timestamp": "9/11/2026, 09:51:08"
   }
 ]
