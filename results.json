@@ -1415,12 +1415,12 @@
     "school": "N.S.S PUBLIC SCHOOL PERUNTHANNI",
     "name": "MEENAKSHI S S",
     "chest": 416,
-    "dob": "14/04/2015",
+    "dob": "2015-04-14",
     "ageCategory": "Under 12",
     "gender": "Female",
     "events": [
       "400m Race",
-      "4x100m Relay"
+      "4x400m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793949090117-MEENAKSHI_S_S.jpg",
     "timestamp": "6/11/2026, 07:11:30"
