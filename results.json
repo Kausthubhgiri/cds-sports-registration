@@ -3054,10 +3054,11 @@
     "school": "VISHWABHARATHY PUBLIC SCHOOL",
     "name": "NAVEEN S S",
     "chest": 338,
-    "dob": "06/07/2010",
+    "dob": "2010-07-06",
     "ageCategory": "Under 19",
     "gender": "Male",
     "events": [
+      "400m Race",
       "High Jump",
       "4x100m Relay",
       "4x400m Relay"
