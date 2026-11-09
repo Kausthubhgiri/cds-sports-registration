@@ -2987,5 +2987,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794203986967-ABHINAV_S_A.jpg",
     "timestamp": "9/11/2026, 05:59:47"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "KARTHIK R NAIR",
+    "chest": 333,
+    "dob": "01/09/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794204908222-KARTHIK_R_NAIR.jpg",
+    "timestamp": "9/11/2026, 06:15:09"
   }
 ]
