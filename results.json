@@ -2511,12 +2511,13 @@
     "school": "VISHWABHARATHY PUBLIC SCHOOL",
     "name": "ABHINAV S D",
     "chest": 330,
-    "dob": "23/07/2010",
+    "dob": "2010-07-23",
     "ageCategory": "Under 17",
     "gender": "Male",
     "events": [
       "200m Race",
       "400m Race",
+      "1500m Race",
       "4x100m Relay",
       "4x400m Relay"
     ],
