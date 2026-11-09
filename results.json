@@ -3117,5 +3117,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794208164074-AANN_MARY_RAJESH.jpg",
     "timestamp": "9/11/2026, 07:09:25"
+  },
+  {
+    "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
+    "name": "Aradhya V S",
+    "chest": 1519,
+    "dob": "11/09/2014",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794209772529-Aradhya_V_S.jpg",
+    "timestamp": "9/11/2026, 07:36:13"
   }
 ]
