@@ -3158,5 +3158,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794216617508-Diya_s_lal.jpg",
     "timestamp": "9/11/2026, 09:30:18"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Daya ajith",
+    "chest": 901,
+    "dob": "01/06/2010",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794217110733-Daya_ajith.jpg",
+    "timestamp": "9/11/2026, 09:38:32"
   }
 ]
