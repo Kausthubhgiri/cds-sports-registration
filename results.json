@@ -729,11 +729,12 @@
     "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
     "name": "Rafiya Nazar R",
     "chest": 1505,
-    "dob": "12/06/2013",
+    "dob": "2013-12-06",
     "ageCategory": "Under 14",
     "gender": "Female",
     "events": [
-      "200m Race"
+      "200m Race",
+      "4x100m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793945329342-Rafiya_Nazar_R.jpg",
     "timestamp": "6/11/2026, 06:08:49"
