@@ -3379,5 +3379,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794239283546-Sreerag___R_I.jpg",
     "timestamp": "9/11/2026, 15:48:04"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Dishna Dileep.  M",
+    "chest": 1026,
+    "dob": "22/06/2010",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794239425140-Dishna_Dileep___M.jpg",
+    "timestamp": "9/11/2026, 15:50:26"
   }
 ]
