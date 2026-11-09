@@ -3080,5 +3080,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794205582504-NAVEEN_S_S.jpg",
     "timestamp": "9/11/2026, 06:26:23"
+  },
+  {
+    "school": "VISHWABHARATHY PUBLIC SCHOOL",
+    "name": "ABHINAV KRISHNA K",
+    "chest": 339,
+    "dob": "19/10/2010",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794205840993-ABHINAV_KRISHNA_K.jpg",
+    "timestamp": "9/11/2026, 06:30:41"
   }
 ]
