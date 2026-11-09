@@ -2845,5 +2845,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794035289888-Athul_Subash___A.jpg",
     "timestamp": "7/11/2026, 07:08:10"
+  },
+  {
+    "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
+    "name": "Arjun A",
+    "chest": 1511,
+    "dob": "13/01/2015",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Long Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794198387920-Arjun_A.jpg",
+    "timestamp": "9/11/2026, 04:26:28"
   }
 ]
