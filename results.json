@@ -3069,11 +3069,12 @@
     "school": "VISHWABHARATHY PUBLIC SCHOOL",
     "name": "ABHINAV KRISHNA K",
     "chest": 339,
-    "dob": "19/10/2010",
+    "dob": "2010-10-10",
     "ageCategory": "Under 19",
     "gender": "Male",
     "events": [
-      "Shot Put"
+      "Shot Put",
+      "4x400m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794205840993-ABHINAV_KRISHNA_K.jpg",
     "timestamp": "9/11/2026, 06:30:41"
