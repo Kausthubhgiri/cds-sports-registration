@@ -2717,13 +2717,14 @@
     "school": "CHINTHALAYA VIDYALAYA",
     "name": "Aadikesh A R",
     "chest": 1009,
-    "dob": "09/10/2012",
-    "ageCategory": "Under 14",
+    "dob": "2012-10-09",
+    "ageCategory": "Under 17",
     "gender": "Male",
     "events": [
       "200m Race",
-      "800m Race",
-      "4x100m Relay"
+      "400m Race",
+      "1500m Race",
+      "4x400m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794033392137-Aadikesh_A_R.jpg",
     "timestamp": "7/11/2026, 06:36:33"
