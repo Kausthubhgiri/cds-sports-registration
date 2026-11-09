@@ -3334,5 +3334,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794238152349-Nived_Krishna__P_Nair.jpg",
     "timestamp": "9/11/2026, 15:29:13"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Aarav. D",
+    "chest": 1023,
+    "dob": "25/02/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Long Jump",
+      "High Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794238957617-Aarav__D.jpg",
+    "timestamp": "9/11/2026, 15:42:38"
   }
 ]
