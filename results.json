@@ -3251,5 +3251,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794218278847-Daya_ajith.jpg",
     "timestamp": "9/11/2026, 09:58:00"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "V.Adhikesav",
+    "chest": 1017,
+    "dob": "28/05/2015",
+    "ageCategory": "Under 12",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794236019476-V_Adhikesav.jpg",
+    "timestamp": "9/11/2026, 14:53:41"
   }
 ]
