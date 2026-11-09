@@ -2917,5 +2917,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794199243902-Alfiya_S.jpg",
     "timestamp": "9/11/2026, 04:40:44"
+  },
+  {
+    "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
+    "name": "Muhammad Swalih M",
+    "chest": 1516,
+    "dob": "21/02/2015",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794199336009-Muhammad_Swalih_M.jpg",
+    "timestamp": "9/11/2026, 04:42:16"
   }
 ]
