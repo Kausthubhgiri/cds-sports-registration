@@ -3366,5 +3366,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794239135949-Sarang__J_R.jpg",
     "timestamp": "9/11/2026, 15:45:37"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Sreerag.  R I",
+    "chest": 1025,
+    "dob": "14/08/2012",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794239283546-Sreerag___R_I.jpg",
+    "timestamp": "9/11/2026, 15:48:04"
   }
 ]
