@@ -2663,11 +2663,12 @@
     "school": "SARASWATHI VIDYALAYA",
     "name": "Roshan J S",
     "chest": 173,
-    "dob": "07/10/2008",
+    "dob": "2008-11-07",
     "ageCategory": "Under 19",
     "gender": "Male",
     "events": [
-      "3000m Race"
+      "3000m Race",
+      "4x400m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794028683912-Roshan_J_S.jpg",
     "timestamp": "7/11/2026, 05:18:05"
