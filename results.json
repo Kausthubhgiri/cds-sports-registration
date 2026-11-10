@@ -4478,5 +4478,22 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794302824175-NANDINI_A_R.jpg",
     "timestamp": "10/11/2026, 09:27:05"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "AKSHARA S KUMAR",
+    "chest": 535,
+    "dob": "13/08/2010",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "800m Race",
+      "1500m Race",
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794302889351-AKSHARA_S_KUMAR.jpg",
+    "timestamp": "10/11/2026, 09:28:10"
   }
 ]
