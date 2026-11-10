@@ -3700,5 +3700,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794285647724-Rohit_rv.jpg",
     "timestamp": "10/11/2026, 04:40:49"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Muhammad ayaan siyad",
+    "chest": 916,
+    "dob": "23/09/2014",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "800m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794285732610-Muhammad_ayaan_siyad.jpg",
+    "timestamp": "10/11/2026, 04:42:13"
   }
 ]
