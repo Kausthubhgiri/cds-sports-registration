@@ -4824,5 +4824,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794308202170-ADHRIT_R.jpg",
     "timestamp": "10/11/2026, 10:56:43"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "DHYAN R N",
+    "chest": 821,
+    "dob": "15/03/2015",
+    "ageCategory": "Under 12",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794308284067-DHYAN_R_N.jpg",
+    "timestamp": "10/11/2026, 10:58:05"
   }
 ]
