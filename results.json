@@ -4510,5 +4510,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794303022709-NANDITA_L.jpg",
     "timestamp": "10/11/2026, 09:30:24"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "SANVIKA R",
+    "chest": 537,
+    "dob": "09/02/2012",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794303101494-SANVIKA_R.jpg",
+    "timestamp": "10/11/2026, 09:31:42"
   }
 ]
