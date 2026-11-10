@@ -4767,5 +4767,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794307386473-ASLAM_YASIR_S.jpg",
     "timestamp": "10/11/2026, 10:43:07"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "BENYAMEEN AJAYAN",
+    "chest": 817,
+    "dob": "19/06/2010",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "3000m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794307612572-BENYAMEEN_AJAYAN.jpg",
+    "timestamp": "10/11/2026, 10:46:53"
   }
 ]
