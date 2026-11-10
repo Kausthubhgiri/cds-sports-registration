@@ -4624,5 +4624,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794306085246-AMARNATH_M_NAIR.jpg",
     "timestamp": "10/11/2026, 10:21:26"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "AFNAN NASIMUDEEN",
+    "chest": 807,
+    "dob": "17/03/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Discus Throw",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794306240375-AFNAN_NASIMUDEEN.jpg",
+    "timestamp": "10/11/2026, 10:24:01"
   }
 ]
