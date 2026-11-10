@@ -3459,13 +3459,13 @@
     "school": "CHINTHALAYA VIDYALAYA",
     "name": "Sikhaa shaji",
     "chest": 1031,
-    "dob": "15/01/2011",
+    "dob": "2011-01-15",
     "ageCategory": "Under 17",
     "gender": "Female",
     "events": [
-      "100m Race",
       "800m Race",
       "Long Jump",
+      "High Jump",
       "4x100m Relay",
       "4x400m Relay"
     ],
