@@ -5400,5 +5400,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794329098949-Akash_A_S.jpg",
     "timestamp": "10/11/2026, 16:45:00"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Azhar s",
+    "chest": 932,
+    "dob": "27/01/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794329152265-Azhar_s.jpg",
+    "timestamp": "10/11/2026, 16:45:54"
   }
 ]
