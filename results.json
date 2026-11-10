@@ -4710,5 +4710,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794307026976-SHIVAHARI_B.jpg",
     "timestamp": "10/11/2026, 10:37:07"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "AKSHAY KRISHNAN S",
+    "chest": 813,
+    "dob": "30/07/2010",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "High Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794307099416-AKSHAY_KRISHNAN_S.jpg",
+    "timestamp": "10/11/2026, 10:38:20"
   }
 ]
