@@ -5371,5 +5371,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794329019249-Dheeraj_s_shibu.jpg",
     "timestamp": "10/11/2026, 16:43:40"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Adhnan ali m",
+    "chest": 931,
+    "dob": "11/11/2008",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794329087307-Adhnan_ali_m.jpg",
+    "timestamp": "10/11/2026, 16:44:49"
   }
 ]
