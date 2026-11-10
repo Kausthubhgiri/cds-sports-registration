@@ -5076,5 +5076,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794309658377-MUHAMMED_FARHAN_A.jpg",
     "timestamp": "10/11/2026, 11:20:59"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "AGNIVESH MANU",
+    "chest": 839,
+    "dob": "07/10/2012",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "800m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794309706008-AGNIVESH_MANU.jpg",
+    "timestamp": "10/11/2026, 11:21:47"
   }
 ]
