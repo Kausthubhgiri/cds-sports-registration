@@ -4462,5 +4462,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794302727746-SHARAN_GOPI.jpg",
     "timestamp": "10/11/2026, 09:25:28"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "NANDINI A R",
+    "chest": 534,
+    "dob": "02/12/2012",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "Long Jump",
+      "High Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794302824175-NANDINI_A_R.jpg",
+    "timestamp": "10/11/2026, 09:27:05"
   }
 ]
