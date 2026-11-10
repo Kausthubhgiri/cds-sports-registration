@@ -4061,5 +4061,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794298359059-SIVAPRIYA_AS.jpg",
     "timestamp": "10/11/2026, 08:12:40"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "ANAMIKA PS",
+    "chest": 513,
+    "dob": "25/01/2014",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "400m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794298467508-ANAMIKA_PS.jpg",
+    "timestamp": "10/11/2026, 08:14:28"
   }
 ]
