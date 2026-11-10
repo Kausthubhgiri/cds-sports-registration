@@ -4936,5 +4936,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794309019539-VEDIKA_HARISH.jpg",
     "timestamp": "10/11/2026, 11:10:20"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "DILNA SAJEER S",
+    "chest": 829,
+    "dob": "25/04/2016",
+    "ageCategory": "Under 12",
+    "gender": "Female",
+    "events": [
+      "200m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794309072568-DILNA_SAJEER_S.jpg",
+    "timestamp": "10/11/2026, 11:11:13"
   }
 ]
