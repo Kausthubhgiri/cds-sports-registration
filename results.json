@@ -4225,5 +4225,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794300315075-GOVARDHAN_SA.jpg",
     "timestamp": "10/11/2026, 08:45:16"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "ADHIL MUHAMMED",
+    "chest": 520,
+    "dob": "19/06/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "Discus Throw",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794300435754-ADHIL_MUHAMMED.jpg",
+    "timestamp": "10/11/2026, 08:47:16"
   }
 ]
