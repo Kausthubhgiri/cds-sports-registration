@@ -4137,5 +4137,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794299381451-Nirbhay_niju.jpg",
     "timestamp": "10/11/2026, 08:29:43"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Faizan khan",
+    "chest": 920,
+    "dob": "25/04/2015",
+    "ageCategory": "Under 12",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "400m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794299558340-Faizan_khan.jpg",
+    "timestamp": "10/11/2026, 08:32:40"
   }
 ]
