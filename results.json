@@ -4541,5 +4541,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794303165934-J_NITHYA_SREE.jpg",
     "timestamp": "10/11/2026, 09:32:46"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "NIYA S MIDHUN",
+    "chest": 539,
+    "dob": "29/12/2011",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794303239609-NIYA_S_MIDHUN.jpg",
+    "timestamp": "10/11/2026, 09:34:00"
   }
 ]
