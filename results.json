@@ -5004,5 +5004,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794309311149-VISMAYA_A.jpg",
     "timestamp": "10/11/2026, 11:15:12"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "RHITHUVARADHA A",
+    "chest": 834,
+    "dob": "18/03/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794309372324-RHITHUVARADHA_A.jpg",
+    "timestamp": "10/11/2026, 11:16:13"
   }
 ]
