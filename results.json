@@ -4169,5 +4169,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794299672322-Adithyan_a.jpg",
     "timestamp": "10/11/2026, 08:34:33"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "DEVIKA A",
+    "chest": 516,
+    "dob": "12/10/2014",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794299896760-DEVIKA_A.jpg",
+    "timestamp": "10/11/2026, 08:38:18"
   }
 ]
