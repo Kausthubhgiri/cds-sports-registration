@@ -3557,5 +3557,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794282086394-Kashi_Nadh.jpg",
     "timestamp": "10/11/2026, 03:41:28"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Devapriya dhanyan",
+    "chest": 906,
+    "dob": "17/05/2009",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794282099623-Devapriya_dhanyan.jpg",
+    "timestamp": "10/11/2026, 03:41:40"
   }
 ]
