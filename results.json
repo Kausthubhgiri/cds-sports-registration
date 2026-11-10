@@ -3897,5 +3897,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794293535529-ANJALI_H_GOPAL.jpg",
     "timestamp": "10/11/2026, 06:52:16"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Parvathy.  S. Nair",
+    "chest": 1043,
+    "dob": "24/05/2012",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "3000m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794293638690-Parvathy___S__Nair.jpg",
+    "timestamp": "10/11/2026, 06:53:59"
   }
 ]
