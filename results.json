@@ -3778,5 +3778,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794288627149-Aswin_M_S.jpg",
     "timestamp": "10/11/2026, 05:30:28"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Sreehari. S",
+    "chest": 1039,
+    "dob": "02/10/2008",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794290164517-Sreehari__S.jpg",
+    "timestamp": "10/11/2026, 05:56:05"
   }
 ]
