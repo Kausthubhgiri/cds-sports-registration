@@ -5325,5 +5325,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794327893109-Shaarav_Santhosh.jpg",
     "timestamp": "10/11/2026, 16:24:54"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Diya. A J",
+    "chest": 1056,
+    "dob": "24/09/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794328082471-Diya__A_J.jpg",
+    "timestamp": "10/11/2026, 16:28:05"
   }
 ]
