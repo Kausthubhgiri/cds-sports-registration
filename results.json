@@ -4419,5 +4419,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794302219104-AMAN_SAJEEV.jpg",
     "timestamp": "10/11/2026, 09:17:00"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "VAISHNAV S",
+    "chest": 531,
+    "dob": "05/06/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794302490089-VAISHNAV_S.jpg",
+    "timestamp": "10/11/2026, 09:21:31"
   }
 ]
