@@ -3465,11 +3465,13 @@
     "school": "CHINTHALAYA VIDYALAYA",
     "name": "Malavika Syam",
     "chest": 1032,
-    "dob": "11/06/2011",
+    "dob": "2011-06-11",
     "ageCategory": "Under 17",
     "gender": "Female",
     "events": [
       "100m Race",
+      "200m Race",
+      "Long Jump",
       "4x100m Relay",
       "4x400m Relay"
     ],
