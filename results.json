@@ -4326,5 +4326,22 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794301586686-SREE__HARINARAYANAN_S.jpg",
     "timestamp": "10/11/2026, 09:06:27"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "SREEHARI J M",
+    "chest": 526,
+    "dob": "12/10/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "1500m Race",
+      "Discus Throw",
+      "High Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794301659227-SREEHARI_J_M.jpg",
+    "timestamp": "10/11/2026, 09:07:40"
   }
 ]
