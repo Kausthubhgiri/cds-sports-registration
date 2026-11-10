@@ -4738,5 +4738,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794307163669-DEV_S.jpg",
     "timestamp": "10/11/2026, 10:39:24"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "ADVAY KRISHNA C J",
+    "chest": 815,
+    "dob": "01/04/2010",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "Discus Throw",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794307298500-ADVAY_KRISHNA_C_J.jpg",
+    "timestamp": "10/11/2026, 10:41:39"
   }
 ]
