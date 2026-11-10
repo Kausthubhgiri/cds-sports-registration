@@ -4153,5 +4153,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794299558340-Faizan_khan.jpg",
     "timestamp": "10/11/2026, 08:32:40"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Adithyan a",
+    "chest": 921,
+    "dob": "04/05/2015",
+    "ageCategory": "Under 12",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794299672322-Adithyan_a.jpg",
+    "timestamp": "10/11/2026, 08:34:33"
   }
 ]
