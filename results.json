@@ -5413,5 +5413,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794329152265-Azhar_s.jpg",
     "timestamp": "10/11/2026, 16:45:54"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Niranjan babu",
+    "chest": 933,
+    "dob": "22/12/2008",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794329213768-Niranjan_babu.jpg",
+    "timestamp": "10/11/2026, 16:46:58"
   }
 ]
