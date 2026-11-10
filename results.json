@@ -5439,5 +5439,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794329357921-Krishnajith_k.jpg",
     "timestamp": "10/11/2026, 16:49:19"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Adhil S R",
+    "chest": 1058,
+    "dob": "05/08/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794329592177-Adhil_S_R.jpg",
+    "timestamp": "10/11/2026, 16:53:20"
   }
 ]
