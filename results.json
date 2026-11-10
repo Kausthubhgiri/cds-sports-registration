@@ -3817,13 +3817,13 @@
     "school": "CHINTHALAYA VIDYALAYA",
     "name": "Varna.R B",
     "chest": 1041,
-    "dob": "10/09/2008",
+    "dob": "2008-09-10",
     "ageCategory": "Under 19",
     "gender": "Female",
     "events": [
-      "1500m Race",
       "Shot Put",
       "Discus Throw",
+      "High Jump",
       "4x400m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794291925163-Varna_R_B.jpg",
