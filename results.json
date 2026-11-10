@@ -4077,5 +4077,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794298467508-ANAMIKA_PS.jpg",
     "timestamp": "10/11/2026, 08:14:28"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "GRACE VS",
+    "chest": 514,
+    "dob": "12/06/2014",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794298560847-GRACE_VS.jpg",
+    "timestamp": "10/11/2026, 08:16:01"
   }
 ]
