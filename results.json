@@ -4612,5 +4612,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794305285861-ADVAITH_ULLAS__GOPALA_KRISHNAN.jpg",
     "timestamp": "10/11/2026, 10:08:07"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "AMARNATH M NAIR",
+    "chest": 806,
+    "dob": "04/11/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794306085246-AMARNATH_M_NAIR.jpg",
+    "timestamp": "10/11/2026, 10:21:26"
   }
 ]
