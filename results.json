@@ -3741,5 +3741,22 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794285936851-Adith_r_nair.jpg",
     "timestamp": "10/11/2026, 04:45:38"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Mahadev.  H R",
+    "chest": 1037,
+    "dob": "02/10/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "400m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794286279377-Mahadev___H_R.jpg",
+    "timestamp": "10/11/2026, 04:51:20"
   }
 ]
