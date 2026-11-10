@@ -3728,5 +3728,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794285831923-Shahana_sabeer.jpg",
     "timestamp": "10/11/2026, 04:43:53"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Adith r nair",
+    "chest": 918,
+    "dob": "28/10/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794285936851-Adith_r_nair.jpg",
+    "timestamp": "10/11/2026, 04:45:38"
   }
 ]
