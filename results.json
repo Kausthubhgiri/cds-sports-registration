@@ -4020,5 +4020,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794297147406-Akhilesh_biju.jpg",
     "timestamp": "10/11/2026, 07:52:28"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Alfiya Shaji",
+    "chest": 1046,
+    "dob": "04/10/2008",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "High Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794297596187-Alfiya_Shaji.jpg",
+    "timestamp": "10/11/2026, 07:59:57"
   }
 ]
