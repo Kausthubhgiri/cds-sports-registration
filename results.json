@@ -4665,5 +4665,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794306411103-ANURAJ_B_S.jpg",
     "timestamp": "10/11/2026, 10:26:52"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "MUHAMMED IHSAN H S",
+    "chest": 810,
+    "dob": "30/10/2014",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "800m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794306467881-MUHAMMED_IHSAN_H_S.jpg",
+    "timestamp": "10/11/2026, 10:27:49"
   }
 ]
