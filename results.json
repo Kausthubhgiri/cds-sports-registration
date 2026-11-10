@@ -4282,5 +4282,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794300920485-PRANAV_R_MAHESH.jpg",
     "timestamp": "10/11/2026, 08:55:21"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "DIYAN S S",
+    "chest": 524,
+    "dob": "22/10/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794301332139-DIYAN_S_S.jpg",
+    "timestamp": "10/11/2026, 09:02:13"
   }
 ]
