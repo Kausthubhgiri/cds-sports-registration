@@ -3570,5 +3570,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794282099623-Devapriya_dhanyan.jpg",
     "timestamp": "10/11/2026, 03:41:40"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Shifana s a",
+    "chest": 907,
+    "dob": "08/10/2009",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794282156369-Shifana_s_a.jpg",
+    "timestamp": "10/11/2026, 03:42:37"
   }
 ]
