@@ -4574,12 +4574,11 @@
     "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
     "name": "ADIL MOHAMMED",
     "chest": 803,
-    "dob": "05/09/2013",
+    "dob": "2013-09-05",
     "ageCategory": "Under 14",
     "gender": "Male",
     "events": [
-      "200m Race",
-      "4x100m Relay"
+      "200m Race"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794304979648-ADIL_MOHAMMED.jpg",
     "timestamp": "10/11/2026, 10:03:00"
