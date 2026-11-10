@@ -4268,5 +4268,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794300781121-DEVADATH_S_R.jpg",
     "timestamp": "10/11/2026, 08:53:02"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "PRANAV R MAHESH",
+    "chest": 523,
+    "dob": "31/07/2014",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "800m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794300920485-PRANAV_R_MAHESH.jpg",
+    "timestamp": "10/11/2026, 08:55:21"
   }
 ]
