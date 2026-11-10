@@ -224,11 +224,12 @@
     "school": "SARASWATHI VIDYALAYA",
     "name": "Aarav Thushar",
     "chest": 106,
-    "dob": "22/06/2015",
+    "dob": "2015-06-22",
     "ageCategory": "Under 12",
     "gender": "Male",
     "events": [
-      "Shot Put"
+      "Shot Put",
+      "4x100m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793941116806-Aarav_Thushar.jpg",
     "timestamp": "6/11/2026, 04:58:36"
