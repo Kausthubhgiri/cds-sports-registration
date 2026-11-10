@@ -4391,5 +4391,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794301951284-PRANAV_K_R.jpg",
     "timestamp": "10/11/2026, 09:12:32"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "FAREEDHA BEEGAM S",
+    "chest": 529,
+    "dob": "11/12/2008",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794302036722-FAREEDHA_BEEGAM_S.jpg",
+    "timestamp": "10/11/2026, 09:13:58"
   }
 ]
