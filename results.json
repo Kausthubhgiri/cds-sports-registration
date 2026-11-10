@@ -4583,5 +4583,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794304979648-ADIL_MOHAMMED.jpg",
     "timestamp": "10/11/2026, 10:03:00"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "NAVANEETH M A",
+    "chest": 804,
+    "dob": "09/04/2014",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794305043937-NAVANEETH_M_A.jpg",
+    "timestamp": "10/11/2026, 10:04:05"
   }
 ]
