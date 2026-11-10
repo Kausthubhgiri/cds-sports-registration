@@ -3939,5 +3939,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794293880170-DAKSH_D.jpg",
     "timestamp": "10/11/2026, 06:58:01"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Ananya. SS",
+    "chest": 1044,
+    "dob": "03/03/2012",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "3000m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794293885303-Ananya__SS.jpg",
+    "timestamp": "10/11/2026, 06:58:06"
   }
 ]
