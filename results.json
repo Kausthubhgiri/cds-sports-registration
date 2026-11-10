@@ -3821,5 +3821,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794291858325-Avanitha_arun.jpg",
     "timestamp": "10/11/2026, 06:24:20"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Varna.R B",
+    "chest": 1041,
+    "dob": "10/09/2008",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "1500m Race",
+      "Shot Put",
+      "Discus Throw",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794291925163-Varna_R_B.jpg",
+    "timestamp": "10/11/2026, 06:25:26"
   }
 ]
