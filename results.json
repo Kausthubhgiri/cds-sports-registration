@@ -5144,5 +5144,22 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794321241922-Praveena_pr.jpg",
     "timestamp": "10/11/2026, 14:34:04"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Anakha S Mahesh",
+    "chest": 1048,
+    "dob": "19/12/2009",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "1500m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794321389299-Anakha_S_Mahesh.jpg",
+    "timestamp": "10/11/2026, 14:36:30"
   }
 ]
