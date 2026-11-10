@@ -3762,5 +3762,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794286279377-Mahadev___H_R.jpg",
     "timestamp": "10/11/2026, 04:51:20"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Aswin M S",
+    "chest": 1038,
+    "dob": "24/05/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "1500m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794288627149-Aswin_M_S.jpg",
+    "timestamp": "10/11/2026, 05:30:28"
   }
 ]
