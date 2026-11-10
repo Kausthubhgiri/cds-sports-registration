@@ -4195,5 +4195,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794300083699-HIDA_FATHIMA.jpg",
     "timestamp": "10/11/2026, 08:41:24"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "SREEDEVI AS",
+    "chest": 518,
+    "dob": "04/02/2014",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794300177465-SREEDEVI_AS.jpg",
+    "timestamp": "10/11/2026, 08:42:58"
   }
 ]
