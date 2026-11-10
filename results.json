@@ -4007,5 +4007,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794295513056-ADNAN_MUHAMMED.jpg",
     "timestamp": "10/11/2026, 07:25:14"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Akhilesh biju",
+    "chest": 1045,
+    "dob": "30/07/2008",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "3000m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794297147406-Akhilesh_biju.jpg",
+    "timestamp": "10/11/2026, 07:52:28"
   }
 ]
