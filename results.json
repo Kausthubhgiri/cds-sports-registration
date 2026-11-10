@@ -4254,5 +4254,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794300607110-AARAV_S_K.jpg",
     "timestamp": "10/11/2026, 08:50:08"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "DEVADATH S R",
+    "chest": 522,
+    "dob": "05/09/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794300781121-DEVADATH_S_R.jpg",
+    "timestamp": "10/11/2026, 08:53:02"
   }
 ]
