@@ -3791,5 +3791,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794290164517-Sreehari__S.jpg",
     "timestamp": "10/11/2026, 05:56:05"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Akhil M.A",
+    "chest": 1040,
+    "dob": "22/10/2008",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "Long Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794290427193-Akhil_M_A.jpg",
+    "timestamp": "10/11/2026, 06:00:28"
   }
 ]
