@@ -4678,5 +4678,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794306467881-MUHAMMED_IHSAN_H_S.jpg",
     "timestamp": "10/11/2026, 10:27:49"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "SRAVAN MADHAV S",
+    "chest": 811,
+    "dob": "08/03/2010",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794306954189-SRAVAN_MADHAV_S.jpg",
+    "timestamp": "10/11/2026, 10:35:55"
   }
 ]
