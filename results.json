@@ -5452,5 +5452,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794329592177-Adhil_S_R.jpg",
     "timestamp": "10/11/2026, 16:53:20"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Abhinav B",
+    "chest": 1059,
+    "dob": "18/09/2008",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "400m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794330323288-Abhinav_B.jpg",
+    "timestamp": "10/11/2026, 17:05:24"
   }
 ]
