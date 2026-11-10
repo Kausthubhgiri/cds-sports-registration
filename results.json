@@ -3628,5 +3628,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794284764745-Suryakiran_sr.jpg",
     "timestamp": "10/11/2026, 04:26:06"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Jaganath RL",
+    "chest": 911,
+    "dob": "08/08/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794284861686-Jaganath_RL.jpg",
+    "timestamp": "10/11/2026, 04:27:43"
   }
 ]
