@@ -5090,5 +5090,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794309706008-AGNIVESH_MANU.jpg",
     "timestamp": "10/11/2026, 11:21:47"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "ANUSHMA BOSE A R",
+    "chest": 840,
+    "dob": "12/05/2012",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794309754440-ANUSHMA_BOSE_A_R.jpg",
+    "timestamp": "10/11/2026, 11:22:35"
   }
 ]
