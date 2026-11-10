@@ -5355,5 +5355,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794328830822-Rohit_shine.jpg",
     "timestamp": "10/11/2026, 16:40:32"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Dheeraj s shibu",
+    "chest": 930,
+    "dob": "15/10/2008",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "1500m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794329019249-Dheeraj_s_shibu.jpg",
+    "timestamp": "10/11/2026, 16:43:40"
   }
 ]
