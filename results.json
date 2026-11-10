@@ -4240,5 +4240,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794300435754-ADHIL_MUHAMMED.jpg",
     "timestamp": "10/11/2026, 08:47:16"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "AARAV S K",
+    "chest": 521,
+    "dob": "13/07/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794300607110-AARAV_S_K.jpg",
+    "timestamp": "10/11/2026, 08:50:08"
   }
 ]
