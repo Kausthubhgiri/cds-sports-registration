@@ -3644,5 +3644,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794284861686-Jaganath_RL.jpg",
     "timestamp": "10/11/2026, 04:27:43"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Muhammad rayyan",
+    "chest": 912,
+    "dob": "02/05/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794284961001-Muhammad_rayyan.jpg",
+    "timestamp": "10/11/2026, 04:29:22"
   }
 ]
