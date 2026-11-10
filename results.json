@@ -5311,5 +5311,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794327661490-Sidharth__A__G.jpg",
     "timestamp": "10/11/2026, 16:21:04"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Shaarav Santhosh",
+    "chest": 1055,
+    "dob": "15/04/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794327893109-Shaarav_Santhosh.jpg",
+    "timestamp": "10/11/2026, 16:24:54"
   }
 ]
