@@ -4639,5 +4639,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794306240375-AFNAN_NASIMUDEEN.jpg",
     "timestamp": "10/11/2026, 10:24:01"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "AGRAJ A A",
+    "chest": 808,
+    "dob": "18/11/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794306294602-AGRAJ_A_A.jpg",
+    "timestamp": "10/11/2026, 10:24:55"
   }
 ]
