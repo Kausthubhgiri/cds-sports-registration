@@ -5020,5 +5020,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794309372324-RHITHUVARADHA_A.jpg",
     "timestamp": "10/11/2026, 11:16:13"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "LAVANYA R",
+    "chest": 835,
+    "dob": "24/10/2014",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794309500663-LAVANYA_R.jpg",
+    "timestamp": "10/11/2026, 11:18:21"
   }
 ]
