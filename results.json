@@ -4433,5 +4433,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794302490089-VAISHNAV_S.jpg",
     "timestamp": "10/11/2026, 09:21:31"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "ANTON EZRA",
+    "chest": 532,
+    "dob": "01/03/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "Long Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794302601082-ANTON_EZRA.jpg",
+    "timestamp": "10/11/2026, 09:23:22"
   }
 ]
