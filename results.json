@@ -5130,5 +5130,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794321092460-Arshi_Krishna.jpg",
     "timestamp": "10/11/2026, 14:31:34"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Praveena pr",
+    "chest": 924,
+    "dob": "27/01/2016",
+    "ageCategory": "Under 12",
+    "gender": "Female",
+    "events": [
+      "50m Race",
+      "Long Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794321241922-Praveena_pr.jpg",
+    "timestamp": "10/11/2026, 14:34:04"
   }
 ]
