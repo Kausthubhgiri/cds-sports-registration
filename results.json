@@ -3674,5 +3674,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794285127864-Kashinath_k.jpg",
     "timestamp": "10/11/2026, 04:32:09"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Devanandhan us",
+    "chest": 914,
+    "dob": "16/10/2014",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794285268635-Devanandhan_us.jpg",
+    "timestamp": "10/11/2026, 04:34:30"
   }
 ]
