@@ -5247,5 +5247,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794324173004-Apoorva_s_a.jpg",
     "timestamp": "10/11/2026, 15:22:55"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Adithya  B.S",
+    "chest": 1051,
+    "dob": "13/09/2010",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794324215117-Adithya__B_S.jpg",
+    "timestamp": "10/11/2026, 15:23:36"
   }
 ]
