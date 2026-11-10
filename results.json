@@ -4555,5 +4555,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794303239609-NIYA_S_MIDHUN.jpg",
     "timestamp": "10/11/2026, 09:34:00"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "JAYAKRISHNAN J",
+    "chest": 540,
+    "dob": "19/05/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794303470071-JAYAKRISHNAN_J.jpg",
+    "timestamp": "10/11/2026, 09:37:51"
   }
 ]
