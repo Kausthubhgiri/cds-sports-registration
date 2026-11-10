@@ -4495,5 +4495,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794302889351-AKSHARA_S_KUMAR.jpg",
     "timestamp": "10/11/2026, 09:28:10"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "NANDITA L",
+    "chest": 536,
+    "dob": "28/01/2011",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794303022709-NANDITA_L.jpg",
+    "timestamp": "10/11/2026, 09:30:24"
   }
 ]
