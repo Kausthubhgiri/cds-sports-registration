@@ -5062,5 +5062,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794309609989-FABIAN_SHA__J.jpg",
     "timestamp": "10/11/2026, 11:20:11"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "MUHAMMED FARHAN A",
+    "chest": 838,
+    "dob": "23/01/2012",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "1500m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794309658377-MUHAMMED_FARHAN_A.jpg",
+    "timestamp": "10/11/2026, 11:20:59"
   }
 ]
