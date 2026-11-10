@@ -5339,5 +5339,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794328082471-Diya__A_J.jpg",
     "timestamp": "10/11/2026, 16:28:05"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Rohit shine",
+    "chest": 929,
+    "dob": "18/11/2008",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794328830822-Rohit_shine.jpg",
+    "timestamp": "10/11/2026, 16:40:32"
   }
 ]
