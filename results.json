@@ -5048,5 +5048,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794309567791-AVANTHIKA_BOSE_A_R.jpg",
     "timestamp": "10/11/2026, 11:19:28"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "FABIAN SHA .J",
+    "chest": 837,
+    "dob": "26/11/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "400m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794309609989-FABIAN_SHA__J.jpg",
+    "timestamp": "10/11/2026, 11:20:11"
   }
 ]
