@@ -5266,5 +5266,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794324215117-Adithya__B_S.jpg",
     "timestamp": "10/11/2026, 15:23:36"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Rejoy S Dev",
+    "chest": 1052,
+    "dob": "25/06/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw",
+      "Long Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794326026311-Rejoy_S_Dev.jpg",
+    "timestamp": "10/11/2026, 15:53:47"
   }
 ]
