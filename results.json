@@ -4652,5 +4652,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794306294602-AGRAJ_A_A.jpg",
     "timestamp": "10/11/2026, 10:24:55"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "ANURAJ B S",
+    "chest": 809,
+    "dob": "06/06/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794306411103-ANURAJ_B_S.jpg",
+    "timestamp": "10/11/2026, 10:26:52"
   }
 ]
