@@ -4093,5 +4093,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794298560847-GRACE_VS.jpg",
     "timestamp": "10/11/2026, 08:16:01"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "SIVANI GS",
+    "chest": 515,
+    "dob": "16/05/2016",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "800m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794299140401-SIVANI_GS.jpg",
+    "timestamp": "10/11/2026, 08:25:41"
   }
 ]
