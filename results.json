@@ -3596,5 +3596,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794282595163-Shifana_sa.jpg",
     "timestamp": "10/11/2026, 03:49:56"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Raga as",
+    "chest": 909,
+    "dob": "08/10/2009",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794282721958-Raga_as.jpg",
+    "timestamp": "10/11/2026, 03:52:03"
   }
 ]
