@@ -4809,5 +4809,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794308111645-RIHAAN_N_T.jpg",
     "timestamp": "10/11/2026, 10:55:12"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "ADHRIT R",
+    "chest": 820,
+    "dob": "20/07/2015",
+    "ageCategory": "Under 12",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794308202170-ADHRIT_R.jpg",
+    "timestamp": "10/11/2026, 10:56:43"
   }
 ]
