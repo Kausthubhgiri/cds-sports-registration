@@ -5384,5 +5384,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794329087307-Adhnan_ali_m.jpg",
     "timestamp": "10/11/2026, 16:44:49"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Akash A S",
+    "chest": 1057,
+    "dob": "03/12/2008",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Long Jump",
+      "High Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794329098949-Akash_A_S.jpg",
+    "timestamp": "10/11/2026, 16:45:00"
   }
 ]
