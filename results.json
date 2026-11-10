@@ -4033,5 +4033,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794297596187-Alfiya_Shaji.jpg",
     "timestamp": "10/11/2026, 07:59:57"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Ananya B Krishna",
+    "chest": 1047,
+    "dob": "07/11/2009",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794297703582-Ananya_B_Krishna.jpg",
+    "timestamp": "10/11/2026, 08:01:44"
   }
 ]
