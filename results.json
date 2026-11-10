@@ -5204,5 +5204,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794321611116-Aradhya_s_a.jpg",
     "timestamp": "10/11/2026, 14:40:12"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Abel Stalin",
+    "chest": 1050,
+    "dob": "07/03/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "3000m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794323562404-Abel_Stalin.jpg",
+    "timestamp": "10/11/2026, 15:12:44"
   }
 ]
