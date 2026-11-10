@@ -5175,5 +5175,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794321415875-Rudra_r_nair.jpg",
     "timestamp": "10/11/2026, 14:36:57"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Gayathri B.S",
+    "chest": 1049,
+    "dob": "22/10/2009",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794321518559-Gayathri_B_S.jpg",
+    "timestamp": "10/11/2026, 14:38:39"
   }
 ]
