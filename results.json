@@ -4724,5 +4724,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794307099416-AKSHAY_KRISHNAN_S.jpg",
     "timestamp": "10/11/2026, 10:38:20"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "DEV S",
+    "chest": 814,
+    "dob": "24/05/2010",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794307163669-DEV_S.jpg",
+    "timestamp": "10/11/2026, 10:39:24"
   }
 ]
