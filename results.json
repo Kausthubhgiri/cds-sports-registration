@@ -4694,5 +4694,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794306954189-SRAVAN_MADHAV_S.jpg",
     "timestamp": "10/11/2026, 10:35:55"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "SHIVAHARI B",
+    "chest": 812,
+    "dob": "28/01/2010",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "1500m Race",
+      "Discus Throw",
+      "Long Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794307026976-SHIVAHARI_B.jpg",
+    "timestamp": "10/11/2026, 10:37:07"
   }
 ]
