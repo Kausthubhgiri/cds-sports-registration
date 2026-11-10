@@ -4795,5 +4795,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794307920261-THEJAS_KRISHNA_B.jpg",
     "timestamp": "10/11/2026, 10:52:01"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "RIHAAN N T",
+    "chest": 819,
+    "dob": "06/01/2016",
+    "ageCategory": "Under 12",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794308111645-RIHAAN_N_T.jpg",
+    "timestamp": "10/11/2026, 10:55:12"
   }
 ]
