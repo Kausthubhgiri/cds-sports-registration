@@ -4988,5 +4988,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794309243589-NILA_S_KRISHNA.jpg",
     "timestamp": "10/11/2026, 11:14:04"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "VISMAYA A",
+    "chest": 833,
+    "dob": "17/03/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "800m Race",
+      "Shot Put",
+      "Discus Throw",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794309311149-VISMAYA_A.jpg",
+    "timestamp": "10/11/2026, 11:15:12"
   }
 ]
