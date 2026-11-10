@@ -3687,5 +3687,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794285268635-Devanandhan_us.jpg",
     "timestamp": "10/11/2026, 04:34:30"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Rohit rv",
+    "chest": 915,
+    "dob": "28/10/2014",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794285647724-Rohit_rv.jpg",
+    "timestamp": "10/11/2026, 04:40:49"
   }
 ]
