@@ -4296,5 +4296,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794301332139-DIYAN_S_S.jpg",
     "timestamp": "10/11/2026, 09:02:13"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "AGHORNATH S S",
+    "chest": 525,
+    "dob": "26/04/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Discus Throw",
+      "Long Jump",
+      "High Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794301507070-AGHORNATH_S_S.jpg",
+    "timestamp": "10/11/2026, 09:05:08"
   }
 ]
