@@ -4343,5 +4343,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794301659227-SREEHARI_J_M.jpg",
     "timestamp": "10/11/2026, 09:07:40"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "ADITHYAN LD",
+    "chest": 527,
+    "dob": "03/06/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "High Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794301822541-ADITHYAN_LD.jpg",
+    "timestamp": "10/11/2026, 09:10:23"
   }
 ]
