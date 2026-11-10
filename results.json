@@ -5281,5 +5281,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794326026311-Rejoy_S_Dev.jpg",
     "timestamp": "10/11/2026, 15:53:47"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Devadath R S",
+    "chest": 1053,
+    "dob": "17/05/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794326779898-Devadath_R_S.jpg",
+    "timestamp": "10/11/2026, 16:06:21"
   }
 ]
