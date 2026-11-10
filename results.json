@@ -2814,10 +2814,11 @@
     "school": "CHINTHALAYA VIDYALAYA",
     "name": "A.V.Vardhana",
     "chest": 1015,
-    "dob": "23/01/2013",
+    "dob": "2013-01-23",
     "ageCategory": "Under 14",
     "gender": "Female",
     "events": [
+      "Shot Put",
       "Discus Throw"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794034777040-A_V_Vardhana.jpg",
