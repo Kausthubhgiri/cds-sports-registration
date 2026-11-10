@@ -4526,5 +4526,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794303101494-SANVIKA_R.jpg",
     "timestamp": "10/11/2026, 09:31:42"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "J NITHYA SREE",
+    "chest": 538,
+    "dob": "06/12/2010",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794303165934-J_NITHYA_SREE.jpg",
+    "timestamp": "10/11/2026, 09:32:46"
   }
 ]
