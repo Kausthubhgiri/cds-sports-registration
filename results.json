@@ -3837,5 +3837,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794291925163-Varna_R_B.jpg",
     "timestamp": "10/11/2026, 06:25:26"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Anagha Satheesh",
+    "chest": 1042,
+    "dob": "17/12/2011",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794292481420-Anagha_Satheesh.jpg",
+    "timestamp": "10/11/2026, 06:34:42"
   }
 ]
