@@ -4311,5 +4311,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794301507070-AGHORNATH_S_S.jpg",
     "timestamp": "10/11/2026, 09:05:08"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "SREE  HARINARAYANAN S",
+    "chest": 801,
+    "dob": "05/07/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794301586686-SREE__HARINARAYANAN_S.jpg",
+    "timestamp": "10/11/2026, 09:06:27"
   }
 ]
