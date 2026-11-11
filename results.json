@@ -5479,5 +5479,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794367380800-Jithin_bs.jpg",
     "timestamp": "11/11/2026, 03:23:02"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Shabin s",
+    "chest": 936,
+    "dob": "14/07/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "High Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794367646094-Shabin_s.jpg",
+    "timestamp": "11/11/2026, 03:27:27"
   }
 ]
