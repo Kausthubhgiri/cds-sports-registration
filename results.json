@@ -3336,10 +3336,11 @@
     "school": "CHINTHALAYA VIDYALAYA",
     "name": "Nandalal.  V S",
     "chest": 1029,
-    "dob": "10/07/2009",
+    "dob": "2009-07-10",
     "ageCategory": "Under 19",
     "gender": "Male",
     "events": [
+      "400m Race",
       "1500m Race"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794242624690-Nandalal___V_S.jpg",
