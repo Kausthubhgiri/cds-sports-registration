@@ -3749,11 +3749,12 @@
     "school": "CHINTHALAYA VIDYALAYA",
     "name": "Anagha Satheesh",
     "chest": 1042,
-    "dob": "17/12/2011",
+    "dob": "2011-12-17",
     "ageCategory": "Under 19",
     "gender": "Female",
     "events": [
       "100m Race",
+      "200m Race",
       "4x100m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794292481420-Anagha_Satheesh.jpg",
