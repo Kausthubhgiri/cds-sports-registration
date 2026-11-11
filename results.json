@@ -1096,12 +1096,12 @@
     "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
     "name": "Aarshel balu",
     "chest": 720,
-    "dob": "13/01/2009",
+    "dob": "2009-01-13",
     "ageCategory": "Under 19",
     "gender": "Male",
     "events": [
+      "3000m Race",
       "High Jump",
-      "4x100m Relay",
       "4x400m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793946936001-Aarshel_balu.jpg",
