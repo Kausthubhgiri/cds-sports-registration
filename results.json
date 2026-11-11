@@ -5630,5 +5630,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794378791940-Archa_S_G.jpg",
     "timestamp": "11/11/2026, 06:33:12"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Archana Vinod",
+    "chest": 1063,
+    "dob": "19/03/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794378942829-Archana_Vinod.jpg",
+    "timestamp": "11/11/2026, 06:35:43"
   }
 ]
