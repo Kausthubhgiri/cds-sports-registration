@@ -3219,10 +3219,11 @@
     "school": "CHINTHALAYA VIDYALAYA",
     "name": "Rudra. A R",
     "chest": 1020,
-    "dob": "24/03/2016",
+    "dob": "2016-03-24",
     "ageCategory": "Under 12",
     "gender": "Female",
     "events": [
+      "200m Race",
       "4x100m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794237388029-Rudra__A_R.jpg",
