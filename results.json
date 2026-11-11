@@ -5465,5 +5465,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794330323288-Abhinav_B.jpg",
     "timestamp": "10/11/2026, 17:05:24"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Jithin bs",
+    "chest": 935,
+    "dob": "27/10/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "High Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794367380800-Jithin_bs.jpg",
+    "timestamp": "11/11/2026, 03:23:02"
   }
 ]
