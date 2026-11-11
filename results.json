@@ -5536,5 +5536,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794368494070-Adithya_nandhan.jpg",
     "timestamp": "11/11/2026, 03:41:35"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Naveen s",
+    "chest": 940,
+    "dob": "19/11/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794368757927-Naveen_s.jpg",
+    "timestamp": "11/11/2026, 03:45:58"
   }
 ]
