@@ -5172,12 +5172,13 @@
     "school": "CHINTHALAYA VIDYALAYA",
     "name": "Adithya  B.S",
     "chest": 1051,
-    "dob": "13/09/2010",
+    "dob": "2010-09-13",
     "ageCategory": "Under 19",
     "gender": "Female",
     "events": [
       "400m Race",
       "800m Race",
+      "1500m Race",
       "4x100m Relay",
       "4x400m Relay"
     ],
