@@ -1214,12 +1214,11 @@
     "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
     "name": "Muhammad irfan",
     "chest": 725,
-    "dob": "27/09/2011",
+    "dob": "2011-09-27",
     "ageCategory": "Under 17",
     "gender": "Male",
     "events": [
       "1500m Race",
-      "4x100m Relay",
       "4x400m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793947809882-Muhammad_irfan.jpg",
