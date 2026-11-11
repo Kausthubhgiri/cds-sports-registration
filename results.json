@@ -1984,13 +1984,12 @@
     "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
     "name": "Kasinath m",
     "chest": 744,
-    "dob": "12/02/2015",
+    "dob": "2015-02-12",
     "ageCategory": "Under 12",
     "gender": "Male",
     "events": [
       "Long Jump",
-      "4x100m Relay",
-      "4x400m Relay"
+      "4x100m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793953354058-Kasinath_m.jpg",
     "timestamp": "6/11/2026, 08:22:34"
