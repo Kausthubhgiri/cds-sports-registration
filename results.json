@@ -5607,5 +5607,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794370313638-Amanulla_ns.jpg",
     "timestamp": "11/11/2026, 04:11:55"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Muhammad nouf",
+    "chest": 945,
+    "dob": "12/06/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794370361066-Muhammad_nouf.jpg",
+    "timestamp": "11/11/2026, 04:12:42"
   }
 ]
