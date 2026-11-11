@@ -1821,15 +1821,14 @@
     "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
     "name": "Devika manu",
     "chest": 735,
-    "dob": "20/05/2010",
+    "dob": "2010-05-20",
     "ageCategory": "Under 17",
     "gender": "Female",
     "events": [
       "100m Race",
       "200m Race",
       "Long Jump",
-      "4x100m Relay",
-      "4x400m Relay"
+      "4x100m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952331707-Devika_manu.jpg",
     "timestamp": "6/11/2026, 08:05:31"
