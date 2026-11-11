@@ -5593,5 +5593,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794369252362-Roshan_s.jpg",
     "timestamp": "11/11/2026, 03:54:13"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Amanulla ns",
+    "chest": 944,
+    "dob": "27/03/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794370313638-Amanulla_ns.jpg",
+    "timestamp": "11/11/2026, 04:11:55"
   }
 ]
