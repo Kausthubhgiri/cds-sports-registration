@@ -1894,14 +1894,13 @@
     "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
     "name": "Riya renjith",
     "chest": 739,
-    "dob": "10/12/2015",
+    "dob": "2015-12-10",
     "ageCategory": "Under 12",
     "gender": "Female",
     "events": [
       "50m Race",
       "200m Race",
-      "4x100m Relay",
-      "4x400m Relay"
+      "4x100m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952765994-Riya_renjith.jpg",
     "timestamp": "6/11/2026, 08:12:45"
