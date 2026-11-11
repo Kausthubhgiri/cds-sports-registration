@@ -5579,5 +5579,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794369134586-Sreyen_ps.jpg",
     "timestamp": "11/11/2026, 03:52:15"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Roshan s",
+    "chest": 943,
+    "dob": "10/08/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794369252362-Roshan_s.jpg",
+    "timestamp": "11/11/2026, 03:54:13"
   }
 ]
