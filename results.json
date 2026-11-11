@@ -5522,5 +5522,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794368386822-Abhinad_dinesh.jpg",
     "timestamp": "11/11/2026, 03:39:47"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Adithya nandhan",
+    "chest": 939,
+    "dob": "19/10/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Long Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794368494070-Adithya_nandhan.jpg",
+    "timestamp": "11/11/2026, 03:41:35"
   }
 ]
