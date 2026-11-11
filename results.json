@@ -5621,5 +5621,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794370361066-Muhammad_nouf.jpg",
     "timestamp": "11/11/2026, 04:12:42"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "Archa AS",
+    "chest": 1060,
+    "dob": "09/07/2011",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794373592270-Archa_AS.jpg",
+    "timestamp": "11/11/2026, 05:06:33"
   }
 ]
