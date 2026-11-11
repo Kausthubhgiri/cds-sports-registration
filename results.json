@@ -5563,5 +5563,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794368975823-Abhinad_sujith.jpg",
     "timestamp": "11/11/2026, 03:49:37"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Sreyen ps",
+    "chest": 942,
+    "dob": "07/07/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794369134586-Sreyen_ps.jpg",
+    "timestamp": "11/11/2026, 03:52:15"
   }
 ]
