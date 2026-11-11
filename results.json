@@ -3656,13 +3656,13 @@
     "school": "CHINTHALAYA VIDYALAYA",
     "name": "Mahadev.  H R",
     "chest": 1037,
-    "dob": "02/10/2009",
+    "dob": "2009-10-02",
     "ageCategory": "Under 19",
     "gender": "Male",
     "events": [
       "100m Race",
       "200m Race",
-      "400m Race",
+      "High Jump",
       "4x100m Relay",
       "4x400m Relay"
     ],
