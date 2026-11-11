@@ -5493,5 +5493,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794367646094-Shabin_s.jpg",
     "timestamp": "11/11/2026, 03:27:27"
+  },
+  {
+    "school": "SREE GOKULAM PUBLIC SCHOOL",
+    "name": "Vinayak sv",
+    "chest": 937,
+    "dob": "01/01/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794368007096-Vinayak_sv.jpg",
+    "timestamp": "11/11/2026, 03:33:28"
   }
 ]
