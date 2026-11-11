@@ -3306,10 +3306,11 @@
     "school": "CHINTHALAYA VIDYALAYA",
     "name": "Dishna Dileep.  M",
     "chest": 1026,
-    "dob": "22/06/2010",
+    "dob": "2010-06-22",
     "ageCategory": "Under 17",
     "gender": "Female",
     "events": [
+      "100m Race",
       "200m Race",
       "400m Race",
       "4x100m Relay",
