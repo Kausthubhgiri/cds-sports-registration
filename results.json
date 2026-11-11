@@ -1778,12 +1778,13 @@
     "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
     "name": "Jouharath N",
     "chest": 734,
-    "dob": "30/04/2011",
+    "dob": "2012-04-30",
     "ageCategory": "Under 17",
     "gender": "Female",
     "events": [
       "800m Race",
-      "1500m Race"
+      "1500m Race",
+      "4x100m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793952170869-Jouharath_N.jpg",
     "timestamp": "6/11/2026, 08:02:50"
