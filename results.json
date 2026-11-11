@@ -3205,11 +3205,12 @@
     "school": "CHINTHALAYA VIDYALAYA",
     "name": "Aksha. R . Lal",
     "chest": 1019,
-    "dob": "03/04/2015",
+    "dob": "2015-04-03",
     "ageCategory": "Under 12",
     "gender": "Female",
     "events": [
       "200m Race",
+      "Long Jump",
       "4x100m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794236625978-Aksha__R___Lal.jpg",
