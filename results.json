@@ -1275,12 +1275,11 @@
     "school": "SIVAGIRI SREE NARAYANA SENIOR SECONDARY SCHOOL",
     "name": "Jeevan. G",
     "chest": 728,
-    "dob": "04/09/2011",
+    "dob": "2011-06-04",
     "ageCategory": "Under 17",
     "gender": "Male",
     "events": [
       "200m Race",
-      "Shot Put",
       "High Jump"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793948153878-Jeevan__G.jpg",
