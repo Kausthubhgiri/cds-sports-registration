@@ -59,7 +59,7 @@
   <header class="hero"><div class="hero-row"><div><div class="eyebrow">Admin Page</div><h1>CDS Sports Meet 2026</h1><p>Participant registrations, events and official exports.</p></div><div class="live"><i></i><span id="lastUpdated">Loading live entries…</span></div></div></header>
   <main class="shell">
     <section class="stats" aria-label="Summary"><button type="button" class="stat stat-action" data-stat="participants" aria-label="View registered participants"><b id="statParticipants">—</b><span>Registered participants</span></button><button type="button" class="stat stat-action" data-stat="events" aria-label="View events represented"><b class="accent" id="statEvents">—</b><span>Events represented</span></button><button type="button" class="stat stat-action" data-stat="schools" aria-label="View schools represented"><b id="statSchools">—</b><span>Schools represented</span></button><button type="button" class="stat stat-action" data-stat="slots" aria-label="View event registrations"><b id="statSlots">—</b><span>Event registrations</span></button></section>
-    <section class="panel"><div class="toolbar"><div><h2>Exports & data controls</h2><p>Download a ZIP containing a separate, print-ready A4 PDF for each school.</p></div><div class="actions"><button class="btn subtle" id="excelBtn">⇩ Excel</button><button class="btn subtle" id="excelEventBtn">▦ Excel by event</button><button class="btn success" id="schoolPdfBtn">⤓ Separate PDFs by School</button><button class="btn warning" id="undoBtn">↶ Undo last</button><button class="btn danger" id="resetBtn">⌫ Reset all</button></div></div>
+    <section class="panel"><div class="toolbar"><div><h2>Exports & data controls</h2><p>Download a ZIP containing a separate, print-ready A4 PDF for each school.</p></div><div class="actions"><button class="btn subtle" id="excelBtn">⇩ Excel</button><button class="btn subtle" id="excelEventBtn">▦ Excel by event</button><button class="btn success" id="masterPdfBtn">⤓ Master PDF</button><button class="btn primary" id="schoolPdfBtn">⤓ Separate PDFs by School</button><button class="btn warning" id="undoBtn">↶ Undo last</button><button class="btn danger" id="resetBtn">⌫ Reset all</button></div></div>
       <div class="filters"><label class="search"><input id="searchInput" type="search" placeholder="Search participant, school, chest number…" autocomplete="off"></label><select id="eventFilter" class="filter-select" aria-label="Filter by event"><option value="">All events</option></select><select id="ageFilter" class="filter-select" aria-label="Filter by age category"><option value="">All age categories</option></select><select id="schoolFilter" class="filter-select" aria-label="Filter by school"><option value="">All schools</option></select><span id="shownLabel" style="color:var(--muted);font-size:12px;font-weight:650"></span></div>
     </section>
     <section id="resultsContainer" class="event-list" aria-live="polite"><div class="empty">Loading registrations…</div></section>
@@ -207,9 +207,8 @@
     doc.text('PARTICIPANT REGISTER',36,17);
   }
   function pdfFooter(doc){const pages=doc.internal.getNumberOfPages();for(let p=1;p<=pages;p++){doc.setPage(p);const w=doc.internal.pageSize.getWidth(),h=doc.internal.pageSize.getHeight();doc.setDrawColor(217,226,236);doc.line(14,h-14,w-14,h-14);doc.setFontSize(7);doc.setTextColor(98,125,152);doc.text('CDS Sports Meet • Official participant register',14,h-9);doc.text(`Page ${p} of ${pages}`,w-14,h-9,{align:'right'});}}
-  async function createSchoolWisePdf() {
+  async function createMasterPdf() {
     if(!window.jspdf?.jsPDF||!window.jspdf?.jsPDF.API.autoTable)throw new Error('PDF library did not load. Check the internet connection or host the PDF library files locally.');
-    if(!window.JSZip)throw new Error('ZIP library did not load. Check the internet connection or host jszip.min.js locally.');
     if(!previousData.length)throw new Error('There are no participants to export.');
 
     const schoolMap=new Map();
@@ -221,10 +220,10 @@
     const schools=[...schoolMap].sort(([a],[b])=>a.localeCompare(b,undefined,{sensitivity:'base'}));
     if(!schools.length)throw new Error('No schools were found to export.');
 
-    setProgress(true,'Preparing separate school PDFs…');
+    setProgress(true,'Building master registration PDF…');
     try {
       const {jsPDF}=window.jspdf;
-      const zip=new JSZip();
+      const doc=new jsPDF({orientation:'landscape',unit:'mm',format:'a4',compress:true});
       const pdfLogo=await loadPdfLogo();
       const eventOrder=new Map(ALL_EVENTS.map((event,index)=>[event,index]));
       const genderGroups=[
@@ -233,16 +232,13 @@
         {label:'OTHER / UNSPECIFIED',match:g=>!String(g||'').trim().toLowerCase().startsWith('m')&&!String(g||'').trim().toLowerCase().startsWith('f')}
       ];
 
-      let exportedSchools=0,photoCount=0;
-      const usedNames=new Set();
+      let exportedSchools=0,photoCount=0,sectionStarted=false;
 
       for(const [school,schoolMembers] of schools) {
+        let schoolSectionStarted=false;
         const events=[...new Set(schoolMembers.flatMap(p=>(p.events||[]).map(cleanEvent)).filter(Boolean))]
           .sort((a,b)=>(eventOrder.get(a)??999)-(eventOrder.get(b)??999)||a.localeCompare(b));
         if(!events.length)continue;
-
-        const doc=new jsPDF({orientation:'landscape',unit:'mm',format:'a4',compress:true});
-        let sectionStarted=false;
 
         for(const event of events) {
           const members=schoolMembers.filter(p=>(p.events||[]).map(cleanEvent).includes(event));
@@ -254,6 +250,7 @@
             if(sectionStarted)doc.addPage();
             pdfHeader(doc,pdfLogo);
             sectionStarted=true;
+            schoolSectionStarted=true;
             let y=31;
 
             doc.setFillColor(225,244,250);
@@ -267,12 +264,6 @@
             doc.setTextColor(35,65,90);doc.setFont('helvetica','bold');doc.setFontSize(8.5);
             doc.text(`EVENT  •  ${event}  •  ${genderMembers.length} PARTICIPANTS`,17,y+4.5);
             y+=9;
-
-            doc.setFillColor(245,248,251);
-            doc.roundedRect(14,y,269,6,1,1,'F');
-            doc.setTextColor(65,85,105);doc.setFont('helvetica','bold');doc.setFontSize(7.5);
-            doc.text(genderGroup.label,17,y+4.2);
-            y+=8;
 
             // Manual age category is preserved and sorted in the configured category order.
             genderMembers.sort((a,b)=>
@@ -317,6 +308,118 @@
           }
         }
 
+        if(schoolSectionStarted)exportedSchools++;
+      }
+
+      if(!exportedSchools||!sectionStarted)throw new Error('No event registrations were found to export.');
+      pdfFooter(doc);
+      doc.save('cds-sports-master-register.pdf');
+      showToast(`Master PDF downloaded with ${exportedSchools} schools.`);
+    } finally {
+      setProgress(false);
+    }
+  }
+
+  async function createSchoolWisePdf() {
+    if(!window.jspdf?.jsPDF||!window.jspdf?.jsPDF.API.autoTable)throw new Error('PDF library did not load. Check the internet connection or host the PDF library files locally.');
+    if(!window.JSZip)throw new Error('ZIP library did not load. Check the internet connection or host jszip.min.js locally.');
+    if(!previousData.length)throw new Error('There are no participants to export.');
+
+    const schoolMap=new Map();
+    previousData.forEach(person=>{
+      const school=String(person.school||'Unassigned school').trim()||'Unassigned school';
+      if(!schoolMap.has(school))schoolMap.set(school,[]);
+      schoolMap.get(school).push(person);
+    });
+    const schools=[...schoolMap].sort(([a],[b])=>a.localeCompare(b,undefined,{sensitivity:'base'}));
+    if(!schools.length)throw new Error('No schools were found to export.');
+
+    setProgress(true,'Preparing separate school PDFs…');
+    try {
+      const {jsPDF}=window.jspdf;
+      const zip=new JSZip();
+      const pdfLogo=await loadPdfLogo();
+      const eventOrder=new Map(ALL_EVENTS.map((event,index)=>[event,index]));
+      const genderOrder=g=> {
+        const value=String(g||'').trim().toLowerCase();
+        return value.startsWith('m')?0:value.startsWith('f')?1:2;
+      };
+
+      let exportedSchools=0,photoCount=0;
+      const usedNames=new Set();
+
+      for(const [school,schoolMembers] of schools) {
+        const events=[...new Set(schoolMembers.flatMap(p=>(p.events||[]).map(cleanEvent)).filter(Boolean))]
+          .sort((a,b)=>(eventOrder.get(a)??999)-(eventOrder.get(b)??999)||a.localeCompare(b));
+        if(!events.length)continue;
+
+        const doc=new jsPDF({orientation:'landscape',unit:'mm',format:'a4',compress:true});
+        let sectionStarted=false;
+
+        for(const event of events) {
+          const members=schoolMembers
+            .filter(p=>(p.events||[]).map(cleanEvent).includes(event))
+            .sort((a,b)=>
+              ageIndex(a.ageCategory)-ageIndex(b.ageCategory) ||
+              genderOrder(a.gender)-genderOrder(b.gender) ||
+              String(a.name||'').localeCompare(String(b.name||''),undefined,{sensitivity:'base'})
+            );
+          if(!members.length)continue;
+
+          // One event section per page: male and female participants share the same table.
+          if(sectionStarted)doc.addPage();
+          pdfHeader(doc,pdfLogo);
+          sectionStarted=true;
+          let y=31;
+
+          doc.setFillColor(225,244,250);
+          doc.roundedRect(14,y,269,7,1.5,1.5,'F');
+          doc.setTextColor(10,75,120);doc.setFont('helvetica','bold');doc.setFontSize(10);
+          doc.text(`SCHOOL  •  ${school}`,17,y+4.8);
+          y+=10;
+
+          doc.setFillColor(238,243,248);
+          doc.roundedRect(14,y,269,6.5,1,1,'F');
+          doc.setTextColor(35,65,90);doc.setFont('helvetica','bold');doc.setFontSize(8.5);
+          doc.text(`EVENT  •  ${event}  •  ${members.length} PARTICIPANTS`,17,y+4.5);
+          y+=9;
+
+          const body=[];
+          for(const person of members) {
+            photoCount++;
+            setProgress(true,`Building ${school} PDF · embedding photo ${photoCount}`);
+            const photo=await imageData(person.photoPath,person.gender);
+            body.push([
+              {content:'',photo},
+              person.name||'—',
+              person.chest||'—',
+              person.dob||'—',
+              person.ageCategory||'Not assigned',
+              person.gender||'—'
+            ]);
+          }
+
+          doc.autoTable({
+            startY:y,
+            head:[['Photo','Participant','Chest','Date of birth','Age category','Gender']],
+            body,
+            margin:{left:14,right:14,top:28,bottom:17},
+            theme:'grid',
+            styles:{font:'helvetica',fontSize:7,cellPadding:1.05,valign:'middle',lineColor:[217,226,236],lineWidth:.1,overflow:'linebreak'},
+            headStyles:{fillColor:[8,75,120],textColor:255,fontStyle:'bold',fontSize:6.8,cellPadding:1.35},
+            columnStyles:{0:{cellWidth:15},1:{cellWidth:76,fontStyle:'bold'},2:{cellWidth:20},3:{cellWidth:30},4:{cellWidth:45},5:{cellWidth:30}},
+            didDrawCell:d=>{
+              const photo=d.cell.raw?.photo;
+              if(photo&&d.section==='body'&&d.column.index===0){
+                const size=Math.min(10,d.cell.height-1.5);
+                if(size>0)doc.addImage(photo,'JPEG',d.cell.x+(d.cell.width-size)/2,d.cell.y+(d.cell.height-size)/2,size,size);
+              }
+            },
+            didParseCell:d=>{if(d.section==='body')d.cell.styles.minCellHeight=12;},
+            showHead:'everyPage',pageBreak:'auto',rowPageBreak:'avoid'
+          });
+        }
+
         if(!sectionStarted)continue;
         pdfFooter(doc);
 
@@ -346,7 +449,7 @@
     }
   }
 
-  $('excelBtn').addEventListener('click',()=>exportExcel('/export'));$('excelEventBtn').addEventListener('click',()=>exportExcel('/export-by-event'));$('schoolPdfBtn').addEventListener('click',()=>createSchoolWisePdf().catch(e=>showToast(e.message,true)));$('undoBtn').addEventListener('click',()=>askConfirm('Undo latest registration?','The most recent registration will be removed. This cannot be undone.',()=>postAction('/reset-last')));$('resetBtn').addEventListener('click',()=>askConfirm('Reset all registrations?','This will permanently remove every registration. This action cannot be undone.',()=>postAction('/reset-all')));$('searchInput').addEventListener('input',applyFilters);$('eventFilter').addEventListener('change',applyFilters);$('ageFilter').addEventListener('change',applyFilters);$('schoolFilter').addEventListener('change',applyFilters);$('resultsContainer').addEventListener('click',e=>{const index=Number(e.target.dataset.index);if(e.target.matches('.edit-person'))editEvents(index);if(e.target.matches('.remove-person'))removeCandidate(index);});
+  $('excelBtn').addEventListener('click',()=>exportExcel('/export'));$('excelEventBtn').addEventListener('click',()=>exportExcel('/export-by-event'));$('masterPdfBtn').addEventListener('click',()=>createMasterPdf().catch(e=>showToast(e.message,true)));$('schoolPdfBtn').addEventListener('click',()=>createSchoolWisePdf().catch(e=>showToast(e.message,true)));$('undoBtn').addEventListener('click',()=>askConfirm('Undo latest registration?','The most recent registration will be removed. This cannot be undone.',()=>postAction('/reset-last')));$('resetBtn').addEventListener('click',()=>askConfirm('Reset all registrations?','This will permanently remove every registration. This action cannot be undone.',()=>postAction('/reset-all')));$('searchInput').addEventListener('input',applyFilters);$('eventFilter').addEventListener('change',applyFilters);$('ageFilter').addEventListener('change',applyFilters);$('schoolFilter').addEventListener('change',applyFilters);$('resultsContainer').addEventListener('click',e=>{const index=Number(e.target.dataset.index);if(e.target.matches('.edit-person'))editEvents(index);if(e.target.matches('.remove-person'))removeCandidate(index);});
   $("editorClose").addEventListener("click",closeEditor);$("editorCancel").addEventListener("click",closeEditor);$("editorOverlay").addEventListener("click",e=>{if(e.target===$("editorOverlay"))closeEditor();});$("editorForm").addEventListener("submit",saveEditor);$("editorEvents").addEventListener("change",e=>{if(!e.target.matches("input[type=checkbox]"))return;const checked=[...document.querySelectorAll("#editorEvents input:checked")],relay=checked.filter(x=>RELAY_EVENTS.has(x.value)).length,individual=checked.length-relay;if(RELAY_EVENTS.has(e.target.value)&&relay>2){e.target.checked=false;showEditorError("Maximum 2 relay events are allowed.");}else if(!RELAY_EVENTS.has(e.target.value)&&individual>3){e.target.checked=false;showEditorError("Maximum 3 non-relay events are allowed.");}else $("editorError").classList.remove("show");updateEditorCount();});$("confirmCancel").addEventListener("click",()=>$('confirmOverlay').classList.remove('open'));$("confirmOverlay").addEventListener("click",e=>{if(e.target===$("confirmOverlay"))$("confirmOverlay").classList.remove("open");});document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeEditor();$("confirmOverlay").classList.remove("open");}});
 
   document.querySelectorAll('.stat-action').forEach(button=>button.addEventListener('click',()=>openStatDetails(button.dataset.stat)));
