@@ -4255,13 +4255,13 @@
     "school": "A.R.R PUBLIC SCHOOL",
     "name": "ADITHYAN LD",
     "chest": 527,
-    "dob": "03/06/2010",
+    "dob": "2010-06-03",
     "ageCategory": "Under 17",
     "gender": "Male",
     "events": [
       "100m Race",
       "200m Race",
-      "High Jump",
+      "Long Jump",
       "4x100m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794301822541-ADITHYAN_LD.jpg",
