@@ -558,13 +558,13 @@
     "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
     "name": "Vinay",
     "chest": 1501,
-    "dob": "05/11/2009",
+    "dob": "2009-11-05",
     "ageCategory": "Under 19",
     "gender": "Male",
     "events": [
-      "100m Race",
       "800m Race",
-      "1500m Race"
+      "1500m Race",
+      "3000m Race"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793944425101-Vinay.jpg",
     "timestamp": "6/11/2026, 05:53:45"
