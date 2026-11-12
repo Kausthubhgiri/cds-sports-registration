@@ -5655,5 +5655,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794467694686-ATHRISHNAV_A_S.jpg",
     "timestamp": "12/11/2026, 07:14:55"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "ADHIKESH D",
+    "chest": 544,
+    "dob": "13/02/2012",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "High Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794467773856-ADHIKESH_D.jpg",
+    "timestamp": "12/11/2026, 07:16:15"
   }
 ]
