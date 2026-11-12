@@ -53,13 +53,23 @@
     .details-foot{padding:12px 22px;border-top:1px solid #edf2f7;color:#71869a;font-size:11px;background:#fbfdff}
     @media(max-width:600px){.details-overlay{padding:9px}.details-card{max-height:94vh;border-radius:16px}.details-head{padding:17px}.details-tools{padding:11px 14px}.details-list{padding:6px 14px 14px}.details-item{align-items:flex-start}.details-item span{max-width:42%}}
 
+
+    .school-pdf-overlay{display:none;position:fixed;inset:0;z-index:130;background:rgba(3,8,20,.68);backdrop-filter:blur(8px);padding:18px;align-items:center;justify-content:center}
+    .school-pdf-overlay.open{display:flex}
+    .school-pdf-card{width:min(100%,460px);padding:24px;border-radius:18px;background:#fff;border:1px solid #d9e2ec;box-shadow:0 28px 90px rgba(0,25,45,.32)}
+    .school-pdf-card h3{margin:0 0 6px;font-size:20px;color:#102a43}
+    .school-pdf-card p{margin:0 0 18px;color:#627d98;font-size:13px}
+    .school-pdf-card label{display:block;margin-bottom:7px;color:#31546a;font-size:12px;font-weight:800}
+    .school-pdf-card select{width:100%;padding:12px;border:1px solid #cbd8e3;border-radius:10px;background:#fbfdff;color:#102a43}
+    .school-pdf-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:20px}
+    @media(max-width:600px){.school-pdf-card{padding:18px}.school-pdf-actions{flex-direction:column-reverse}.school-pdf-actions .btn{width:100%;justify-content:center}}
   </style>
 </head>
 <body>
   <header class="hero"><div class="hero-row"><div><div class="eyebrow">Admin Page</div><h1>CDS Sports Meet 2026</h1><p>Participant registrations, events and official exports.</p></div><div class="live"><i></i><span id="lastUpdated">Loading live entries…</span></div></div></header>
   <main class="shell">
     <section class="stats" aria-label="Summary"><button type="button" class="stat stat-action" data-stat="participants" aria-label="View registered participants"><b id="statParticipants">—</b><span>Registered participants</span></button><button type="button" class="stat stat-action" data-stat="events" aria-label="View events represented"><b class="accent" id="statEvents">—</b><span>Events represented</span></button><button type="button" class="stat stat-action" data-stat="schools" aria-label="View schools represented"><b id="statSchools">—</b><span>Schools represented</span></button><button type="button" class="stat stat-action" data-stat="slots" aria-label="View event registrations"><b id="statSlots">—</b><span>Event registrations</span></button></section>
-    <section class="panel"><div class="toolbar"><div><h2>Exports & data controls</h2><p>Download a ZIP containing a separate, print-ready A4 PDF for each school.</p></div><div class="actions"><button class="btn subtle" id="excelBtn">⇩ Excel</button><button class="btn subtle" id="excelEventBtn">▦ Excel by event</button><button class="btn success" id="masterPdfBtn">⤓ Master PDF</button><button class="btn primary" id="schoolPdfBtn">⤓ Separate PDFs by School</button><button class="btn warning" id="undoBtn">↶ Undo last</button><button class="btn danger" id="resetBtn">⌫ Reset all</button></div></div>
+    <section class="panel"><div class="toolbar"><div><h2>Exports & data controls</h2><p>Download a ZIP containing a separate, print-ready A4 PDF for each school.</p></div><div class="actions"><button class="btn subtle" id="excelBtn">⇩ Excel</button><button class="btn subtle" id="excelEventBtn">▦ Excel by event</button><button class="btn success" id="masterPdfBtn">⤓ Master PDF</button><button class="btn primary" id="schoolPdfBtn">⤓ Separate PDFs by School</button><button class="btn subtle" id="singleSchoolPdfBtn">⤓ PDF for One School</button><button class="btn warning" id="undoBtn">↶ Undo last</button><button class="btn danger" id="resetBtn">⌫ Reset all</button></div></div>
       <div class="filters"><label class="search"><input id="searchInput" type="search" placeholder="Search participant, school, chest number…" autocomplete="off"></label><select id="eventFilter" class="filter-select" aria-label="Filter by event"><option value="">All events</option></select><select id="ageFilter" class="filter-select" aria-label="Filter by age category"><option value="">All age categories</option></select><select id="schoolFilter" class="filter-select" aria-label="Filter by school"><option value="">All schools</option></select><span id="shownLabel" style="color:var(--muted);font-size:12px;font-weight:650"></span></div>
     </section>
     <section id="resultsContainer" class="event-list" aria-live="polite"><div class="empty">Loading registrations…</div></section>
@@ -79,6 +89,18 @@
   </div>
 
   <div class="editor-overlay" id="editorOverlay" role="dialog" aria-modal="true" aria-labelledby="editorTitle"><div class="editor-card"><div class="editor-head"><div><h2 id="editorTitle">Edit participant registration</h2><p>Update participant details and event selections.</p></div><button class="editor-close" id="editorClose" type="button" aria-label="Close">✕</button></div><form class="editor-body" id="editorForm"><div class="editor-person" id="editorPerson"></div><div class="editor-fields"><div class="editor-field"><label for="editName">Participant name</label><input id="editName" required maxlength="100"></div><div class="editor-field"><label for="editDob">Date of birth</label><input id="editDob" type="date" required></div><div class="editor-field"><label for="editGender">Gender</label><select id="editGender"><option>Male</option><option>Female</option></select></div><div class="editor-field"><label for="editAge">Age category (manual selection)</label><select id="editAge"><option>Under 12</option><option>Under 14</option><option>Under 16</option><option>Under 17</option><option>Under 19</option></select></div></div><div class="editor-section-title"><span>Registered events</span><small><span class="editor-count" id="editorEventCount">0 selected</span> · max 3 individual + 2 relay</small></div><div class="editor-event-grid" id="editorEvents"></div><div class="editor-hint">3000m Race is available only for Under 19. Age category is always selected manually.</div><div class="editor-error" id="editorError" role="alert"></div><div class="editor-actions"><button class="btn cancel-editor" id="editorCancel" type="button">Cancel</button><button class="btn save-editor" id="editorSave" type="submit">Save changes</button></div></form></div></div>
+<div class="school-pdf-overlay" id="schoolPdfPicker" role="dialog" aria-modal="true" aria-labelledby="schoolPdfPickerTitle">
+  <section class="school-pdf-card">
+    <h3 id="schoolPdfPickerTitle">Export one school</h3>
+    <p>Select a school to download its registrations as a single PDF. The same event, age-category and gender sorting used in the school-wise export will be applied.</p>
+    <label for="singleSchoolSelect">School</label>
+    <select id="singleSchoolSelect"><option value="">Choose a school</option></select>
+    <div class="school-pdf-actions">
+      <button class="btn cancel-editor" id="schoolPdfPickerCancel" type="button">Cancel</button>
+      <button class="btn primary" id="schoolPdfPickerExport" type="button" disabled>Export PDF</button>
+    </div>
+  </section>
+</div>
 <div class="confirm-overlay" id="confirmOverlay" role="dialog" aria-modal="true"><div class="confirm-card"><h3 id="confirmTitle">Please confirm</h3><p id="confirmMessage"></p><div class="confirm-actions"><button class="btn cancel-editor" id="confirmCancel" type="button">Cancel</button><button class="btn danger" id="confirmAccept" type="button">Continue</button></div></div></div>  <div class="toast" id="toast" role="status"></div><div class="progress" id="progress"><div class="progress-box"><div class="spinner"></div><strong id="progressText">Preparing export…</strong><p style="color:#627d98;font-size:12px;margin:7px 0 0">Photos are being included at print quality.</p></div></div>
 <script>
 (() => {
@@ -320,6 +342,112 @@
     }
   }
 
+  function openSingleSchoolPdfPicker() {
+    const select=$('singleSchoolSelect');
+    const schools=[...new Set(previousData.map(p=>String(p.school||'Unassigned school').trim()||'Unassigned school'))]
+      .sort((a,b)=>a.localeCompare(b,undefined,{sensitivity:'base'}));
+    select.innerHTML='<option value="">Choose a school</option>'+schools.map(school=>`<option value="${escapeHTML(school)}">${escapeHTML(school)}</option>`).join('');
+    $('schoolPdfPickerExport').disabled=true;
+    $('schoolPdfPicker').classList.add('open');
+    select.focus();
+  }
+
+  function closeSingleSchoolPdfPicker() {
+    $('schoolPdfPicker').classList.remove('open');
+  }
+
+  async function createSingleSchoolPdf(school) {
+    if(!window.jspdf?.jsPDF||!window.jspdf?.jsPDF.API.autoTable)throw new Error('PDF library did not load. Check the internet connection or host the PDF library files locally.');
+    if(!school)throw new Error('Please select a school.');
+    const schoolMembers=previousData.filter(p=>(String(p.school||'Unassigned school').trim()||'Unassigned school')===school);
+    if(!schoolMembers.length)throw new Error('No registrations were found for the selected school.');
+
+    setProgress(true,`Building ${school} PDF…`);
+    try {
+      const {jsPDF}=window.jspdf;
+      const doc=new jsPDF({orientation:'landscape',unit:'mm',format:'a4',compress:true});
+      const pdfLogo=await loadPdfLogo();
+      const eventOrder=new Map(ALL_EVENTS.map((event,index)=>[event,index]));
+      const genderOrder=g=>{
+        const value=String(g||'').trim().toLowerCase();
+        return value.startsWith('m')?0:value.startsWith('f')?1:2;
+      };
+      const events=[...new Set(schoolMembers.flatMap(p=>(p.events||[]).map(cleanEvent)).filter(Boolean))]
+        .sort((a,b)=>(eventOrder.get(a)??999)-(eventOrder.get(b)??999)||a.localeCompare(b));
+      let sectionStarted=false,photoCount=0;
+
+      for(const event of events) {
+        const members=schoolMembers
+          .filter(p=>(p.events||[]).map(cleanEvent).includes(event))
+          .sort((a,b)=>
+            ageIndex(a.ageCategory)-ageIndex(b.ageCategory) ||
+            genderOrder(a.gender)-genderOrder(b.gender) ||
+            String(a.name||'').localeCompare(String(b.name||''),undefined,{sensitivity:'base'})
+          );
+        if(!members.length)continue;
+
+        if(sectionStarted)doc.addPage();
+        pdfHeader(doc,pdfLogo);
+        sectionStarted=true;
+        let y=31;
+
+        doc.setFillColor(225,244,250);
+        doc.roundedRect(14,y,269,7,1.5,1.5,'F');
+        doc.setTextColor(10,75,120);doc.setFont('helvetica','bold');doc.setFontSize(10);
+        doc.text(`SCHOOL  •  ${school}`,17,y+4.8);
+        y+=10;
+
+        doc.setFillColor(238,243,248);
+        doc.roundedRect(14,y,269,6.5,1,1,'F');
+        doc.setTextColor(35,65,90);doc.setFont('helvetica','bold');doc.setFontSize(8.5);
+        doc.text(`EVENT  •  ${event}  •  ${members.length} PARTICIPANTS`,17,y+4.5);
+        y+=9;
+
+        const body=[];
+        for(const person of members) {
+          photoCount++;
+          setProgress(true,`Building ${school} PDF · embedding photo ${photoCount}`);
+          const photo=await imageData(person.photoPath,person.gender);
+          body.push([
+            {content:'',photo},
+            person.name||'—',
+            person.chest||'—',
+            person.dob||'—',
+            person.ageCategory||'Not assigned',
+            person.gender||'—'
+          ]);
+        }
+
+        doc.autoTable({
+          startY:y,
+          head:[['Photo','Participant','Chest','Date of birth','Age category','Gender']],
+          body,
+          margin:{left:14,right:14,top:28,bottom:17},
+          theme:'grid',
+          styles:{font:'helvetica',fontSize:7,cellPadding:1.05,valign:'middle',lineColor:[217,226,236],lineWidth:.1,overflow:'linebreak'},
+          headStyles:{fillColor:[8,75,120],textColor:255,fontStyle:'bold',fontSize:6.8,cellPadding:1.35},
+          columnStyles:{0:{cellWidth:15},1:{cellWidth:76,fontStyle:'bold'},2:{cellWidth:20},3:{cellWidth:30},4:{cellWidth:45},5:{cellWidth:30}},
+          didDrawCell:d=>{
+            const photo=d.cell.raw?.photo;
+            if(photo&&d.section==='body'&&d.column.index===0){
+              const size=Math.min(10,d.cell.height-1.5);
+              if(size>0)doc.addImage(photo,'JPEG',d.cell.x+(d.cell.width-size)/2,d.cell.y+(d.cell.height-size)/2,size,size);
+            }
+          },
+          didParseCell:d=>{if(d.section==='body')d.cell.styles.minCellHeight=12;},
+          showHead:'everyPage',pageBreak:'auto',rowPageBreak:'avoid'
+        });
+      }
+
+      if(!sectionStarted)throw new Error('No event registrations were found for the selected school.');
+      pdfFooter(doc);
+      doc.save(`${filename(school)||'school'}-registration-register.pdf`);
+      showToast(`PDF downloaded for ${school}.`);
+    } finally {
+      setProgress(false);
+    }
+  }
+
   async function createSchoolWisePdf() {
     if(!window.jspdf?.jsPDF||!window.jspdf?.jsPDF.API.autoTable)throw new Error('PDF library did not load. Check the internet connection or host the PDF library files locally.');
     if(!window.JSZip)throw new Error('ZIP library did not load. Check the internet connection or host jszip.min.js locally.');
@@ -449,6 +577,16 @@
     }
   }
 
+  $('singleSchoolPdfBtn').addEventListener('click',openSingleSchoolPdfPicker);
+  $('schoolPdfPickerCancel').addEventListener('click',closeSingleSchoolPdfPicker);
+  $('schoolPdfPicker').addEventListener('click',e=>{if(e.target===$('schoolPdfPicker'))closeSingleSchoolPdfPicker();});
+  $('singleSchoolSelect').addEventListener('change',e=>{$('schoolPdfPickerExport').disabled=!e.target.value;});
+  $('schoolPdfPickerExport').addEventListener('click',async()=>{
+    const school=$('singleSchoolSelect').value;
+    if(!school)return showToast('Please select a school.',true);
+    closeSingleSchoolPdfPicker();
+    try{await createSingleSchoolPdf(school);}catch(err){showToast(err.message||'Could not create the school PDF.',true);}
+  });
   $('excelBtn').addEventListener('click',()=>exportExcel('/export'));$('excelEventBtn').addEventListener('click',()=>exportExcel('/export-by-event'));$('masterPdfBtn').addEventListener('click',()=>createMasterPdf().catch(e=>showToast(e.message,true)));$('schoolPdfBtn').addEventListener('click',()=>createSchoolWisePdf().catch(e=>showToast(e.message,true)));$('undoBtn').addEventListener('click',()=>askConfirm('Undo latest registration?','The most recent registration will be removed. This cannot be undone.',()=>postAction('/reset-last')));$('resetBtn').addEventListener('click',()=>askConfirm('Reset all registrations?','This will permanently remove every registration. This action cannot be undone.',()=>postAction('/reset-all')));$('searchInput').addEventListener('input',applyFilters);$('eventFilter').addEventListener('change',applyFilters);$('ageFilter').addEventListener('change',applyFilters);$('schoolFilter').addEventListener('change',applyFilters);$('resultsContainer').addEventListener('click',e=>{const index=Number(e.target.dataset.index);if(e.target.matches('.edit-person'))editEvents(index);if(e.target.matches('.remove-person'))removeCandidate(index);});
   $("editorClose").addEventListener("click",closeEditor);$("editorCancel").addEventListener("click",closeEditor);$("editorOverlay").addEventListener("click",e=>{if(e.target===$("editorOverlay"))closeEditor();});$("editorForm").addEventListener("submit",saveEditor);$("editorEvents").addEventListener("change",e=>{if(!e.target.matches("input[type=checkbox]"))return;const checked=[...document.querySelectorAll("#editorEvents input:checked")],relay=checked.filter(x=>RELAY_EVENTS.has(x.value)).length,individual=checked.length-relay;if(RELAY_EVENTS.has(e.target.value)&&relay>2){e.target.checked=false;showEditorError("Maximum 2 relay events are allowed.");}else if(!RELAY_EVENTS.has(e.target.value)&&individual>3){e.target.checked=false;showEditorError("Maximum 3 non-relay events are allowed.");}else $("editorError").classList.remove("show");updateEditorCount();});$("confirmCancel").addEventListener("click",()=>$('confirmOverlay').classList.remove('open'));$("confirmOverlay").addEventListener("click",e=>{if(e.target===$("confirmOverlay"))$("confirmOverlay").classList.remove("open");});document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeEditor();$("confirmOverlay").classList.remove("open");}});
 
