@@ -5640,5 +5640,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794467285671-ASLAM_T_N.jpg",
     "timestamp": "12/11/2026, 07:08:10"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "ATHRISHNAV A S",
+    "chest": 543,
+    "dob": "24/07/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794467694686-ATHRISHNAV_A_S.jpg",
+    "timestamp": "12/11/2026, 07:14:55"
   }
 ]
