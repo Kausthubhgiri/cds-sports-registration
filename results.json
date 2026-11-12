@@ -5653,5 +5653,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794467773856-ADHIKESH_D.jpg",
     "timestamp": "12/11/2026, 07:16:15"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "ABIN JOSE",
+    "chest": 545,
+    "dob": "06/08/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "High Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794470159251-ABIN_JOSE.jpg",
+    "timestamp": "12/11/2026, 07:56:00"
   }
 ]
