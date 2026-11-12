@@ -753,12 +753,11 @@
     "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
     "name": "Srenandanan A S",
     "chest": 1506,
-    "dob": "15/04/2013",
-    "ageCategory": "Under 14",
+    "dob": "2013-04-15",
+    "ageCategory": "Under 17",
     "gender": "Male",
     "events": [
       "400m Race",
-      "800m Race",
       "Long Jump",
       "4x100m Relay"
     ],
