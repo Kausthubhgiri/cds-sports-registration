@@ -5626,5 +5626,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794466980628-ANOKI_D.jpg",
     "timestamp": "12/11/2026, 07:03:01"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "ASLAM T N",
+    "chest": 542,
+    "dob": "28/06/2014",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794467285671-ASLAM_T_N.jpg",
+    "timestamp": "12/11/2026, 07:08:10"
   }
 ]
