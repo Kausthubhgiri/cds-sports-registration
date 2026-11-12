@@ -2872,12 +2872,12 @@
     "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
     "name": "Arjun Sreejith",
     "chest": 1518,
-    "dob": "06/11/2014",
+    "dob": "2014-01-06",
     "ageCategory": "Under 14",
     "gender": "Male",
     "events": [
-      "800m Race",
-      "1500m Race"
+      "50m Race",
+      "800m Race"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794199494455-Arjun_Sreejith.jpg",
     "timestamp": "9/11/2026, 04:44:55"
