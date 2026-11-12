@@ -4603,13 +4603,14 @@
     "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
     "name": "SHIVAHARI B",
     "chest": 812,
-    "dob": "28/01/2010",
+    "dob": "2010-01-28",
     "ageCategory": "Under 19",
     "gender": "Male",
     "events": [
       "1500m Race",
       "Discus Throw",
       "Long Jump",
+      "4x100m Relay",
       "4x400m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794307026976-SHIVAHARI_B.jpg",
