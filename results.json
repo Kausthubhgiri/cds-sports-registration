@@ -4345,12 +4345,11 @@
     "school": "A.R.R PUBLIC SCHOOL",
     "name": "ANTON EZRA",
     "chest": 532,
-    "dob": "01/03/2011",
+    "dob": "2013-03-01",
     "ageCategory": "Under 17",
     "gender": "Male",
     "events": [
-      "400m Race",
-      "Long Jump"
+      "400m Race"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794302601082-ANTON_EZRA.jpg",
     "timestamp": "10/11/2026, 09:23:22"
