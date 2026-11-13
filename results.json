@@ -2348,11 +2348,12 @@
     "school": "VISHWABHARATHY PUBLIC SCHOOL",
     "name": "DIYAADATH S",
     "chest": 325,
-    "dob": "16/05/2011",
+    "dob": "2011-05-16",
     "ageCategory": "Under 17",
     "gender": "Female",
     "events": [
-      "Shot Put"
+      "Shot Put",
+      "Discus Throw"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1793982810063-DIYAADATH_S.jpg",
     "timestamp": "6/11/2026, 16:33:31"
