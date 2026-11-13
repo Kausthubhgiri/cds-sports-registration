@@ -3035,13 +3035,12 @@
     "school": "VISHWABHARATHY PUBLIC SCHOOL",
     "name": "VAIBHAV V NAIR",
     "chest": 341,
-    "dob": "24/09/2009",
+    "dob": "2009-09-24",
     "ageCategory": "Under 19",
     "gender": "Male",
     "events": [
       "Shot Put",
-      "Discus Throw",
-      "Long Jump"
+      "Discus Throw"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794207987469-VAIBHAV_V_NAIR.jpg",
     "timestamp": "9/11/2026, 07:06:28"
