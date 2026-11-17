@@ -5691,5 +5691,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794891286181-Jibin_Joseph.jpg",
     "timestamp": "17/11/2026, 04:54:47"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Vedhika DS",
+    "chest": 549,
+    "dob": "27/11/2012",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "800m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794892017306-Vedhika_DS.jpg",
+    "timestamp": "17/11/2026, 05:06:58"
   }
 ]
