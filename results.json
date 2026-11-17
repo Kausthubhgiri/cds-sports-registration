@@ -5680,5 +5680,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794891197240-Sanjay_S_J.jpg",
     "timestamp": "17/11/2026, 04:53:18"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Jibin Joseph",
+    "chest": 548,
+    "dob": "21/02/2014",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794891286181-Jibin_Joseph.jpg",
+    "timestamp": "17/11/2026, 04:54:47"
   }
 ]
