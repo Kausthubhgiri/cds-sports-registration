@@ -5667,5 +5667,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794470311901-DEVANAND.jpg",
     "timestamp": "12/11/2026, 07:58:33"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Sanjay S.J",
+    "chest": 547,
+    "dob": "08/06/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794891197240-Sanjay_S_J.jpg",
+    "timestamp": "17/11/2026, 04:53:18"
   }
 ]
