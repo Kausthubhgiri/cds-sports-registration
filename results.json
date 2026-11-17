@@ -5704,5 +5704,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794892017306-Vedhika_DS.jpg",
     "timestamp": "17/11/2026, 05:06:58"
+  },
+  {
+    "school": "A.R.R PUBLIC SCHOOL",
+    "name": "Ayisha Fathima",
+    "chest": 550,
+    "dob": "01/12/2011",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "1500m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794893775376-Ayisha_Fathima.jpg",
+    "timestamp": "17/11/2026, 05:36:16"
   }
 ]
