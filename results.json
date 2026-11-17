@@ -4358,12 +4358,11 @@
     "school": "A.R.R PUBLIC SCHOOL",
     "name": "NANDINI A R",
     "chest": 534,
-    "dob": "02/12/2012",
+    "dob": "2012-12-02",
     "ageCategory": "Under 17",
     "gender": "Female",
     "events": [
       "100m Race",
-      "Long Jump",
       "High Jump",
       "4x100m Relay"
     ],
