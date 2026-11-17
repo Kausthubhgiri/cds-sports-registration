@@ -4374,12 +4374,10 @@
     "school": "A.R.R PUBLIC SCHOOL",
     "name": "AKSHARA S KUMAR",
     "chest": 535,
-    "dob": "13/08/2010",
+    "dob": "2010-08-13",
     "ageCategory": "Under 17",
     "gender": "Female",
     "events": [
-      "800m Race",
-      "1500m Race",
       "Long Jump",
       "4x100m Relay",
       "4x400m Relay"
