@@ -499,6 +499,7 @@
 
 <style id="live-camera-capture-styles">
 .camera-actions{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 12px}
+#photo{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 .camera-action{flex:1;min-width:150px;padding:12px 15px;border:1px solid rgba(109,124,255,.35);border-radius:13px;background:linear-gradient(135deg,rgba(109,124,255,.2),rgba(0,216,255,.1));color:#eef2ff;font-weight:800;cursor:pointer}
 .camera-action.secondary{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.13)}
 .camera-help{display:block;color:#9daac3;font-size:.78rem;margin:3px 0 8px}
@@ -622,7 +623,7 @@
         <label><input type="checkbox" name="events" value="50m Race">50m Race</label><label><input type="checkbox" name="events" value="100m Race">100m Race</label><label><input type="checkbox" name="events" value="200m Race">200m Race</label><label><input type="checkbox" name="events" value="400m Race">400m Race</label><label><input type="checkbox" name="events" value="800m Race">800m Race</label><label><input type="checkbox" name="events" value="1500m Race">1500m Race</label><label id="under19-3000m-option" style="display:none"><input type="checkbox" name="events" value="3000m Race">3000m Race <span style="color:#aab6ff;font-size:.8em">(Under 19 only)</span></label><label><input type="checkbox" name="events" value="Shot Put">Shot Put</label><label><input type="checkbox" name="events" value="Discus Throw">Discus Throw</label><label><input type="checkbox" name="events" value="Long Jump">Long Jump</label><label><input type="checkbox" name="events" value="High Jump">High Jump</label><label><input type="checkbox" name="events" value="4x100m Relay" class="relay">4x100m Relay</label><label><input type="checkbox" name="events" value="4x400m Relay" class="relay">4x400m Relay</label>
       </div>
     </fieldset>
-    <label for="photo">Participant Photo</label><input type="file" id="photo" name="photo" accept="image/png,image/jpeg,image/jpg"><img id="preview" alt="Photo Preview" style="display:none;">
+    <input type="file" id="photo" name="photo" accept="image/png,image/jpeg,image/jpg"><img id="preview" alt="Photo Preview" style="display:none;">
     <div class="camera-actions">
       <button class="camera-action" id="openCameraBtn" type="button">📷 Capture Live Photo</button>
       <button class="camera-action secondary" id="choosePhotoBtn" type="button">Choose from Device</button>
