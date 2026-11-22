@@ -496,6 +496,31 @@
 @media(max-width:760px){.premium-school-trigger{min-height:57px;padding:15px 61px 15px 17px;font-size:.95rem}.premium-school-options{max-height:245px}}
 </style>
 
+
+<style id="live-camera-capture-styles">
+.camera-actions{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 12px}
+.camera-action{flex:1;min-width:150px;padding:12px 15px;border:1px solid rgba(109,124,255,.35);border-radius:13px;background:linear-gradient(135deg,rgba(109,124,255,.2),rgba(0,216,255,.1));color:#eef2ff;font-weight:800;cursor:pointer}
+.camera-action.secondary{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.13)}
+.camera-help{display:block;color:#9daac3;font-size:.78rem;margin:3px 0 8px}
+#preview{max-width:180px;max-height:180px;object-fit:cover}
+.camera-modal{display:none;position:fixed;inset:0;z-index:2147483000;background:rgba(3,7,16,.88);backdrop-filter:blur(16px);padding:18px;align-items:center;justify-content:center}
+.camera-modal.open{display:flex}
+.camera-card{width:min(100%,680px);max-height:94vh;overflow:auto;border:1px solid rgba(255,255,255,.16);border-radius:22px;background:#0c1221;color:#f3f6ff;box-shadow:0 30px 100px rgba(0,0,0,.65);padding:18px}
+.camera-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
+.camera-head h3{margin:0;font-size:1.15rem}.camera-head p{margin:3px 0 0;color:#9daac3;font-size:.8rem}
+.camera-close{width:38px;height:38px;border-radius:11px;background:rgba(255,255,255,.08);color:#fff;font-size:21px}
+.camera-stage{position:relative;width:100%;overflow:hidden;border-radius:16px;background:#02050a;aspect-ratio:4/3;display:grid;place-items:center}
+#cameraVideo{width:100%;height:100%;object-fit:cover;display:block}
+.camera-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(to right,transparent 33.15%,rgba(255,255,255,.72) 33.33%,transparent 33.55%,transparent 66.45%,rgba(255,255,255,.72) 66.67%,transparent 66.85%),linear-gradient(to bottom,transparent 33.15%,rgba(255,255,255,.72) 33.33%,transparent 33.55%,transparent 66.45%,rgba(255,255,255,.72) 66.67%,transparent 66.85%)}
+.camera-stage:after{content:"";position:absolute;inset:8%;border:1px solid rgba(255,255,255,.35);border-radius:10px;pointer-events:none}
+.camera-status{min-height:22px;color:#aeb9d0;font-size:.8rem;margin:9px 2px}
+.camera-controls{display:flex;gap:9px;flex-wrap:wrap;margin-top:10px}
+.camera-controls button{flex:1;min-width:115px;padding:12px;border-radius:11px;font-weight:800}
+#capturePhotoBtn{background:linear-gradient(135deg,#7584ff,#4d5df0);color:#fff}
+#switchCameraBtn,#cancelCameraBtn{background:rgba(255,255,255,.08);color:#e8edff;border:1px solid rgba(255,255,255,.12)}
+@media(max-width:520px){.camera-modal{padding:10px}.camera-card{padding:13px;border-radius:17px}.camera-controls button{min-width:calc(50% - 8px)}}
+</style>
+
 </head>
 <body>
 <video autoplay muted loop playsinline id="bgVideoDesktop"><source src="desktop-bg.mp4" type="video/mp4"></video>
@@ -598,6 +623,29 @@
       </div>
     </fieldset>
     <label for="photo">Participant Photo</label><input type="file" id="photo" name="photo" accept="image/png,image/jpeg,image/jpg"><img id="preview" alt="Photo Preview" style="display:none;">
+    <div class="camera-actions">
+      <button class="camera-action" id="openCameraBtn" type="button">📷 Capture Live Photo</button>
+      <button class="camera-action secondary" id="choosePhotoBtn" type="button">Choose from Device</button>
+    </div>
+    <small class="camera-help">Use your phone or computer camera, or upload an existing photo. A live framing grid will help position the participant.</small>
+    <div class="camera-modal" id="cameraModal" role="dialog" aria-modal="true" aria-labelledby="cameraTitle">
+      <div class="camera-card">
+        <div class="camera-head">
+          <div><h3 id="cameraTitle">Live Photo Capture</h3><p>Position the participant inside the frame using the grid lines.</p></div>
+          <button class="camera-close" id="closeCameraBtn" type="button" aria-label="Close camera">×</button>
+        </div>
+        <div class="camera-stage">
+          <video id="cameraVideo" autoplay playsinline muted></video>
+          <div class="camera-grid" aria-hidden="true"></div>
+        </div>
+        <div class="camera-status" id="cameraStatus" role="status" aria-live="polite">Starting camera…</div>
+        <div class="camera-controls">
+          <button id="switchCameraBtn" type="button">↻ Switch Camera</button>
+          <button id="capturePhotoBtn" type="button">Capture Photo</button>
+          <button id="cancelCameraBtn" type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
     <button type="submit">Submit Registration →</button>
   </form>
   <div id="status" role="status" aria-live="polite"></div>
@@ -941,6 +989,98 @@ photoInput.addEventListener('change', () => {
   };
   reader.readAsDataURL(file);
 });
+
+
+// Live camera capture (works on HTTPS sites and localhost).
+(() => {
+  const openBtn = document.getElementById('openCameraBtn');
+  const chooseBtn = document.getElementById('choosePhotoBtn');
+  const modal = document.getElementById('cameraModal');
+  const video = document.getElementById('cameraVideo');
+  const status = document.getElementById('cameraStatus');
+  const captureBtn = document.getElementById('capturePhotoBtn');
+  const switchBtn = document.getElementById('switchCameraBtn');
+  const closeBtn = document.getElementById('closeCameraBtn');
+  const cancelBtn = document.getElementById('cancelCameraBtn');
+  let stream = null;
+  let facingMode = 'environment';
+
+  function stopCamera() {
+    if (stream) stream.getTracks().forEach(track => track.stop());
+    stream = null;
+    video.srcObject = null;
+  }
+  function closeCamera() {
+    stopCamera();
+    modal.classList.remove('open');
+  }
+  async function startCamera() {
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+      status.textContent = 'Camera access is unavailable. Open this site over HTTPS or choose a photo from your device.';
+      return;
+    }
+    stopCamera();
+    status.textContent = 'Requesting camera permission…';
+    try {
+      stream = await navigator.mediaDevices.getUserMedia({
+        audio: false,
+        video: { facingMode: { ideal: facingMode }, width: { ideal: 1920 }, height: { ideal: 1440 } }
+      });
+      video.srcObject = stream;
+      await video.play();
+      status.textContent = 'Camera ready. Align the participant with the grid and capture.';
+    } catch (err) {
+      const messages = {
+        NotAllowedError: 'Camera permission was denied. Allow camera access in your browser settings.',
+        NotFoundError: 'No camera was found on this device.',
+        NotReadableError: 'The camera is already in use by another application.'
+      };
+      status.textContent = messages[err.name] || 'Could not start the camera. Check browser permission or choose a photo instead.';
+      stopCamera();
+    }
+  }
+  openBtn.addEventListener('click', async () => {
+    modal.classList.add('open');
+    await startCamera();
+  });
+  chooseBtn.addEventListener('click', () => photoInput.click());
+  switchBtn.addEventListener('click', async () => {
+    facingMode = facingMode === 'environment' ? 'user' : 'environment';
+    await startCamera();
+  });
+  captureBtn.addEventListener('click', () => {
+    if (!stream || !video.videoWidth || !video.videoHeight) {
+      status.textContent = 'Camera is not ready yet.';
+      return;
+    }
+    const canvas = document.createElement('canvas');
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    const ctx = canvas.getContext('2d');
+    if (facingMode === 'user') {
+      ctx.translate(canvas.width, 0);
+      ctx.scale(-1, 1);
+    }
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    canvas.toBlob(blob => {
+      if (!blob) {
+        status.textContent = 'Could not capture this photo. Please try again.';
+        return;
+      }
+      const file = new File([blob], `participant-live-${Date.now()}.jpg`, { type: 'image/jpeg', lastModified: Date.now() });
+      const transfer = new DataTransfer();
+      transfer.items.add(file);
+      photoInput.files = transfer.files;
+      photoInput.dispatchEvent(new Event('change', { bubbles: true }));
+      closeCamera();
+      showPopup('Live photo captured. Review the preview before submitting.');
+    }, 'image/jpeg', 0.9);
+  }, 'image/jpeg', 0.9);
+  [closeBtn, cancelBtn].forEach(btn => btn.addEventListener('click', closeCamera));
+  modal.addEventListener('click', e => { if (e.target === modal) closeCamera(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('open')) closeCamera(); });
+  window.addEventListener('pagehide', stopCamera);
+})();
 
 </script>
 <script>
