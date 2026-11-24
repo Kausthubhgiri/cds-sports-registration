@@ -5735,11 +5735,12 @@
     "school": "Dr GR PUBLIC SCHOOL",
     "name": "Naveen Sidharth S",
     "chest": 202,
-    "dob": "03/12/2014",
+    "dob": "2014-12-03",
     "ageCategory": "Under 12",
     "gender": "Male",
     "events": [
-      "Long Jump"
+      "Long Jump",
+      "4x100m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795497140498-Naveen_Sidharth_S.jpg",
     "timestamp": "24/11/2026, 05:12:21"
