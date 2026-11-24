@@ -4460,19 +4460,6 @@
   },
   {
     "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
-    "name": "ADIL MOHAMMED",
-    "chest": 803,
-    "dob": "2013-09-05",
-    "ageCategory": "Under 14",
-    "gender": "Male",
-    "events": [
-      "200m Race"
-    ],
-    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794304979648-ADIL_MOHAMMED.jpg",
-    "timestamp": "10/11/2026, 10:03:00"
-  },
-  {
-    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
     "name": "NAVANEETH M A",
     "chest": 804,
     "dob": "09/04/2014",
