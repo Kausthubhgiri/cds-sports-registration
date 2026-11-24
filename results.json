@@ -6013,5 +6013,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498788818-IRIN_R_GEORGE_ODAL.jpg",
     "timestamp": "24/11/2026, 05:39:50"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "SNEHA B.S",
+    "chest": 222,
+    "dob": "15/04/2014",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Long Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498835887-SNEHA_B_S.jpg",
+    "timestamp": "24/11/2026, 05:40:36"
   }
 ]
