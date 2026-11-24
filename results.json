@@ -6363,5 +6363,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795510117694-Sourabh_M.jpg",
     "timestamp": "24/11/2026, 08:48:39"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "NEERAJ RAJESH",
+    "chest": 841,
+    "dob": "07/11/2014",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "200m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795511355506-NEERAJ_RAJESH.jpg",
+    "timestamp": "24/11/2026, 09:09:16"
   }
 ]
