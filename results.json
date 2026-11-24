@@ -6231,5 +6231,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795503994260-ABHISHEK_S_S.jpg",
     "timestamp": "24/11/2026, 07:06:35"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ADITHYAN U",
+    "chest": 237,
+    "dob": "05/06/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "3000m Race",
+      "Discus Throw",
+      "Long Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795504076163-ADITHYAN_U.jpg",
+    "timestamp": "24/11/2026, 07:07:57"
   }
 ]
