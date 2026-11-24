@@ -5717,5 +5717,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794893775376-Ayisha_Fathima.jpg",
     "timestamp": "17/11/2026, 05:36:16"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "Don Mosas D.S",
+    "chest": 201,
+    "dob": "19/03/2015",
+    "ageCategory": "Under 12",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795497074912-Don_Mosas_D_S.jpg",
+    "timestamp": "24/11/2026, 05:11:16"
   }
 ]
