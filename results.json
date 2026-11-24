@@ -5927,5 +5927,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498214243-ABHINAV_V_R.jpg",
     "timestamp": "24/11/2026, 05:30:15"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "DEVA NANDAN A.P",
+    "chest": 216,
+    "dob": "18/05/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498364522-DEVA_NANDAN_A_P.jpg",
+    "timestamp": "24/11/2026, 05:32:46"
   }
 ]
