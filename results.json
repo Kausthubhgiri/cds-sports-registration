@@ -5954,5 +5954,22 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498428539-ADITHYAN_S.jpg",
     "timestamp": "24/11/2026, 05:33:49"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "PARVANA KRISHNA R",
+    "chest": 218,
+    "dob": "03/03/2014",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "400m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498495255-PARVANA_KRISHNA_R.jpg",
+    "timestamp": "24/11/2026, 05:34:56"
   }
 ]
