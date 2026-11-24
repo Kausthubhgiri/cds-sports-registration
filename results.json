@@ -6261,5 +6261,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795504223247-ROHITH_SHAJI.jpg",
     "timestamp": "24/11/2026, 07:10:24"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "NIRANJAN V",
+    "chest": 239,
+    "dob": "20/01/2010",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "1500m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795504295507-NIRANJAN_V.jpg",
+    "timestamp": "24/11/2026, 07:11:36"
   }
 ]
