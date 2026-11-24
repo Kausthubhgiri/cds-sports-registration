@@ -5790,5 +5790,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795497401209-Darshith_M_Biju.jpg",
     "timestamp": "24/11/2026, 05:16:42"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "Aadi Dev D.S",
+    "chest": 206,
+    "dob": "23/12/2014",
+    "ageCategory": "Under 12",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795497451977-Aadi_Dev_D_S.jpg",
+    "timestamp": "24/11/2026, 05:17:33"
   }
 ]
