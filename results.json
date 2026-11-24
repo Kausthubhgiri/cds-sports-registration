@@ -6026,5 +6026,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498835887-SNEHA_B_S.jpg",
     "timestamp": "24/11/2026, 05:40:36"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "VEDHIKA A.S",
+    "chest": 223,
+    "dob": "29/01/2014",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498879467-VEDHIKA_A_S.jpg",
+    "timestamp": "24/11/2026, 05:41:20"
   }
 ]
