@@ -5913,5 +5913,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498160208-H_S_HARSHAVARDHAN.jpg",
     "timestamp": "24/11/2026, 05:29:21"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ABHINAV V.R",
+    "chest": 215,
+    "dob": "30/05/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498214243-ABHINAV_V_R.jpg",
+    "timestamp": "24/11/2026, 05:30:15"
   }
 ]
