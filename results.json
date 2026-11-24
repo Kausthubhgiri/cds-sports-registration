@@ -6247,5 +6247,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795504076163-ADITHYAN_U.jpg",
     "timestamp": "24/11/2026, 07:07:57"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ROHITH SHAJI",
+    "chest": 238,
+    "dob": "26/10/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "200m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795504223247-ROHITH_SHAJI.jpg",
+    "timestamp": "24/11/2026, 07:10:24"
   }
 ]
