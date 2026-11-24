@@ -6216,5 +6216,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795503570408-ARCHITHA_J_P.jpg",
     "timestamp": "24/11/2026, 06:59:31"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ABHISHEK S.S",
+    "chest": 236,
+    "dob": "06/02/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "1500m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795503994260-ABHISHEK_S_S.jpg",
+    "timestamp": "24/11/2026, 07:06:35"
   }
 ]
