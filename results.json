@@ -5744,5 +5744,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795497140498-Naveen_Sidharth_S.jpg",
     "timestamp": "24/11/2026, 05:12:21"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "Neeraj S",
+    "chest": 203,
+    "dob": "30/01/2015",
+    "ageCategory": "Under 12",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795497241823-Neeraj_S.jpg",
+    "timestamp": "24/11/2026, 05:14:03"
   }
 ]
