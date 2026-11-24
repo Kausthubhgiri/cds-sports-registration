@@ -5900,5 +5900,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498033267-Abhinav_S_A.jpg",
     "timestamp": "24/11/2026, 05:27:14"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "H.S HARSHAVARDHAN",
+    "chest": 214,
+    "dob": "22/04/2014",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498160208-H_S_HARSHAVARDHAN.jpg",
+    "timestamp": "24/11/2026, 05:29:21"
   }
 ]
