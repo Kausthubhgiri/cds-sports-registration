@@ -5846,5 +5846,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795497671216-Shenaha_Shan_S_S.jpg",
     "timestamp": "24/11/2026, 05:21:12"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "Aadriti Parvathi Nair",
+    "chest": 210,
+    "dob": "23/05/2015",
+    "ageCategory": "Under 12",
+    "gender": "Female",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795497721351-Aadriti_Parvathi_Nair.jpg",
+    "timestamp": "24/11/2026, 05:22:02"
   }
 ]
