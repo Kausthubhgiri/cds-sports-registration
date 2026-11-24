@@ -5999,5 +5999,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498697844-NANMA_ELSA_JOHN.jpg",
     "timestamp": "24/11/2026, 05:38:18"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "IRIN R GEORGE ODAL",
+    "chest": 221,
+    "dob": "28/04/2014",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498788818-IRIN_R_GEORGE_ODAL.jpg",
+    "timestamp": "24/11/2026, 05:39:50"
   }
 ]
