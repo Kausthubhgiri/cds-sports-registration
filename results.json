@@ -6039,5 +6039,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498879467-VEDHIKA_A_S.jpg",
     "timestamp": "24/11/2026, 05:41:20"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "EVANIA S SHIBU",
+    "chest": 224,
+    "dob": "18/01/2015",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498940184-EVANIA_S_SHIBU.jpg",
+    "timestamp": "24/11/2026, 05:42:21"
   }
 ]
