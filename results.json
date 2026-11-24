@@ -6344,5 +6344,22 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795504724164-ABDULLA_SUDHEER_ABDUL_REHMAN.jpg",
     "timestamp": "24/11/2026, 07:18:45"
+  },
+  {
+    "school": "CHINTHALAYA VIDYALAYA",
+    "name": "ARUNIMA B.S",
+    "chest": 1064,
+    "dob": "30/07/2012",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "1500m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795506615002-ARUNIMA_B_S.jpg",
+    "timestamp": "24/11/2026, 07:50:16"
   }
 ]
