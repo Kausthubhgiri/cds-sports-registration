@@ -3353,12 +3353,11 @@
     "school": "CHINTHALAYA VIDYALAYA",
     "name": "Abi sajith",
     "chest": 1030,
-    "dob": "25/02/2009",
+    "dob": "2009-02-25",
     "ageCategory": "Under 19",
     "gender": "Male",
     "events": [
-      "Shot Put",
-      "Discus Throw"
+      "Shot Put"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794242910831-Abi_sajith.jpg",
     "timestamp": "9/11/2026, 16:48:31"
