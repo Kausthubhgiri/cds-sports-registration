@@ -5940,5 +5940,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498364522-DEVA_NANDAN_A_P.jpg",
     "timestamp": "24/11/2026, 05:32:46"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ADITHYAN S",
+    "chest": 217,
+    "dob": "30/09/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "800m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498428539-ADITHYAN_S.jpg",
+    "timestamp": "24/11/2026, 05:33:49"
   }
 ]
