@@ -5885,5 +5885,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795497909416-Sreemithra_M_S.jpg",
     "timestamp": "24/11/2026, 05:25:10"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "Abhinav S.A",
+    "chest": 213,
+    "dob": "08/06/2013",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "Long Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498033267-Abhinav_S_A.jpg",
+    "timestamp": "24/11/2026, 05:27:14"
   }
 ]
