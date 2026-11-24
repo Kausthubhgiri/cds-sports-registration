@@ -6186,5 +6186,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795503154539-ANANTHA_LESKHMI_A.jpg",
     "timestamp": "24/11/2026, 06:52:35"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ARADHANA PRANAV",
+    "chest": 234,
+    "dob": "03/01/2013",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Long Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795503389885-ARADHANA_PRANAV.jpg",
+    "timestamp": "24/11/2026, 06:56:31"
   }
 ]
