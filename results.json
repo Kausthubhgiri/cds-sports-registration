@@ -5986,5 +5986,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498569472-HAFSA_UVAIS_A.jpg",
     "timestamp": "24/11/2026, 05:36:10"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "NANMA ELSA JOHN",
+    "chest": 220,
+    "dob": "18/03/2013",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "200m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795498697844-NANMA_ELSA_JOHN.jpg",
+    "timestamp": "24/11/2026, 05:38:18"
   }
 ]
