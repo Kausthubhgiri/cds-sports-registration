@@ -6290,5 +6290,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795504361944-KARTHIKEYAN_J_N.jpg",
     "timestamp": "24/11/2026, 07:12:43"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ABHINAV S.P",
+    "chest": 241,
+    "dob": "07/11/2008",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795504502265-ABHINAV_S_P.jpg",
+    "timestamp": "24/11/2026, 07:15:03"
   }
 ]
