@@ -6067,5 +6067,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795499015003-JUAN_JOSHI.jpg",
     "timestamp": "24/11/2026, 05:43:36"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "JAYADEV R.S",
+    "chest": 226,
+    "dob": "25/04/2014",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795499078570-JAYADEV_R_S.jpg",
+    "timestamp": "24/11/2026, 05:44:39"
   }
 ]
