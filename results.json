@@ -6392,5 +6392,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795511423666-SABARI_SAJAN.jpg",
     "timestamp": "24/11/2026, 09:10:24"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "MUHAMMED SUFIYAN N.H",
+    "chest": 843,
+    "dob": "25/03/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795511526487-MUHAMMED_SUFIYAN_N_H.jpg",
+    "timestamp": "24/11/2026, 09:12:07"
   }
 ]
