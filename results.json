@@ -6201,5 +6201,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795503389885-ARADHANA_PRANAV.jpg",
     "timestamp": "24/11/2026, 06:56:31"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ARCHITHA J.P",
+    "chest": 235,
+    "dob": "29/06/2013",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "1500m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795503570408-ARCHITHA_J_P.jpg",
+    "timestamp": "24/11/2026, 06:59:31"
   }
 ]
