@@ -6276,5 +6276,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795504295507-NIRANJAN_V.jpg",
     "timestamp": "24/11/2026, 07:11:36"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "KARTHIKEYAN J.N",
+    "chest": 240,
+    "dob": "28/05/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "Long Jump",
+      "High Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795504361944-KARTHIKEYAN_J_N.jpg",
+    "timestamp": "24/11/2026, 07:12:43"
   }
 ]
