@@ -6125,5 +6125,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795502665504-AAROK_ANITTAN.jpg",
     "timestamp": "24/11/2026, 06:44:26"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ABHIDEV PRANAV",
+    "chest": 230,
+    "dob": "03/01/2013",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Long Jump",
+      "High Jump",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795502819161-ABHIDEV_PRANAV.jpg",
+    "timestamp": "24/11/2026, 06:47:00"
   }
 ]
