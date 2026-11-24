@@ -6376,5 +6376,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795511355506-NEERAJ_RAJESH.jpg",
     "timestamp": "24/11/2026, 09:09:16"
+  },
+  {
+    "school": "RAJA RAVI VARMA CENTRAL SCHOOL",
+    "name": "SABARI SAJAN",
+    "chest": 842,
+    "dob": "28/05/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "Discus Throw",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795511423666-SABARI_SAJAN.jpg",
+    "timestamp": "24/11/2026, 09:10:24"
   }
 ]
