@@ -6362,5 +6362,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795506615002-ARUNIMA_B_S.jpg",
     "timestamp": "24/11/2026, 07:50:16"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "Sourabh M",
+    "chest": 245,
+    "dob": "04/11/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795510117694-Sourabh_M.jpg",
+    "timestamp": "24/11/2026, 08:48:39"
   }
 ]
