@@ -6174,12 +6174,13 @@
     "school": "Dr GR PUBLIC SCHOOL",
     "name": "ANANTHA LESKHMI A",
     "chest": 233,
-    "dob": "14/08/2012",
+    "dob": "2012-08-14",
     "ageCategory": "Under 17",
     "gender": "Female",
     "events": [
       "400m Race",
       "800m Race",
+      "Long Jump",
       "4x100m Relay",
       "4x400m Relay"
     ],
