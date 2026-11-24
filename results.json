@@ -5760,5 +5760,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795497241823-Neeraj_S.jpg",
     "timestamp": "24/11/2026, 05:14:03"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "Sainath Suvi",
+    "chest": 204,
+    "dob": "14/06/2015",
+    "ageCategory": "Under 12",
+    "gender": "Male",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795497320749-Sainath_Suvi.jpg",
+    "timestamp": "24/11/2026, 05:15:22"
   }
 ]
