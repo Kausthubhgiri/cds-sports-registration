@@ -6111,5 +6111,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795502608183-ISHAN_AHAMED.jpg",
     "timestamp": "24/11/2026, 06:43:29"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "AAROK ANITTAN",
+    "chest": 229,
+    "dob": "31/12/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Long Jump",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795502665504-AAROK_ANITTAN.jpg",
+    "timestamp": "24/11/2026, 06:44:26"
   }
 ]
