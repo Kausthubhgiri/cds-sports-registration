@@ -6083,5 +6083,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795499078570-JAYADEV_R_S.jpg",
     "timestamp": "24/11/2026, 05:44:39"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "NIVED P.S",
+    "chest": 227,
+    "dob": "16/12/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "1500m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795502526244-NIVED_P_S.jpg",
+    "timestamp": "24/11/2026, 06:42:07"
   }
 ]
