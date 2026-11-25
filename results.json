@@ -6539,5 +6539,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795584339689-VAIKA_V_S.jpg",
     "timestamp": "25/11/2026, 05:25:40"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ISHITHA M",
+    "chest": 257,
+    "dob": "27/03/2011",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795584476361-ISHITHA_M.jpg",
+    "timestamp": "25/11/2026, 05:27:57"
   }
 ]
