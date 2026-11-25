@@ -6420,5 +6420,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795581436172-DANI_B_JAYAN.jpg",
     "timestamp": "25/11/2026, 04:37:17"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "RISHIKESH JOSEPH PREMAL",
+    "chest": 249,
+    "dob": "22/03/2012",
+    "ageCategory": "Under 14",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "400m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795581605575-RISHIKESH_JOSEPH_PREMAL.jpg",
+    "timestamp": "25/11/2026, 04:40:06"
   }
 ]
