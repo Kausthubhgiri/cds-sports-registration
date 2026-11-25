@@ -6689,5 +6689,22 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795595407762-ABHINAV_A_ARUN.jpg",
     "timestamp": "25/11/2026, 08:30:09"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "AKSHIMA S AJITH",
+    "chest": 269,
+    "dob": "12/04/2010",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "200m Race",
+      "Long Jump",
+      "High Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795595622184-AKSHIMA_S_AJITH.jpg",
+    "timestamp": "25/11/2026, 08:33:43"
   }
 ]
