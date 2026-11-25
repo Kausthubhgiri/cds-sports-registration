@@ -6707,5 +6707,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795595622184-AKSHIMA_S_AJITH.jpg",
     "timestamp": "25/11/2026, 08:33:43"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ABHISHEK S.A",
+    "chest": 270,
+    "dob": "31/05/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795596613285-ABHISHEK_S_A.jpg",
+    "timestamp": "25/11/2026, 08:50:14"
   }
 ]
