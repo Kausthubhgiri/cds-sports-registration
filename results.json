@@ -6497,5 +6497,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795583703404-MUHAMMED_ARHAM_J_R.jpg",
     "timestamp": "25/11/2026, 05:15:04"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "SYGA LEKSHMY R",
+    "chest": 254,
+    "dob": "05/01/2012",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795584206139-SYGA_LEKSHMY_R.jpg",
+    "timestamp": "25/11/2026, 05:23:27"
   }
 ]
