@@ -6662,5 +6662,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795589229079-MOHAMMED_SADATH_S.jpg",
     "timestamp": "25/11/2026, 06:47:10"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "FLEMIN SALOMAN",
+    "chest": 267,
+    "dob": "24/01/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795590212330-FLEMIN_SALOMAN.jpg",
+    "timestamp": "25/11/2026, 07:03:33"
   }
 ]
