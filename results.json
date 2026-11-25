@@ -6468,5 +6468,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795581952667-ANJANA_S_S.jpg",
     "timestamp": "25/11/2026, 04:45:53"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ANANTHANATH S.J",
+    "chest": 252,
+    "dob": "01/03/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "800m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795582412141-ANANTHANATH_S_J.jpg",
+    "timestamp": "25/11/2026, 04:53:33"
   }
 ]
