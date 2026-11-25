@@ -6407,5 +6407,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795581378036-AMRITHA_KRISHNA_R_S.jpg",
     "timestamp": "25/11/2026, 04:36:19"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "DANI B JAYAN",
+    "chest": 248,
+    "dob": "14/03/2010",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "3000m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795581436172-DANI_B_JAYAN.jpg",
+    "timestamp": "25/11/2026, 04:37:17"
   }
 ]
