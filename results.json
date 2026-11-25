@@ -6676,5 +6676,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795590212330-FLEMIN_SALOMAN.jpg",
     "timestamp": "25/11/2026, 07:03:33"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ABHINAV A ARUN",
+    "chest": 268,
+    "dob": "26/08/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "400m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795595407762-ABHINAV_A_ARUN.jpg",
+    "timestamp": "25/11/2026, 08:30:09"
   }
 ]
