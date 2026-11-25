@@ -6579,5 +6579,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795584663151-RAJUL_S.jpg",
     "timestamp": "25/11/2026, 05:31:04"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "VAISHNAV B.R",
+    "chest": 260,
+    "dob": "14/11/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "High Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795585302374-VAISHNAV_B_R.jpg",
+    "timestamp": "25/11/2026, 05:41:43"
   }
 ]
