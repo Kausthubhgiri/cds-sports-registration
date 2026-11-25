@@ -6392,5 +6392,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795580962939-AANSIYA_V_S.jpg",
     "timestamp": "25/11/2026, 04:29:23"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "AMRITHA KRISHNA R.S",
+    "chest": 247,
+    "dob": "20/09/2010",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "1500m Race",
+      "3000m Race",
+      "Long Jump"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795581378036-AMRITHA_KRISHNA_R_S.jpg",
+    "timestamp": "25/11/2026, 04:36:19"
   }
 ]
