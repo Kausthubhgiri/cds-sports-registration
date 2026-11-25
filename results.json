@@ -6481,5 +6481,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795582412141-ANANTHANATH_S_J.jpg",
     "timestamp": "25/11/2026, 04:53:33"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "MUHAMMED ARHAM J.R",
+    "chest": 253,
+    "dob": "06/08/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795583703404-MUHAMMED_ARHAM_J_R.jpg",
+    "timestamp": "25/11/2026, 05:15:04"
   }
 ]
