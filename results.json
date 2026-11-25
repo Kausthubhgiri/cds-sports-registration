@@ -6524,5 +6524,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795584288491-DIYA_S_DONALD.jpg",
     "timestamp": "25/11/2026, 05:24:49"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "VAIKA V.S",
+    "chest": 256,
+    "dob": "13/10/2011",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795584339689-VAIKA_V_S.jpg",
+    "timestamp": "25/11/2026, 05:25:40"
   }
 ]
