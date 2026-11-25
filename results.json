@@ -6648,5 +6648,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795588883068-RICHIN_BEN.jpg",
     "timestamp": "25/11/2026, 06:41:24"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "MOHAMMED SADATH S",
+    "chest": 266,
+    "dob": "17/06/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "800m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795589229079-MOHAMMED_SADATH_S.jpg",
+    "timestamp": "25/11/2026, 06:47:10"
   }
 ]
