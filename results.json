@@ -6397,13 +6397,14 @@
     "school": "Dr GR PUBLIC SCHOOL",
     "name": "AMRITHA KRISHNA R.S",
     "chest": 247,
-    "dob": "20/09/2010",
+    "dob": "2010-09-20",
     "ageCategory": "Under 19",
     "gender": "Female",
     "events": [
       "1500m Race",
       "3000m Race",
-      "Long Jump"
+      "Long Jump",
+      "4x100m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795581378036-AMRITHA_KRISHNA_R_S.jpg",
     "timestamp": "25/11/2026, 04:36:19"
