@@ -6437,5 +6437,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795581605575-RISHIKESH_JOSEPH_PREMAL.jpg",
     "timestamp": "25/11/2026, 04:40:06"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ANAKHA J.A",
+    "chest": 250,
+    "dob": "05/10/2010",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "Discus Throw",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795581758123-ANAKHA_J_A.jpg",
+    "timestamp": "25/11/2026, 04:42:39"
   }
 ]
