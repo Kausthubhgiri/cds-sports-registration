@@ -5992,10 +5992,11 @@
     "school": "Dr GR PUBLIC SCHOOL",
     "name": "IRIN R GEORGE ODAL",
     "chest": 221,
-    "dob": "28/04/2014",
+    "dob": "2014-04-28",
     "ageCategory": "Under 14",
     "gender": "Female",
     "events": [
+      "100m Race",
       "Long Jump",
       "4x100m Relay"
     ],
