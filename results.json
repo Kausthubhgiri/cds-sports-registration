@@ -6621,5 +6621,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795588271009-SHAVIN_RAJ_W.jpg",
     "timestamp": "25/11/2026, 06:31:12"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ALSAFAN A",
+    "chest": 264,
+    "dob": "21/09/2010",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "400m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795588562947-ALSAFAN_A.jpg",
+    "timestamp": "25/11/2026, 06:36:04"
   }
 ]
