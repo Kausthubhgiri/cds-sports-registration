@@ -6592,5 +6592,20 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795585459340-PRATHEESHA_T_P.jpg",
     "timestamp": "25/11/2026, 05:44:20"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "NEVIN BLAZE A.N",
+    "chest": 262,
+    "dob": "03/11/2011",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795587200189-NEVIN_BLAZE_A_N.jpg",
+    "timestamp": "25/11/2026, 06:13:21"
   }
 ]
