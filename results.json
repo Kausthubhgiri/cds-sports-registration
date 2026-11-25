@@ -6592,5 +6592,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795585302374-VAISHNAV_B_R.jpg",
     "timestamp": "25/11/2026, 05:41:43"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "PRATHEESHA T.P",
+    "chest": 261,
+    "dob": "11/06/2009",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "1500m Race",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795585459340-PRATHEESHA_T_P.jpg",
+    "timestamp": "25/11/2026, 05:44:20"
   }
 ]
