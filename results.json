@@ -6511,5 +6511,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795584206139-SYGA_LEKSHMY_R.jpg",
     "timestamp": "25/11/2026, 05:23:27"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "DIYA S DONALD",
+    "chest": 255,
+    "dob": "02/04/2011",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795584288491-DIYA_S_DONALD.jpg",
+    "timestamp": "25/11/2026, 05:24:49"
   }
 ]
