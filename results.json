@@ -6635,5 +6635,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795588562947-ALSAFAN_A.jpg",
     "timestamp": "25/11/2026, 06:36:04"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "RICHIN BEN",
+    "chest": 265,
+    "dob": "23/11/2009",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795588883068-RICHIN_BEN.jpg",
+    "timestamp": "25/11/2026, 06:41:24"
   }
 ]
