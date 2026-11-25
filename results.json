@@ -6695,12 +6695,12 @@
     "school": "Dr GR PUBLIC SCHOOL",
     "name": "AKSHIMA S AJITH",
     "chest": 269,
-    "dob": "12/04/2010",
+    "dob": "2010-04-12",
     "ageCategory": "Under 19",
     "gender": "Female",
     "events": [
+      "100m Race",
       "200m Race",
-      "Long Jump",
       "High Jump",
       "4x100m Relay",
       "4x400m Relay"
