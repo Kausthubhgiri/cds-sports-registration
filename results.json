@@ -6552,5 +6552,18 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795584476361-ISHITHA_M.jpg",
     "timestamp": "25/11/2026, 05:27:57"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ANAGHA R.S",
+    "chest": 258,
+    "dob": "15/11/2009",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "Shot Put"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795584521219-ANAGHA_R_S.jpg",
+    "timestamp": "25/11/2026, 05:28:42"
   }
 ]
