@@ -2801,11 +2801,10 @@
     "school": "MODEL PUBLIC SCHOOL PALLIPURAM",
     "name": "Veda S S",
     "chest": 1513,
-    "dob": "06/08/2015",
+    "dob": "2015-08-06",
     "ageCategory": "Under 14",
     "gender": "Female",
     "events": [
-      "50m Race",
       "800m Race",
       "Long Jump"
     ],
