@@ -233,15 +233,6 @@
     if(!window.jspdf?.jsPDF||!window.jspdf?.jsPDF.API.autoTable)throw new Error('PDF library did not load. Check the internet connection or host the PDF library files locally.');
     if(!previousData.length)throw new Error('There are no participants to export.');
 
-    const schoolMap=new Map();
-    previousData.forEach(person=>{
-      const school=String(person.school||'Unassigned school').trim()||'Unassigned school';
-      if(!schoolMap.has(school))schoolMap.set(school,[]);
-      schoolMap.get(school).push(person);
-    });
-    const schools=[...schoolMap].sort(([a],[b])=>a.localeCompare(b,undefined,{sensitivity:'base'}));
-    if(!schools.length)throw new Error('No schools were found to export.');
-
     setProgress(true,'Building master registration PDF…');
     try {
       const {jsPDF}=window.jspdf;
@@ -249,58 +240,57 @@
       const pdfLogo=await loadPdfLogo();
       const eventOrder=new Map(ALL_EVENTS.map((event,index)=>[event,index]));
       const genderGroups=[
-        {label:'MALE PARTICIPANTS',match:g=>String(g||'').trim().toLowerCase().startsWith('m')},
-        {label:'FEMALE PARTICIPANTS',match:g=>String(g||'').trim().toLowerCase().startsWith('f')},
+        {label:'MALE',match:g=>String(g||'').trim().toLowerCase().startsWith('m')},
+        {label:'FEMALE',match:g=>String(g||'').trim().toLowerCase().startsWith('f')},
         {label:'OTHER / UNSPECIFIED',match:g=>!String(g||'').trim().toLowerCase().startsWith('m')&&!String(g||'').trim().toLowerCase().startsWith('f')}
       ];
+      const events=[...new Set(previousData.flatMap(p=>(p.events||[]).map(cleanEvent)).filter(Boolean))]
+        .sort((a,b)=>(eventOrder.get(a)??999)-(eventOrder.get(b)??999)||a.localeCompare(b,undefined,{sensitivity:'base'}));
+      let sectionStarted=false,photoCount=0,exportedGroups=0;
 
-      let exportedSchools=0,photoCount=0,sectionStarted=false;
+      // Master PDF: one page section per event + manually selected age category + gender.
+      // Every school is combined in the same section; school remains a visible sort column.
+      for(const event of events) {
+        const eventMembers=previousData.filter(p=>(p.events||[]).map(cleanEvent).includes(event));
+        for(const age of AGE_ORDER) {
+          const ageMembers=eventMembers.filter(p=>(p.ageCategory||'Not assigned')===age);
+          if(!ageMembers.length)continue;
 
-      for(const [school,schoolMembers] of schools) {
-        let schoolSectionStarted=false;
-        const events=[...new Set(schoolMembers.flatMap(p=>(p.events||[]).map(cleanEvent)).filter(Boolean))]
-          .sort((a,b)=>(eventOrder.get(a)??999)-(eventOrder.get(b)??999)||a.localeCompare(b));
-        if(!events.length)continue;
-
-        for(const event of events) {
-          const members=schoolMembers.filter(p=>(p.events||[]).map(cleanEvent).includes(event));
           for(const genderGroup of genderGroups) {
-            const genderMembers=members.filter(p=>genderGroup.match(p.gender));
-            if(!genderMembers.length)continue;
+            const members=ageMembers.filter(p=>genderGroup.match(p.gender));
+            if(!members.length)continue;
 
-            // Each event/gender section starts on a fresh page; long tables continue naturally.
+            members.sort((a,b)=>
+              String(a.school||'Unassigned school').trim().localeCompare(String(b.school||'Unassigned school').trim(),undefined,{sensitivity:'base'}) ||
+              String(a.name||'').localeCompare(String(b.name||''),undefined,{sensitivity:'base'}) ||
+              String(a.chest||'').localeCompare(String(b.chest||''),undefined,{numeric:true,sensitivity:'base'})
+            );
+
             if(sectionStarted)doc.addPage();
             pdfHeader(doc,pdfLogo);
             sectionStarted=true;
-            schoolSectionStarted=true;
-            let y=31;
+            exportedGroups++;
+            const y=31;
 
             doc.setFillColor(225,244,250);
             doc.roundedRect(14,y,269,7,1.5,1.5,'F');
             doc.setTextColor(10,75,120);doc.setFont('helvetica','bold');doc.setFontSize(10);
-            doc.text(`SCHOOL  •  ${school}`,17,y+4.8);
-            y+=10;
+            doc.text(`EVENT  •  ${event}`,17,y+4.8);
 
             doc.setFillColor(238,243,248);
-            doc.roundedRect(14,y,269,6.5,1,1,'F');
+            doc.roundedRect(14,y+10,269,7,1.5,1.5,'F');
             doc.setTextColor(35,65,90);doc.setFont('helvetica','bold');doc.setFontSize(8.5);
-            doc.text(`EVENT  •  ${event}  •  ${genderMembers.length} PARTICIPANTS`,17,y+4.5);
-            y+=9;
-
-            // Manual age category is preserved and sorted in the configured category order.
-            genderMembers.sort((a,b)=>
-              ageIndex(a.ageCategory)-ageIndex(b.ageCategory) ||
-              String(a.name||'').localeCompare(String(b.name||''),undefined,{sensitivity:'base'})
-            );
+            doc.text(`AGE CATEGORY  •  ${age}     |     GENDER  •  ${genderGroup.label}     |     ${members.length} PARTICIPANTS`,17,y+14.7);
 
             const body=[];
-            for(const person of genderMembers) {
+            for(const person of members) {
               photoCount++;
-              setProgress(true,`Building ${school} PDF · embedding photo ${photoCount}`);
+              setProgress(true,`Building master PDF · embedding photo ${photoCount} of ${members.length}`);
               const photo=await imageData(person.photoPath,person.gender);
               body.push([
                 {content:'',photo},
                 person.name||'—',
+                person.school||'Unassigned school',
                 person.chest||'—',
                 person.dob||'—',
                 person.ageCategory||'Not assigned',
@@ -309,14 +299,14 @@
             }
 
             doc.autoTable({
-              startY:y,
-              head:[['Photo','Participant','Chest','Date of birth','Age category','Gender']],
+              startY:y+21,
+              head:[['Photo','Participant','School','Chest','Date of birth','Age category','Gender']],
               body,
               margin:{left:14,right:14,top:28,bottom:17},
               theme:'grid',
-              styles:{font:'helvetica',fontSize:7,cellPadding:1.05,valign:'middle',lineColor:[217,226,236],lineWidth:.1,overflow:'linebreak'},
-              headStyles:{fillColor:[8,75,120],textColor:255,fontStyle:'bold',fontSize:6.8,cellPadding:1.35},
-              columnStyles:{0:{cellWidth:15},1:{cellWidth:76,fontStyle:'bold'},2:{cellWidth:20},3:{cellWidth:30},4:{cellWidth:45},5:{cellWidth:30}},
+              styles:{font:'helvetica',fontSize:6.8,cellPadding:1.05,valign:'middle',lineColor:[217,226,236],lineWidth:.1,overflow:'linebreak'},
+              headStyles:{fillColor:[8,75,120],textColor:255,fontStyle:'bold',fontSize:6.6,cellPadding:1.35},
+              columnStyles:{0:{cellWidth:14},1:{cellWidth:62,fontStyle:'bold'},2:{cellWidth:61},3:{cellWidth:17},4:{cellWidth:27},5:{cellWidth:40},6:{cellWidth:20}},
               didDrawCell:d=>{
                 const photo=d.cell.raw?.photo;
                 if(photo&&d.section==='body'&&d.column.index===0){
@@ -329,14 +319,12 @@
             });
           }
         }
-
-        if(schoolSectionStarted)exportedSchools++;
       }
 
-      if(!exportedSchools||!sectionStarted)throw new Error('No event registrations were found to export.');
+      if(!exportedGroups||!sectionStarted)throw new Error('No event registrations were found to export.');
       pdfFooter(doc);
       doc.save('cds-sports-master-register.pdf');
-      showToast(`Master PDF downloaded with ${exportedSchools} schools.`);
+      showToast(`Master PDF downloaded · ${exportedGroups} event/age/gender sections across all schools.`);
     } finally {
       setProgress(false);
     }
