@@ -6607,5 +6607,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795587200189-NEVIN_BLAZE_A_N.jpg",
     "timestamp": "25/11/2026, 06:13:21"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "SHAVIN RAJ W",
+    "chest": 263,
+    "dob": "20/05/2010",
+    "ageCategory": "Under 19",
+    "gender": "Male",
+    "events": [
+      "400m Race",
+      "800m Race"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795588271009-SHAVIN_RAJ_W.jpg",
+    "timestamp": "25/11/2026, 06:31:12"
   }
 ]
