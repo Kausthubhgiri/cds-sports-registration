@@ -6376,5 +6376,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795511355506-NEERAJ_RAJESH.jpg",
     "timestamp": "24/11/2026, 09:09:16"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "AANSIYA V.S",
+    "chest": 246,
+    "dob": "16/11/2016",
+    "ageCategory": "Under 12",
+    "gender": "Female",
+    "events": [
+      "50m Race",
+      "100m Race",
+      "200m Race",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795580962939-AANSIYA_V_S.jpg",
+    "timestamp": "25/11/2026, 04:29:23"
   }
 ]
