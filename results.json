@@ -6429,12 +6429,13 @@
     "school": "Dr GR PUBLIC SCHOOL",
     "name": "ANAKHA J.A",
     "chest": 250,
-    "dob": "05/10/2010",
+    "dob": "2010-10-05",
     "ageCategory": "Under 19",
     "gender": "Female",
     "events": [
       "100m Race",
       "Discus Throw",
+      "Long Jump",
       "4x100m Relay"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795581758123-ANAKHA_J_A.jpg",
