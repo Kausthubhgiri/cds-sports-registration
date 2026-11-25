@@ -6565,5 +6565,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795584521219-ANAGHA_R_S.jpg",
     "timestamp": "25/11/2026, 05:28:42"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "RAJUL S",
+    "chest": 259,
+    "dob": "27/09/2010",
+    "ageCategory": "Under 17",
+    "gender": "Male",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795584663151-RAJUL_S.jpg",
+    "timestamp": "25/11/2026, 05:31:04"
   }
 ]
