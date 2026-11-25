@@ -6722,5 +6722,22 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795596613285-ABHISHEK_S_A.jpg",
     "timestamp": "25/11/2026, 08:50:14"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "AVANTHIKA K.M",
+    "chest": 271,
+    "dob": "24/07/2011",
+    "ageCategory": "Under 17",
+    "gender": "Female",
+    "events": [
+      "100m Race",
+      "1500m Race",
+      "High Jump",
+      "4x100m Relay",
+      "4x400m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795598620437-AVANTHIKA_K_M.jpg",
+    "timestamp": "25/11/2026, 09:23:41"
   }
 ]
