@@ -6452,5 +6452,21 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795581758123-ANAKHA_J_A.jpg",
     "timestamp": "25/11/2026, 04:42:39"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "ANJANA S.S",
+    "chest": 251,
+    "dob": "15/04/2014",
+    "ageCategory": "Under 14",
+    "gender": "Female",
+    "events": [
+      "400m Race",
+      "800m Race",
+      "Shot Put",
+      "4x100m Relay"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795581952667-ANJANA_S_S.jpg",
+    "timestamp": "25/11/2026, 04:45:53"
   }
 ]
