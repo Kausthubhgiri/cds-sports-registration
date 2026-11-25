@@ -6145,21 +6145,6 @@
   },
   {
     "school": "Dr GR PUBLIC SCHOOL",
-    "name": "LAKSHMI SREE",
-    "chest": 232,
-    "dob": "12/09/2011",
-    "ageCategory": "Under 17",
-    "gender": "Female",
-    "events": [
-      "100m Race",
-      "4x100m Relay",
-      "4x400m Relay"
-    ],
-    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795503006228-LAKSHMI_SREE.jpg",
-    "timestamp": "24/11/2026, 06:50:07"
-  },
-  {
-    "school": "Dr GR PUBLIC SCHOOL",
     "name": "ANANTHA LESKHMI A",
     "chest": 233,
     "dob": "2012-08-14",
