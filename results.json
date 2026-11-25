@@ -6296,12 +6296,12 @@
     "school": "Dr GR PUBLIC SCHOOL",
     "name": "SREEHARI R.S",
     "chest": 242,
-    "dob": "01/09/2009",
+    "dob": "2009-09-01",
     "ageCategory": "Under 19",
     "gender": "Male",
     "events": [
       "Shot Put",
-      "Discus Throw"
+      "High Jump"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795504570145-SREEHARI_R_S.jpg",
     "timestamp": "24/11/2026, 07:16:11"
