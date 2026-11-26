@@ -5641,10 +5641,11 @@
     "school": "A.R.R PUBLIC SCHOOL",
     "name": "Sanjay S.J",
     "chest": 547,
-    "dob": "08/06/2013",
+    "dob": "2013-06-08",
     "ageCategory": "Under 14",
     "gender": "Male",
     "events": [
+      "Shot Put",
       "Discus Throw"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794891197240-Sanjay_S_J.jpg",
