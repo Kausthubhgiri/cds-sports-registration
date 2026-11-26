@@ -6196,12 +6196,11 @@
     "school": "Dr GR PUBLIC SCHOOL",
     "name": "ADITHYAN U",
     "chest": 237,
-    "dob": "05/06/2009",
+    "dob": "2009-06-05",
     "ageCategory": "Under 19",
     "gender": "Male",
     "events": [
       "3000m Race",
-      "Discus Throw",
       "Long Jump",
       "4x400m Relay"
     ],
