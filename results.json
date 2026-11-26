@@ -6723,5 +6723,19 @@
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795598620437-AVANTHIKA_K_M.jpg",
     "timestamp": "25/11/2026, 09:23:41"
+  },
+  {
+    "school": "Dr GR PUBLIC SCHOOL",
+    "name": "S REHNA FATHIMA",
+    "chest": 272,
+    "dob": "19/06/2010",
+    "ageCategory": "Under 19",
+    "gender": "Female",
+    "events": [
+      "Shot Put",
+      "Discus Throw"
+    ],
+    "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1795669719448-S_REHNA_FATHIMA.jpg",
+    "timestamp": "26/11/2026, 05:08:41"
   }
 ]
