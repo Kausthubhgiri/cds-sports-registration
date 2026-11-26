@@ -4136,12 +4136,13 @@
     "school": "A.R.R PUBLIC SCHOOL",
     "name": "AARAV S K",
     "chest": 521,
-    "dob": "13/07/2013",
+    "dob": "2013-07-13",
     "ageCategory": "Under 14",
     "gender": "Male",
     "events": [
       "200m Race",
-      "Shot Put"
+      "Shot Put",
+      "Discus Throw"
     ],
     "photoPath": "https://github.com/kausthubhgiri/cds-sports-registration/raw/main/uploads/1794300607110-AARAV_S_K.jpg",
     "timestamp": "10/11/2026, 08:50:08"
