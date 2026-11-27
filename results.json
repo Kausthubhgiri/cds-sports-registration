@@ -3674,10 +3674,11 @@
     "school": "CHINTHALAYA VIDYALAYA",
     "name": "Aswin M S",
     "chest": 1038,
-    "dob": "24/05/2009",
+    "dob": "2009-05-24",
     "ageCategory": "Under 19",
     "gender": "Male",
     "events": [
+      "400m Race",
       "800m Race",
       "1500m Race",
       "4x100m Relay",
