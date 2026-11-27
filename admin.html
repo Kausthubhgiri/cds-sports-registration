@@ -263,6 +263,8 @@
       {label:'FEMALE PARTICIPANTS',match:g=>String(g||'').trim().toLowerCase().startsWith('f')},
       {label:'OTHER / UNSPECIFIED',match:g=>!String(g||'').trim().toLowerCase().startsWith('m')&&!String(g||'').trim().toLowerCase().startsWith('f')}
     ];
+    const ageLabel=p=>String(p.ageCategory||'Not assigned').trim()||'Not assigned';
+    const schoolLabel=p=>String(p.school||'Unassigned school').trim()||'Unassigned school';
     const events=[...chosenEvents].filter(event=>previousData.some(p=>(p.events||[]).map(cleanEvent).includes(event)))
       .sort((a,b)=>(eventOrder.get(a)??999)-(eventOrder.get(b)??999)||a.localeCompare(b));
     if(!events.length)throw new Error('No registrations were found for the selected events.');
@@ -274,16 +276,21 @@
       const pdfLogo=await loadPdfLogo();
       let pageStarted=false,photoCount=0,sectionCount=0;
 
+      // Required grouping order: EVENT → AGE CATEGORY → GENDER.
+      // Every school participating in that exact combination is placed in one combined table.
       for(const event of events) {
         const eventMembers=previousData.filter(p=>(p.events||[]).map(cleanEvent).includes(event));
-        for(const genderGroup of genderGroups) {
-          const genderMembers=eventMembers.filter(p=>genderGroup.match(p.gender));
-          const ageCategories=[...new Set(genderMembers.map(p=>String(p.ageCategory||'Not assigned').trim()||'Not assigned'))]
-            .sort((a,b)=>ageIndex(a)-ageIndex(b)||a.localeCompare(b));
-          for(const ageCategory of ageCategories) {
-            const members=genderMembers.filter(p=>(String(p.ageCategory||'Not assigned').trim()||'Not assigned')===ageCategory)
-              .sort((a,b)=>String(a.school||'Unassigned school').localeCompare(String(b.school||'Unassigned school'),undefined,{sensitivity:'base'})||String(a.name||'').localeCompare(String(b.name||''),undefined,{sensitivity:'base'}));
+        const ageCategories=[...new Set(eventMembers.map(ageLabel))]
+          .sort((a,b)=>ageIndex(a)-ageIndex(b)||a.localeCompare(b,undefined,{sensitivity:'base'}));
+
+        for(const ageCategory of ageCategories) {
+          const ageMembers=eventMembers.filter(p=>ageLabel(p)===ageCategory);
+          for(const genderGroup of genderGroups) {
+            const members=ageMembers.filter(p=>genderGroup.match(p.gender))
+              .sort((a,b)=>schoolLabel(a).localeCompare(schoolLabel(b),undefined,{sensitivity:'base'})||
+                String(a.name||'').localeCompare(String(b.name||''),undefined,{sensitivity:'base'}));
             if(!members.length)continue;
+
             if(pageStarted)doc.addPage();
             pdfHeader(doc,pdfLogo);
             pageStarted=true;sectionCount++;
@@ -293,17 +300,17 @@
             doc.text(`EVENT  •  ${event}`,17,y+4.8);y+=10;
             doc.setFillColor(238,243,248);doc.roundedRect(14,y,269,7,1,1,'F');
             doc.setTextColor(35,65,90);doc.setFont('helvetica','bold');doc.setFontSize(8.5);
-            doc.text(`${genderGroup.label}  •  ${ageCategory.toUpperCase()}  •  ${members.length} PARTICIPANTS  •  ALL SCHOOLS`,17,y+4.8);y+=10;
+            doc.text(`${ageCategory.toUpperCase()}  •  ${genderGroup.label}  •  ${members.length} PARTICIPANTS  •  ALL SCHOOLS`,17,y+4.8);y+=10;
 
             const body=[];
             for(const person of members) {
               photoCount++;
-              setProgress(true,`Building ${event} PDF · embedding photo ${photoCount}`);
+              setProgress(true,`Building ${event} · ${ageCategory} · ${genderGroup.label.toLowerCase()} · photo ${photoCount}`);
               const photo=await imageData(person.photoPath,person.gender);
               body.push([
                 {content:'',photo},
                 person.name||'—',
-                String(person.school||'Unassigned school').trim()||'Unassigned school',
+                schoolLabel(person),
                 person.chest||'—',
                 person.dob||'—',
                 person.gender||'—'
@@ -334,7 +341,7 @@
       if(!pageStarted||!sectionCount)throw new Error('No event registrations were found to export.');
       pdfFooter(doc);
       doc.save('cds-sports-master-register-selected-events.pdf');
-      showToast(`Selected-events Master PDF downloaded · ${events.length} events · all schools combined by age category and gender.`);
+      showToast(`Selected-events Master PDF downloaded · ${events.length} events · grouped by event, age category and gender with all schools together.`);
     } finally {setProgress(false);}
   }
 
