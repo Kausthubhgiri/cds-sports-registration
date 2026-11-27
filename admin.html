@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0a4b78">
+  <title>CDS Sports Meet | Admin Dashboard</title>
+  <link rel="icon" type="image/png" href="drgr_logo.png">
+<link rel="apple-touch-icon" href="drgr_logo.png">
+  <!-- PDF libraries are loaded from CDN. Keep these two lines when deploying this file. -->
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.3/dist/jspdf.plugin.autotable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <style>
+    :root{--ink:#102a43;--muted:#627d98;--line:#d9e2ec;--navy:#0a4b78;--blue:#087eae;--mint:#20b486;--orange:#f59e0b;--red:#e53e3e;--surface:#fff;--canvas:#f3f7fb;--shadow:0 14px 38px rgba(20,53,83,.11)}
+    *{box-sizing:border-box} body{margin:0;font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--canvas)}
+    button,select{font:inherit} button{border:0;cursor:pointer;transition:transform .18s,box-shadow .18s,background .18s} button:hover{transform:translateY(-1px)} button:focus-visible,select:focus-visible{outline:3px solid rgba(8,126,174,.3);outline-offset:2px}
+    .hero{color:#fff;background:radial-gradient(circle at 88% 10%,#23a7d6 0,transparent 29%),linear-gradient(125deg,#07375b,#0b5b88 62%,#087eae);padding:32px max(20px,calc((100vw - 1440px)/2));box-shadow:0 2px 12px rgba(2,35,57,.2)}
+    .eyebrow{font-size:11px;letter-spacing:.14em;font-weight:800;text-transform:uppercase;opacity:.78}.hero-row{display:flex;justify-content:space-between;gap:20px;align-items:flex-end}.hero h1{margin:4px 0 2px;font-size:clamp(25px,4vw,38px);letter-spacing:-.04em}.hero p{margin:0;opacity:.86}.live{display:flex;align-items:center;gap:8px;white-space:nowrap;font-weight:700;font-size:12px}.live i{width:9px;height:9px;border-radius:50%;background:#65f1b9;box-shadow:0 0 0 5px rgba(101,241,185,.18)}
+    .shell{max-width:1440px;margin:0 auto;padding:24px 20px 54px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-1px}.stat{background:var(--surface);border:1px solid rgba(217,226,236,.85);border-radius:16px;padding:17px 18px;box-shadow:0 7px 20px rgba(20,53,83,.06)}.stat b{display:block;font-size:27px;letter-spacing:-.05em}.stat span{color:var(--muted);font-size:12px;font-weight:650}.stat .accent{color:var(--blue)}
+    .panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;margin-top:20px;box-shadow:var(--shadow)}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.toolbar h2{font-size:17px;margin:0}.toolbar p{margin:2px 0 0;color:var(--muted);font-size:12px}.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{display:inline-flex;gap:8px;align-items:center;border-radius:9px;padding:10px 13px;font-size:13px;font-weight:750;color:#fff;background:var(--navy);box-shadow:0 4px 10px rgba(10,75,120,.2)}.btn.primary{background:var(--blue)}.btn.success{background:var(--mint)}.btn.warning{color:#563900;background:#fbd36d}.btn.danger{background:#fff0f0;color:#bd2424;box-shadow:none;border:1px solid #fecaca}.btn.subtle{color:var(--navy);background:#e9f5fa;box-shadow:none}.btn[disabled]{cursor:wait;opacity:.62;transform:none}
+    .filters{display:flex;align-items:center;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:18px;padding-top:16px}.search{position:relative;flex:1;min-width:210px}.search input{width:100%;border:1px solid var(--line);background:#fbfdff;border-radius:9px;padding:10px 12px 10px 35px;color:var(--ink)}.search:before{content:'⌕';position:absolute;left:12px;top:6px;font-size:22px;color:#789}.filter-select{border:1px solid var(--line);border-radius:9px;padding:10px;background:#fff;color:var(--ink);min-width:145px}.note{margin:16px 0 0;padding:11px 13px;border-radius:9px;background:#edf8fd;color:#28536d;font-size:12px}.note strong{color:#0a4b78}.event-list{display:grid;gap:14px;margin-top:20px}.event-card{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}.event-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;background:linear-gradient(90deg,#f7fbfd,#fff)}.event-title{display:flex;gap:11px;align-items:center}.event-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:#d9f1fa;font-size:17px}.event-title h3{margin:0;font-size:15px}.event-title p{margin:0;color:var(--muted);font-size:12px}.event-tools{display:flex;align-items:center;gap:10px}.tag{font-size:11px;font-weight:800;padding:4px 8px;border-radius:20px;background:#e8f7f1;color:#087956}.event-body{overflow:auto}.school-group+.school-group{border-top:1px solid var(--line)}.school-title{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;background:#fbfdff;font-weight:800;font-size:13px}.school-title small{color:var(--muted);font-weight:600}.age-label{padding:8px 16px;background:#f6f9fb;color:#507086;font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.08em}.data-table{width:100%;border-collapse:collapse;min-width:880px}.data-table th{background:#fff;color:#607d91;font-size:10px;text-transform:uppercase;letter-spacing:.06em;text-align:left;padding:9px 12px;border-bottom:1px solid var(--line)}.data-table td{padding:10px 12px;border-bottom:1px solid #edf2f7;vertical-align:middle}.data-table tr:last-child td{border-bottom:0}.photo{width:43px;height:43px;border-radius:9px;object-fit:cover;background:#e5edf3;border:1px solid #d4e0e8}.avatar-fallback{display:grid;place-items:center;color:#44667d;font-weight:800}.person{font-weight:800}.chest{font:700 12px ui-monospace,monospace;background:#eff5f8;padding:3px 6px;border-radius:5px}.table-actions{display:flex;gap:6px}.icon-btn{padding:7px 8px;border-radius:7px;background:#edf7fb;color:#0a6488;font-size:12px;font-weight:750}.icon-btn.remove{background:#fff1f1;color:#c62828}.empty{text-align:center;padding:52px 20px;color:var(--muted)}.empty strong{display:block;color:var(--ink);font-size:16px;margin:7px}.toast{position:fixed;right:18px;bottom:18px;z-index:20;max-width:340px;color:#fff;background:#113b58;padding:12px 15px;border-radius:10px;box-shadow:var(--shadow);transform:translateY(120px);opacity:0;transition:.25s}.toast.show{transform:translateY(0);opacity:1}.toast.error{background:#a92d2d}.progress{position:fixed;inset:0;z-index:30;background:rgba(8,42,67,.38);display:none;place-items:center;padding:20px}.progress.show{display:grid}.progress-box{background:#fff;border-radius:16px;padding:25px;min-width:280px;box-shadow:var(--shadow);text-align:center}.spinner{margin:0 auto 14px;width:31px;height:31px;border:4px solid #d8edf5;border-top-color:var(--blue);border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+    @media(max-width:760px){.hero{padding:24px 20px}.hero-row{align-items:flex-start;flex-direction:column}.shell{padding:16px 12px 36px}.stats{grid-template-columns:repeat(2,1fr);gap:9px}.stat{padding:12px}.panel{padding:14px;border-radius:14px}.event-header{align-items:flex-start;flex-direction:column}.event-tools{width:100%;justify-content:space-between}.actions .btn{flex:1;justify-content:center}.filters{align-items:stretch}.filter-select{flex:1}.btn{padding:9px 10px}}
+
+/* Premium participant editor */
+.editor-overlay{display:none;position:fixed;inset:0;z-index:100;background:rgba(3,8,20,.76);backdrop-filter:blur(10px);padding:18px;align-items:center;justify-content:center}.editor-overlay.open{display:flex}.editor-card{width:min(100%,760px);max-height:94vh;overflow:auto;border:1px solid rgba(181,198,232,.18);border-radius:22px;background:linear-gradient(145deg,#151c30,#0b1120);color:#f3f6ff;box-shadow:0 35px 100px rgba(0,0,0,.58)}.editor-head{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;gap:16px;padding:22px 24px 17px;background:rgba(19,26,44,.97);border-bottom:1px solid rgba(181,198,232,.14);backdrop-filter:blur(14px)}.editor-head h2{margin:0;font-size:21px;letter-spacing:-.04em}.editor-head p{margin:4px 0 0;color:#9daac3;font-size:12px}.editor-close{width:38px;height:38px;border-radius:11px;color:#d8e0f5;background:rgba(255,255,255,.06);border:1px solid rgba(181,198,232,.16)}.editor-body{padding:22px 24px}.editor-person{display:flex;align-items:center;gap:13px;padding:13px;border:1px solid rgba(181,198,232,.13);border-radius:14px;background:rgba(255,255,255,.035);margin-bottom:18px}.editor-person .photo{width:54px;height:54px;border-radius:14px}.editor-person strong{display:block;font-size:15px}.editor-person span{color:#9daac3;font-size:12px}.editor-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.editor-field label{display:block;color:#c4cfea;font-size:11px;font-weight:800;margin:0 0 6px}.editor-field input,.editor-field select{width:100%;min-height:44px;padding:11px 12px;border:1px solid rgba(181,198,232,.17);border-radius:10px;color:#f3f6ff;background:#0b1020}.editor-field select option{background:#10172a}.editor-section-title{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:23px 0 10px;color:#dce4fa;font-weight:800;font-size:13px}.editor-section-title small{color:#9daac3;font-weight:500}.editor-event-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.editor-event-grid label{display:flex;align-items:center;gap:9px;min-height:44px;padding:10px;border:1px solid rgba(181,198,232,.13);border-radius:10px;background:rgba(255,255,255,.025);color:#c9d3e9;font-size:12px;cursor:pointer;transition:.18s}.editor-event-grid label:has(input:checked){border-color:rgba(115,133,255,.55);background:rgba(115,133,255,.12);color:#f4f6ff}.editor-event-grid input{accent-color:#8190ff;width:16px;height:16px}.editor-hint{margin-top:12px;color:#9daac3;font-size:11px}.editor-count{color:#aab6ff;font-weight:800}.editor-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:23px;padding-top:17px;border-top:1px solid rgba(181,198,232,.14)}.editor-actions .btn{min-width:118px}.btn.cancel-editor{background:rgba(255,255,255,.06);color:#d5def2;border:1px solid rgba(181,198,232,.15);box-shadow:none}.btn.save-editor{background:linear-gradient(135deg,#7e8cff,#5268ed)}.editor-error{display:none;margin-top:12px;padding:10px 12px;border:1px solid rgba(255,113,137,.25);border-radius:10px;background:rgba(255,113,137,.08);color:#ff9aaa;font-size:12px}.editor-error.show{display:block}.confirm-overlay{display:none;position:fixed;inset:0;z-index:120;background:rgba(3,8,20,.7);backdrop-filter:blur(8px);padding:18px;align-items:center;justify-content:center}.confirm-overlay.open{display:flex}.confirm-card{width:min(100%,420px);padding:23px;border-radius:18px;background:linear-gradient(145deg,#151c30,#0b1120);border:1px solid rgba(181,198,232,.18);color:#f3f6ff;box-shadow:0 30px 80px rgba(0,0,0,.5)}.confirm-card h3{margin:0 0 7px}.confirm-card p{margin:0;color:#aab6cc;font-size:13px}.confirm-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:20px}
+@media(max-width:700px){.editor-overlay,.confirm-overlay{padding:9px}.editor-card{max-height:96vh;border-radius:17px}.editor-head{padding:17px}.editor-body{padding:16px}.editor-fields,.editor-event-grid{grid-template-columns:1fr}.editor-actions{position:sticky;bottom:-16px;background:#0e1424;padding:13px 0 2px}.editor-actions .btn{flex:1;min-width:0}.editor-section-title{align-items:flex-start;flex-direction:column}}
+  
+    .stat-action{width:100%;text-align:left;position:relative;cursor:pointer;color:var(--ink);font:inherit;transition:transform .2s,box-shadow .2s,border-color .2s}
+    .stat-action:hover{transform:translateY(-3px);box-shadow:0 15px 32px rgba(20,53,83,.13);border-color:#9ccfe2}
+    .stat-action:focus-visible{outline:3px solid rgba(8,126,174,.35);outline-offset:3px}
+    .stat-action small{display:inline-block;margin-top:8px;color:var(--blue);font-size:11px;font-weight:800}
+    .details-overlay{display:none;position:fixed;inset:0;z-index:150;background:rgba(5,18,32,.62);backdrop-filter:blur(8px);padding:18px;align-items:center;justify-content:center}
+    .details-overlay.open{display:flex}
+    .details-card{width:min(100%,620px);max-height:min(88vh,760px);display:flex;flex-direction:column;overflow:hidden;background:#fff;border:1px solid #dce7f0;border-radius:20px;box-shadow:0 28px 90px rgba(0,25,45,.32)}
+    .details-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:21px 23px 17px;background:linear-gradient(125deg,#f5fbff,#fff);border-bottom:1px solid #e5edf4}
+    .details-kicker{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#087eae;font-weight:850}
+    .details-head h3{margin:5px 0 3px;font-size:21px;letter-spacing:-.035em;color:#102a43}
+    .details-head p{margin:0;color:#627d98;font-size:12px}
+    .details-close{width:36px;height:36px;flex:0 0 auto;border-radius:10px;background:#edf4f8;color:#31546a;font-size:18px}
+    .details-tools{padding:13px 20px;border-bottom:1px solid #edf2f7}
+    .details-search{width:100%;padding:11px 13px;border:1px solid #d9e2ec;border-radius:10px;background:#f9fcfe;color:#102a43;outline:none}
+    .details-search:focus{border-color:#087eae;box-shadow:0 0 0 3px rgba(8,126,174,.1)}
+    .details-list{overflow:auto;padding:8px 20px 18px}
+    .details-item{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 3px;border-bottom:1px solid #edf2f7;color:#183b54}
+    .details-item:last-child{border-bottom:0}
+    .details-item strong{font-size:13px;font-weight:750}
+    .details-item span{color:#71869a;font-size:11px;text-align:right}
+    .details-index{display:inline-grid;place-items:center;width:28px;height:28px;flex:0 0 auto;margin-right:10px;border-radius:9px;background:#eaf6fb;color:#087eae;font-size:11px;font-weight:850}
+    .details-left{display:flex;align-items:center;min-width:0}
+    .details-name{overflow-wrap:anywhere}
+    .details-empty{padding:30px 12px;text-align:center;color:#71869a}
+    .details-foot{padding:12px 22px;border-top:1px solid #edf2f7;color:#71869a;font-size:11px;background:#fbfdff}
+    @media(max-width:600px){.details-overlay{padding:9px}.details-card{max-height:94vh;border-radius:16px}.details-head{padding:17px}.details-tools{padding:11px 14px}.details-list{padding:6px 14px 14px}.details-item{align-items:flex-start}.details-item span{max-width:42%}}
+
+
+    .selected-events-card{width:min(100%,620px);max-height:min(88vh,760px);overflow:auto}
+    .selected-events-tools{display:flex;align-items:center;gap:8px;margin:0 0 12px;flex-wrap:wrap}
+    .selected-events-tools span{margin-left:auto;color:var(--muted);font-size:12px;font-weight:750}
+    .selected-events-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+    .selected-events-grid label{display:flex;align-items:center;gap:9px;padding:10px 11px;margin:0;border:1px solid var(--line);border-radius:9px;background:#fbfdff;color:var(--ink);font-size:13px;font-weight:650;cursor:pointer}
+    .selected-events-grid input{width:16px;height:16px;accent-color:var(--blue)}
+    @media(max-width:600px){.selected-events-grid{grid-template-columns:1fr}}
+    .school-pdf-overlay{display:none;position:fixed;inset:0;z-index:130;background:rgba(3,8,20,.68);backdrop-filter:blur(8px);padding:18px;align-items:center;justify-content:center}
+    .school-pdf-overlay.open{display:flex}
+    .school-pdf-card{width:min(100%,460px);padding:24px;border-radius:18px;background:#fff;border:1px solid #d9e2ec;box-shadow:0 28px 90px rgba(0,25,45,.32)}
+    .school-pdf-card h3{margin:0 0 6px;font-size:20px;color:#102a43}
+    .school-pdf-card p{margin:0 0 18px;color:#627d98;font-size:13px}
+    .school-pdf-card label{display:block;margin-bottom:7px;color:#31546a;font-size:12px;font-weight:800}
+    .school-pdf-card select{width:100%;padding:12px;border:1px solid #cbd8e3;border-radius:10px;background:#fbfdff;color:#102a43}
+    .school-pdf-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:20px}
+    @media(max-width:600px){.school-pdf-card{padding:18px}.school-pdf-actions{flex-direction:column-reverse}.school-pdf-actions .btn{width:100%;justify-content:center}}
+    .school-pdf-card.selected-events-card{width:min(100%,620px)}
+    .school-pdf-card .selected-events-grid label{display:flex;align-items:center;gap:9px;margin:0;padding:10px 11px;border:1px solid var(--line);border-radius:9px;background:#fbfdff;color:var(--ink);font-size:13px;font-weight:650;cursor:pointer}
+    .school-pdf-card .selected-events-grid input{width:16px;height:16px;margin:0;accent-color:var(--blue)}
+  </style>
+</head>
+<body>
+  <header class="hero"><div class="hero-row"><div><div class="eyebrow">Admin Page</div><h1>CDS Sports Meet 2026</h1><p>Participant registrations, events and official exports.</p></div><div class="live"><i></i><span id="lastUpdated">Loading live entries…</span></div></div></header>
+  <main class="shell">
+    <section class="stats" aria-label="Summary"><button type="button" class="stat stat-action" data-stat="participants" aria-label="View registered participants"><b id="statParticipants">—</b><span>Registered participants</span></button><button type="button" class="stat stat-action" data-stat="events" aria-label="View events represented"><b class="accent" id="statEvents">—</b><span>Events represented</span></button><button type="button" class="stat stat-action" data-stat="schools" aria-label="View schools represented"><b id="statSchools">—</b><span>Schools represented</span></button><button type="button" class="stat stat-action" data-stat="slots" aria-label="View event registrations"><b id="statSlots">—</b><span>Event registrations</span></button></section>
+    <section class="panel"><div class="toolbar"><div><h2>Exports & data controls</h2><p>Download a ZIP containing a separate, print-ready A4 PDF for each school.</p></div><div class="actions"><button class="btn subtle" id="excelBtn">⇩ Excel</button><button class="btn subtle" id="excelEventBtn">▦ Excel by event</button><button class="btn success" id="masterPdfBtn">⤓ Master PDF</button><button class="btn primary" id="selectedEventsPdfBtn">⤓ Master PDF – Selected Events</button><button class="btn primary" id="schoolPdfBtn">⤓ Separate PDFs by School</button><button class="btn subtle" id="singleSchoolPdfBtn">⤓ PDF for One School</button><button class="btn warning" id="undoBtn">↶ Undo last</button><button class="btn danger" id="resetBtn">⌫ Reset all</button></div></div>
+      <div class="filters"><label class="search"><input id="searchInput" type="search" placeholder="Search participant, school, chest number…" autocomplete="off"></label><select id="eventFilter" class="filter-select" aria-label="Filter by event"><option value="">All events</option></select><select id="ageFilter" class="filter-select" aria-label="Filter by age category"><option value="">All age categories</option></select><select id="schoolFilter" class="filter-select" aria-label="Filter by school"><option value="">All schools</option></select><span id="shownLabel" style="color:var(--muted);font-size:12px;font-weight:650"></span></div>
+    </section>
+    <section id="resultsContainer" class="event-list" aria-live="polite"><div class="empty">Loading registrations…</div></section>
+  </main>
+
+
+  <div class="details-overlay" id="statsDetailsOverlay" role="dialog" aria-modal="true" aria-labelledby="statsDetailsTitle">
+    <section class="details-card">
+      <header class="details-head">
+        <div><div class="details-kicker">Dashboard overview</div><h3 id="statsDetailsTitle">Details</h3><p id="statsDetailsSubtitle">Browse the current registration data.</p></div>
+        <button type="button" class="details-close" id="statsDetailsClose" aria-label="Close">×</button>
+      </header>
+      <div class="details-tools"><input class="details-search" id="statsDetailsSearch" type="search" placeholder="Search this list…" autocomplete="off"></div>
+      <div class="details-list" id="statsDetailsList"></div>
+      <footer class="details-foot" id="statsDetailsFoot">Data is based on the currently loaded registrations.</footer>
+    </section>
+  </div>
+
+  <div class="editor-overlay" id="editorOverlay" role="dialog" aria-modal="true" aria-labelledby="editorTitle"><div class="editor-card"><div class="editor-head"><div><h2 id="editorTitle">Edit participant registration</h2><p>Update participant details and event selections.</p></div><button class="editor-close" id="editorClose" type="button" aria-label="Close">✕</button></div><form class="editor-body" id="editorForm"><div class="editor-person" id="editorPerson"></div><div class="editor-fields"><div class="editor-field"><label for="editName">Participant name</label><input id="editName" required maxlength="100"></div><div class="editor-field"><label for="editDob">Date of birth</label><input id="editDob" type="date" required></div><div class="editor-field"><label for="editGender">Gender</label><select id="editGender"><option>Male</option><option>Female</option></select></div><div class="editor-field"><label for="editAge">Age category (manual selection)</label><select id="editAge"><option>Under 12</option><option>Under 14</option><option>Under 16</option><option>Under 17</option><option>Under 19</option></select></div></div><div class="editor-section-title"><span>Registered events</span><small><span class="editor-count" id="editorEventCount">0 selected</span> · max 3 individual + 2 relay</small></div><div class="editor-event-grid" id="editorEvents"></div><div class="editor-hint">3000m Race is available only for Under 19. Age category is always selected manually.</div><div class="editor-error" id="editorError" role="alert"></div><div class="editor-actions"><button class="btn cancel-editor" id="editorCancel" type="button">Cancel</button><button class="btn save-editor" id="editorSave" type="submit">Save changes</button></div></form></div></div>
+<div class="school-pdf-overlay" id="schoolPdfPicker" role="dialog" aria-modal="true" aria-labelledby="schoolPdfPickerTitle">
+  <section class="school-pdf-card">
+    <h3 id="schoolPdfPickerTitle">Export one school</h3>
+    <p>Select a school to download its registrations as a single PDF. The same event, age-category and gender sorting used in the school-wise export will be applied.</p>
+    <label for="singleSchoolSelect">School</label>
+    <select id="singleSchoolSelect"><option value="">Choose a school</option></select>
+    <div class="school-pdf-actions">
+      <button class="btn cancel-editor" id="schoolPdfPickerCancel" type="button">Cancel</button>
+      <button class="btn primary" id="schoolPdfPickerExport" type="button" disabled>Export PDF</button>
+    </div>
+  </section>
+</div>
+<div class="school-pdf-overlay" id="selectedEventsPdfPicker" role="dialog" aria-modal="true" aria-labelledby="selectedEventsPdfTitle">
+  <section class="school-pdf-card selected-events-card">
+    <h3 id="selectedEventsPdfTitle">Master PDF – Select Events</h3>
+    <p>Choose one or more events. The combined PDF will retain the existing master-register layout, school grouping, gender separation, participant photos and manual age-category order.</p>
+    <div class="selected-events-tools"><button type="button" class="btn subtle" id="selectAllPdfEvents">Select all</button><button type="button" class="btn subtle" id="clearPdfEvents">Clear</button><span id="selectedPdfEventCount">0 selected</span></div>
+    <div class="selected-events-grid" id="selectedPdfEventsList"></div>
+    <div class="school-pdf-actions">
+      <button class="btn cancel-editor" id="selectedEventsPdfCancel" type="button">Cancel</button>
+      <button class="btn primary" id="selectedEventsPdfExport" type="button" disabled>Generate PDF</button>
+    </div>
+  </section>
+</div>
+<div class="confirm-overlay" id="confirmOverlay" role="dialog" aria-modal="true"><div class="confirm-card"><h3 id="confirmTitle">Please confirm</h3><p id="confirmMessage"></p><div class="confirm-actions"><button class="btn cancel-editor" id="confirmCancel" type="button">Cancel</button><button class="btn danger" id="confirmAccept" type="button">Continue</button></div></div></div>  <div class="toast" id="toast" role="status"></div><div class="progress" id="progress"><div class="progress-box"><div class="spinner"></div><strong id="progressText">Preparing export…</strong><p style="color:#627d98;font-size:12px;margin:7px 0 0">Photos are being included at print quality.</p></div></div>
+<script>
+(() => {
+  'use strict';
+  const AGE_ORDER = ['Under 12','Under 14','Under 16','Under 17','Under 19'];
+  const ALL_EVENTS = ['50m Race','100m Race','200m Race','400m Race','800m Race','1500m Race','3000m Race','Shot Put','Discus Throw','Long Jump','High Jump','4x100m Relay','4x400m Relay'];
+  const RELAY_EVENTS = new Set(['4x100m Relay','4x400m Relay']);
+  let editingIndex = -1;
+  let previousData = [], filteredData = [], toastTimer;
+  const $ = id => document.getElementById(id);
+  const escapeHTML = value => String(value ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+  const ageIndex = age => { const n = AGE_ORDER.indexOf(age); return n === -1 ? 999 : n; };
+  const cleanEvent = event => String(event || '').trim().replace(/\s+/g,' ');
+  const sortPeople = (a,b) => ageIndex(a.ageCategory)-ageIndex(b.ageCategory) || String(a.name).localeCompare(String(b.name));
+  function showToast(message, error=false) { const el=$('toast'); el.textContent=message; el.className='toast show'+(error?' error':''); clearTimeout(toastTimer); toastTimer=setTimeout(()=>el.className='toast',4200); }
+  function setProgress(show, text='Preparing export…') { $('progressText').textContent=text; $('progress').classList.toggle('show',show); document.querySelectorAll('.btn').forEach(b=>b.disabled=show); }
+  function stats(data) { const events=new Set(),schools=new Set(); let slots=0; data.forEach(p=>{schools.add(p.school||'Unassigned'); (p.events||[]).forEach(e=>{events.add(cleanEvent(e));slots++});}); $('statParticipants').textContent=data.length; $('statEvents').textContent=events.size; $('statSchools').textContent=schools.size; $('statSlots').textContent=slots; }
+
+  let activeStatItems = [];
+  const statMeta = {
+    participants: {title:'Registered participants', subtitle:'All participant records currently loaded.'},
+    events: {title:'Events represented', subtitle:'Unique events selected across all registrations.'},
+    schools: {title:'Schools represented', subtitle:'Unique schools with at least one registration.'},
+    slots: {title:'Event registrations', subtitle:'Participant entries grouped by event.'}
+  };
+  function openStatDetails(type) {
+    const meta = statMeta[type]; if (!meta) return;
+    const list = $('statsDetailsList');
+    let items = [];
+    if (type === 'participants') {
+      items = previousData.map(p => ({name:p.name || 'Unnamed participant', detail:`${p.school || 'Unassigned'} · Chest ${p.chest || '—'} · ${p.ageCategory || 'No age category'}`}));
+      items.sort((a,b)=>a.name.localeCompare(b.name));
+    } else if (type === 'schools') {
+      const counts = new Map();
+      previousData.forEach(p => { const school=String(p.school||'Unassigned').trim(); counts.set(school,(counts.get(school)||0)+1); });
+      items = [...counts].map(([name,count])=>({name,detail:`${count} participant${count===1?'':'s'}`})).sort((a,b)=>a.name.localeCompare(b.name));
+    } else if (type === 'events') {
+      const counts = new Map();
+      previousData.forEach(p => (p.events||[]).forEach(e => { const name=cleanEvent(e); if(name)counts.set(name,(counts.get(name)||0)+1); }));
+      items = [...counts].map(([name,count])=>({name,detail:`${count} registration${count===1?'':'s'}`})).sort((a,b)=>a.name.localeCompare(b.name));
+    } else if (type === 'slots') {
+      const counts = new Map();
+      previousData.forEach(p => (p.events||[]).forEach(e => { const name=cleanEvent(e); if(name)counts.set(name,(counts.get(name)||0)+1); }));
+      items = [...counts].map(([name,count])=>({name,detail:`${count} participant registration${count===1?'':'s'}`})).sort((a,b)=>b.detail.localeCompare(a.detail));
+    }
+    activeStatItems = items;
+    $('statsDetailsTitle').textContent = meta.title;
+    $('statsDetailsSubtitle').textContent = `${items.length} ${type==='participants'?'records':type==='schools'?'schools':type==='events'?'unique events':'event groups'}`;
+    $('statsDetailsSearch').value = '';
+    renderStatDetails('');
+    $('statsDetailsOverlay').classList.add('open');
+    $('statsDetailsClose').focus();
+  }
+  function renderStatDetails(query) {
+    const q=String(query||'').trim().toLowerCase();
+    const items=activeStatItems.filter(item=>(item.name+' '+item.detail).toLowerCase().includes(q));
+    $('statsDetailsList').innerHTML=items.length ? items.map((item,i)=>`<div class="details-item"><div class="details-left"><span class="details-index">${i+1}</span><strong class="details-name">${escapeHTML(item.name)}</strong></div><span>${escapeHTML(item.detail)}</span></div>`).join('') : '<div class="details-empty">No matching entries found.</div>';
+    $('statsDetailsFoot').textContent=`Showing ${items.length} of ${activeStatItems.length} entries · Updates with the latest dashboard data.`;
+  }
+  function closeStatDetails(){ $('statsDetailsOverlay').classList.remove('open'); }
+
+  function refreshFilters(data) {
+    const keepEvent=$('eventFilter').value,keepAge=$('ageFilter').value,keepSchool=$('schoolFilter').value;
+    const events=[...new Set(data.flatMap(p=>(p.events||[]).map(cleanEvent)))].filter(Boolean).sort();
+    const ages=[...new Set(data.map(p=>p.ageCategory).filter(Boolean))].sort((a,b)=>ageIndex(a)-ageIndex(b));
+    const schools=[...new Set(data.map(p=>String(p.school||'Unassigned').trim()).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+    $('eventFilter').innerHTML='<option value="">All events</option>'+events.map(e=>`<option value="${escapeHTML(e)}">${escapeHTML(e)}</option>`).join('');
+    $('ageFilter').innerHTML='<option value="">All age categories</option>'+ages.map(a=>`<option value="${escapeHTML(a)}">${escapeHTML(a)}</option>`).join('');
+    $('schoolFilter').innerHTML='<option value="">All schools</option>'+schools.map(s=>`<option value="${escapeHTML(s)}">${escapeHTML(s)}</option>`).join('');
+    $('eventFilter').value=events.includes(keepEvent)?keepEvent:'';
+    $('ageFilter').value=ages.includes(keepAge)?keepAge:'';
+    $('schoolFilter').value=schools.includes(keepSchool)?keepSchool:'';
+  }
+  function applyFilters() {
+    const query=$('searchInput').value.trim().toLowerCase(),event=$('eventFilter').value,age=$('ageFilter').value,school=$('schoolFilter').value;
+    filteredData=previousData.filter(p=>{
+      const blob=[p.name,p.school,p.chest,p.dob,p.gender,p.ageCategory,...(p.events||[])].join(' ').toLowerCase();
+      const participantSchool=String(p.school||'Unassigned').trim();
+      return (!query||blob.includes(query))&&(!age||p.ageCategory===age)&&(!event||(p.events||[]).map(cleanEvent).includes(event))&&(!school||participantSchool===school);
+    });
+    $('shownLabel').textContent=`Showing ${filteredData.length} of ${previousData.length} participants`;
+    render(filteredData);
+  }
+  function groupedByEvent(data) { const map=new Map(); data.forEach(person=>(person.events||[]).forEach(raw=>{const event=cleanEvent(raw);if(!event)return;if(!map.has(event))map.set(event,new Map());const schools=map.get(event),school=person.school||'Unassigned school';if(!schools.has(school))schools.set(school,[]);schools.get(school).push(person);})); return new Map([...map].sort(([a],[b])=>a.localeCompare(b))); }
+  function genderMark(gender) { const value=String(gender||'').toLowerCase(); return value.startsWith('f')?'♀':value.startsWith('m')?'♂':'●'; }
+  function photoCell(p) { const mark=genderMark(p.gender); if(!p.photoPath)return `<div class="photo avatar-fallback" title="Default ${escapeHTML(p.gender||'participant')} portrait">${mark}</div>`; return `<img class="photo" src="${escapeHTML(p.photoPath)}" alt="Photo of ${escapeHTML(p.name)}" onerror="this.outerHTML='<div class=\\'photo avatar-fallback\\' title=\\'Default portrait\\'>${mark}</div>'">`; }
+  function render(data) { const container=$('resultsContainer'),events=groupedByEvent(data); if(!data.length){container.innerHTML='<div class="panel empty"><div style="font-size:30px">🏁</div><strong>No registrations match these filters</strong>Try another search or clear a filter.</div>';return;} container.innerHTML=''; for(const [event,schools] of events){const total=[...schools.values()].reduce((n,people)=>n+people.length,0);const card=document.createElement('article');card.className='event-card';card.innerHTML=`<div class="event-header"><div class="event-title"><span class="event-icon">🏅</span><div><h3>${escapeHTML(event)}</h3><p>School → age category → participant</p></div></div><div class="event-tools"><span class="tag">${total} participant${total===1?'':'s'}</span></div></div><div class="event-body"></div>`; const body=card.querySelector('.event-body'); for(const [school,people] of [...schools].sort(([a],[b])=>a.localeCompare(b))){const section=document.createElement('section');section.className='school-group';const byAge=new Map();people.sort(sortPeople).forEach(p=>{const age=p.ageCategory||'Not assigned';if(!byAge.has(age))byAge.set(age,[]);byAge.get(age).push(p)});section.innerHTML=`<div class="school-title"><span>🏫 ${escapeHTML(school)}</span><small>${people.length} participant${people.length===1?'':'s'}</small></div>`;for(const [age,members] of [...byAge].sort(([a],[b])=>ageIndex(a)-ageIndex(b))){const wrapper=document.createElement('div');wrapper.innerHTML=`<div class="age-label">${escapeHTML(age)}</div><table class="data-table"><thead><tr><th>Photo</th><th>Participant</th><th>Chest</th><th>Date of birth</th><th>Gender</th><th>Registered at</th><th>Actions</th></tr></thead><tbody>${members.map((p,i)=>`<tr><td>${photoCell(p)}</td><td><span class="person">${escapeHTML(p.name)}</span></td><td><span class="chest">${escapeHTML(p.chest||'—')}</span></td><td>${escapeHTML(p.dob||'—')}</td><td>${escapeHTML(p.gender||'—')}</td><td>${escapeHTML(p.timestamp||'—')}</td><td><div class="table-actions"><button class="icon-btn edit-person" data-index="${previousData.indexOf(p)}">Edit events</button><button class="icon-btn remove remove-person" data-index="${previousData.indexOf(p)}">Remove</button></div></td></tr>`).join('')}</tbody></table>`;section.appendChild(wrapper)}body.appendChild(section)}container.appendChild(card)} }
+  async function loadResults(force=false) { try{const res=await fetch('/results',{cache:'no-store'});if(!res.ok)throw new Error(`Server returned ${res.status}`);const data=await res.json();if(!Array.isArray(data))throw new Error('Results are not an array');const changed=JSON.stringify(data)!==JSON.stringify(previousData);previousData=data;stats(data);if(changed||force){refreshFilters(data);applyFilters();}$('lastUpdated').textContent=`Live · updated ${new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}`;}catch(err){$('resultsContainer').innerHTML='<div class="panel empty"><strong>Could not load registrations</strong>Check that this dashboard is served by the CDS application and that <code>/results</code> is available.</div>';$('lastUpdated').textContent='Connection needs attention';console.error(err)} }
+  async function postAction(path, payload, confirmText) { if(confirmText&&!confirm(confirmText))return;try{const res=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:payload?JSON.stringify(payload):undefined});const msg=await res.text();if(!res.ok)throw new Error(msg||'Action failed');showToast(msg||'Saved');loadResults(true)}catch(err){showToast(err.message||'Unable to complete action',true)} }
+  function showEditorError(message){const el=$("editorError");el.textContent=message;el.classList.add("show");}
+  function updateEditorCount(){const selected=[...document.querySelectorAll("#editorEvents input:checked")];const relay=selected.filter(x=>RELAY_EVENTS.has(x.value)).length;const individual=selected.length-relay;$("editorEventCount").textContent=`${selected.length} selected · ${individual}/3 individual · ${relay}/2 relay`; }
+  function editEvents(index) { const entry=previousData[index];if(!entry)return;editingIndex=index;$("editorError").classList.remove("show");$("editName").value=entry.name||"";$("editDob").value=entry.dob||"";$("editGender").value=entry.gender||"Male";$("editAge").value=entry.ageCategory||"Under 12";$("editorPerson").innerHTML=`${photoCell(entry)}<div><strong>${escapeHTML(entry.name)}</strong><span>${escapeHTML(entry.school)} · Chest ${escapeHTML(entry.chest||"—")}</span></div>`;const current=new Set((entry.events||[]).map(cleanEvent));$("editorEvents").innerHTML=ALL_EVENTS.map(event=>`<label><input type="checkbox" value="${escapeHTML(event)}" ${current.has(event)?"checked":""}>${escapeHTML(event)}</label>`).join("");$("editorOverlay").classList.add("open");updateEditorCount();$("editName").focus(); }
+  function closeEditor(){ $("editorOverlay").classList.remove("open");editingIndex=-1; }
+  async function saveEditor(event){event.preventDefault();if(editingIndex<0)return;const entry=previousData[editingIndex];if(!entry)return;const selected=[...document.querySelectorAll("#editorEvents input:checked")].map(x=>x.value);const relay=selected.filter(x=>RELAY_EVENTS.has(x)).length,individual=selected.length-relay;if(!selected.length)return showEditorError("Select at least one event.");if(individual>3)return showEditorError("A participant can select a maximum of 3 non-relay events.");if(relay>2)return showEditorError("A participant can select a maximum of 2 relay events.");if(selected.includes("3000m Race")&&$("editAge").value!=="Under 19")return showEditorError("3000m Race is available only for Under 19.");const payload={originalName:entry.name,name:$("editName").value.trim(),school:entry.school,dob:$("editDob").value,gender:$("editGender").value,ageCategory:$("editAge").value,events:selected};if(!payload.name||!payload.dob)return showEditorError("Participant name and date of birth are required.");const save=$("editorSave");save.disabled=true;save.textContent="Saving…";try{const res=await fetch("/edit-events",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});const msg=await res.text();if(!res.ok)throw new Error(msg||"Update failed");closeEditor();showToast(msg||"Participant updated successfully.");await loadResults(true);}catch(err){showEditorError(err.message||"Could not save changes.");}finally{save.disabled=false;save.textContent="Save changes";}}
+  function askConfirm(title,message,action,danger=true){$("confirmTitle").textContent=title;$("confirmMessage").textContent=message;const accept=$("confirmAccept");accept.className="btn "+(danger?"danger":"primary");$("confirmOverlay").classList.add("open");accept.onclick=async()=>{ $("confirmOverlay").classList.remove("open");await action();};}
+  function removeCandidate(index) { const entry=previousData[index];if(entry)askConfirm("Remove participant?",`Remove ${entry.name} from ${entry.school}? This cannot be undone.`,()=>postAction('/remove-candidate',{name:entry.name,school:entry.school})); }
+  function exportExcel(path) { window.location.href=path; }
+  function defaultPortraitData(gender) { const female=String(gender||'').toLowerCase().startsWith('f'), male=String(gender||'').toLowerCase().startsWith('m'); const c=document.createElement('canvas');c.width=c.height=240;const x=c.getContext('2d');x.fillStyle=female?'#f9e4ef':male?'#e1effa':'#e8f1f5';x.fillRect(0,0,240,240);x.fillStyle=female?'#b84278':male?'#2178b9':'#547080';x.beginPath();x.arc(120,81,42,0,Math.PI*2);x.fill();x.beginPath();x.arc(120,267,88,Math.PI,0);x.fill();x.fillStyle='rgba(255,255,255,.88)';x.font='700 44px Arial';x.textAlign='center';x.fillText(female?'F':male?'M':'P',120,220);return c.toDataURL('image/jpeg',.9); }
+  function blobToDataUrl(blob) { return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsDataURL(blob);}); }
+  function photoUrls(path) { const urls=[path];const github=String(path||'').match(/^https:\/\/github\.com\/([^/]+)\/([^/]+)\/raw\/([^/]+)\/(.+)$/i);if(github)urls.unshift(`https://raw.githubusercontent.com/${github[1]}/${github[2]}/${github[3]}/${github[4]}`);return [...new Set(urls)]; }
+  async function loadImage(path) { if(!path)return null; return new Promise(resolve=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>resolve(null);img.src=path;}); }
+  async function loadPdfLogo(){
+    try{
+      const response=await fetch('drgr_logo.png',{cache:'no-store'});
+      if(!response.ok)throw new Error(`Logo request failed (${response.status})`);
+      const blob=await response.blob();
+      if(!blob.type.startsWith('image/'))throw new Error('Logo file is not an image');
+      return await blobToDataUrl(blob);
+    }catch(err){
+      console.warn('Dr GR logo could not be loaded for PDF header. Deploy drgr_logo.png beside admin.html.',err);
+      return null;
+    }
+  }
+  async function imageData(path, gender) { if(!path)return defaultPortraitData(gender);const urls=photoUrls(path);for(const url of urls){try{const response=await fetch(url,{cache:'no-store'});if(response.ok){const blob=await response.blob();if(blob.type.startsWith('image/'))return await blobToDataUrl(blob);}}catch(err){console.warn('Photo fetch failed:',url,err);}}for(const url of urls){const img=await loadImage(url);if(!img)continue;try{const c=document.createElement('canvas');const max=300;const scale=Math.min(1,max/Math.max(img.naturalWidth,img.naturalHeight));c.width=Math.max(1,Math.round(img.naturalWidth*scale));c.height=Math.max(1,Math.round(img.naturalHeight*scale));c.getContext('2d').drawImage(img,0,0,c.width,c.height);return c.toDataURL('image/jpeg',.88)}catch(err){console.warn('Photo canvas conversion failed:',url,err);}}return defaultPortraitData(gender); }
+  function filename(text){return text.replace(/[^a-z0-9]+/gi,'-').replace(/^-|-$/g,'').toLowerCase();}
+  function pdfHeader(doc,logoData=null){
+    const w=doc.internal.pageSize.getWidth();
+    doc.setFillColor(8,75,120);doc.rect(0,0,w,25,'F');
+    if(logoData){
+      try{doc.addImage(logoData,'PNG',13,3,18,18,undefined,'FAST');}
+      catch(err){console.warn('Could not add Dr GR logo to PDF header:',err);}
+    }
+    doc.setTextColor(255);doc.setFont('helvetica','bold');doc.setFontSize(16);
+    doc.text('CDS SPORTS MEET',36,11);
+    doc.setFontSize(8);doc.setFont('helvetica','normal');
+    doc.text('PARTICIPANT REGISTER',36,17);
+  }
+  function pdfFooter(doc){const pages=doc.internal.getNumberOfPages();for(let p=1;p<=pages;p++){doc.setPage(p);const w=doc.internal.pageSize.getWidth(),h=doc.internal.pageSize.getHeight();doc.setDrawColor(217,226,236);doc.line(14,h-14,w-14,h-14);doc.setFontSize(7);doc.setTextColor(98,125,152);doc.text('CDS Sports Meet • Official participant register',14,h-9);doc.text(`Page ${p} of ${pages}`,w-14,h-9,{align:'right'});}}
+  async function createSelectedEventsMasterPdf(selectedEvents) {
+    if(!window.jspdf?.jsPDF||!window.jspdf?.jsPDF.API.autoTable)throw new Error('PDF library did not load. Check the internet connection or host the PDF library files locally.');
+    if(!previousData.length)throw new Error('There are no participants to export.');
+    const chosenEvents=new Set((selectedEvents||[]).map(cleanEvent));
+    if(!chosenEvents.size)throw new Error('Select at least one event.');
+
+    const eventOrder=new Map(ALL_EVENTS.map((event,index)=>[event,index]));
+    const genderGroups=[
+      {label:'MALE PARTICIPANTS',match:g=>String(g||'').trim().toLowerCase().startsWith('m')},
+      {label:'FEMALE PARTICIPANTS',match:g=>String(g||'').trim().toLowerCase().startsWith('f')},
+      {label:'OTHER / UNSPECIFIED',match:g=>!String(g||'').trim().toLowerCase().startsWith('m')&&!String(g||'').trim().toLowerCase().startsWith('f')}
+    ];
+    const events=[...chosenEvents].filter(event=>previousData.some(p=>(p.events||[]).map(cleanEvent).includes(event)))
+      .sort((a,b)=>(eventOrder.get(a)??999)-(eventOrder.get(b)??999)||a.localeCompare(b));
+    if(!events.length)throw new Error('No registrations were found for the selected events.');
+
+    setProgress(true,'Building selected-events master PDF…');
+    try {
+      const {jsPDF}=window.jspdf;
+      const doc=new jsPDF({orientation:'landscape',unit:'mm',format:'a4',compress:true});
+      const pdfLogo=await loadPdfLogo();
+      let pageStarted=false,photoCount=0,sectionCount=0;
+
+      for(const event of events) {
+        const eventMembers=previousData.filter(p=>(p.events||[]).map(cleanEvent).includes(event));
+        for(const genderGroup of genderGroups) {
+          const genderMembers=eventMembers.filter(p=>genderGroup.match(p.gender));
+          const ageCategories=[...new Set(genderMembers.map(p=>String(p.ageCategory||'Not assigned').trim()||'Not assigned'))]
+            .sort((a,b)=>ageIndex(a)-ageIndex(b)||a.localeCompare(b));
+          for(const ageCategory of ageCategories) {
+            const members=genderMembers.filter(p=>(String(p.ageCategory||'Not assigned').trim()||'Not assigned')===ageCategory)
+              .sort((a,b)=>String(a.school||'Unassigned school').localeCompare(String(b.school||'Unassigned school'),undefined,{sensitivity:'base'})||String(a.name||'').localeCompare(String(b.name||''),undefined,{sensitivity:'base'}));
+            if(!members.length)continue;
+            if(pageStarted)doc.addPage();
+            pdfHeader(doc,pdfLogo);
+            pageStarted=true;sectionCount++;
+            let y=31;
+            doc.setFillColor(225,244,250);doc.roundedRect(14,y,269,7,1.5,1.5,'F');
+            doc.setTextColor(10,75,120);doc.setFont('helvetica','bold');doc.setFontSize(10);
+            doc.text(`EVENT  •  ${event}`,17,y+4.8);y+=10;
+            doc.setFillColor(238,243,248);doc.roundedRect(14,y,269,7,1,1,'F');
+            doc.setTextColor(35,65,90);doc.setFont('helvetica','bold');doc.setFontSize(8.5);
+            doc.text(`${genderGroup.label}  •  ${ageCategory.toUpperCase()}  •  ${members.length} PARTICIPANTS  •  ALL SCHOOLS`,17,y+4.8);y+=10;
+
+            const body=[];
+            for(const person of members) {
+              photoCount++;
+              setProgress(true,`Building ${event} PDF · embedding photo ${photoCount}`);
+              const photo=await imageData(person.photoPath,person.gender);
+              body.push([
+                {content:'',photo},
+                person.name||'—',
+                String(person.school||'Unassigned school').trim()||'Unassigned school',
+                person.chest||'—',
+                person.dob||'—',
+                person.gender||'—'
+              ]);
+            }
+            doc.autoTable({
+              startY:y,
+              head:[['Photo','Participant','School','Chest','Date of birth','Gender']],
+              body,
+              margin:{left:14,right:14,top:28,bottom:17},
+              theme:'grid',
+              styles:{font:'helvetica',fontSize:7,cellPadding:1.05,valign:'middle',lineColor:[217,226,236],lineWidth:.1,overflow:'linebreak'},
+              headStyles:{fillColor:[8,75,120],textColor:255,fontStyle:'bold',fontSize:6.8,cellPadding:1.35},
+              columnStyles:{0:{cellWidth:14},1:{cellWidth:52,fontStyle:'bold'},2:{cellWidth:75},3:{cellWidth:20},4:{cellWidth:34},5:{cellWidth:30}},
+              didDrawCell:d=>{
+                const photo=d.cell.raw?.photo;
+                if(photo&&d.section==='body'&&d.column.index===0){
+                  const size=Math.min(10,d.cell.height-1.5);
+                  if(size>0)doc.addImage(photo,'JPEG',d.cell.x+(d.cell.width-size)/2,d.cell.y+(d.cell.height-size)/2,size,size);
+                }
+              },
+              didParseCell:d=>{if(d.section==='body')d.cell.styles.minCellHeight=12;},
+              showHead:'everyPage',pageBreak:'auto',rowPageBreak:'avoid'
+            });
+          }
+        }
+      }
+      if(!pageStarted||!sectionCount)throw new Error('No event registrations were found to export.');
+      pdfFooter(doc);
+      doc.save('cds-sports-master-register-selected-events.pdf');
+      showToast(`Selected-events Master PDF downloaded · ${events.length} events · all schools combined by age category and gender.`);
+    } finally {setProgress(false);}
+  }
+
+  async function createMasterPdf(selectedEvents = null) {
+    if(!window.jspdf?.jsPDF||!window.jspdf?.jsPDF.API.autoTable)throw new Error('PDF library did not load. Check the internet connection or host the PDF library files locally.');
+    if(!previousData.length)throw new Error('There are no participants to export.');
+    const chosenEvents = selectedEvents ? new Set(selectedEvents.map(cleanEvent)) : null;
+    if(chosenEvents && !chosenEvents.size)throw new Error('Select at least one event.');
+
+    const schoolMap=new Map();
+    previousData.forEach(person=>{
+      const school=String(person.school||'Unassigned school').trim()||'Unassigned school';
+      if(!schoolMap.has(school))schoolMap.set(school,[]);
+      schoolMap.get(school).push(person);
+    });
+    const schools=[...schoolMap].sort(([a],[b])=>a.localeCompare(b,undefined,{sensitivity:'base'}));
+    if(!schools.length)throw new Error('No schools were found to export.');
+
+    setProgress(true,'Building master registration PDF…');
+    try {
+      const {jsPDF}=window.jspdf;
+      const doc=new jsPDF({orientation:'landscape',unit:'mm',format:'a4',compress:true});
+      const pdfLogo=await loadPdfLogo();
+      const eventOrder=new Map(ALL_EVENTS.map((event,index)=>[event,index]));
+      const genderGroups=[
+        {label:'MALE PARTICIPANTS',match:g=>String(g||'').trim().toLowerCase().startsWith('m')},
+        {label:'FEMALE PARTICIPANTS',match:g=>String(g||'').trim().toLowerCase().startsWith('f')},
+        {label:'OTHER / UNSPECIFIED',match:g=>!String(g||'').trim().toLowerCase().startsWith('m')&&!String(g||'').trim().toLowerCase().startsWith('f')}
+      ];
+
+      let exportedSchools=0,photoCount=0,sectionStarted=false;
+
+      for(const [school,schoolMembers] of schools) {
+        let schoolSectionStarted=false;
+        const events=[...new Set(schoolMembers.flatMap(p=>(p.events||[]).map(cleanEvent)).filter(Boolean))]
+          .filter(event=>!chosenEvents || chosenEvents.has(event))
+          .sort((a,b)=>(eventOrder.get(a)??999)-(eventOrder.get(b)??999)||a.localeCompare(b));
+        if(!events.length)continue;
+
+        for(const event of events) {
+          const members=schoolMembers.filter(p=>(p.events||[]).map(cleanEvent).includes(event));
+          for(const genderGroup of genderGroups) {
+            const genderMembers=members.filter(p=>genderGroup.match(p.gender));
+            if(!genderMembers.length)continue;
+
+            // Each event/gender section starts on a fresh page; long tables continue naturally.
+            if(sectionStarted)doc.addPage();
+            pdfHeader(doc,pdfLogo);
+            sectionStarted=true;
+            schoolSectionStarted=true;
+            let y=31;
+
+            doc.setFillColor(225,244,250);
+            doc.roundedRect(14,y,269,7,1.5,1.5,'F');
+            doc.setTextColor(10,75,120);doc.setFont('helvetica','bold');doc.setFontSize(10);
+            doc.text(`SCHOOL  •  ${school}`,17,y+4.8);
+            y+=10;
+
+            doc.setFillColor(238,243,248);
+            doc.roundedRect(14,y,269,6.5,1,1,'F');
+            doc.setTextColor(35,65,90);doc.setFont('helvetica','bold');doc.setFontSize(8.5);
+            doc.text(`EVENT  •  ${event}  •  ${genderMembers.length} PARTICIPANTS`,17,y+4.5);
+            y+=9;
+
+            // Manual age category is preserved and sorted in the configured category order.
+            genderMembers.sort((a,b)=>
+              ageIndex(a.ageCategory)-ageIndex(b.ageCategory) ||
+              String(a.name||'').localeCompare(String(b.name||''),undefined,{sensitivity:'base'})
+            );
+
+            const body=[];
+            for(const person of genderMembers) {
+              photoCount++;
+              setProgress(true,`Building ${school} PDF · embedding photo ${photoCount}`);
+              const photo=await imageData(person.photoPath,person.gender);
+              body.push([
+                {content:'',photo},
+                person.name||'—',
+                person.chest||'—',
+                person.dob||'—',
+                person.ageCategory||'Not assigned',
+                person.gender||'—'
+              ]);
+            }
+
+            doc.autoTable({
+              startY:y,
+              head:[['Photo','Participant','Chest','Date of birth','Age category','Gender']],
+              body,
+              margin:{left:14,right:14,top:28,bottom:17},
+              theme:'grid',
+              styles:{font:'helvetica',fontSize:7,cellPadding:1.05,valign:'middle',lineColor:[217,226,236],lineWidth:.1,overflow:'linebreak'},
+              headStyles:{fillColor:[8,75,120],textColor:255,fontStyle:'bold',fontSize:6.8,cellPadding:1.35},
+              columnStyles:{0:{cellWidth:15},1:{cellWidth:76,fontStyle:'bold'},2:{cellWidth:20},3:{cellWidth:30},4:{cellWidth:45},5:{cellWidth:30}},
+              didDrawCell:d=>{
+                const photo=d.cell.raw?.photo;
+                if(photo&&d.section==='body'&&d.column.index===0){
+                  const size=Math.min(10,d.cell.height-1.5);
+                  if(size>0)doc.addImage(photo,'JPEG',d.cell.x+(d.cell.width-size)/2,d.cell.y+(d.cell.height-size)/2,size,size);
+                }
+              },
+              didParseCell:d=>{if(d.section==='body')d.cell.styles.minCellHeight=12;},
+              showHead:'everyPage',pageBreak:'auto',rowPageBreak:'avoid'
+            });
+          }
+        }
+
+        if(schoolSectionStarted)exportedSchools++;
+      }
+
+      if(!exportedSchools||!sectionStarted)throw new Error('No event registrations were found to export.');
+      pdfFooter(doc);
+      doc.save(chosenEvents ? 'cds-sports-master-register-selected-events.pdf' : 'cds-sports-master-register.pdf');
+      showToast(chosenEvents ? `Selected-events Master PDF downloaded with ${exportedSchools} schools.` : `Master PDF downloaded with ${exportedSchools} schools.`);
+    } finally {
+      setProgress(false);
+    }
+  }
+
+  function updateSelectedPdfEventCount() {
+    const count=document.querySelectorAll('#selectedPdfEventsList input[type="checkbox"]:checked').length;
+    $('selectedPdfEventCount').textContent=`${count} selected`;
+    $('selectedEventsPdfExport').disabled=count===0;
+  }
+  function openSelectedEventsPdfPicker() {
+    const available=[...new Set(previousData.flatMap(p=>(p.events||[]).map(cleanEvent)).filter(Boolean))]
+      .sort((a,b)=>ALL_EVENTS.indexOf(a)-ALL_EVENTS.indexOf(b)||a.localeCompare(b));
+    if(!available.length){showToast('There are no event registrations to export.',true);return;}
+    $('selectedPdfEventsList').innerHTML=available.map(event=>`<label><input type="checkbox" value="${escapeHTML(event)}"> <span>${escapeHTML(event)}</span></label>`).join('');
+    updateSelectedPdfEventCount();
+    $('selectedEventsPdfPicker').classList.add('open');
+  }
+  function closeSelectedEventsPdfPicker() {$('selectedEventsPdfPicker').classList.remove('open');}
+
+  function openSingleSchoolPdfPicker() {
+    const select=$('singleSchoolSelect');
+    const schools=[...new Set(previousData.map(p=>String(p.school||'Unassigned school').trim()||'Unassigned school'))]
+      .sort((a,b)=>a.localeCompare(b,undefined,{sensitivity:'base'}));
+    select.innerHTML='<option value="">Choose a school</option>'+schools.map(school=>`<option value="${escapeHTML(school)}">${escapeHTML(school)}</option>`).join('');
+    $('schoolPdfPickerExport').disabled=true;
+    $('schoolPdfPicker').classList.add('open');
+    select.focus();
+  }
+
+  function closeSingleSchoolPdfPicker() {
+    $('schoolPdfPicker').classList.remove('open');
+  }
+
+  async function createSingleSchoolPdf(school) {
+    if(!window.jspdf?.jsPDF||!window.jspdf?.jsPDF.API.autoTable)throw new Error('PDF library did not load. Check the internet connection or host the PDF library files locally.');
+    if(!school)throw new Error('Please select a school.');
+    const schoolMembers=previousData.filter(p=>(String(p.school||'Unassigned school').trim()||'Unassigned school')===school);
+    if(!schoolMembers.length)throw new Error('No registrations were found for the selected school.');
+
+    setProgress(true,`Building ${school} PDF…`);
+    try {
+      const {jsPDF}=window.jspdf;
+      const doc=new jsPDF({orientation:'landscape',unit:'mm',format:'a4',compress:true});
+      const pdfLogo=await loadPdfLogo();
+      const eventOrder=new Map(ALL_EVENTS.map((event,index)=>[event,index]));
+      const genderOrder=g=>{
+        const value=String(g||'').trim().toLowerCase();
+        return value.startsWith('m')?0:value.startsWith('f')?1:2;
+      };
+      const events=[...new Set(schoolMembers.flatMap(p=>(p.events||[]).map(cleanEvent)).filter(Boolean))]
+        .sort((a,b)=>(eventOrder.get(a)??999)-(eventOrder.get(b)??999)||a.localeCompare(b));
+      let sectionStarted=false,photoCount=0;
+
+      for(const event of events) {
+        const members=schoolMembers
+          .filter(p=>(p.events||[]).map(cleanEvent).includes(event))
+          .sort((a,b)=>
+            ageIndex(a.ageCategory)-ageIndex(b.ageCategory) ||
+            genderOrder(a.gender)-genderOrder(b.gender) ||
+            String(a.name||'').localeCompare(String(b.name||''),undefined,{sensitivity:'base'})
+          );
+        if(!members.length)continue;
+
+        if(sectionStarted)doc.addPage();
+        pdfHeader(doc,pdfLogo);
+        sectionStarted=true;
+        let y=31;
+
+        doc.setFillColor(225,244,250);
+        doc.roundedRect(14,y,269,7,1.5,1.5,'F');
+        doc.setTextColor(10,75,120);doc.setFont('helvetica','bold');doc.setFontSize(10);
+        doc.text(`SCHOOL  •  ${school}`,17,y+4.8);
+        y+=10;
+
+        doc.setFillColor(238,243,248);
+        doc.roundedRect(14,y,269,6.5,1,1,'F');
+        doc.setTextColor(35,65,90);doc.setFont('helvetica','bold');doc.setFontSize(8.5);
+        doc.text(`EVENT  •  ${event}  •  ${members.length} PARTICIPANTS`,17,y+4.5);
+        y+=9;
+
+        const body=[];
+        for(const person of members) {
+          photoCount++;
+          setProgress(true,`Building ${school} PDF · embedding photo ${photoCount}`);
+          const photo=await imageData(person.photoPath,person.gender);
+          body.push([
+            {content:'',photo},
+            person.name||'—',
+            person.chest||'—',
+            person.dob||'—',
+            person.ageCategory||'Not assigned',
+            person.gender||'—'
+          ]);
+        }
+
+        doc.autoTable({
+          startY:y,
+          head:[['Photo','Participant','Chest','Date of birth','Age category','Gender']],
+          body,
+          margin:{left:14,right:14,top:28,bottom:17},
+          theme:'grid',
+          styles:{font:'helvetica',fontSize:7,cellPadding:1.05,valign:'middle',lineColor:[217,226,236],lineWidth:.1,overflow:'linebreak'},
+          headStyles:{fillColor:[8,75,120],textColor:255,fontStyle:'bold',fontSize:6.8,cellPadding:1.35},
+          columnStyles:{0:{cellWidth:15},1:{cellWidth:76,fontStyle:'bold'},2:{cellWidth:20},3:{cellWidth:30},4:{cellWidth:45},5:{cellWidth:30}},
+          didDrawCell:d=>{
+            const photo=d.cell.raw?.photo;
+            if(photo&&d.section==='body'&&d.column.index===0){
+              const size=Math.min(10,d.cell.height-1.5);
+              if(size>0)doc.addImage(photo,'JPEG',d.cell.x+(d.cell.width-size)/2,d.cell.y+(d.cell.height-size)/2,size,size);
+            }
+          },
+          didParseCell:d=>{if(d.section==='body')d.cell.styles.minCellHeight=12;},
+          showHead:'everyPage',pageBreak:'auto',rowPageBreak:'avoid'
+        });
+      }
+
+      if(!sectionStarted)throw new Error('No event registrations were found for the selected school.');
+      pdfFooter(doc);
+      doc.save(`${filename(school)||'school'}-registration-register.pdf`);
+      showToast(`PDF downloaded for ${school}.`);
+    } finally {
+      setProgress(false);
+    }
+  }
+
+  async function createSchoolWisePdf() {
+    if(!window.jspdf?.jsPDF||!window.jspdf?.jsPDF.API.autoTable)throw new Error('PDF library did not load. Check the internet connection or host the PDF library files locally.');
+    if(!window.JSZip)throw new Error('ZIP library did not load. Check the internet connection or host jszip.min.js locally.');
+    if(!previousData.length)throw new Error('There are no participants to export.');
+
+    const schoolMap=new Map();
+    previousData.forEach(person=>{
+      const school=String(person.school||'Unassigned school').trim()||'Unassigned school';
+      if(!schoolMap.has(school))schoolMap.set(school,[]);
+      schoolMap.get(school).push(person);
+    });
+    const schools=[...schoolMap].sort(([a],[b])=>a.localeCompare(b,undefined,{sensitivity:'base'}));
+    if(!schools.length)throw new Error('No schools were found to export.');
+
+    setProgress(true,'Preparing separate school PDFs…');
+    try {
+      const {jsPDF}=window.jspdf;
+      const zip=new JSZip();
+      const pdfLogo=await loadPdfLogo();
+      const eventOrder=new Map(ALL_EVENTS.map((event,index)=>[event,index]));
+      const genderOrder=g=> {
+        const value=String(g||'').trim().toLowerCase();
+        return value.startsWith('m')?0:value.startsWith('f')?1:2;
+      };
+
+      let exportedSchools=0,photoCount=0;
+      const usedNames=new Set();
+
+      for(const [school,schoolMembers] of schools) {
+        const events=[...new Set(schoolMembers.flatMap(p=>(p.events||[]).map(cleanEvent)).filter(Boolean))]
+          .sort((a,b)=>(eventOrder.get(a)??999)-(eventOrder.get(b)??999)||a.localeCompare(b));
+        if(!events.length)continue;
+
+        const doc=new jsPDF({orientation:'landscape',unit:'mm',format:'a4',compress:true});
+        let sectionStarted=false;
+
+        for(const event of events) {
+          const members=schoolMembers
+            .filter(p=>(p.events||[]).map(cleanEvent).includes(event))
+            .sort((a,b)=>
+              ageIndex(a.ageCategory)-ageIndex(b.ageCategory) ||
+              genderOrder(a.gender)-genderOrder(b.gender) ||
+              String(a.name||'').localeCompare(String(b.name||''),undefined,{sensitivity:'base'})
+            );
+          if(!members.length)continue;
+
+          // One event section per page: male and female participants share the same table.
+          if(sectionStarted)doc.addPage();
+          pdfHeader(doc,pdfLogo);
+          sectionStarted=true;
+          let y=31;
+
+          doc.setFillColor(225,244,250);
+          doc.roundedRect(14,y,269,7,1.5,1.5,'F');
+          doc.setTextColor(10,75,120);doc.setFont('helvetica','bold');doc.setFontSize(10);
+          doc.text(`SCHOOL  •  ${school}`,17,y+4.8);
+          y+=10;
+
+          doc.setFillColor(238,243,248);
+          doc.roundedRect(14,y,269,6.5,1,1,'F');
+          doc.setTextColor(35,65,90);doc.setFont('helvetica','bold');doc.setFontSize(8.5);
+          doc.text(`EVENT  •  ${event}  •  ${members.length} PARTICIPANTS`,17,y+4.5);
+          y+=9;
+
+          const body=[];
+          for(const person of members) {
+            photoCount++;
+            setProgress(true,`Building ${school} PDF · embedding photo ${photoCount}`);
+            const photo=await imageData(person.photoPath,person.gender);
+            body.push([
+              {content:'',photo},
+              person.name||'—',
+              person.chest||'—',
+              person.dob||'—',
+              person.ageCategory||'Not assigned',
+              person.gender||'—'
+            ]);
+          }
+
+          doc.autoTable({
+            startY:y,
+            head:[['Photo','Participant','Chest','Date of birth','Age category','Gender']],
+            body,
+            margin:{left:14,right:14,top:28,bottom:17},
+            theme:'grid',
+            styles:{font:'helvetica',fontSize:7,cellPadding:1.05,valign:'middle',lineColor:[217,226,236],lineWidth:.1,overflow:'linebreak'},
+            headStyles:{fillColor:[8,75,120],textColor:255,fontStyle:'bold',fontSize:6.8,cellPadding:1.35},
+            columnStyles:{0:{cellWidth:15},1:{cellWidth:76,fontStyle:'bold'},2:{cellWidth:20},3:{cellWidth:30},4:{cellWidth:45},5:{cellWidth:30}},
+            didDrawCell:d=>{
+              const photo=d.cell.raw?.photo;
+              if(photo&&d.section==='body'&&d.column.index===0){
+                const size=Math.min(10,d.cell.height-1.5);
+                if(size>0)doc.addImage(photo,'JPEG',d.cell.x+(d.cell.width-size)/2,d.cell.y+(d.cell.height-size)/2,size,size);
+              }
+            },
+            didParseCell:d=>{if(d.section==='body')d.cell.styles.minCellHeight=12;},
+            showHead:'everyPage',pageBreak:'auto',rowPageBreak:'avoid'
+          });
+        }
+
+        if(!sectionStarted)continue;
+        pdfFooter(doc);
+
+        let baseName=filename(school)||'unassigned-school';
+        let zipName=`${baseName}.pdf`,suffix=2;
+        while(usedNames.has(zipName.toLowerCase()))zipName=`${baseName}-${suffix++}.pdf`;
+        usedNames.add(zipName.toLowerCase());
+
+        zip.file(zipName,doc.output('blob'));
+        exportedSchools++;
+      }
+
+      if(!exportedSchools)throw new Error('No event registrations were found to export.');
+      setProgress(true,`Packing ${exportedSchools} school PDFs into ZIP…`);
+      const zipBlob=await zip.generateAsync({type:'blob',compression:'DEFLATE',compressionOptions:{level:5}});
+      const url=URL.createObjectURL(zipBlob);
+      const link=document.createElement('a');
+      link.href=url;
+      link.download='cds-sports-school-wise-pdfs.zip';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setTimeout(()=>URL.revokeObjectURL(url),60000);
+      showToast(`${exportedSchools} separate school PDFs downloaded in one ZIP file.`);
+    } finally {
+      setProgress(false);
+    }
+  }
+
+  $('selectedEventsPdfBtn').addEventListener('click',openSelectedEventsPdfPicker);
+  $('selectedEventsPdfCancel').addEventListener('click',closeSelectedEventsPdfPicker);
+  $('selectedEventsPdfPicker').addEventListener('click',e=>{if(e.target===$('selectedEventsPdfPicker'))closeSelectedEventsPdfPicker();});
+  $('selectedPdfEventsList').addEventListener('change',updateSelectedPdfEventCount);
+  $('selectAllPdfEvents').addEventListener('click',()=>{document.querySelectorAll('#selectedPdfEventsList input[type="checkbox"]').forEach(input=>input.checked=true);updateSelectedPdfEventCount();});
+  $('clearPdfEvents').addEventListener('click',()=>{document.querySelectorAll('#selectedPdfEventsList input[type="checkbox"]').forEach(input=>input.checked=false);updateSelectedPdfEventCount();});
+  $('selectedEventsPdfExport').addEventListener('click',async()=>{
+    const events=[...document.querySelectorAll('#selectedPdfEventsList input[type="checkbox"]:checked')].map(input=>input.value);
+    if(!events.length)return showToast('Select at least one event.',true);
+    closeSelectedEventsPdfPicker();
+    try{await createSelectedEventsMasterPdf(events);}catch(err){showToast(err.message||'Could not create the selected-events Master PDF.',true);}
+  });
+  $('singleSchoolPdfBtn').addEventListener('click',openSingleSchoolPdfPicker);
+  $('schoolPdfPickerCancel').addEventListener('click',closeSingleSchoolPdfPicker);
+  $('schoolPdfPicker').addEventListener('click',e=>{if(e.target===$('schoolPdfPicker'))closeSingleSchoolPdfPicker();});
+  $('singleSchoolSelect').addEventListener('change',e=>{$('schoolPdfPickerExport').disabled=!e.target.value;});
+  $('schoolPdfPickerExport').addEventListener('click',async()=>{
+    const school=$('singleSchoolSelect').value;
+    if(!school)return showToast('Please select a school.',true);
+    closeSingleSchoolPdfPicker();
+    try{await createSingleSchoolPdf(school);}catch(err){showToast(err.message||'Could not create the school PDF.',true);}
+  });
+  $('excelBtn').addEventListener('click',()=>exportExcel('/export'));$('excelEventBtn').addEventListener('click',()=>exportExcel('/export-by-event'));$('masterPdfBtn').addEventListener('click',()=>createMasterPdf().catch(e=>showToast(e.message,true)));$('schoolPdfBtn').addEventListener('click',()=>createSchoolWisePdf().catch(e=>showToast(e.message,true)));$('undoBtn').addEventListener('click',()=>askConfirm('Undo latest registration?','The most recent registration will be removed. This cannot be undone.',()=>postAction('/reset-last')));$('resetBtn').addEventListener('click',()=>askConfirm('Reset all registrations?','This will permanently remove every registration. This action cannot be undone.',()=>postAction('/reset-all')));$('searchInput').addEventListener('input',applyFilters);$('eventFilter').addEventListener('change',applyFilters);$('ageFilter').addEventListener('change',applyFilters);$('schoolFilter').addEventListener('change',applyFilters);$('resultsContainer').addEventListener('click',e=>{const index=Number(e.target.dataset.index);if(e.target.matches('.edit-person'))editEvents(index);if(e.target.matches('.remove-person'))removeCandidate(index);});
+  $("editorClose").addEventListener("click",closeEditor);$("editorCancel").addEventListener("click",closeEditor);$("editorOverlay").addEventListener("click",e=>{if(e.target===$("editorOverlay"))closeEditor();});$("editorForm").addEventListener("submit",saveEditor);$("editorEvents").addEventListener("change",e=>{if(!e.target.matches("input[type=checkbox]"))return;const checked=[...document.querySelectorAll("#editorEvents input:checked")],relay=checked.filter(x=>RELAY_EVENTS.has(x.value)).length,individual=checked.length-relay;if(RELAY_EVENTS.has(e.target.value)&&relay>2){e.target.checked=false;showEditorError("Maximum 2 relay events are allowed.");}else if(!RELAY_EVENTS.has(e.target.value)&&individual>3){e.target.checked=false;showEditorError("Maximum 3 non-relay events are allowed.");}else $("editorError").classList.remove("show");updateEditorCount();});$("confirmCancel").addEventListener("click",()=>$('confirmOverlay').classList.remove('open'));$("confirmOverlay").addEventListener("click",e=>{if(e.target===$("confirmOverlay"))$("confirmOverlay").classList.remove("open");});document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeEditor();closeSelectedEventsPdfPicker();$("confirmOverlay").classList.remove("open");}});
+
+  document.querySelectorAll('.stat-action').forEach(button=>button.addEventListener('click',()=>openStatDetails(button.dataset.stat)));
+  $('statsDetailsClose').addEventListener('click',closeStatDetails);
+  $('statsDetailsOverlay').addEventListener('click',e=>{if(e.target===$('statsDetailsOverlay'))closeStatDetails();});
+  $('statsDetailsSearch').addEventListener('input',e=>renderStatDetails(e.target.value));
+
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeStatDetails();});
+  loadResults(true);setInterval(loadResults,5000);
+})();
+</script>
+</body>
+</html>
